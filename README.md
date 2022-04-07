@@ -1,1 +1,1 @@
-# CosmosSwift
+# CosmosKit
