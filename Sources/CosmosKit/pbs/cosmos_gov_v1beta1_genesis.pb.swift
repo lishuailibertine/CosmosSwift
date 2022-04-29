@@ -21,56 +21,56 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// GenesisState defines the gov module's genesis state.
-struct Cosmos_Gov_V1beta1_GenesisState {
+public struct Cosmos_Gov_V1beta1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// starting_proposal_id is the ID of the starting proposal.
-  var startingProposalID: UInt64 = 0
+  public var startingProposalID: UInt64 = 0
 
   /// deposits defines all the deposits present at genesis.
-  var deposits: [Cosmos_Gov_V1beta1_Deposit] = []
+  public var deposits: [Cosmos_Gov_V1beta1_Deposit] = []
 
   /// votes defines all the votes present at genesis.
-  var votes: [Cosmos_Gov_V1beta1_Vote] = []
+  public var votes: [Cosmos_Gov_V1beta1_Vote] = []
 
   /// proposals defines all the proposals present at genesis.
-  var proposals: [Cosmos_Gov_V1beta1_Proposal] = []
+  public var proposals: [Cosmos_Gov_V1beta1_Proposal] = []
 
   /// params defines all the paramaters of related to deposit.
-  var depositParams: Cosmos_Gov_V1beta1_DepositParams {
+  public var depositParams: Cosmos_Gov_V1beta1_DepositParams {
     get {return _depositParams ?? Cosmos_Gov_V1beta1_DepositParams()}
     set {_depositParams = newValue}
   }
   /// Returns true if `depositParams` has been explicitly set.
-  var hasDepositParams: Bool {return self._depositParams != nil}
+  public var hasDepositParams: Bool {return self._depositParams != nil}
   /// Clears the value of `depositParams`. Subsequent reads from it will return its default value.
-  mutating func clearDepositParams() {self._depositParams = nil}
+  public mutating func clearDepositParams() {self._depositParams = nil}
 
   /// params defines all the paramaters of related to voting.
-  var votingParams: Cosmos_Gov_V1beta1_VotingParams {
+  public var votingParams: Cosmos_Gov_V1beta1_VotingParams {
     get {return _votingParams ?? Cosmos_Gov_V1beta1_VotingParams()}
     set {_votingParams = newValue}
   }
   /// Returns true if `votingParams` has been explicitly set.
-  var hasVotingParams: Bool {return self._votingParams != nil}
+  public var hasVotingParams: Bool {return self._votingParams != nil}
   /// Clears the value of `votingParams`. Subsequent reads from it will return its default value.
-  mutating func clearVotingParams() {self._votingParams = nil}
+  public mutating func clearVotingParams() {self._votingParams = nil}
 
   /// params defines all the paramaters of related to tally.
-  var tallyParams: Cosmos_Gov_V1beta1_TallyParams {
+  public var tallyParams: Cosmos_Gov_V1beta1_TallyParams {
     get {return _tallyParams ?? Cosmos_Gov_V1beta1_TallyParams()}
     set {_tallyParams = newValue}
   }
   /// Returns true if `tallyParams` has been explicitly set.
-  var hasTallyParams: Bool {return self._tallyParams != nil}
+  public var hasTallyParams: Bool {return self._tallyParams != nil}
   /// Clears the value of `tallyParams`. Subsequent reads from it will return its default value.
-  mutating func clearTallyParams() {self._tallyParams = nil}
+  public mutating func clearTallyParams() {self._tallyParams = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _depositParams: Cosmos_Gov_V1beta1_DepositParams? = nil
   fileprivate var _votingParams: Cosmos_Gov_V1beta1_VotingParams? = nil
@@ -86,8 +86,8 @@ extension Cosmos_Gov_V1beta1_GenesisState: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.gov.v1beta1"
 
 extension Cosmos_Gov_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GenesisState"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GenesisState"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "starting_proposal_id"),
     2: .same(proto: "deposits"),
     3: .same(proto: "votes"),
@@ -97,7 +97,7 @@ extension Cosmos_Gov_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf.
     7: .standard(proto: "tally_params"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -115,7 +115,7 @@ extension Cosmos_Gov_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -144,7 +144,7 @@ extension Cosmos_Gov_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta1_GenesisState, rhs: Cosmos_Gov_V1beta1_GenesisState) -> Bool {
+  public static func ==(lhs: Cosmos_Gov_V1beta1_GenesisState, rhs: Cosmos_Gov_V1beta1_GenesisState) -> Bool {
     if lhs.startingProposalID != rhs.startingProposalID {return false}
     if lhs.deposits != rhs.deposits {return false}
     if lhs.votes != rhs.votes {return false}

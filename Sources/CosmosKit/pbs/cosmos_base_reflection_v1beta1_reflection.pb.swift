@@ -21,57 +21,57 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// ListAllInterfacesRequest is the request type of the ListAllInterfaces RPC.
-struct Cosmos_Base_Reflection_V1beta1_ListAllInterfacesRequest {
+public struct Cosmos_Base_Reflection_V1beta1_ListAllInterfacesRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// ListAllInterfacesResponse is the response type of the ListAllInterfaces RPC.
-struct Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse {
+public struct Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// interface_names is an array of all the registered interfaces.
-  var interfaceNames: [String] = []
+  public var interfaceNames: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// ListImplementationsRequest is the request type of the ListImplementations
 /// RPC.
-struct Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest {
+public struct Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// interface_name defines the interface to query the implementations for.
-  var interfaceName: String = String()
+  public var interfaceName: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// ListImplementationsResponse is the response type of the ListImplementations
 /// RPC.
-struct Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse {
+public struct Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var implementationMessageNames: [String] = []
+  public var implementationMessageNames: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -86,31 +86,31 @@ extension Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse: @unchecked
 fileprivate let _protobuf_package = "cosmos.base.reflection.v1beta1"
 
 extension Cosmos_Base_Reflection_V1beta1_ListAllInterfacesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListAllInterfacesRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".ListAllInterfacesRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Base_Reflection_V1beta1_ListAllInterfacesRequest, rhs: Cosmos_Base_Reflection_V1beta1_ListAllInterfacesRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Base_Reflection_V1beta1_ListAllInterfacesRequest, rhs: Cosmos_Base_Reflection_V1beta1_ListAllInterfacesRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListAllInterfacesResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ListAllInterfacesResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "interface_names"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -122,14 +122,14 @@ extension Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse: SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.interfaceNames.isEmpty {
       try visitor.visitRepeatedStringField(value: self.interfaceNames, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse, rhs: Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse, rhs: Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse) -> Bool {
     if lhs.interfaceNames != rhs.interfaceNames {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -137,12 +137,12 @@ extension Cosmos_Base_Reflection_V1beta1_ListAllInterfacesResponse: SwiftProtobu
 }
 
 extension Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListImplementationsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ListImplementationsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "interface_name"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -154,14 +154,14 @@ extension Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest: SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.interfaceName.isEmpty {
       try visitor.visitSingularStringField(value: self.interfaceName, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest, rhs: Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest, rhs: Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest) -> Bool {
     if lhs.interfaceName != rhs.interfaceName {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -169,12 +169,12 @@ extension Cosmos_Base_Reflection_V1beta1_ListImplementationsRequest: SwiftProtob
 }
 
 extension Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ListImplementationsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ListImplementationsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "implementation_message_names"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -186,14 +186,14 @@ extension Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse: SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.implementationMessageNames.isEmpty {
       try visitor.visitRepeatedStringField(value: self.implementationMessageNames, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse, rhs: Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse, rhs: Cosmos_Base_Reflection_V1beta1_ListImplementationsResponse) -> Bool {
     if lhs.implementationMessageNames != rhs.implementationMessageNames {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

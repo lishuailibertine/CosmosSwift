@@ -21,56 +21,56 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// MsgCreateValidator defines a SDK message for creating a new validator.
-struct Cosmos_Staking_V1beta1_MsgCreateValidator {
+public struct Cosmos_Staking_V1beta1_MsgCreateValidator {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var description_p: Cosmos_Staking_V1beta1_Description {
+  public var description_p: Cosmos_Staking_V1beta1_Description {
     get {return _description_p ?? Cosmos_Staking_V1beta1_Description()}
     set {_description_p = newValue}
   }
   /// Returns true if `description_p` has been explicitly set.
-  var hasDescription_p: Bool {return self._description_p != nil}
+  public var hasDescription_p: Bool {return self._description_p != nil}
   /// Clears the value of `description_p`. Subsequent reads from it will return its default value.
-  mutating func clearDescription_p() {self._description_p = nil}
+  public mutating func clearDescription_p() {self._description_p = nil}
 
-  var commission: Cosmos_Staking_V1beta1_CommissionRates {
+  public var commission: Cosmos_Staking_V1beta1_CommissionRates {
     get {return _commission ?? Cosmos_Staking_V1beta1_CommissionRates()}
     set {_commission = newValue}
   }
   /// Returns true if `commission` has been explicitly set.
-  var hasCommission: Bool {return self._commission != nil}
+  public var hasCommission: Bool {return self._commission != nil}
   /// Clears the value of `commission`. Subsequent reads from it will return its default value.
-  mutating func clearCommission() {self._commission = nil}
+  public mutating func clearCommission() {self._commission = nil}
 
-  var minSelfDelegation: String = String()
+  public var minSelfDelegation: String = String()
 
-  var delegatorAddress: String = String()
+  public var delegatorAddress: String = String()
 
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
-  var pubkey: SwiftProtobuf.Google_Protobuf_Any {
+  public var pubkey: SwiftProtobuf.Google_Protobuf_Any {
     get {return _pubkey ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_pubkey = newValue}
   }
   /// Returns true if `pubkey` has been explicitly set.
-  var hasPubkey: Bool {return self._pubkey != nil}
+  public var hasPubkey: Bool {return self._pubkey != nil}
   /// Clears the value of `pubkey`. Subsequent reads from it will return its default value.
-  mutating func clearPubkey() {self._pubkey = nil}
+  public mutating func clearPubkey() {self._pubkey = nil}
 
-  var value: Cosmos_Base_V1beta1_Coin {
+  public var value: Cosmos_Base_V1beta1_Coin {
     get {return _value ?? Cosmos_Base_V1beta1_Coin()}
     set {_value = newValue}
   }
   /// Returns true if `value` has been explicitly set.
-  var hasValue: Bool {return self._value != nil}
+  public var hasValue: Bool {return self._value != nil}
   /// Clears the value of `value`. Subsequent reads from it will return its default value.
-  mutating func clearValue() {self._value = nil}
+  public mutating func clearValue() {self._value = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _description_p: Cosmos_Staking_V1beta1_Description? = nil
   fileprivate var _commission: Cosmos_Staking_V1beta1_CommissionRates? = nil
@@ -79,193 +79,193 @@ struct Cosmos_Staking_V1beta1_MsgCreateValidator {
 }
 
 /// MsgCreateValidatorResponse defines the Msg/CreateValidator response type.
-struct Cosmos_Staking_V1beta1_MsgCreateValidatorResponse {
+public struct Cosmos_Staking_V1beta1_MsgCreateValidatorResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgEditValidator defines a SDK message for editing an existing validator.
-struct Cosmos_Staking_V1beta1_MsgEditValidator {
+public struct Cosmos_Staking_V1beta1_MsgEditValidator {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var description_p: Cosmos_Staking_V1beta1_Description {
+  public var description_p: Cosmos_Staking_V1beta1_Description {
     get {return _description_p ?? Cosmos_Staking_V1beta1_Description()}
     set {_description_p = newValue}
   }
   /// Returns true if `description_p` has been explicitly set.
-  var hasDescription_p: Bool {return self._description_p != nil}
+  public var hasDescription_p: Bool {return self._description_p != nil}
   /// Clears the value of `description_p`. Subsequent reads from it will return its default value.
-  mutating func clearDescription_p() {self._description_p = nil}
+  public mutating func clearDescription_p() {self._description_p = nil}
 
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
   /// We pass a reference to the new commission rate and min self delegation as
   /// it's not mandatory to update. If not updated, the deserialized rate will be
   /// zero with no way to distinguish if an update was intended.
   /// REF: #2373
-  var commissionRate: String = String()
+  public var commissionRate: String = String()
 
-  var minSelfDelegation: String = String()
+  public var minSelfDelegation: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _description_p: Cosmos_Staking_V1beta1_Description? = nil
 }
 
 /// MsgEditValidatorResponse defines the Msg/EditValidator response type.
-struct Cosmos_Staking_V1beta1_MsgEditValidatorResponse {
+public struct Cosmos_Staking_V1beta1_MsgEditValidatorResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgDelegate defines a SDK message for performing a delegation of coins
 /// from a delegator to a validator.
-struct Cosmos_Staking_V1beta1_MsgDelegate {
+public struct Cosmos_Staking_V1beta1_MsgDelegate {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var delegatorAddress: String = String()
+  public var delegatorAddress: String = String()
 
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
-  var amount: Cosmos_Base_V1beta1_Coin {
+  public var amount: Cosmos_Base_V1beta1_Coin {
     get {return _amount ?? Cosmos_Base_V1beta1_Coin()}
     set {_amount = newValue}
   }
   /// Returns true if `amount` has been explicitly set.
-  var hasAmount: Bool {return self._amount != nil}
+  public var hasAmount: Bool {return self._amount != nil}
   /// Clears the value of `amount`. Subsequent reads from it will return its default value.
-  mutating func clearAmount() {self._amount = nil}
+  public mutating func clearAmount() {self._amount = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _amount: Cosmos_Base_V1beta1_Coin? = nil
 }
 
 /// MsgDelegateResponse defines the Msg/Delegate response type.
-struct Cosmos_Staking_V1beta1_MsgDelegateResponse {
+public struct Cosmos_Staking_V1beta1_MsgDelegateResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgBeginRedelegate defines a SDK message for performing a redelegation
 /// of coins from a delegator and source validator to a destination validator.
-struct Cosmos_Staking_V1beta1_MsgBeginRedelegate {
+public struct Cosmos_Staking_V1beta1_MsgBeginRedelegate {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var delegatorAddress: String = String()
+  public var delegatorAddress: String = String()
 
-  var validatorSrcAddress: String = String()
+  public var validatorSrcAddress: String = String()
 
-  var validatorDstAddress: String = String()
+  public var validatorDstAddress: String = String()
 
-  var amount: Cosmos_Base_V1beta1_Coin {
+  public var amount: Cosmos_Base_V1beta1_Coin {
     get {return _amount ?? Cosmos_Base_V1beta1_Coin()}
     set {_amount = newValue}
   }
   /// Returns true if `amount` has been explicitly set.
-  var hasAmount: Bool {return self._amount != nil}
+  public var hasAmount: Bool {return self._amount != nil}
   /// Clears the value of `amount`. Subsequent reads from it will return its default value.
-  mutating func clearAmount() {self._amount = nil}
+  public mutating func clearAmount() {self._amount = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _amount: Cosmos_Base_V1beta1_Coin? = nil
 }
 
 /// MsgBeginRedelegateResponse defines the Msg/BeginRedelegate response type.
-struct Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse {
+public struct Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var completionTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var completionTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _completionTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_completionTime = newValue}
   }
   /// Returns true if `completionTime` has been explicitly set.
-  var hasCompletionTime: Bool {return self._completionTime != nil}
+  public var hasCompletionTime: Bool {return self._completionTime != nil}
   /// Clears the value of `completionTime`. Subsequent reads from it will return its default value.
-  mutating func clearCompletionTime() {self._completionTime = nil}
+  public mutating func clearCompletionTime() {self._completionTime = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _completionTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 /// MsgUndelegate defines a SDK message for performing an undelegation from a
 /// delegate and a validator.
-struct Cosmos_Staking_V1beta1_MsgUndelegate {
+public struct Cosmos_Staking_V1beta1_MsgUndelegate {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var delegatorAddress: String = String()
+  public var delegatorAddress: String = String()
 
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
-  var amount: Cosmos_Base_V1beta1_Coin {
+  public var amount: Cosmos_Base_V1beta1_Coin {
     get {return _amount ?? Cosmos_Base_V1beta1_Coin()}
     set {_amount = newValue}
   }
   /// Returns true if `amount` has been explicitly set.
-  var hasAmount: Bool {return self._amount != nil}
+  public var hasAmount: Bool {return self._amount != nil}
   /// Clears the value of `amount`. Subsequent reads from it will return its default value.
-  mutating func clearAmount() {self._amount = nil}
+  public mutating func clearAmount() {self._amount = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _amount: Cosmos_Base_V1beta1_Coin? = nil
 }
 
 /// MsgUndelegateResponse defines the Msg/Undelegate response type.
-struct Cosmos_Staking_V1beta1_MsgUndelegateResponse {
+public struct Cosmos_Staking_V1beta1_MsgUndelegateResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var completionTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var completionTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _completionTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_completionTime = newValue}
   }
   /// Returns true if `completionTime` has been explicitly set.
-  var hasCompletionTime: Bool {return self._completionTime != nil}
+  public var hasCompletionTime: Bool {return self._completionTime != nil}
   /// Clears the value of `completionTime`. Subsequent reads from it will return its default value.
-  mutating func clearCompletionTime() {self._completionTime = nil}
+  public mutating func clearCompletionTime() {self._completionTime = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _completionTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
@@ -288,8 +288,8 @@ extension Cosmos_Staking_V1beta1_MsgUndelegateResponse: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.staking.v1beta1"
 
 extension Cosmos_Staking_V1beta1_MsgCreateValidator: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgCreateValidator"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgCreateValidator"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "description"),
     2: .same(proto: "commission"),
     3: .standard(proto: "min_self_delegation"),
@@ -299,7 +299,7 @@ extension Cosmos_Staking_V1beta1_MsgCreateValidator: SwiftProtobuf.Message, Swif
     7: .same(proto: "value"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -317,7 +317,7 @@ extension Cosmos_Staking_V1beta1_MsgCreateValidator: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -346,7 +346,7 @@ extension Cosmos_Staking_V1beta1_MsgCreateValidator: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgCreateValidator, rhs: Cosmos_Staking_V1beta1_MsgCreateValidator) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgCreateValidator, rhs: Cosmos_Staking_V1beta1_MsgCreateValidator) -> Bool {
     if lhs._description_p != rhs._description_p {return false}
     if lhs._commission != rhs._commission {return false}
     if lhs.minSelfDelegation != rhs.minSelfDelegation {return false}
@@ -360,34 +360,34 @@ extension Cosmos_Staking_V1beta1_MsgCreateValidator: SwiftProtobuf.Message, Swif
 }
 
 extension Cosmos_Staking_V1beta1_MsgCreateValidatorResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgCreateValidatorResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgCreateValidatorResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgCreateValidatorResponse, rhs: Cosmos_Staking_V1beta1_MsgCreateValidatorResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgCreateValidatorResponse, rhs: Cosmos_Staking_V1beta1_MsgCreateValidatorResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Staking_V1beta1_MsgEditValidator: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgEditValidator"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgEditValidator"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "description"),
     2: .standard(proto: "validator_address"),
     3: .standard(proto: "commission_rate"),
     4: .standard(proto: "min_self_delegation"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -402,7 +402,7 @@ extension Cosmos_Staking_V1beta1_MsgEditValidator: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -422,7 +422,7 @@ extension Cosmos_Staking_V1beta1_MsgEditValidator: SwiftProtobuf.Message, SwiftP
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgEditValidator, rhs: Cosmos_Staking_V1beta1_MsgEditValidator) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgEditValidator, rhs: Cosmos_Staking_V1beta1_MsgEditValidator) -> Bool {
     if lhs._description_p != rhs._description_p {return false}
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs.commissionRate != rhs.commissionRate {return false}
@@ -433,33 +433,33 @@ extension Cosmos_Staking_V1beta1_MsgEditValidator: SwiftProtobuf.Message, SwiftP
 }
 
 extension Cosmos_Staking_V1beta1_MsgEditValidatorResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgEditValidatorResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgEditValidatorResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgEditValidatorResponse, rhs: Cosmos_Staking_V1beta1_MsgEditValidatorResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgEditValidatorResponse, rhs: Cosmos_Staking_V1beta1_MsgEditValidatorResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Staking_V1beta1_MsgDelegate: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgDelegate"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgDelegate"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_address"),
     2: .standard(proto: "validator_address"),
     3: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -473,7 +473,7 @@ extension Cosmos_Staking_V1beta1_MsgDelegate: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -490,7 +490,7 @@ extension Cosmos_Staking_V1beta1_MsgDelegate: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgDelegate, rhs: Cosmos_Staking_V1beta1_MsgDelegate) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgDelegate, rhs: Cosmos_Staking_V1beta1_MsgDelegate) -> Bool {
     if lhs.delegatorAddress != rhs.delegatorAddress {return false}
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs._amount != rhs._amount {return false}
@@ -500,34 +500,34 @@ extension Cosmos_Staking_V1beta1_MsgDelegate: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Cosmos_Staking_V1beta1_MsgDelegateResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgDelegateResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgDelegateResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgDelegateResponse, rhs: Cosmos_Staking_V1beta1_MsgDelegateResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgDelegateResponse, rhs: Cosmos_Staking_V1beta1_MsgDelegateResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Staking_V1beta1_MsgBeginRedelegate: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgBeginRedelegate"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgBeginRedelegate"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_address"),
     2: .standard(proto: "validator_src_address"),
     3: .standard(proto: "validator_dst_address"),
     4: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -542,7 +542,7 @@ extension Cosmos_Staking_V1beta1_MsgBeginRedelegate: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -562,7 +562,7 @@ extension Cosmos_Staking_V1beta1_MsgBeginRedelegate: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgBeginRedelegate, rhs: Cosmos_Staking_V1beta1_MsgBeginRedelegate) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgBeginRedelegate, rhs: Cosmos_Staking_V1beta1_MsgBeginRedelegate) -> Bool {
     if lhs.delegatorAddress != rhs.delegatorAddress {return false}
     if lhs.validatorSrcAddress != rhs.validatorSrcAddress {return false}
     if lhs.validatorDstAddress != rhs.validatorDstAddress {return false}
@@ -573,12 +573,12 @@ extension Cosmos_Staking_V1beta1_MsgBeginRedelegate: SwiftProtobuf.Message, Swif
 }
 
 extension Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgBeginRedelegateResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgBeginRedelegateResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "completion_time"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -590,7 +590,7 @@ extension Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -601,7 +601,7 @@ extension Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse: SwiftProtobuf.Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse, rhs: Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse, rhs: Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse) -> Bool {
     if lhs._completionTime != rhs._completionTime {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -609,14 +609,14 @@ extension Cosmos_Staking_V1beta1_MsgBeginRedelegateResponse: SwiftProtobuf.Messa
 }
 
 extension Cosmos_Staking_V1beta1_MsgUndelegate: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUndelegate"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgUndelegate"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_address"),
     2: .standard(proto: "validator_address"),
     3: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -630,7 +630,7 @@ extension Cosmos_Staking_V1beta1_MsgUndelegate: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -647,7 +647,7 @@ extension Cosmos_Staking_V1beta1_MsgUndelegate: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgUndelegate, rhs: Cosmos_Staking_V1beta1_MsgUndelegate) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgUndelegate, rhs: Cosmos_Staking_V1beta1_MsgUndelegate) -> Bool {
     if lhs.delegatorAddress != rhs.delegatorAddress {return false}
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs._amount != rhs._amount {return false}
@@ -657,12 +657,12 @@ extension Cosmos_Staking_V1beta1_MsgUndelegate: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Cosmos_Staking_V1beta1_MsgUndelegateResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUndelegateResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgUndelegateResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "completion_time"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -674,7 +674,7 @@ extension Cosmos_Staking_V1beta1_MsgUndelegateResponse: SwiftProtobuf.Message, S
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -685,7 +685,7 @@ extension Cosmos_Staking_V1beta1_MsgUndelegateResponse: SwiftProtobuf.Message, S
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_MsgUndelegateResponse, rhs: Cosmos_Staking_V1beta1_MsgUndelegateResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_MsgUndelegateResponse, rhs: Cosmos_Staking_V1beta1_MsgUndelegateResponse) -> Bool {
     if lhs._completionTime != rhs._completionTime {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

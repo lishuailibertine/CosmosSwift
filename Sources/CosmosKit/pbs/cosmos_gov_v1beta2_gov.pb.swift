@@ -7,8 +7,6 @@
 // For information on using the generated types, please see the documentation:
 //   https://github.com/apple/swift-protobuf/
 
-/// Since: cosmos-sdk 0.46
-
 import Foundation
 import SwiftProtobuf
 
@@ -23,8 +21,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// VoteOption enumerates the valid vote options for a given governance proposal.
-enum Cosmos_Gov_V1beta2_VoteOption: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Cosmos_Gov_V1beta2_VoteOption: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
 
   /// VOTE_OPTION_UNSPECIFIED defines a no-op vote option.
   case unspecified // = 0
@@ -42,11 +40,11 @@ enum Cosmos_Gov_V1beta2_VoteOption: SwiftProtobuf.Enum {
   case noWithVeto // = 4
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unspecified
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unspecified
     case 1: self = .yes
@@ -57,7 +55,7 @@ enum Cosmos_Gov_V1beta2_VoteOption: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unspecified: return 0
     case .yes: return 1
@@ -74,7 +72,7 @@ enum Cosmos_Gov_V1beta2_VoteOption: SwiftProtobuf.Enum {
 
 extension Cosmos_Gov_V1beta2_VoteOption: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Cosmos_Gov_V1beta2_VoteOption] = [
+  public static var allCases: [Cosmos_Gov_V1beta2_VoteOption] = [
     .unspecified,
     .yes,
     .abstain,
@@ -86,8 +84,8 @@ extension Cosmos_Gov_V1beta2_VoteOption: CaseIterable {
 #endif  // swift(>=4.2)
 
 /// ProposalStatus enumerates the valid statuses of a proposal.
-enum Cosmos_Gov_V1beta2_ProposalStatus: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Cosmos_Gov_V1beta2_ProposalStatus: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
 
   /// PROPOSAL_STATUS_UNSPECIFIED defines the default propopsal status.
   case unspecified // = 0
@@ -113,11 +111,11 @@ enum Cosmos_Gov_V1beta2_ProposalStatus: SwiftProtobuf.Enum {
   case failed // = 5
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unspecified
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unspecified
     case 1: self = .depositPeriod
@@ -129,7 +127,7 @@ enum Cosmos_Gov_V1beta2_ProposalStatus: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unspecified: return 0
     case .depositPeriod: return 1
@@ -147,7 +145,7 @@ enum Cosmos_Gov_V1beta2_ProposalStatus: SwiftProtobuf.Enum {
 
 extension Cosmos_Gov_V1beta2_ProposalStatus: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Cosmos_Gov_V1beta2_ProposalStatus] = [
+  public static var allCases: [Cosmos_Gov_V1beta2_ProposalStatus] = [
     .unspecified,
     .depositPeriod,
     .votingPeriod,
@@ -160,235 +158,220 @@ extension Cosmos_Gov_V1beta2_ProposalStatus: CaseIterable {
 #endif  // swift(>=4.2)
 
 /// WeightedVoteOption defines a unit of vote for vote split.
-struct Cosmos_Gov_V1beta2_WeightedVoteOption {
+public struct Cosmos_Gov_V1beta2_WeightedVoteOption {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var option: Cosmos_Gov_V1beta2_VoteOption = .unspecified
+  public var option: Cosmos_Gov_V1beta2_VoteOption = .unspecified
 
-  var weight: String = String()
+  public var weight: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Deposit defines an amount deposited by an account address to an active
 /// proposal.
-struct Cosmos_Gov_V1beta2_Deposit {
+public struct Cosmos_Gov_V1beta2_Deposit {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var proposalID: UInt64 = 0
+  public var proposalID: UInt64 = 0
 
-  var depositor: String = String()
+  public var depositor: String = String()
 
-  var amount: [Cosmos_Base_V1beta1_Coin] = []
+  public var amount: [Cosmos_Base_V1beta1_Coin] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Proposal defines the core field members of a governance proposal.
-struct Cosmos_Gov_V1beta2_Proposal {
+public struct Cosmos_Gov_V1beta2_Proposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: UInt64 {
-    get {return _storage._id}
-    set {_uniqueStorage()._id = newValue}
-  }
+  public var proposalID: UInt64 = 0
 
-  var messages: [SwiftProtobuf.Google_Protobuf_Any] {
-    get {return _storage._messages}
-    set {_uniqueStorage()._messages = newValue}
-  }
+  public var messages: [SwiftProtobuf.Google_Protobuf_Any] = []
 
-  var status: Cosmos_Gov_V1beta2_ProposalStatus {
-    get {return _storage._status}
-    set {_uniqueStorage()._status = newValue}
-  }
+  public var status: Cosmos_Gov_V1beta2_ProposalStatus = .unspecified
 
-  /// final_tally_result is the final tally result of the proposal. When
-  /// querying a proposal via gRPC, this field is not populated until the
-  /// proposal's voting period has ended.
-  var finalTallyResult: Cosmos_Gov_V1beta2_TallyResult {
-    get {return _storage._finalTallyResult ?? Cosmos_Gov_V1beta2_TallyResult()}
-    set {_uniqueStorage()._finalTallyResult = newValue}
+  public var finalTallyResult: Cosmos_Gov_V1beta2_TallyResult {
+    get {return _finalTallyResult ?? Cosmos_Gov_V1beta2_TallyResult()}
+    set {_finalTallyResult = newValue}
   }
   /// Returns true if `finalTallyResult` has been explicitly set.
-  var hasFinalTallyResult: Bool {return _storage._finalTallyResult != nil}
+  public var hasFinalTallyResult: Bool {return self._finalTallyResult != nil}
   /// Clears the value of `finalTallyResult`. Subsequent reads from it will return its default value.
-  mutating func clearFinalTallyResult() {_uniqueStorage()._finalTallyResult = nil}
+  public mutating func clearFinalTallyResult() {self._finalTallyResult = nil}
 
-  var submitTime: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._submitTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._submitTime = newValue}
+  public var submitTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _submitTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_submitTime = newValue}
   }
   /// Returns true if `submitTime` has been explicitly set.
-  var hasSubmitTime: Bool {return _storage._submitTime != nil}
+  public var hasSubmitTime: Bool {return self._submitTime != nil}
   /// Clears the value of `submitTime`. Subsequent reads from it will return its default value.
-  mutating func clearSubmitTime() {_uniqueStorage()._submitTime = nil}
+  public mutating func clearSubmitTime() {self._submitTime = nil}
 
-  var depositEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._depositEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._depositEndTime = newValue}
+  public var depositEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _depositEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_depositEndTime = newValue}
   }
   /// Returns true if `depositEndTime` has been explicitly set.
-  var hasDepositEndTime: Bool {return _storage._depositEndTime != nil}
+  public var hasDepositEndTime: Bool {return self._depositEndTime != nil}
   /// Clears the value of `depositEndTime`. Subsequent reads from it will return its default value.
-  mutating func clearDepositEndTime() {_uniqueStorage()._depositEndTime = nil}
+  public mutating func clearDepositEndTime() {self._depositEndTime = nil}
 
-  var totalDeposit: [Cosmos_Base_V1beta1_Coin] {
-    get {return _storage._totalDeposit}
-    set {_uniqueStorage()._totalDeposit = newValue}
-  }
+  public var totalDeposit: [Cosmos_Base_V1beta1_Coin] = []
 
-  var votingStartTime: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._votingStartTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._votingStartTime = newValue}
+  public var votingStartTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _votingStartTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_votingStartTime = newValue}
   }
   /// Returns true if `votingStartTime` has been explicitly set.
-  var hasVotingStartTime: Bool {return _storage._votingStartTime != nil}
+  public var hasVotingStartTime: Bool {return self._votingStartTime != nil}
   /// Clears the value of `votingStartTime`. Subsequent reads from it will return its default value.
-  mutating func clearVotingStartTime() {_uniqueStorage()._votingStartTime = nil}
+  public mutating func clearVotingStartTime() {self._votingStartTime = nil}
 
-  var votingEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._votingEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._votingEndTime = newValue}
+  public var votingEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _votingEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_votingEndTime = newValue}
   }
   /// Returns true if `votingEndTime` has been explicitly set.
-  var hasVotingEndTime: Bool {return _storage._votingEndTime != nil}
+  public var hasVotingEndTime: Bool {return self._votingEndTime != nil}
   /// Clears the value of `votingEndTime`. Subsequent reads from it will return its default value.
-  mutating func clearVotingEndTime() {_uniqueStorage()._votingEndTime = nil}
+  public mutating func clearVotingEndTime() {self._votingEndTime = nil}
 
-  /// metadata is any arbitrary metadata attached to the proposal.
-  var metadata: String {
-    get {return _storage._metadata}
-    set {_uniqueStorage()._metadata = newValue}
-  }
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public init() {}
 
-  init() {}
-
-  fileprivate var _storage = _StorageClass.defaultInstance
+  fileprivate var _finalTallyResult: Cosmos_Gov_V1beta2_TallyResult? = nil
+  fileprivate var _submitTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  fileprivate var _depositEndTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  fileprivate var _votingStartTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  fileprivate var _votingEndTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 /// TallyResult defines a standard tally for a governance proposal.
-struct Cosmos_Gov_V1beta2_TallyResult {
+public struct Cosmos_Gov_V1beta2_TallyResult {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var yesCount: String = String()
+  public var yes: String = String()
 
-  var abstainCount: String = String()
+  public var abstain: String = String()
 
-  var noCount: String = String()
+  public var no: String = String()
 
-  var noWithVetoCount: String = String()
+  public var noWithVeto: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Vote defines a vote on a governance proposal.
 /// A Vote consists of a proposal ID, the voter, and the vote option.
-struct Cosmos_Gov_V1beta2_Vote {
+public struct Cosmos_Gov_V1beta2_Vote {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var proposalID: UInt64 = 0
+  public var proposalID: UInt64 = 0
 
-  var voter: String = String()
+  public var voter: String = String()
 
-  var options: [Cosmos_Gov_V1beta2_WeightedVoteOption] = []
+  /// Deprecated: Prefer to use `options` instead. This field is set in queries
+  /// if and only if `len(options) == 1` and that option has weight 1. In all
+  /// other cases, this field will default to VOTE_OPTION_UNSPECIFIED.
+  public var option: Cosmos_Gov_V1beta2_VoteOption = .unspecified
 
-  /// metadata is any  arbitrary metadata to attached to the vote.
-  var metadata: String = String()
+  public var options: [Cosmos_Gov_V1beta2_WeightedVoteOption] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// DepositParams defines the params for deposits on governance proposals.
-struct Cosmos_Gov_V1beta2_DepositParams {
+public struct Cosmos_Gov_V1beta2_DepositParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   ///  Minimum deposit for a proposal to enter voting period.
-  var minDeposit: [Cosmos_Base_V1beta1_Coin] = []
+  public var minDeposit: [Cosmos_Base_V1beta1_Coin] = []
 
   ///  Maximum period for Atom holders to deposit on a proposal. Initial value: 2
   ///  months.
-  var maxDepositPeriod: SwiftProtobuf.Google_Protobuf_Duration {
+  public var maxDepositPeriod: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _maxDepositPeriod ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_maxDepositPeriod = newValue}
   }
   /// Returns true if `maxDepositPeriod` has been explicitly set.
-  var hasMaxDepositPeriod: Bool {return self._maxDepositPeriod != nil}
+  public var hasMaxDepositPeriod: Bool {return self._maxDepositPeriod != nil}
   /// Clears the value of `maxDepositPeriod`. Subsequent reads from it will return its default value.
-  mutating func clearMaxDepositPeriod() {self._maxDepositPeriod = nil}
+  public mutating func clearMaxDepositPeriod() {self._maxDepositPeriod = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _maxDepositPeriod: SwiftProtobuf.Google_Protobuf_Duration? = nil
 }
 
 /// VotingParams defines the params for voting on governance proposals.
-struct Cosmos_Gov_V1beta2_VotingParams {
+public struct Cosmos_Gov_V1beta2_VotingParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   ///  Length of the voting period.
-  var votingPeriod: SwiftProtobuf.Google_Protobuf_Duration {
+  public var votingPeriod: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _votingPeriod ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_votingPeriod = newValue}
   }
   /// Returns true if `votingPeriod` has been explicitly set.
-  var hasVotingPeriod: Bool {return self._votingPeriod != nil}
+  public var hasVotingPeriod: Bool {return self._votingPeriod != nil}
   /// Clears the value of `votingPeriod`. Subsequent reads from it will return its default value.
-  mutating func clearVotingPeriod() {self._votingPeriod = nil}
+  public mutating func clearVotingPeriod() {self._votingPeriod = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _votingPeriod: SwiftProtobuf.Google_Protobuf_Duration? = nil
 }
 
 /// TallyParams defines the params for tallying votes on governance proposals.
-struct Cosmos_Gov_V1beta2_TallyParams {
+public struct Cosmos_Gov_V1beta2_TallyParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   ///  Minimum percentage of total stake needed to vote for a result to be
   ///  considered valid.
-  var quorum: String = String()
+  public var quorum: String = String()
 
   ///  Minimum proportion of Yes votes for proposal to pass. Default value: 0.5.
-  var threshold: String = String()
+  public var threshold: String = String()
 
   ///  Minimum value of Veto votes to Total votes ratio for proposal to be
   ///  vetoed. Default value: 1/3.
-  var vetoThreshold: String = String()
+  public var vetoThreshold: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -409,7 +392,7 @@ extension Cosmos_Gov_V1beta2_TallyParams: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.gov.v1beta2"
 
 extension Cosmos_Gov_V1beta2_VoteOption: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "VOTE_OPTION_UNSPECIFIED"),
     1: .same(proto: "VOTE_OPTION_YES"),
     2: .same(proto: "VOTE_OPTION_ABSTAIN"),
@@ -419,7 +402,7 @@ extension Cosmos_Gov_V1beta2_VoteOption: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension Cosmos_Gov_V1beta2_ProposalStatus: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "PROPOSAL_STATUS_UNSPECIFIED"),
     1: .same(proto: "PROPOSAL_STATUS_DEPOSIT_PERIOD"),
     2: .same(proto: "PROPOSAL_STATUS_VOTING_PERIOD"),
@@ -430,13 +413,13 @@ extension Cosmos_Gov_V1beta2_ProposalStatus: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension Cosmos_Gov_V1beta2_WeightedVoteOption: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".WeightedVoteOption"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".WeightedVoteOption"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "option"),
     2: .same(proto: "weight"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -449,7 +432,7 @@ extension Cosmos_Gov_V1beta2_WeightedVoteOption: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.option != .unspecified {
       try visitor.visitSingularEnumField(value: self.option, fieldNumber: 1)
     }
@@ -459,7 +442,7 @@ extension Cosmos_Gov_V1beta2_WeightedVoteOption: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta2_WeightedVoteOption, rhs: Cosmos_Gov_V1beta2_WeightedVoteOption) -> Bool {
+  public static func ==(lhs: Cosmos_Gov_V1beta2_WeightedVoteOption, rhs: Cosmos_Gov_V1beta2_WeightedVoteOption) -> Bool {
     if lhs.option != rhs.option {return false}
     if lhs.weight != rhs.weight {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -468,14 +451,14 @@ extension Cosmos_Gov_V1beta2_WeightedVoteOption: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Cosmos_Gov_V1beta2_Deposit: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Deposit"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Deposit"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proposal_id"),
     2: .same(proto: "depositor"),
     3: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -489,7 +472,7 @@ extension Cosmos_Gov_V1beta2_Deposit: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.proposalID != 0 {
       try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
     }
@@ -502,7 +485,7 @@ extension Cosmos_Gov_V1beta2_Deposit: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta2_Deposit, rhs: Cosmos_Gov_V1beta2_Deposit) -> Bool {
+  public static func ==(lhs: Cosmos_Gov_V1beta2_Deposit, rhs: Cosmos_Gov_V1beta2_Deposit) -> Bool {
     if lhs.proposalID != rhs.proposalID {return false}
     if lhs.depositor != rhs.depositor {return false}
     if lhs.amount != rhs.amount {return false}
@@ -512,9 +495,9 @@ extension Cosmos_Gov_V1beta2_Deposit: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Cosmos_Gov_V1beta2_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Proposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "id"),
+  public static let protoMessageName: String = _protobuf_package + ".Proposal"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "proposal_id"),
     2: .same(proto: "messages"),
     3: .same(proto: "status"),
     4: .standard(proto: "final_tally_result"),
@@ -523,194 +506,138 @@ extension Cosmos_Gov_V1beta2_Proposal: SwiftProtobuf.Message, SwiftProtobuf._Mes
     7: .standard(proto: "total_deposit"),
     8: .standard(proto: "voting_start_time"),
     9: .standard(proto: "voting_end_time"),
-    10: .same(proto: "metadata"),
   ]
 
-  fileprivate class _StorageClass {
-    var _id: UInt64 = 0
-    var _messages: [SwiftProtobuf.Google_Protobuf_Any] = []
-    var _status: Cosmos_Gov_V1beta2_ProposalStatus = .unspecified
-    var _finalTallyResult: Cosmos_Gov_V1beta2_TallyResult? = nil
-    var _submitTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _depositEndTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _totalDeposit: [Cosmos_Base_V1beta1_Coin] = []
-    var _votingStartTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _votingEndTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _metadata: String = String()
-
-    static let defaultInstance = _StorageClass()
-
-    private init() {}
-
-    init(copying source: _StorageClass) {
-      _id = source._id
-      _messages = source._messages
-      _status = source._status
-      _finalTallyResult = source._finalTallyResult
-      _submitTime = source._submitTime
-      _depositEndTime = source._depositEndTime
-      _totalDeposit = source._totalDeposit
-      _votingStartTime = source._votingStartTime
-      _votingEndTime = source._votingEndTime
-      _metadata = source._metadata
-    }
-  }
-
-  fileprivate mutating func _uniqueStorage() -> _StorageClass {
-    if !isKnownUniquelyReferenced(&_storage) {
-      _storage = _StorageClass(copying: _storage)
-    }
-    return _storage
-  }
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    _ = _uniqueStorage()
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      while let fieldNumber = try decoder.nextFieldNumber() {
-        // The use of inline closures is to circumvent an issue where the compiler
-        // allocates stack space for every case branch when no optimizations are
-        // enabled. https://github.com/apple/swift-protobuf/issues/1034
-        switch fieldNumber {
-        case 1: try { try decoder.decodeSingularUInt64Field(value: &_storage._id) }()
-        case 2: try { try decoder.decodeRepeatedMessageField(value: &_storage._messages) }()
-        case 3: try { try decoder.decodeSingularEnumField(value: &_storage._status) }()
-        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._finalTallyResult) }()
-        case 5: try { try decoder.decodeSingularMessageField(value: &_storage._submitTime) }()
-        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._depositEndTime) }()
-        case 7: try { try decoder.decodeRepeatedMessageField(value: &_storage._totalDeposit) }()
-        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._votingStartTime) }()
-        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._votingEndTime) }()
-        case 10: try { try decoder.decodeSingularStringField(value: &_storage._metadata) }()
-        default: break
-        }
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every if/case branch local when no optimizations
-      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-      // https://github.com/apple/swift-protobuf/issues/1182
-      if _storage._id != 0 {
-        try visitor.visitSingularUInt64Field(value: _storage._id, fieldNumber: 1)
-      }
-      if !_storage._messages.isEmpty {
-        try visitor.visitRepeatedMessageField(value: _storage._messages, fieldNumber: 2)
-      }
-      if _storage._status != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._status, fieldNumber: 3)
-      }
-      try { if let v = _storage._finalTallyResult {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-      } }()
-      try { if let v = _storage._submitTime {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-      } }()
-      try { if let v = _storage._depositEndTime {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-      } }()
-      if !_storage._totalDeposit.isEmpty {
-        try visitor.visitRepeatedMessageField(value: _storage._totalDeposit, fieldNumber: 7)
-      }
-      try { if let v = _storage._votingStartTime {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-      } }()
-      try { if let v = _storage._votingEndTime {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
-      } }()
-      if !_storage._metadata.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._metadata, fieldNumber: 10)
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.proposalID) }()
+      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.messages) }()
+      case 3: try { try decoder.decodeSingularEnumField(value: &self.status) }()
+      case 4: try { try decoder.decodeSingularMessageField(value: &self._finalTallyResult) }()
+      case 5: try { try decoder.decodeSingularMessageField(value: &self._submitTime) }()
+      case 6: try { try decoder.decodeSingularMessageField(value: &self._depositEndTime) }()
+      case 7: try { try decoder.decodeRepeatedMessageField(value: &self.totalDeposit) }()
+      case 8: try { try decoder.decodeSingularMessageField(value: &self._votingStartTime) }()
+      case 9: try { try decoder.decodeSingularMessageField(value: &self._votingEndTime) }()
+      default: break
       }
     }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if self.proposalID != 0 {
+      try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
+    }
+    if !self.messages.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.messages, fieldNumber: 2)
+    }
+    if self.status != .unspecified {
+      try visitor.visitSingularEnumField(value: self.status, fieldNumber: 3)
+    }
+    try { if let v = self._finalTallyResult {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+    } }()
+    try { if let v = self._submitTime {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+    } }()
+    try { if let v = self._depositEndTime {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+    } }()
+    if !self.totalDeposit.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.totalDeposit, fieldNumber: 7)
+    }
+    try { if let v = self._votingStartTime {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+    } }()
+    try { if let v = self._votingEndTime {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta2_Proposal, rhs: Cosmos_Gov_V1beta2_Proposal) -> Bool {
-    if lhs._storage !== rhs._storage {
-      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
-        let _storage = _args.0
-        let rhs_storage = _args.1
-        if _storage._id != rhs_storage._id {return false}
-        if _storage._messages != rhs_storage._messages {return false}
-        if _storage._status != rhs_storage._status {return false}
-        if _storage._finalTallyResult != rhs_storage._finalTallyResult {return false}
-        if _storage._submitTime != rhs_storage._submitTime {return false}
-        if _storage._depositEndTime != rhs_storage._depositEndTime {return false}
-        if _storage._totalDeposit != rhs_storage._totalDeposit {return false}
-        if _storage._votingStartTime != rhs_storage._votingStartTime {return false}
-        if _storage._votingEndTime != rhs_storage._votingEndTime {return false}
-        if _storage._metadata != rhs_storage._metadata {return false}
-        return true
-      }
-      if !storagesAreEqual {return false}
-    }
+  public static func ==(lhs: Cosmos_Gov_V1beta2_Proposal, rhs: Cosmos_Gov_V1beta2_Proposal) -> Bool {
+    if lhs.proposalID != rhs.proposalID {return false}
+    if lhs.messages != rhs.messages {return false}
+    if lhs.status != rhs.status {return false}
+    if lhs._finalTallyResult != rhs._finalTallyResult {return false}
+    if lhs._submitTime != rhs._submitTime {return false}
+    if lhs._depositEndTime != rhs._depositEndTime {return false}
+    if lhs.totalDeposit != rhs.totalDeposit {return false}
+    if lhs._votingStartTime != rhs._votingStartTime {return false}
+    if lhs._votingEndTime != rhs._votingEndTime {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Gov_V1beta2_TallyResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TallyResult"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "yes_count"),
-    2: .standard(proto: "abstain_count"),
-    3: .standard(proto: "no_count"),
-    4: .standard(proto: "no_with_veto_count"),
+  public static let protoMessageName: String = _protobuf_package + ".TallyResult"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "yes"),
+    2: .same(proto: "abstain"),
+    3: .same(proto: "no"),
+    4: .standard(proto: "no_with_veto"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.yesCount) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.abstainCount) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.noCount) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.noWithVetoCount) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self.yes) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.abstain) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.no) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.noWithVeto) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.yesCount.isEmpty {
-      try visitor.visitSingularStringField(value: self.yesCount, fieldNumber: 1)
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.yes.isEmpty {
+      try visitor.visitSingularStringField(value: self.yes, fieldNumber: 1)
     }
-    if !self.abstainCount.isEmpty {
-      try visitor.visitSingularStringField(value: self.abstainCount, fieldNumber: 2)
+    if !self.abstain.isEmpty {
+      try visitor.visitSingularStringField(value: self.abstain, fieldNumber: 2)
     }
-    if !self.noCount.isEmpty {
-      try visitor.visitSingularStringField(value: self.noCount, fieldNumber: 3)
+    if !self.no.isEmpty {
+      try visitor.visitSingularStringField(value: self.no, fieldNumber: 3)
     }
-    if !self.noWithVetoCount.isEmpty {
-      try visitor.visitSingularStringField(value: self.noWithVetoCount, fieldNumber: 4)
+    if !self.noWithVeto.isEmpty {
+      try visitor.visitSingularStringField(value: self.noWithVeto, fieldNumber: 4)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta2_TallyResult, rhs: Cosmos_Gov_V1beta2_TallyResult) -> Bool {
-    if lhs.yesCount != rhs.yesCount {return false}
-    if lhs.abstainCount != rhs.abstainCount {return false}
-    if lhs.noCount != rhs.noCount {return false}
-    if lhs.noWithVetoCount != rhs.noWithVetoCount {return false}
+  public static func ==(lhs: Cosmos_Gov_V1beta2_TallyResult, rhs: Cosmos_Gov_V1beta2_TallyResult) -> Bool {
+    if lhs.yes != rhs.yes {return false}
+    if lhs.abstain != rhs.abstain {return false}
+    if lhs.no != rhs.no {return false}
+    if lhs.noWithVeto != rhs.noWithVeto {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Gov_V1beta2_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Vote"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Vote"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proposal_id"),
     2: .same(proto: "voter"),
+    3: .same(proto: "option"),
     4: .same(proto: "options"),
-    5: .same(proto: "metadata"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -718,47 +645,47 @@ extension Cosmos_Gov_V1beta2_Vote: SwiftProtobuf.Message, SwiftProtobuf._Message
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.proposalID) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.voter) }()
+      case 3: try { try decoder.decodeSingularEnumField(value: &self.option) }()
       case 4: try { try decoder.decodeRepeatedMessageField(value: &self.options) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self.metadata) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.proposalID != 0 {
       try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
     }
     if !self.voter.isEmpty {
       try visitor.visitSingularStringField(value: self.voter, fieldNumber: 2)
     }
+    if self.option != .unspecified {
+      try visitor.visitSingularEnumField(value: self.option, fieldNumber: 3)
+    }
     if !self.options.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.options, fieldNumber: 4)
-    }
-    if !self.metadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.metadata, fieldNumber: 5)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta2_Vote, rhs: Cosmos_Gov_V1beta2_Vote) -> Bool {
+  public static func ==(lhs: Cosmos_Gov_V1beta2_Vote, rhs: Cosmos_Gov_V1beta2_Vote) -> Bool {
     if lhs.proposalID != rhs.proposalID {return false}
     if lhs.voter != rhs.voter {return false}
+    if lhs.option != rhs.option {return false}
     if lhs.options != rhs.options {return false}
-    if lhs.metadata != rhs.metadata {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Gov_V1beta2_DepositParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DepositParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DepositParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "min_deposit"),
     2: .standard(proto: "max_deposit_period"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -771,7 +698,7 @@ extension Cosmos_Gov_V1beta2_DepositParams: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -785,7 +712,7 @@ extension Cosmos_Gov_V1beta2_DepositParams: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta2_DepositParams, rhs: Cosmos_Gov_V1beta2_DepositParams) -> Bool {
+  public static func ==(lhs: Cosmos_Gov_V1beta2_DepositParams, rhs: Cosmos_Gov_V1beta2_DepositParams) -> Bool {
     if lhs.minDeposit != rhs.minDeposit {return false}
     if lhs._maxDepositPeriod != rhs._maxDepositPeriod {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -794,12 +721,12 @@ extension Cosmos_Gov_V1beta2_DepositParams: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Cosmos_Gov_V1beta2_VotingParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VotingParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".VotingParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "voting_period"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -811,7 +738,7 @@ extension Cosmos_Gov_V1beta2_VotingParams: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -822,7 +749,7 @@ extension Cosmos_Gov_V1beta2_VotingParams: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta2_VotingParams, rhs: Cosmos_Gov_V1beta2_VotingParams) -> Bool {
+  public static func ==(lhs: Cosmos_Gov_V1beta2_VotingParams, rhs: Cosmos_Gov_V1beta2_VotingParams) -> Bool {
     if lhs._votingPeriod != rhs._votingPeriod {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -830,14 +757,14 @@ extension Cosmos_Gov_V1beta2_VotingParams: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Cosmos_Gov_V1beta2_TallyParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TallyParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TallyParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "quorum"),
     2: .same(proto: "threshold"),
     3: .standard(proto: "veto_threshold"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -851,7 +778,7 @@ extension Cosmos_Gov_V1beta2_TallyParams: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.quorum.isEmpty {
       try visitor.visitSingularStringField(value: self.quorum, fieldNumber: 1)
     }
@@ -864,7 +791,7 @@ extension Cosmos_Gov_V1beta2_TallyParams: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Gov_V1beta2_TallyParams, rhs: Cosmos_Gov_V1beta2_TallyParams) -> Bool {
+  public static func ==(lhs: Cosmos_Gov_V1beta2_TallyParams, rhs: Cosmos_Gov_V1beta2_TallyParams) -> Bool {
     if lhs.quorum != rhs.quorum {return false}
     if lhs.threshold != rhs.threshold {return false}
     if lhs.vetoThreshold != rhs.vetoThreshold {return false}

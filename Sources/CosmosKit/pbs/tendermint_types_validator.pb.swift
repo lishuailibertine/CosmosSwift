@@ -20,77 +20,77 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Tendermint_Types_ValidatorSet {
+public struct Tendermint_Types_ValidatorSet {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var validators: [Tendermint_Types_Validator] = []
+  public var validators: [Tendermint_Types_Validator] = []
 
-  var proposer: Tendermint_Types_Validator {
+  public var proposer: Tendermint_Types_Validator {
     get {return _proposer ?? Tendermint_Types_Validator()}
     set {_proposer = newValue}
   }
   /// Returns true if `proposer` has been explicitly set.
-  var hasProposer: Bool {return self._proposer != nil}
+  public var hasProposer: Bool {return self._proposer != nil}
   /// Clears the value of `proposer`. Subsequent reads from it will return its default value.
-  mutating func clearProposer() {self._proposer = nil}
+  public mutating func clearProposer() {self._proposer = nil}
 
-  var totalVotingPower: Int64 = 0
+  public var totalVotingPower: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _proposer: Tendermint_Types_Validator? = nil
 }
 
-struct Tendermint_Types_Validator {
+public struct Tendermint_Types_Validator {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var address: Data = Data()
+  public var address: Data = Data()
 
-  var pubKey: Tendermint_Crypto_PublicKey {
+  public var pubKey: Tendermint_Crypto_PublicKey {
     get {return _pubKey ?? Tendermint_Crypto_PublicKey()}
     set {_pubKey = newValue}
   }
   /// Returns true if `pubKey` has been explicitly set.
-  var hasPubKey: Bool {return self._pubKey != nil}
+  public var hasPubKey: Bool {return self._pubKey != nil}
   /// Clears the value of `pubKey`. Subsequent reads from it will return its default value.
-  mutating func clearPubKey() {self._pubKey = nil}
+  public mutating func clearPubKey() {self._pubKey = nil}
 
-  var votingPower: Int64 = 0
+  public var votingPower: Int64 = 0
 
-  var proposerPriority: Int64 = 0
+  public var proposerPriority: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pubKey: Tendermint_Crypto_PublicKey? = nil
 }
 
-struct Tendermint_Types_SimpleValidator {
+public struct Tendermint_Types_SimpleValidator {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var pubKey: Tendermint_Crypto_PublicKey {
+  public var pubKey: Tendermint_Crypto_PublicKey {
     get {return _pubKey ?? Tendermint_Crypto_PublicKey()}
     set {_pubKey = newValue}
   }
   /// Returns true if `pubKey` has been explicitly set.
-  var hasPubKey: Bool {return self._pubKey != nil}
+  public var hasPubKey: Bool {return self._pubKey != nil}
   /// Clears the value of `pubKey`. Subsequent reads from it will return its default value.
-  mutating func clearPubKey() {self._pubKey = nil}
+  public mutating func clearPubKey() {self._pubKey = nil}
 
-  var votingPower: Int64 = 0
+  public var votingPower: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pubKey: Tendermint_Crypto_PublicKey? = nil
 }
@@ -106,14 +106,14 @@ extension Tendermint_Types_SimpleValidator: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.types"
 
 extension Tendermint_Types_ValidatorSet: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorSet"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorSet"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "validators"),
     2: .same(proto: "proposer"),
     3: .standard(proto: "total_voting_power"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -127,7 +127,7 @@ extension Tendermint_Types_ValidatorSet: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -144,7 +144,7 @@ extension Tendermint_Types_ValidatorSet: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_ValidatorSet, rhs: Tendermint_Types_ValidatorSet) -> Bool {
+  public static func ==(lhs: Tendermint_Types_ValidatorSet, rhs: Tendermint_Types_ValidatorSet) -> Bool {
     if lhs.validators != rhs.validators {return false}
     if lhs._proposer != rhs._proposer {return false}
     if lhs.totalVotingPower != rhs.totalVotingPower {return false}
@@ -154,15 +154,15 @@ extension Tendermint_Types_ValidatorSet: SwiftProtobuf.Message, SwiftProtobuf._M
 }
 
 extension Tendermint_Types_Validator: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Validator"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Validator"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .standard(proto: "pub_key"),
     3: .standard(proto: "voting_power"),
     4: .standard(proto: "proposer_priority"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -177,7 +177,7 @@ extension Tendermint_Types_Validator: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -197,7 +197,7 @@ extension Tendermint_Types_Validator: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Validator, rhs: Tendermint_Types_Validator) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Validator, rhs: Tendermint_Types_Validator) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs._pubKey != rhs._pubKey {return false}
     if lhs.votingPower != rhs.votingPower {return false}
@@ -208,13 +208,13 @@ extension Tendermint_Types_Validator: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Tendermint_Types_SimpleValidator: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SimpleValidator"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SimpleValidator"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "pub_key"),
     2: .standard(proto: "voting_power"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -227,7 +227,7 @@ extension Tendermint_Types_SimpleValidator: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -241,7 +241,7 @@ extension Tendermint_Types_SimpleValidator: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_SimpleValidator, rhs: Tendermint_Types_SimpleValidator) -> Bool {
+  public static func ==(lhs: Tendermint_Types_SimpleValidator, rhs: Tendermint_Types_SimpleValidator) -> Bool {
     if lhs._pubKey != rhs._pubKey {return false}
     if lhs.votingPower != rhs.votingPower {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

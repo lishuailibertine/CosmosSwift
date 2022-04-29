@@ -46,18 +46,18 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 extension SwiftProtobuf.Google_Protobuf_MethodOptions {
 
   /// See `HttpRule`.
-  var Google_Api_http: Google_Api_HttpRule {
+  public var Google_Api_http: Google_Api_HttpRule {
     get {return getExtensionValue(ext: Google_Api_Extensions_http) ?? Google_Api_HttpRule()}
     set {setExtensionValue(ext: Google_Api_Extensions_http, value: newValue)}
   }
   /// Returns true if extension `Google_Api_Extensions_http`
   /// has been explicitly set.
-  var hasGoogle_Api_http: Bool {
+  public var hasGoogle_Api_http: Bool {
     return hasExtensionValue(ext: Google_Api_Extensions_http)
   }
   /// Clears the value of extension `Google_Api_Extensions_http`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearGoogle_Api_http() {
+  public mutating func clearGoogle_Api_http() {
     clearExtensionValue(ext: Google_Api_Extensions_http)
   }
 
@@ -69,7 +69,7 @@ extension SwiftProtobuf.Google_Protobuf_MethodOptions {
 /// this .proto file. It can be used any place an `SwiftProtobuf.ExtensionMap` is needed
 /// in parsing, or it can be combined with other `SwiftProtobuf.SimpleExtensionMap`s to create
 /// a larger `SwiftProtobuf.SimpleExtensionMap`.
-let Google_Api_Annotations_Extensions: SwiftProtobuf.SimpleExtensionMap = [
+public let Google_Api_Annotations_Extensions: SwiftProtobuf.SimpleExtensionMap = [
   Google_Api_Extensions_http
 ]
 
@@ -78,7 +78,7 @@ let Google_Api_Annotations_Extensions: SwiftProtobuf.SimpleExtensionMap = [
 // accessors for the extension fields on the messages directly.
 
 /// See `HttpRule`.
-let Google_Api_Extensions_http = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalMessageExtensionField<Google_Api_HttpRule>, SwiftProtobuf.Google_Protobuf_MethodOptions>(
+public let Google_Api_Extensions_http = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalMessageExtensionField<Google_Api_HttpRule>, SwiftProtobuf.Google_Protobuf_MethodOptions>(
   _protobuf_fieldNumber: 72295728,
   fieldName: "google.api.http"
 )

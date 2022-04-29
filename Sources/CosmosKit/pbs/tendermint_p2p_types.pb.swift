@@ -20,134 +20,134 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Tendermint_P2p_ProtocolVersion {
+public struct Tendermint_P2p_ProtocolVersion {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var p2P: UInt64 = 0
+  public var p2P: UInt64 = 0
 
-  var block: UInt64 = 0
+  public var block: UInt64 = 0
 
-  var app: UInt64 = 0
+  public var app: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_P2p_NodeInfo {
+public struct Tendermint_P2p_NodeInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var protocolVersion: Tendermint_P2p_ProtocolVersion {
+  public var protocolVersion: Tendermint_P2p_ProtocolVersion {
     get {return _protocolVersion ?? Tendermint_P2p_ProtocolVersion()}
     set {_protocolVersion = newValue}
   }
   /// Returns true if `protocolVersion` has been explicitly set.
-  var hasProtocolVersion: Bool {return self._protocolVersion != nil}
+  public var hasProtocolVersion: Bool {return self._protocolVersion != nil}
   /// Clears the value of `protocolVersion`. Subsequent reads from it will return its default value.
-  mutating func clearProtocolVersion() {self._protocolVersion = nil}
+  public mutating func clearProtocolVersion() {self._protocolVersion = nil}
 
-  var nodeID: String = String()
+  public var nodeID: String = String()
 
-  var listenAddr: String = String()
+  public var listenAddr: String = String()
 
-  var network: String = String()
+  public var network: String = String()
 
-  var version: String = String()
+  public var version: String = String()
 
-  var channels: Data = Data()
+  public var channels: Data = Data()
 
-  var moniker: String = String()
+  public var moniker: String = String()
 
-  var other: Tendermint_P2p_NodeInfoOther {
+  public var other: Tendermint_P2p_NodeInfoOther {
     get {return _other ?? Tendermint_P2p_NodeInfoOther()}
     set {_other = newValue}
   }
   /// Returns true if `other` has been explicitly set.
-  var hasOther: Bool {return self._other != nil}
+  public var hasOther: Bool {return self._other != nil}
   /// Clears the value of `other`. Subsequent reads from it will return its default value.
-  mutating func clearOther() {self._other = nil}
+  public mutating func clearOther() {self._other = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _protocolVersion: Tendermint_P2p_ProtocolVersion? = nil
   fileprivate var _other: Tendermint_P2p_NodeInfoOther? = nil
 }
 
-struct Tendermint_P2p_NodeInfoOther {
+public struct Tendermint_P2p_NodeInfoOther {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var txIndex: String = String()
+  public var txIndex: String = String()
 
-  var rpcAddress: String = String()
+  public var rpcAddress: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_P2p_PeerInfo {
+public struct Tendermint_P2p_PeerInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var id: String = String()
+  public var id: String = String()
 
-  var addressInfo: [Tendermint_P2p_PeerAddressInfo] = []
+  public var addressInfo: [Tendermint_P2p_PeerAddressInfo] = []
 
-  var lastConnected: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var lastConnected: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _lastConnected ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_lastConnected = newValue}
   }
   /// Returns true if `lastConnected` has been explicitly set.
-  var hasLastConnected: Bool {return self._lastConnected != nil}
+  public var hasLastConnected: Bool {return self._lastConnected != nil}
   /// Clears the value of `lastConnected`. Subsequent reads from it will return its default value.
-  mutating func clearLastConnected() {self._lastConnected = nil}
+  public mutating func clearLastConnected() {self._lastConnected = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _lastConnected: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
-struct Tendermint_P2p_PeerAddressInfo {
+public struct Tendermint_P2p_PeerAddressInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var address: String = String()
+  public var address: String = String()
 
-  var lastDialSuccess: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var lastDialSuccess: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _lastDialSuccess ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_lastDialSuccess = newValue}
   }
   /// Returns true if `lastDialSuccess` has been explicitly set.
-  var hasLastDialSuccess: Bool {return self._lastDialSuccess != nil}
+  public var hasLastDialSuccess: Bool {return self._lastDialSuccess != nil}
   /// Clears the value of `lastDialSuccess`. Subsequent reads from it will return its default value.
-  mutating func clearLastDialSuccess() {self._lastDialSuccess = nil}
+  public mutating func clearLastDialSuccess() {self._lastDialSuccess = nil}
 
-  var lastDialFailure: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var lastDialFailure: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _lastDialFailure ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_lastDialFailure = newValue}
   }
   /// Returns true if `lastDialFailure` has been explicitly set.
-  var hasLastDialFailure: Bool {return self._lastDialFailure != nil}
+  public var hasLastDialFailure: Bool {return self._lastDialFailure != nil}
   /// Clears the value of `lastDialFailure`. Subsequent reads from it will return its default value.
-  mutating func clearLastDialFailure() {self._lastDialFailure = nil}
+  public mutating func clearLastDialFailure() {self._lastDialFailure = nil}
 
-  var dialFailures: UInt32 = 0
+  public var dialFailures: UInt32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _lastDialSuccess: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
   fileprivate var _lastDialFailure: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
@@ -166,14 +166,14 @@ extension Tendermint_P2p_PeerAddressInfo: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.p2p"
 
 extension Tendermint_P2p_ProtocolVersion: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ProtocolVersion"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ProtocolVersion"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "p2p"),
     2: .same(proto: "block"),
     3: .same(proto: "app"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -187,7 +187,7 @@ extension Tendermint_P2p_ProtocolVersion: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.p2P != 0 {
       try visitor.visitSingularUInt64Field(value: self.p2P, fieldNumber: 1)
     }
@@ -200,7 +200,7 @@ extension Tendermint_P2p_ProtocolVersion: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_P2p_ProtocolVersion, rhs: Tendermint_P2p_ProtocolVersion) -> Bool {
+  public static func ==(lhs: Tendermint_P2p_ProtocolVersion, rhs: Tendermint_P2p_ProtocolVersion) -> Bool {
     if lhs.p2P != rhs.p2P {return false}
     if lhs.block != rhs.block {return false}
     if lhs.app != rhs.app {return false}
@@ -210,8 +210,8 @@ extension Tendermint_P2p_ProtocolVersion: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Tendermint_P2p_NodeInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".NodeInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".NodeInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "protocol_version"),
     2: .standard(proto: "node_id"),
     3: .standard(proto: "listen_addr"),
@@ -222,7 +222,7 @@ extension Tendermint_P2p_NodeInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     8: .same(proto: "other"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -241,7 +241,7 @@ extension Tendermint_P2p_NodeInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -273,7 +273,7 @@ extension Tendermint_P2p_NodeInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_P2p_NodeInfo, rhs: Tendermint_P2p_NodeInfo) -> Bool {
+  public static func ==(lhs: Tendermint_P2p_NodeInfo, rhs: Tendermint_P2p_NodeInfo) -> Bool {
     if lhs._protocolVersion != rhs._protocolVersion {return false}
     if lhs.nodeID != rhs.nodeID {return false}
     if lhs.listenAddr != rhs.listenAddr {return false}
@@ -288,13 +288,13 @@ extension Tendermint_P2p_NodeInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Tendermint_P2p_NodeInfoOther: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".NodeInfoOther"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".NodeInfoOther"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "tx_index"),
     2: .standard(proto: "rpc_address"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -307,7 +307,7 @@ extension Tendermint_P2p_NodeInfoOther: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.txIndex.isEmpty {
       try visitor.visitSingularStringField(value: self.txIndex, fieldNumber: 1)
     }
@@ -317,7 +317,7 @@ extension Tendermint_P2p_NodeInfoOther: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_P2p_NodeInfoOther, rhs: Tendermint_P2p_NodeInfoOther) -> Bool {
+  public static func ==(lhs: Tendermint_P2p_NodeInfoOther, rhs: Tendermint_P2p_NodeInfoOther) -> Bool {
     if lhs.txIndex != rhs.txIndex {return false}
     if lhs.rpcAddress != rhs.rpcAddress {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -326,14 +326,14 @@ extension Tendermint_P2p_NodeInfoOther: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Tendermint_P2p_PeerInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PeerInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PeerInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "id"),
     2: .standard(proto: "address_info"),
     3: .standard(proto: "last_connected"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -347,7 +347,7 @@ extension Tendermint_P2p_PeerInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -364,7 +364,7 @@ extension Tendermint_P2p_PeerInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_P2p_PeerInfo, rhs: Tendermint_P2p_PeerInfo) -> Bool {
+  public static func ==(lhs: Tendermint_P2p_PeerInfo, rhs: Tendermint_P2p_PeerInfo) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.addressInfo != rhs.addressInfo {return false}
     if lhs._lastConnected != rhs._lastConnected {return false}
@@ -374,15 +374,15 @@ extension Tendermint_P2p_PeerInfo: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Tendermint_P2p_PeerAddressInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PeerAddressInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PeerAddressInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .standard(proto: "last_dial_success"),
     3: .standard(proto: "last_dial_failure"),
     4: .standard(proto: "dial_failures"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -397,7 +397,7 @@ extension Tendermint_P2p_PeerAddressInfo: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -417,7 +417,7 @@ extension Tendermint_P2p_PeerAddressInfo: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_P2p_PeerAddressInfo, rhs: Tendermint_P2p_PeerAddressInfo) -> Bool {
+  public static func ==(lhs: Tendermint_P2p_PeerAddressInfo, rhs: Tendermint_P2p_PeerAddressInfo) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs._lastDialSuccess != rhs._lastDialSuccess {return false}
     if lhs._lastDialFailure != rhs._lastDialFailure {return false}

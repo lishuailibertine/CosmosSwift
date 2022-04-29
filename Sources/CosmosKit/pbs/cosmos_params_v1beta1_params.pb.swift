@@ -21,38 +21,38 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// ParameterChangeProposal defines a proposal to change one or more parameters.
-struct Cosmos_Params_V1beta1_ParameterChangeProposal {
+public struct Cosmos_Params_V1beta1_ParameterChangeProposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var title: String = String()
+  public var title: String = String()
 
-  var description_p: String = String()
+  public var description_p: String = String()
 
-  var changes: [Cosmos_Params_V1beta1_ParamChange] = []
+  public var changes: [Cosmos_Params_V1beta1_ParamChange] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// ParamChange defines an individual parameter change, for use in
 /// ParameterChangeProposal.
-struct Cosmos_Params_V1beta1_ParamChange {
+public struct Cosmos_Params_V1beta1_ParamChange {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var subspace: String = String()
+  public var subspace: String = String()
 
-  var key: String = String()
+  public var key: String = String()
 
-  var value: String = String()
+  public var value: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -65,14 +65,14 @@ extension Cosmos_Params_V1beta1_ParamChange: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.params.v1beta1"
 
 extension Cosmos_Params_V1beta1_ParameterChangeProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ParameterChangeProposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ParameterChangeProposal"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "title"),
     2: .same(proto: "description"),
     3: .same(proto: "changes"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -86,7 +86,7 @@ extension Cosmos_Params_V1beta1_ParameterChangeProposal: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.title.isEmpty {
       try visitor.visitSingularStringField(value: self.title, fieldNumber: 1)
     }
@@ -99,7 +99,7 @@ extension Cosmos_Params_V1beta1_ParameterChangeProposal: SwiftProtobuf.Message, 
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Params_V1beta1_ParameterChangeProposal, rhs: Cosmos_Params_V1beta1_ParameterChangeProposal) -> Bool {
+  public static func ==(lhs: Cosmos_Params_V1beta1_ParameterChangeProposal, rhs: Cosmos_Params_V1beta1_ParameterChangeProposal) -> Bool {
     if lhs.title != rhs.title {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs.changes != rhs.changes {return false}
@@ -109,14 +109,14 @@ extension Cosmos_Params_V1beta1_ParameterChangeProposal: SwiftProtobuf.Message, 
 }
 
 extension Cosmos_Params_V1beta1_ParamChange: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ParamChange"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ParamChange"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "subspace"),
     2: .same(proto: "key"),
     3: .same(proto: "value"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -130,7 +130,7 @@ extension Cosmos_Params_V1beta1_ParamChange: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.subspace.isEmpty {
       try visitor.visitSingularStringField(value: self.subspace, fieldNumber: 1)
     }
@@ -143,7 +143,7 @@ extension Cosmos_Params_V1beta1_ParamChange: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Params_V1beta1_ParamChange, rhs: Cosmos_Params_V1beta1_ParamChange) -> Bool {
+  public static func ==(lhs: Cosmos_Params_V1beta1_ParamChange, rhs: Cosmos_Params_V1beta1_ParamChange) -> Bool {
     if lhs.subspace != rhs.subspace {return false}
     if lhs.key != rhs.key {return false}
     if lhs.value != rhs.value {return false}

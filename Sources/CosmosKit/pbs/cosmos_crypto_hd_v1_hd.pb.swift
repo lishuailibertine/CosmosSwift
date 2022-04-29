@@ -21,30 +21,30 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// BIP44Params is used as path field in ledger item in Record.
-struct Cosmos_Crypto_Hd_V1_BIP44Params {
+public struct Cosmos_Crypto_Hd_V1_BIP44Params {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// purpose is a constant set to 44' (or 0x8000002C) following the BIP43 recommendation
-  var purpose: UInt32 = 0
+  public var purpose: UInt32 = 0
 
   /// coin_type is a constant that improves privacy
-  var coinType: UInt32 = 0
+  public var coinType: UInt32 = 0
 
   /// account splits the key space into independent user identities
-  var account: UInt32 = 0
+  public var account: UInt32 = 0
 
   /// change is a constant used for public derivation. Constant 0 is used for external chain and constant 1 for internal
   /// chain.
-  var change: Bool = false
+  public var change: Bool = false
 
   /// address_index is used as child index in BIP32 derivation
-  var addressIndex: UInt32 = 0
+  public var addressIndex: UInt32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -56,8 +56,8 @@ extension Cosmos_Crypto_Hd_V1_BIP44Params: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.crypto.hd.v1"
 
 extension Cosmos_Crypto_Hd_V1_BIP44Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BIP44Params"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BIP44Params"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "purpose"),
     2: .standard(proto: "coin_type"),
     3: .same(proto: "account"),
@@ -65,7 +65,7 @@ extension Cosmos_Crypto_Hd_V1_BIP44Params: SwiftProtobuf.Message, SwiftProtobuf.
     5: .standard(proto: "address_index"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -81,7 +81,7 @@ extension Cosmos_Crypto_Hd_V1_BIP44Params: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.purpose != 0 {
       try visitor.visitSingularUInt32Field(value: self.purpose, fieldNumber: 1)
     }
@@ -100,7 +100,7 @@ extension Cosmos_Crypto_Hd_V1_BIP44Params: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crypto_Hd_V1_BIP44Params, rhs: Cosmos_Crypto_Hd_V1_BIP44Params) -> Bool {
+  public static func ==(lhs: Cosmos_Crypto_Hd_V1_BIP44Params, rhs: Cosmos_Crypto_Hd_V1_BIP44Params) -> Bool {
     if lhs.purpose != rhs.purpose {return false}
     if lhs.coinType != rhs.coinType {return false}
     if lhs.account != rhs.account {return false}

@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "63dfa86548c4e5d5c6fd6ed42f638e388cbce529",
+          "version": "5.6.0"
+        }
+      },
+      {
         "package": "Bech32",
         "repositoryURL": "https://github.com/lishuailibertine/Bech32",
         "state": {
@@ -23,9 +32,9 @@
         "package": "CryptoSwift",
         "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift",
         "state": {
-          "branch": "main",
-          "revision": "f2d214f5067c740ff7442a3480f21c0012400439",
-          "version": null
+          "branch": null,
+          "revision": "12f2389aca4a07e0dd54c86ec23d0721ed88b8db",
+          "version": "1.4.3"
         }
       },
       {
@@ -35,6 +44,15 @@
           "branch": null,
           "revision": "d7961746769616d0b81bda771de5648ebfa1abf9",
           "version": "1.7.1"
+        }
+      },
+      {
+        "package": "PromiseKit",
+        "repositoryURL": "https://github.com/mxcl/PromiseKit.git",
+        "state": {
+          "branch": null,
+          "revision": "3fd8c77ded8a4bbee548e3bd6c987ffe8c1e3574",
+          "version": "6.17.0"
         }
       },
       {

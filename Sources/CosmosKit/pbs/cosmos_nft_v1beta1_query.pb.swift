@@ -21,252 +21,252 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// QueryBalanceRequest is the request type for the Query/Balance RPC method
-struct Cosmos_Nft_V1beta1_QueryBalanceRequest {
+public struct Cosmos_Nft_V1beta1_QueryBalanceRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var owner: String = String()
+  public var owner: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryBalanceResponse is the response type for the Query/Balance RPC method
-struct Cosmos_Nft_V1beta1_QueryBalanceResponse {
+public struct Cosmos_Nft_V1beta1_QueryBalanceResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var amount: UInt64 = 0
+  public var amount: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryOwnerRequest is the request type for the Query/Owner RPC method
-struct Cosmos_Nft_V1beta1_QueryOwnerRequest {
+public struct Cosmos_Nft_V1beta1_QueryOwnerRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var id: String = String()
+  public var id: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryOwnerResponse is the response type for the Query/Owner RPC method
-struct Cosmos_Nft_V1beta1_QueryOwnerResponse {
+public struct Cosmos_Nft_V1beta1_QueryOwnerResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var owner: String = String()
+  public var owner: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QuerySupplyRequest is the request type for the Query/Supply RPC method
-struct Cosmos_Nft_V1beta1_QuerySupplyRequest {
+public struct Cosmos_Nft_V1beta1_QuerySupplyRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QuerySupplyResponse is the response type for the Query/Supply RPC method
-struct Cosmos_Nft_V1beta1_QuerySupplyResponse {
+public struct Cosmos_Nft_V1beta1_QuerySupplyResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var amount: UInt64 = 0
+  public var amount: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// QueryNFTstRequest is the request type for the Query/NFTs RPC method
-struct Cosmos_Nft_V1beta1_QueryNFTsRequest {
+/// QueryNFTsOfClassRequest is the request type for the Query/NFTsOfClass RPC method
+public struct Cosmos_Nft_V1beta1_QueryNFTsOfClassRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var owner: String = String()
+  public var owner: String = String()
 
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
-/// QueryNFTsResponse is the response type for the Query/NFTs RPC methods
-struct Cosmos_Nft_V1beta1_QueryNFTsResponse {
+/// QueryNFTsOfClassResponse is the response type for the Query/NFTsOfClass and Query/NFTsOfClassByOwner RPC methods
+public struct Cosmos_Nft_V1beta1_QueryNFTsOfClassResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var nfts: [Cosmos_Nft_V1beta1_NFT] = []
+  public var nfts: [Cosmos_Nft_V1beta1_NFT] = []
 
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
 /// QueryNFTRequest is the request type for the Query/NFT RPC method
-struct Cosmos_Nft_V1beta1_QueryNFTRequest {
+public struct Cosmos_Nft_V1beta1_QueryNFTRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var id: String = String()
+  public var id: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryNFTResponse is the response type for the Query/NFT RPC method
-struct Cosmos_Nft_V1beta1_QueryNFTResponse {
+public struct Cosmos_Nft_V1beta1_QueryNFTResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var nft: Cosmos_Nft_V1beta1_NFT {
+  public var nft: Cosmos_Nft_V1beta1_NFT {
     get {return _nft ?? Cosmos_Nft_V1beta1_NFT()}
     set {_nft = newValue}
   }
   /// Returns true if `nft` has been explicitly set.
-  var hasNft: Bool {return self._nft != nil}
+  public var hasNft: Bool {return self._nft != nil}
   /// Clears the value of `nft`. Subsequent reads from it will return its default value.
-  mutating func clearNft() {self._nft = nil}
+  public mutating func clearNft() {self._nft = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _nft: Cosmos_Nft_V1beta1_NFT? = nil
 }
 
 /// QueryClassRequest is the request type for the Query/Class RPC method
-struct Cosmos_Nft_V1beta1_QueryClassRequest {
+public struct Cosmos_Nft_V1beta1_QueryClassRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryClassResponse is the response type for the Query/Class RPC method
-struct Cosmos_Nft_V1beta1_QueryClassResponse {
+public struct Cosmos_Nft_V1beta1_QueryClassResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var `class`: Cosmos_Nft_V1beta1_Class {
-    get {return _class ?? Cosmos_Nft_V1beta1_Class()}
+  public var `class`: Cosmos_Nft_V1beta1_NFTClass {
+    get {return _class ?? Cosmos_Nft_V1beta1_NFTClass()}
     set {_class = newValue}
   }
   /// Returns true if ``class`` has been explicitly set.
-  var hasClass: Bool {return self._class != nil}
+  public var hasClass: Bool {return self._class != nil}
   /// Clears the value of ``class``. Subsequent reads from it will return its default value.
-  mutating func clearClass() {self._class = nil}
+  public mutating func clearClass() {self._class = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
-  fileprivate var _class: Cosmos_Nft_V1beta1_Class? = nil
+  fileprivate var _class: Cosmos_Nft_V1beta1_NFTClass? = nil
 }
 
 /// QueryClassesRequest is the request type for the Query/Classes RPC method
-struct Cosmos_Nft_V1beta1_QueryClassesRequest {
+public struct Cosmos_Nft_V1beta1_QueryClassesRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryClassesResponse is the response type for the Query/Classes RPC method
-struct Cosmos_Nft_V1beta1_QueryClassesResponse {
+public struct Cosmos_Nft_V1beta1_QueryClassesResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classes: [Cosmos_Nft_V1beta1_Class] = []
+  public var classes: [Cosmos_Nft_V1beta1_NFTClass] = []
 
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
@@ -278,8 +278,8 @@ extension Cosmos_Nft_V1beta1_QueryOwnerRequest: @unchecked Sendable {}
 extension Cosmos_Nft_V1beta1_QueryOwnerResponse: @unchecked Sendable {}
 extension Cosmos_Nft_V1beta1_QuerySupplyRequest: @unchecked Sendable {}
 extension Cosmos_Nft_V1beta1_QuerySupplyResponse: @unchecked Sendable {}
-extension Cosmos_Nft_V1beta1_QueryNFTsRequest: @unchecked Sendable {}
-extension Cosmos_Nft_V1beta1_QueryNFTsResponse: @unchecked Sendable {}
+extension Cosmos_Nft_V1beta1_QueryNFTsOfClassRequest: @unchecked Sendable {}
+extension Cosmos_Nft_V1beta1_QueryNFTsOfClassResponse: @unchecked Sendable {}
 extension Cosmos_Nft_V1beta1_QueryNFTRequest: @unchecked Sendable {}
 extension Cosmos_Nft_V1beta1_QueryNFTResponse: @unchecked Sendable {}
 extension Cosmos_Nft_V1beta1_QueryClassRequest: @unchecked Sendable {}
@@ -293,13 +293,13 @@ extension Cosmos_Nft_V1beta1_QueryClassesResponse: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.nft.v1beta1"
 
 extension Cosmos_Nft_V1beta1_QueryBalanceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryBalanceRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryBalanceRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "owner"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -312,7 +312,7 @@ extension Cosmos_Nft_V1beta1_QueryBalanceRequest: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
@@ -322,7 +322,7 @@ extension Cosmos_Nft_V1beta1_QueryBalanceRequest: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryBalanceRequest, rhs: Cosmos_Nft_V1beta1_QueryBalanceRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryBalanceRequest, rhs: Cosmos_Nft_V1beta1_QueryBalanceRequest) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.owner != rhs.owner {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -331,12 +331,12 @@ extension Cosmos_Nft_V1beta1_QueryBalanceRequest: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Cosmos_Nft_V1beta1_QueryBalanceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryBalanceResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryBalanceResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -348,14 +348,14 @@ extension Cosmos_Nft_V1beta1_QueryBalanceResponse: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.amount != 0 {
       try visitor.visitSingularUInt64Field(value: self.amount, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryBalanceResponse, rhs: Cosmos_Nft_V1beta1_QueryBalanceResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryBalanceResponse, rhs: Cosmos_Nft_V1beta1_QueryBalanceResponse) -> Bool {
     if lhs.amount != rhs.amount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -363,13 +363,13 @@ extension Cosmos_Nft_V1beta1_QueryBalanceResponse: SwiftProtobuf.Message, SwiftP
 }
 
 extension Cosmos_Nft_V1beta1_QueryOwnerRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryOwnerRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryOwnerRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -382,7 +382,7 @@ extension Cosmos_Nft_V1beta1_QueryOwnerRequest: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
@@ -392,7 +392,7 @@ extension Cosmos_Nft_V1beta1_QueryOwnerRequest: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryOwnerRequest, rhs: Cosmos_Nft_V1beta1_QueryOwnerRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryOwnerRequest, rhs: Cosmos_Nft_V1beta1_QueryOwnerRequest) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -401,12 +401,12 @@ extension Cosmos_Nft_V1beta1_QueryOwnerRequest: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Cosmos_Nft_V1beta1_QueryOwnerResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryOwnerResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryOwnerResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "owner"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -418,14 +418,14 @@ extension Cosmos_Nft_V1beta1_QueryOwnerResponse: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.owner.isEmpty {
       try visitor.visitSingularStringField(value: self.owner, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryOwnerResponse, rhs: Cosmos_Nft_V1beta1_QueryOwnerResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryOwnerResponse, rhs: Cosmos_Nft_V1beta1_QueryOwnerResponse) -> Bool {
     if lhs.owner != rhs.owner {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -433,12 +433,12 @@ extension Cosmos_Nft_V1beta1_QueryOwnerResponse: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Cosmos_Nft_V1beta1_QuerySupplyRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QuerySupplyRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QuerySupplyRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -450,14 +450,14 @@ extension Cosmos_Nft_V1beta1_QuerySupplyRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QuerySupplyRequest, rhs: Cosmos_Nft_V1beta1_QuerySupplyRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QuerySupplyRequest, rhs: Cosmos_Nft_V1beta1_QuerySupplyRequest) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -465,12 +465,12 @@ extension Cosmos_Nft_V1beta1_QuerySupplyRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Cosmos_Nft_V1beta1_QuerySupplyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QuerySupplyResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QuerySupplyResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -482,29 +482,29 @@ extension Cosmos_Nft_V1beta1_QuerySupplyResponse: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.amount != 0 {
       try visitor.visitSingularUInt64Field(value: self.amount, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QuerySupplyResponse, rhs: Cosmos_Nft_V1beta1_QuerySupplyResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QuerySupplyResponse, rhs: Cosmos_Nft_V1beta1_QuerySupplyResponse) -> Bool {
     if lhs.amount != rhs.amount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Nft_V1beta1_QueryNFTsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryNFTsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Nft_V1beta1_QueryNFTsOfClassRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".QueryNFTsOfClassRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "owner"),
     3: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -518,7 +518,7 @@ extension Cosmos_Nft_V1beta1_QueryNFTsRequest: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -535,7 +535,7 @@ extension Cosmos_Nft_V1beta1_QueryNFTsRequest: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryNFTsRequest, rhs: Cosmos_Nft_V1beta1_QueryNFTsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryNFTsOfClassRequest, rhs: Cosmos_Nft_V1beta1_QueryNFTsOfClassRequest) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.owner != rhs.owner {return false}
     if lhs._pagination != rhs._pagination {return false}
@@ -544,14 +544,14 @@ extension Cosmos_Nft_V1beta1_QueryNFTsRequest: SwiftProtobuf.Message, SwiftProto
   }
 }
 
-extension Cosmos_Nft_V1beta1_QueryNFTsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryNFTsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Nft_V1beta1_QueryNFTsOfClassResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".QueryNFTsOfClassResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "nfts"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -564,7 +564,7 @@ extension Cosmos_Nft_V1beta1_QueryNFTsResponse: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -578,7 +578,7 @@ extension Cosmos_Nft_V1beta1_QueryNFTsResponse: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryNFTsResponse, rhs: Cosmos_Nft_V1beta1_QueryNFTsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryNFTsOfClassResponse, rhs: Cosmos_Nft_V1beta1_QueryNFTsOfClassResponse) -> Bool {
     if lhs.nfts != rhs.nfts {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -587,13 +587,13 @@ extension Cosmos_Nft_V1beta1_QueryNFTsResponse: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Cosmos_Nft_V1beta1_QueryNFTRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryNFTRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryNFTRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -606,7 +606,7 @@ extension Cosmos_Nft_V1beta1_QueryNFTRequest: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
@@ -616,7 +616,7 @@ extension Cosmos_Nft_V1beta1_QueryNFTRequest: SwiftProtobuf.Message, SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryNFTRequest, rhs: Cosmos_Nft_V1beta1_QueryNFTRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryNFTRequest, rhs: Cosmos_Nft_V1beta1_QueryNFTRequest) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -625,12 +625,12 @@ extension Cosmos_Nft_V1beta1_QueryNFTRequest: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Cosmos_Nft_V1beta1_QueryNFTResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryNFTResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryNFTResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "nft"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -642,7 +642,7 @@ extension Cosmos_Nft_V1beta1_QueryNFTResponse: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -653,7 +653,7 @@ extension Cosmos_Nft_V1beta1_QueryNFTResponse: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryNFTResponse, rhs: Cosmos_Nft_V1beta1_QueryNFTResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryNFTResponse, rhs: Cosmos_Nft_V1beta1_QueryNFTResponse) -> Bool {
     if lhs._nft != rhs._nft {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -661,12 +661,12 @@ extension Cosmos_Nft_V1beta1_QueryNFTResponse: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Cosmos_Nft_V1beta1_QueryClassRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryClassRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryClassRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -678,14 +678,14 @@ extension Cosmos_Nft_V1beta1_QueryClassRequest: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryClassRequest, rhs: Cosmos_Nft_V1beta1_QueryClassRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryClassRequest, rhs: Cosmos_Nft_V1beta1_QueryClassRequest) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -693,12 +693,12 @@ extension Cosmos_Nft_V1beta1_QueryClassRequest: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Cosmos_Nft_V1beta1_QueryClassResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryClassResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryClassResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "class"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -710,7 +710,7 @@ extension Cosmos_Nft_V1beta1_QueryClassResponse: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -721,7 +721,7 @@ extension Cosmos_Nft_V1beta1_QueryClassResponse: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryClassResponse, rhs: Cosmos_Nft_V1beta1_QueryClassResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryClassResponse, rhs: Cosmos_Nft_V1beta1_QueryClassResponse) -> Bool {
     if lhs._class != rhs._class {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -729,12 +729,12 @@ extension Cosmos_Nft_V1beta1_QueryClassResponse: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Cosmos_Nft_V1beta1_QueryClassesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryClassesRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryClassesRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -746,7 +746,7 @@ extension Cosmos_Nft_V1beta1_QueryClassesRequest: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -757,7 +757,7 @@ extension Cosmos_Nft_V1beta1_QueryClassesRequest: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryClassesRequest, rhs: Cosmos_Nft_V1beta1_QueryClassesRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryClassesRequest, rhs: Cosmos_Nft_V1beta1_QueryClassesRequest) -> Bool {
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -765,13 +765,13 @@ extension Cosmos_Nft_V1beta1_QueryClassesRequest: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Cosmos_Nft_V1beta1_QueryClassesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryClassesResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryClassesResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "classes"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -784,7 +784,7 @@ extension Cosmos_Nft_V1beta1_QueryClassesResponse: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -798,7 +798,7 @@ extension Cosmos_Nft_V1beta1_QueryClassesResponse: SwiftProtobuf.Message, SwiftP
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_QueryClassesResponse, rhs: Cosmos_Nft_V1beta1_QueryClassesResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_QueryClassesResponse, rhs: Cosmos_Nft_V1beta1_QueryClassesResponse) -> Bool {
     if lhs.classes != rhs.classes {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

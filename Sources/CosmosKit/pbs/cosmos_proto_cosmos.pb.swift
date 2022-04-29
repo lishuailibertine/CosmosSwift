@@ -32,34 +32,34 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 extension SwiftProtobuf.Google_Protobuf_FieldOptions {
 
   /// accepts_interface is used to annote fields that accept interfaces
-  var CosmosProto_acceptsInterface: String {
+  public var CosmosProto_acceptsInterface: String {
     get {return getExtensionValue(ext: CosmosProto_Extensions_accepts_interface) ?? String()}
     set {setExtensionValue(ext: CosmosProto_Extensions_accepts_interface, value: newValue)}
   }
   /// Returns true if extension `CosmosProto_Extensions_accepts_interface`
   /// has been explicitly set.
-  var hasCosmosProto_acceptsInterface: Bool {
+  public var hasCosmosProto_acceptsInterface: Bool {
     return hasExtensionValue(ext: CosmosProto_Extensions_accepts_interface)
   }
   /// Clears the value of extension `CosmosProto_Extensions_accepts_interface`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearCosmosProto_acceptsInterface() {
+  public mutating func clearCosmosProto_acceptsInterface() {
     clearExtensionValue(ext: CosmosProto_Extensions_accepts_interface)
   }
 
   /// scalar is used to define scalar types
-  var CosmosProto_scalar: String {
+  public var CosmosProto_scalar: String {
     get {return getExtensionValue(ext: CosmosProto_Extensions_scalar) ?? String()}
     set {setExtensionValue(ext: CosmosProto_Extensions_scalar, value: newValue)}
   }
   /// Returns true if extension `CosmosProto_Extensions_scalar`
   /// has been explicitly set.
-  var hasCosmosProto_scalar: Bool {
+  public var hasCosmosProto_scalar: Bool {
     return hasExtensionValue(ext: CosmosProto_Extensions_scalar)
   }
   /// Clears the value of extension `CosmosProto_Extensions_scalar`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearCosmosProto_scalar() {
+  public mutating func clearCosmosProto_scalar() {
     clearExtensionValue(ext: CosmosProto_Extensions_scalar)
   }
 }
@@ -67,18 +67,18 @@ extension SwiftProtobuf.Google_Protobuf_FieldOptions {
 extension SwiftProtobuf.Google_Protobuf_MessageOptions {
 
   /// implements_interface is used to annotate interface implementations
-  var CosmosProto_implementsInterface: String {
+  public var CosmosProto_implementsInterface: String {
     get {return getExtensionValue(ext: CosmosProto_Extensions_implements_interface) ?? String()}
     set {setExtensionValue(ext: CosmosProto_Extensions_implements_interface, value: newValue)}
   }
   /// Returns true if extension `CosmosProto_Extensions_implements_interface`
   /// has been explicitly set.
-  var hasCosmosProto_implementsInterface: Bool {
+  public var hasCosmosProto_implementsInterface: Bool {
     return hasExtensionValue(ext: CosmosProto_Extensions_implements_interface)
   }
   /// Clears the value of extension `CosmosProto_Extensions_implements_interface`.
   /// Subsequent reads from it will return its default value.
-  mutating func clearCosmosProto_implementsInterface() {
+  public mutating func clearCosmosProto_implementsInterface() {
     clearExtensionValue(ext: CosmosProto_Extensions_implements_interface)
   }
 
@@ -90,7 +90,7 @@ extension SwiftProtobuf.Google_Protobuf_MessageOptions {
 /// this .proto file. It can be used any place an `SwiftProtobuf.ExtensionMap` is needed
 /// in parsing, or it can be combined with other `SwiftProtobuf.SimpleExtensionMap`s to create
 /// a larger `SwiftProtobuf.SimpleExtensionMap`.
-let CosmosProto_Cosmos_Extensions: SwiftProtobuf.SimpleExtensionMap = [
+public let CosmosProto_Cosmos_Extensions: SwiftProtobuf.SimpleExtensionMap = [
   CosmosProto_Extensions_implements_interface,
   CosmosProto_Extensions_accepts_interface,
   CosmosProto_Extensions_scalar
@@ -101,19 +101,19 @@ let CosmosProto_Cosmos_Extensions: SwiftProtobuf.SimpleExtensionMap = [
 // accessors for the extension fields on the messages directly.
 
 /// implements_interface is used to annotate interface implementations
-let CosmosProto_Extensions_implements_interface = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufString>, SwiftProtobuf.Google_Protobuf_MessageOptions>(
+public let CosmosProto_Extensions_implements_interface = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufString>, SwiftProtobuf.Google_Protobuf_MessageOptions>(
   _protobuf_fieldNumber: 93001,
   fieldName: "cosmos_proto.implements_interface"
 )
 
 /// accepts_interface is used to annote fields that accept interfaces
-let CosmosProto_Extensions_accepts_interface = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufString>, SwiftProtobuf.Google_Protobuf_FieldOptions>(
+public let CosmosProto_Extensions_accepts_interface = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufString>, SwiftProtobuf.Google_Protobuf_FieldOptions>(
   _protobuf_fieldNumber: 93001,
   fieldName: "cosmos_proto.accepts_interface"
 )
 
 /// scalar is used to define scalar types
-let CosmosProto_Extensions_scalar = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufString>, SwiftProtobuf.Google_Protobuf_FieldOptions>(
+public let CosmosProto_Extensions_scalar = SwiftProtobuf.MessageExtension<SwiftProtobuf.OptionalExtensionField<SwiftProtobuf.ProtobufString>, SwiftProtobuf.Google_Protobuf_FieldOptions>(
   _protobuf_fieldNumber: 93002,
   fieldName: "cosmos_proto.scalar"
 )

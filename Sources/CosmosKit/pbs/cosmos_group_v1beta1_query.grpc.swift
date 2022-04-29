@@ -37,10 +37,10 @@ internal protocol Cosmos_Group_V1beta1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupInfoRequest, Cosmos_Group_V1beta1_QueryGroupInfoResponse>
 
-  func groupPolicyInfo(
-    _ request: Cosmos_Group_V1beta1_QueryGroupPolicyInfoRequest,
+  func groupAccountInfo(
+    _ request: Cosmos_Group_V1beta1_QueryGroupAccountInfoRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupPolicyInfoRequest, Cosmos_Group_V1beta1_QueryGroupPolicyInfoResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupAccountInfoRequest, Cosmos_Group_V1beta1_QueryGroupAccountInfoResponse>
 
   func groupMembers(
     _ request: Cosmos_Group_V1beta1_QueryGroupMembersRequest,
@@ -52,25 +52,25 @@ internal protocol Cosmos_Group_V1beta1_QueryClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupsByAdminRequest, Cosmos_Group_V1beta1_QueryGroupsByAdminResponse>
 
-  func groupPoliciesByGroup(
-    _ request: Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupRequest,
+  func groupAccountsByGroup(
+    _ request: Cosmos_Group_V1beta1_QueryGroupAccountsByGroupRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupRequest, Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupAccountsByGroupRequest, Cosmos_Group_V1beta1_QueryGroupAccountsByGroupResponse>
 
-  func groupPoliciesByAdmin(
-    _ request: Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminRequest,
+  func groupAccountsByAdmin(
+    _ request: Cosmos_Group_V1beta1_QueryGroupAccountsByAdminRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminRequest, Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupAccountsByAdminRequest, Cosmos_Group_V1beta1_QueryGroupAccountsByAdminResponse>
 
   func proposal(
     _ request: Cosmos_Group_V1beta1_QueryProposalRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Group_V1beta1_QueryProposalRequest, Cosmos_Group_V1beta1_QueryProposalResponse>
 
-  func proposalsByGroupPolicy(
-    _ request: Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyRequest,
+  func proposalsByGroupAccount(
+    _ request: Cosmos_Group_V1beta1_QueryProposalsByGroupAccountRequest,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyRequest, Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryProposalsByGroupAccountRequest, Cosmos_Group_V1beta1_QueryProposalsByGroupAccountResponse>
 
   func voteByProposalVoter(
     _ request: Cosmos_Group_V1beta1_QueryVoteByProposalVoterRequest,
@@ -86,16 +86,6 @@ internal protocol Cosmos_Group_V1beta1_QueryClientProtocol: GRPCClient {
     _ request: Cosmos_Group_V1beta1_QueryVotesByVoterRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Group_V1beta1_QueryVotesByVoterRequest, Cosmos_Group_V1beta1_QueryVotesByVoterResponse>
-
-  func groupsByMember(
-    _ request: Cosmos_Group_V1beta1_QueryGroupsByMemberRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupsByMemberRequest, Cosmos_Group_V1beta1_QueryGroupsByMemberResponse>
-
-  func tallyResult(
-    _ request: Cosmos_Group_V1beta1_QueryTallyResultRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryTallyResultRequest, Cosmos_Group_V1beta1_QueryTallyResultResponse>
 }
 
 extension Cosmos_Group_V1beta1_QueryClientProtocol {
@@ -121,21 +111,21 @@ extension Cosmos_Group_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// GroupPolicyInfo queries group policy info based on account address of group policy.
+  /// GroupAccountInfo queries group account info based on group account address.
   ///
   /// - Parameters:
-  ///   - request: Request to send to GroupPolicyInfo.
+  ///   - request: Request to send to GroupAccountInfo.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func groupPolicyInfo(
-    _ request: Cosmos_Group_V1beta1_QueryGroupPolicyInfoRequest,
+  internal func groupAccountInfo(
+    _ request: Cosmos_Group_V1beta1_QueryGroupAccountInfoRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupPolicyInfoRequest, Cosmos_Group_V1beta1_QueryGroupPolicyInfoResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupAccountInfoRequest, Cosmos_Group_V1beta1_QueryGroupAccountInfoResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Query/GroupPolicyInfo",
+      path: "/cosmos.group.v1beta1.Query/GroupAccountInfo",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGroupPolicyInfoInterceptors() ?? []
+      interceptors: self.interceptors?.makeGroupAccountInfoInterceptors() ?? []
     )
   }
 
@@ -175,39 +165,39 @@ extension Cosmos_Group_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// GroupPoliciesByGroup queries group policies by group id.
+  /// GroupAccountsByGroup queries group accounts by group id.
   ///
   /// - Parameters:
-  ///   - request: Request to send to GroupPoliciesByGroup.
+  ///   - request: Request to send to GroupAccountsByGroup.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func groupPoliciesByGroup(
-    _ request: Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupRequest,
+  internal func groupAccountsByGroup(
+    _ request: Cosmos_Group_V1beta1_QueryGroupAccountsByGroupRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupRequest, Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupAccountsByGroupRequest, Cosmos_Group_V1beta1_QueryGroupAccountsByGroupResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Query/GroupPoliciesByGroup",
+      path: "/cosmos.group.v1beta1.Query/GroupAccountsByGroup",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGroupPoliciesByGroupInterceptors() ?? []
+      interceptors: self.interceptors?.makeGroupAccountsByGroupInterceptors() ?? []
     )
   }
 
-  /// GroupsByAdmin queries group policies by admin address.
+  /// GroupsByAdmin queries group accounts by admin address.
   ///
   /// - Parameters:
-  ///   - request: Request to send to GroupPoliciesByAdmin.
+  ///   - request: Request to send to GroupAccountsByAdmin.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func groupPoliciesByAdmin(
-    _ request: Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminRequest,
+  internal func groupAccountsByAdmin(
+    _ request: Cosmos_Group_V1beta1_QueryGroupAccountsByAdminRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminRequest, Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupAccountsByAdminRequest, Cosmos_Group_V1beta1_QueryGroupAccountsByAdminResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Query/GroupPoliciesByAdmin",
+      path: "/cosmos.group.v1beta1.Query/GroupAccountsByAdmin",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGroupPoliciesByAdminInterceptors() ?? []
+      interceptors: self.interceptors?.makeGroupAccountsByAdminInterceptors() ?? []
     )
   }
 
@@ -229,21 +219,21 @@ extension Cosmos_Group_V1beta1_QueryClientProtocol {
     )
   }
 
-  /// ProposalsByGroupPolicy queries proposals based on account address of group policy.
+  /// ProposalsByGroupAccount queries proposals based on group account address.
   ///
   /// - Parameters:
-  ///   - request: Request to send to ProposalsByGroupPolicy.
+  ///   - request: Request to send to ProposalsByGroupAccount.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func proposalsByGroupPolicy(
-    _ request: Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyRequest,
+  internal func proposalsByGroupAccount(
+    _ request: Cosmos_Group_V1beta1_QueryProposalsByGroupAccountRequest,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyRequest, Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryProposalsByGroupAccountRequest, Cosmos_Group_V1beta1_QueryProposalsByGroupAccountResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Query/ProposalsByGroupPolicy",
+      path: "/cosmos.group.v1beta1.Query/ProposalsByGroupAccount",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeProposalsByGroupPolicyInterceptors() ?? []
+      interceptors: self.interceptors?.makeProposalsByGroupAccountInterceptors() ?? []
     )
   }
 
@@ -300,42 +290,6 @@ extension Cosmos_Group_V1beta1_QueryClientProtocol {
       interceptors: self.interceptors?.makeVotesByVoterInterceptors() ?? []
     )
   }
-
-  /// GroupsByMember queries groups by member address.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GroupsByMember.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func groupsByMember(
-    _ request: Cosmos_Group_V1beta1_QueryGroupsByMemberRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryGroupsByMemberRequest, Cosmos_Group_V1beta1_QueryGroupsByMemberResponse> {
-    return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Query/GroupsByMember",
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGroupsByMemberInterceptors() ?? []
-    )
-  }
-
-  /// TallyResult queries the tally of a proposal votes.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to TallyResult.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func tallyResult(
-    _ request: Cosmos_Group_V1beta1_QueryTallyResultRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_QueryTallyResultRequest, Cosmos_Group_V1beta1_QueryTallyResultResponse> {
-    return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Query/TallyResult",
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeTallyResultInterceptors() ?? []
-    )
-  }
 }
 
 internal protocol Cosmos_Group_V1beta1_QueryClientInterceptorFactoryProtocol {
@@ -343,8 +297,8 @@ internal protocol Cosmos_Group_V1beta1_QueryClientInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when invoking 'groupInfo'.
   func makeGroupInfoInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupInfoRequest, Cosmos_Group_V1beta1_QueryGroupInfoResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'groupPolicyInfo'.
-  func makeGroupPolicyInfoInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupPolicyInfoRequest, Cosmos_Group_V1beta1_QueryGroupPolicyInfoResponse>]
+  /// - Returns: Interceptors to use when invoking 'groupAccountInfo'.
+  func makeGroupAccountInfoInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupAccountInfoRequest, Cosmos_Group_V1beta1_QueryGroupAccountInfoResponse>]
 
   /// - Returns: Interceptors to use when invoking 'groupMembers'.
   func makeGroupMembersInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupMembersRequest, Cosmos_Group_V1beta1_QueryGroupMembersResponse>]
@@ -352,17 +306,17 @@ internal protocol Cosmos_Group_V1beta1_QueryClientInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when invoking 'groupsByAdmin'.
   func makeGroupsByAdminInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupsByAdminRequest, Cosmos_Group_V1beta1_QueryGroupsByAdminResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'groupPoliciesByGroup'.
-  func makeGroupPoliciesByGroupInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupRequest, Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupResponse>]
+  /// - Returns: Interceptors to use when invoking 'groupAccountsByGroup'.
+  func makeGroupAccountsByGroupInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupAccountsByGroupRequest, Cosmos_Group_V1beta1_QueryGroupAccountsByGroupResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'groupPoliciesByAdmin'.
-  func makeGroupPoliciesByAdminInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminRequest, Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminResponse>]
+  /// - Returns: Interceptors to use when invoking 'groupAccountsByAdmin'.
+  func makeGroupAccountsByAdminInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupAccountsByAdminRequest, Cosmos_Group_V1beta1_QueryGroupAccountsByAdminResponse>]
 
   /// - Returns: Interceptors to use when invoking 'proposal'.
   func makeProposalInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryProposalRequest, Cosmos_Group_V1beta1_QueryProposalResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'proposalsByGroupPolicy'.
-  func makeProposalsByGroupPolicyInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyRequest, Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyResponse>]
+  /// - Returns: Interceptors to use when invoking 'proposalsByGroupAccount'.
+  func makeProposalsByGroupAccountInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryProposalsByGroupAccountRequest, Cosmos_Group_V1beta1_QueryProposalsByGroupAccountResponse>]
 
   /// - Returns: Interceptors to use when invoking 'voteByProposalVoter'.
   func makeVoteByProposalVoterInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryVoteByProposalVoterRequest, Cosmos_Group_V1beta1_QueryVoteByProposalVoterResponse>]
@@ -372,12 +326,6 @@ internal protocol Cosmos_Group_V1beta1_QueryClientInterceptorFactoryProtocol {
 
   /// - Returns: Interceptors to use when invoking 'votesByVoter'.
   func makeVotesByVoterInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryVotesByVoterRequest, Cosmos_Group_V1beta1_QueryVotesByVoterResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'groupsByMember'.
-  func makeGroupsByMemberInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryGroupsByMemberRequest, Cosmos_Group_V1beta1_QueryGroupsByMemberResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'tallyResult'.
-  func makeTallyResultInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_QueryTallyResultRequest, Cosmos_Group_V1beta1_QueryTallyResultResponse>]
 }
 
 internal final class Cosmos_Group_V1beta1_QueryClient: Cosmos_Group_V1beta1_QueryClientProtocol {
@@ -411,8 +359,8 @@ internal protocol Cosmos_Group_V1beta1_QueryProvider: CallHandlerProvider {
   /// GroupInfo queries group info based on group id.
   func groupInfo(request: Cosmos_Group_V1beta1_QueryGroupInfoRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupInfoResponse>
 
-  /// GroupPolicyInfo queries group policy info based on account address of group policy.
-  func groupPolicyInfo(request: Cosmos_Group_V1beta1_QueryGroupPolicyInfoRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupPolicyInfoResponse>
+  /// GroupAccountInfo queries group account info based on group account address.
+  func groupAccountInfo(request: Cosmos_Group_V1beta1_QueryGroupAccountInfoRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupAccountInfoResponse>
 
   /// GroupMembers queries members of a group
   func groupMembers(request: Cosmos_Group_V1beta1_QueryGroupMembersRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupMembersResponse>
@@ -420,17 +368,17 @@ internal protocol Cosmos_Group_V1beta1_QueryProvider: CallHandlerProvider {
   /// GroupsByAdmin queries groups by admin address.
   func groupsByAdmin(request: Cosmos_Group_V1beta1_QueryGroupsByAdminRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupsByAdminResponse>
 
-  /// GroupPoliciesByGroup queries group policies by group id.
-  func groupPoliciesByGroup(request: Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupResponse>
+  /// GroupAccountsByGroup queries group accounts by group id.
+  func groupAccountsByGroup(request: Cosmos_Group_V1beta1_QueryGroupAccountsByGroupRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupAccountsByGroupResponse>
 
-  /// GroupsByAdmin queries group policies by admin address.
-  func groupPoliciesByAdmin(request: Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminResponse>
+  /// GroupsByAdmin queries group accounts by admin address.
+  func groupAccountsByAdmin(request: Cosmos_Group_V1beta1_QueryGroupAccountsByAdminRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupAccountsByAdminResponse>
 
   /// Proposal queries a proposal based on proposal id.
   func proposal(request: Cosmos_Group_V1beta1_QueryProposalRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryProposalResponse>
 
-  /// ProposalsByGroupPolicy queries proposals based on account address of group policy.
-  func proposalsByGroupPolicy(request: Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyResponse>
+  /// ProposalsByGroupAccount queries proposals based on group account address.
+  func proposalsByGroupAccount(request: Cosmos_Group_V1beta1_QueryProposalsByGroupAccountRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryProposalsByGroupAccountResponse>
 
   /// VoteByProposalVoter queries a vote by proposal id and voter.
   func voteByProposalVoter(request: Cosmos_Group_V1beta1_QueryVoteByProposalVoterRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryVoteByProposalVoterResponse>
@@ -440,12 +388,6 @@ internal protocol Cosmos_Group_V1beta1_QueryProvider: CallHandlerProvider {
 
   /// VotesByVoter queries a vote by voter.
   func votesByVoter(request: Cosmos_Group_V1beta1_QueryVotesByVoterRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryVotesByVoterResponse>
-
-  /// GroupsByMember queries groups by member address.
-  func groupsByMember(request: Cosmos_Group_V1beta1_QueryGroupsByMemberRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryGroupsByMemberResponse>
-
-  /// TallyResult queries the tally of a proposal votes.
-  func tallyResult(request: Cosmos_Group_V1beta1_QueryTallyResultRequest, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_QueryTallyResultResponse>
 }
 
 extension Cosmos_Group_V1beta1_QueryProvider {
@@ -467,13 +409,13 @@ extension Cosmos_Group_V1beta1_QueryProvider {
         userFunction: self.groupInfo(request:context:)
       )
 
-    case "GroupPolicyInfo":
+    case "GroupAccountInfo":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryGroupPolicyInfoRequest>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryGroupPolicyInfoResponse>(),
-        interceptors: self.interceptors?.makeGroupPolicyInfoInterceptors() ?? [],
-        userFunction: self.groupPolicyInfo(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryGroupAccountInfoRequest>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryGroupAccountInfoResponse>(),
+        interceptors: self.interceptors?.makeGroupAccountInfoInterceptors() ?? [],
+        userFunction: self.groupAccountInfo(request:context:)
       )
 
     case "GroupMembers":
@@ -494,22 +436,22 @@ extension Cosmos_Group_V1beta1_QueryProvider {
         userFunction: self.groupsByAdmin(request:context:)
       )
 
-    case "GroupPoliciesByGroup":
+    case "GroupAccountsByGroup":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupRequest>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupResponse>(),
-        interceptors: self.interceptors?.makeGroupPoliciesByGroupInterceptors() ?? [],
-        userFunction: self.groupPoliciesByGroup(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryGroupAccountsByGroupRequest>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryGroupAccountsByGroupResponse>(),
+        interceptors: self.interceptors?.makeGroupAccountsByGroupInterceptors() ?? [],
+        userFunction: self.groupAccountsByGroup(request:context:)
       )
 
-    case "GroupPoliciesByAdmin":
+    case "GroupAccountsByAdmin":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminRequest>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminResponse>(),
-        interceptors: self.interceptors?.makeGroupPoliciesByAdminInterceptors() ?? [],
-        userFunction: self.groupPoliciesByAdmin(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryGroupAccountsByAdminRequest>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryGroupAccountsByAdminResponse>(),
+        interceptors: self.interceptors?.makeGroupAccountsByAdminInterceptors() ?? [],
+        userFunction: self.groupAccountsByAdmin(request:context:)
       )
 
     case "Proposal":
@@ -521,13 +463,13 @@ extension Cosmos_Group_V1beta1_QueryProvider {
         userFunction: self.proposal(request:context:)
       )
 
-    case "ProposalsByGroupPolicy":
+    case "ProposalsByGroupAccount":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyRequest>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyResponse>(),
-        interceptors: self.interceptors?.makeProposalsByGroupPolicyInterceptors() ?? [],
-        userFunction: self.proposalsByGroupPolicy(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryProposalsByGroupAccountRequest>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryProposalsByGroupAccountResponse>(),
+        interceptors: self.interceptors?.makeProposalsByGroupAccountInterceptors() ?? [],
+        userFunction: self.proposalsByGroupAccount(request:context:)
       )
 
     case "VoteByProposalVoter":
@@ -557,24 +499,6 @@ extension Cosmos_Group_V1beta1_QueryProvider {
         userFunction: self.votesByVoter(request:context:)
       )
 
-    case "GroupsByMember":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryGroupsByMemberRequest>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryGroupsByMemberResponse>(),
-        interceptors: self.interceptors?.makeGroupsByMemberInterceptors() ?? [],
-        userFunction: self.groupsByMember(request:context:)
-      )
-
-    case "TallyResult":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_QueryTallyResultRequest>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_QueryTallyResultResponse>(),
-        interceptors: self.interceptors?.makeTallyResultInterceptors() ?? [],
-        userFunction: self.tallyResult(request:context:)
-      )
-
     default:
       return nil
     }
@@ -587,9 +511,9 @@ internal protocol Cosmos_Group_V1beta1_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeGroupInfoInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupInfoRequest, Cosmos_Group_V1beta1_QueryGroupInfoResponse>]
 
-  /// - Returns: Interceptors to use when handling 'groupPolicyInfo'.
+  /// - Returns: Interceptors to use when handling 'groupAccountInfo'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeGroupPolicyInfoInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupPolicyInfoRequest, Cosmos_Group_V1beta1_QueryGroupPolicyInfoResponse>]
+  func makeGroupAccountInfoInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupAccountInfoRequest, Cosmos_Group_V1beta1_QueryGroupAccountInfoResponse>]
 
   /// - Returns: Interceptors to use when handling 'groupMembers'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -599,21 +523,21 @@ internal protocol Cosmos_Group_V1beta1_QueryServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeGroupsByAdminInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupsByAdminRequest, Cosmos_Group_V1beta1_QueryGroupsByAdminResponse>]
 
-  /// - Returns: Interceptors to use when handling 'groupPoliciesByGroup'.
+  /// - Returns: Interceptors to use when handling 'groupAccountsByGroup'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeGroupPoliciesByGroupInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupRequest, Cosmos_Group_V1beta1_QueryGroupPoliciesByGroupResponse>]
+  func makeGroupAccountsByGroupInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupAccountsByGroupRequest, Cosmos_Group_V1beta1_QueryGroupAccountsByGroupResponse>]
 
-  /// - Returns: Interceptors to use when handling 'groupPoliciesByAdmin'.
+  /// - Returns: Interceptors to use when handling 'groupAccountsByAdmin'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeGroupPoliciesByAdminInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminRequest, Cosmos_Group_V1beta1_QueryGroupPoliciesByAdminResponse>]
+  func makeGroupAccountsByAdminInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupAccountsByAdminRequest, Cosmos_Group_V1beta1_QueryGroupAccountsByAdminResponse>]
 
   /// - Returns: Interceptors to use when handling 'proposal'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeProposalInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryProposalRequest, Cosmos_Group_V1beta1_QueryProposalResponse>]
 
-  /// - Returns: Interceptors to use when handling 'proposalsByGroupPolicy'.
+  /// - Returns: Interceptors to use when handling 'proposalsByGroupAccount'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeProposalsByGroupPolicyInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyRequest, Cosmos_Group_V1beta1_QueryProposalsByGroupPolicyResponse>]
+  func makeProposalsByGroupAccountInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryProposalsByGroupAccountRequest, Cosmos_Group_V1beta1_QueryProposalsByGroupAccountResponse>]
 
   /// - Returns: Interceptors to use when handling 'voteByProposalVoter'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -626,12 +550,4 @@ internal protocol Cosmos_Group_V1beta1_QueryServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'votesByVoter'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeVotesByVoterInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryVotesByVoterRequest, Cosmos_Group_V1beta1_QueryVotesByVoterResponse>]
-
-  /// - Returns: Interceptors to use when handling 'groupsByMember'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeGroupsByMemberInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryGroupsByMemberRequest, Cosmos_Group_V1beta1_QueryGroupsByMemberResponse>]
-
-  /// - Returns: Interceptors to use when handling 'tallyResult'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeTallyResultInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_QueryTallyResultRequest, Cosmos_Group_V1beta1_QueryTallyResultResponse>]
 }

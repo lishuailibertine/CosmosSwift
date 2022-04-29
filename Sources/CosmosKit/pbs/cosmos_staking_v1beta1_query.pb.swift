@@ -21,647 +21,647 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// QueryValidatorsRequest is request type for Query/Validators RPC method.
-struct Cosmos_Staking_V1beta1_QueryValidatorsRequest {
+public struct Cosmos_Staking_V1beta1_QueryValidatorsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// status enables to query for validators matching a given status.
-  var status: String = String()
+  public var status: String = String()
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryValidatorsResponse is response type for the Query/Validators RPC method
-struct Cosmos_Staking_V1beta1_QueryValidatorsResponse {
+public struct Cosmos_Staking_V1beta1_QueryValidatorsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validators contains all the queried validators.
-  var validators: [Cosmos_Staking_V1beta1_Validator] = []
+  public var validators: [Cosmos_Staking_V1beta1_Validator] = []
 
   /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
 /// QueryValidatorRequest is response type for the Query/Validator RPC method
-struct Cosmos_Staking_V1beta1_QueryValidatorRequest {
+public struct Cosmos_Staking_V1beta1_QueryValidatorRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator_addr defines the validator address to query for.
-  var validatorAddr: String = String()
+  public var validatorAddr: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryValidatorResponse is response type for the Query/Validator RPC method
-struct Cosmos_Staking_V1beta1_QueryValidatorResponse {
+public struct Cosmos_Staking_V1beta1_QueryValidatorResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator defines the the validator info.
-  var validator: Cosmos_Staking_V1beta1_Validator {
+  public var validator: Cosmos_Staking_V1beta1_Validator {
     get {return _validator ?? Cosmos_Staking_V1beta1_Validator()}
     set {_validator = newValue}
   }
   /// Returns true if `validator` has been explicitly set.
-  var hasValidator: Bool {return self._validator != nil}
+  public var hasValidator: Bool {return self._validator != nil}
   /// Clears the value of `validator`. Subsequent reads from it will return its default value.
-  mutating func clearValidator() {self._validator = nil}
+  public mutating func clearValidator() {self._validator = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _validator: Cosmos_Staking_V1beta1_Validator? = nil
 }
 
 /// QueryValidatorDelegationsRequest is request type for the
 /// Query/ValidatorDelegations RPC method
-struct Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest {
+public struct Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator_addr defines the validator address to query for.
-  var validatorAddr: String = String()
+  public var validatorAddr: String = String()
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryValidatorDelegationsResponse is response type for the
 /// Query/ValidatorDelegations RPC method
-struct Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse {
+public struct Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var delegationResponses: [Cosmos_Staking_V1beta1_DelegationResponse] = []
+  public var delegationResponses: [Cosmos_Staking_V1beta1_DelegationResponse] = []
 
   /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
 /// QueryValidatorUnbondingDelegationsRequest is required type for the
 /// Query/ValidatorUnbondingDelegations RPC method
-struct Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest {
+public struct Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator_addr defines the validator address to query for.
-  var validatorAddr: String = String()
+  public var validatorAddr: String = String()
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryValidatorUnbondingDelegationsResponse is response type for the
 /// Query/ValidatorUnbondingDelegations RPC method.
-struct Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse {
+public struct Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unbondingResponses: [Cosmos_Staking_V1beta1_UnbondingDelegation] = []
+  public var unbondingResponses: [Cosmos_Staking_V1beta1_UnbondingDelegation] = []
 
   /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
 /// QueryDelegationRequest is request type for the Query/Delegation RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegationRequest {
+public struct Cosmos_Staking_V1beta1_QueryDelegationRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_addr defines the delegator address to query for.
-  var delegatorAddr: String = String()
+  public var delegatorAddr: String = String()
 
   /// validator_addr defines the validator address to query for.
-  var validatorAddr: String = String()
+  public var validatorAddr: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryDelegationResponse is response type for the Query/Delegation RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegationResponse {
+public struct Cosmos_Staking_V1beta1_QueryDelegationResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegation_responses defines the delegation info of a delegation.
-  var delegationResponse: Cosmos_Staking_V1beta1_DelegationResponse {
+  public var delegationResponse: Cosmos_Staking_V1beta1_DelegationResponse {
     get {return _delegationResponse ?? Cosmos_Staking_V1beta1_DelegationResponse()}
     set {_delegationResponse = newValue}
   }
   /// Returns true if `delegationResponse` has been explicitly set.
-  var hasDelegationResponse: Bool {return self._delegationResponse != nil}
+  public var hasDelegationResponse: Bool {return self._delegationResponse != nil}
   /// Clears the value of `delegationResponse`. Subsequent reads from it will return its default value.
-  mutating func clearDelegationResponse() {self._delegationResponse = nil}
+  public mutating func clearDelegationResponse() {self._delegationResponse = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _delegationResponse: Cosmos_Staking_V1beta1_DelegationResponse? = nil
 }
 
 /// QueryUnbondingDelegationRequest is request type for the
 /// Query/UnbondingDelegation RPC method.
-struct Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest {
+public struct Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_addr defines the delegator address to query for.
-  var delegatorAddr: String = String()
+  public var delegatorAddr: String = String()
 
   /// validator_addr defines the validator address to query for.
-  var validatorAddr: String = String()
+  public var validatorAddr: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryDelegationResponse is response type for the Query/UnbondingDelegation
 /// RPC method.
-struct Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse {
+public struct Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// unbond defines the unbonding information of a delegation.
-  var unbond: Cosmos_Staking_V1beta1_UnbondingDelegation {
+  public var unbond: Cosmos_Staking_V1beta1_UnbondingDelegation {
     get {return _unbond ?? Cosmos_Staking_V1beta1_UnbondingDelegation()}
     set {_unbond = newValue}
   }
   /// Returns true if `unbond` has been explicitly set.
-  var hasUnbond: Bool {return self._unbond != nil}
+  public var hasUnbond: Bool {return self._unbond != nil}
   /// Clears the value of `unbond`. Subsequent reads from it will return its default value.
-  mutating func clearUnbond() {self._unbond = nil}
+  public mutating func clearUnbond() {self._unbond = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _unbond: Cosmos_Staking_V1beta1_UnbondingDelegation? = nil
 }
 
 /// QueryDelegatorDelegationsRequest is request type for the
 /// Query/DelegatorDelegations RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest {
+public struct Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_addr defines the delegator address to query for.
-  var delegatorAddr: String = String()
+  public var delegatorAddr: String = String()
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryDelegatorDelegationsResponse is response type for the
 /// Query/DelegatorDelegations RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse {
+public struct Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegation_responses defines all the delegations' info of a delegator.
-  var delegationResponses: [Cosmos_Staking_V1beta1_DelegationResponse] = []
+  public var delegationResponses: [Cosmos_Staking_V1beta1_DelegationResponse] = []
 
   /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
 /// QueryDelegatorUnbondingDelegationsRequest is request type for the
 /// Query/DelegatorUnbondingDelegations RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest {
+public struct Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_addr defines the delegator address to query for.
-  var delegatorAddr: String = String()
+  public var delegatorAddr: String = String()
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryUnbondingDelegatorDelegationsResponse is response type for the
 /// Query/UnbondingDelegatorDelegations RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse {
+public struct Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unbondingResponses: [Cosmos_Staking_V1beta1_UnbondingDelegation] = []
+  public var unbondingResponses: [Cosmos_Staking_V1beta1_UnbondingDelegation] = []
 
   /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
 /// QueryRedelegationsRequest is request type for the Query/Redelegations RPC
 /// method.
-struct Cosmos_Staking_V1beta1_QueryRedelegationsRequest {
+public struct Cosmos_Staking_V1beta1_QueryRedelegationsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_addr defines the delegator address to query for.
-  var delegatorAddr: String = String()
+  public var delegatorAddr: String = String()
 
   /// src_validator_addr defines the validator address to redelegate from.
-  var srcValidatorAddr: String = String()
+  public var srcValidatorAddr: String = String()
 
   /// dst_validator_addr defines the validator address to redelegate to.
-  var dstValidatorAddr: String = String()
+  public var dstValidatorAddr: String = String()
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryRedelegationsResponse is response type for the Query/Redelegations RPC
 /// method.
-struct Cosmos_Staking_V1beta1_QueryRedelegationsResponse {
+public struct Cosmos_Staking_V1beta1_QueryRedelegationsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var redelegationResponses: [Cosmos_Staking_V1beta1_RedelegationResponse] = []
+  public var redelegationResponses: [Cosmos_Staking_V1beta1_RedelegationResponse] = []
 
   /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
 /// QueryDelegatorValidatorsRequest is request type for the
 /// Query/DelegatorValidators RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest {
+public struct Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_addr defines the delegator address to query for.
-  var delegatorAddr: String = String()
+  public var delegatorAddr: String = String()
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryDelegatorValidatorsResponse is response type for the
 /// Query/DelegatorValidators RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse {
+public struct Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validators defines the the validators' info of a delegator.
-  var validators: [Cosmos_Staking_V1beta1_Validator] = []
+  public var validators: [Cosmos_Staking_V1beta1_Validator] = []
 
   /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
 
 /// QueryDelegatorValidatorRequest is request type for the
 /// Query/DelegatorValidator RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest {
+public struct Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_addr defines the delegator address to query for.
-  var delegatorAddr: String = String()
+  public var delegatorAddr: String = String()
 
   /// validator_addr defines the validator address to query for.
-  var validatorAddr: String = String()
+  public var validatorAddr: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryDelegatorValidatorResponse response type for the
 /// Query/DelegatorValidator RPC method.
-struct Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse {
+public struct Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator defines the the validator info.
-  var validator: Cosmos_Staking_V1beta1_Validator {
+  public var validator: Cosmos_Staking_V1beta1_Validator {
     get {return _validator ?? Cosmos_Staking_V1beta1_Validator()}
     set {_validator = newValue}
   }
   /// Returns true if `validator` has been explicitly set.
-  var hasValidator: Bool {return self._validator != nil}
+  public var hasValidator: Bool {return self._validator != nil}
   /// Clears the value of `validator`. Subsequent reads from it will return its default value.
-  mutating func clearValidator() {self._validator = nil}
+  public mutating func clearValidator() {self._validator = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _validator: Cosmos_Staking_V1beta1_Validator? = nil
 }
 
 /// QueryHistoricalInfoRequest is request type for the Query/HistoricalInfo RPC
 /// method.
-struct Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest {
+public struct Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// height defines at which height to query the historical info.
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryHistoricalInfoResponse is response type for the Query/HistoricalInfo RPC
 /// method.
-struct Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse {
+public struct Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// hist defines the historical info at the given height.
-  var hist: Cosmos_Staking_V1beta1_HistoricalInfo {
+  public var hist: Cosmos_Staking_V1beta1_HistoricalInfo {
     get {return _hist ?? Cosmos_Staking_V1beta1_HistoricalInfo()}
     set {_hist = newValue}
   }
   /// Returns true if `hist` has been explicitly set.
-  var hasHist: Bool {return self._hist != nil}
+  public var hasHist: Bool {return self._hist != nil}
   /// Clears the value of `hist`. Subsequent reads from it will return its default value.
-  mutating func clearHist() {self._hist = nil}
+  public mutating func clearHist() {self._hist = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _hist: Cosmos_Staking_V1beta1_HistoricalInfo? = nil
 }
 
 /// QueryPoolRequest is request type for the Query/Pool RPC method.
-struct Cosmos_Staking_V1beta1_QueryPoolRequest {
+public struct Cosmos_Staking_V1beta1_QueryPoolRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryPoolResponse is response type for the Query/Pool RPC method.
-struct Cosmos_Staking_V1beta1_QueryPoolResponse {
+public struct Cosmos_Staking_V1beta1_QueryPoolResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// pool defines the pool info.
-  var pool: Cosmos_Staking_V1beta1_Pool {
+  public var pool: Cosmos_Staking_V1beta1_Pool {
     get {return _pool ?? Cosmos_Staking_V1beta1_Pool()}
     set {_pool = newValue}
   }
   /// Returns true if `pool` has been explicitly set.
-  var hasPool: Bool {return self._pool != nil}
+  public var hasPool: Bool {return self._pool != nil}
   /// Clears the value of `pool`. Subsequent reads from it will return its default value.
-  mutating func clearPool() {self._pool = nil}
+  public mutating func clearPool() {self._pool = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pool: Cosmos_Staking_V1beta1_Pool? = nil
 }
 
 /// QueryParamsRequest is request type for the Query/Params RPC method.
-struct Cosmos_Staking_V1beta1_QueryParamsRequest {
+public struct Cosmos_Staking_V1beta1_QueryParamsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryParamsResponse is response type for the Query/Params RPC method.
-struct Cosmos_Staking_V1beta1_QueryParamsResponse {
+public struct Cosmos_Staking_V1beta1_QueryParamsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// params holds all the parameters of this module.
-  var params: Cosmos_Staking_V1beta1_Params {
+  public var params: Cosmos_Staking_V1beta1_Params {
     get {return _params ?? Cosmos_Staking_V1beta1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  public var hasParams: Bool {return self._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  public mutating func clearParams() {self._params = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _params: Cosmos_Staking_V1beta1_Params? = nil
 }
@@ -702,13 +702,13 @@ extension Cosmos_Staking_V1beta1_QueryParamsResponse: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.staking.v1beta1"
 
 extension Cosmos_Staking_V1beta1_QueryValidatorsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryValidatorsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryValidatorsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "status"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -721,7 +721,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorsRequest: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -735,7 +735,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorsRequest: SwiftProtobuf.Message, 
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorsRequest, rhs: Cosmos_Staking_V1beta1_QueryValidatorsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorsRequest, rhs: Cosmos_Staking_V1beta1_QueryValidatorsRequest) -> Bool {
     if lhs.status != rhs.status {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -744,13 +744,13 @@ extension Cosmos_Staking_V1beta1_QueryValidatorsRequest: SwiftProtobuf.Message, 
 }
 
 extension Cosmos_Staking_V1beta1_QueryValidatorsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryValidatorsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryValidatorsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "validators"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -763,7 +763,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorsResponse: SwiftProtobuf.Message,
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -777,7 +777,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorsResponse: SwiftProtobuf.Message,
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorsResponse, rhs: Cosmos_Staking_V1beta1_QueryValidatorsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorsResponse, rhs: Cosmos_Staking_V1beta1_QueryValidatorsResponse) -> Bool {
     if lhs.validators != rhs.validators {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -786,12 +786,12 @@ extension Cosmos_Staking_V1beta1_QueryValidatorsResponse: SwiftProtobuf.Message,
 }
 
 extension Cosmos_Staking_V1beta1_QueryValidatorRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryValidatorRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryValidatorRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_addr"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -803,14 +803,14 @@ extension Cosmos_Staking_V1beta1_QueryValidatorRequest: SwiftProtobuf.Message, S
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.validatorAddr.isEmpty {
       try visitor.visitSingularStringField(value: self.validatorAddr, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorRequest, rhs: Cosmos_Staking_V1beta1_QueryValidatorRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorRequest, rhs: Cosmos_Staking_V1beta1_QueryValidatorRequest) -> Bool {
     if lhs.validatorAddr != rhs.validatorAddr {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -818,12 +818,12 @@ extension Cosmos_Staking_V1beta1_QueryValidatorRequest: SwiftProtobuf.Message, S
 }
 
 extension Cosmos_Staking_V1beta1_QueryValidatorResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryValidatorResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryValidatorResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "validator"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -835,7 +835,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorResponse: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -846,7 +846,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorResponse: SwiftProtobuf.Message, 
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorResponse, rhs: Cosmos_Staking_V1beta1_QueryValidatorResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorResponse, rhs: Cosmos_Staking_V1beta1_QueryValidatorResponse) -> Bool {
     if lhs._validator != rhs._validator {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -854,13 +854,13 @@ extension Cosmos_Staking_V1beta1_QueryValidatorResponse: SwiftProtobuf.Message, 
 }
 
 extension Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryValidatorDelegationsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryValidatorDelegationsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_addr"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -873,7 +873,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest: SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -887,7 +887,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest: SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest) -> Bool {
     if lhs.validatorAddr != rhs.validatorAddr {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -896,13 +896,13 @@ extension Cosmos_Staking_V1beta1_QueryValidatorDelegationsRequest: SwiftProtobuf
 }
 
 extension Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryValidatorDelegationsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryValidatorDelegationsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegation_responses"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -915,7 +915,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse: SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -929,7 +929,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse: SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse) -> Bool {
     if lhs.delegationResponses != rhs.delegationResponses {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -938,13 +938,13 @@ extension Cosmos_Staking_V1beta1_QueryValidatorDelegationsResponse: SwiftProtobu
 }
 
 extension Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryValidatorUnbondingDelegationsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryValidatorUnbondingDelegationsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_addr"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -957,7 +957,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest: Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -971,7 +971,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest: Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest) -> Bool {
     if lhs.validatorAddr != rhs.validatorAddr {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -980,13 +980,13 @@ extension Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsRequest: Swif
 }
 
 extension Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryValidatorUnbondingDelegationsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryValidatorUnbondingDelegationsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "unbonding_responses"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -999,7 +999,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse: Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1013,7 +1013,7 @@ extension Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse: Swi
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse) -> Bool {
     if lhs.unbondingResponses != rhs.unbondingResponses {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1022,13 +1022,13 @@ extension Cosmos_Staking_V1beta1_QueryValidatorUnbondingDelegationsResponse: Swi
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegationRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegationRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegationRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_addr"),
     2: .standard(proto: "validator_addr"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1041,7 +1041,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegationRequest: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.delegatorAddr.isEmpty {
       try visitor.visitSingularStringField(value: self.delegatorAddr, fieldNumber: 1)
     }
@@ -1051,7 +1051,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegationRequest: SwiftProtobuf.Message, 
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegationRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegationRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegationRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegationRequest) -> Bool {
     if lhs.delegatorAddr != rhs.delegatorAddr {return false}
     if lhs.validatorAddr != rhs.validatorAddr {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1060,12 +1060,12 @@ extension Cosmos_Staking_V1beta1_QueryDelegationRequest: SwiftProtobuf.Message, 
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegationResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegationResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegationResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegation_response"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1077,7 +1077,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegationResponse: SwiftProtobuf.Message,
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1088,7 +1088,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegationResponse: SwiftProtobuf.Message,
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegationResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegationResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegationResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegationResponse) -> Bool {
     if lhs._delegationResponse != rhs._delegationResponse {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1096,13 +1096,13 @@ extension Cosmos_Staking_V1beta1_QueryDelegationResponse: SwiftProtobuf.Message,
 }
 
 extension Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryUnbondingDelegationRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryUnbondingDelegationRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_addr"),
     2: .standard(proto: "validator_addr"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1115,7 +1115,7 @@ extension Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest: SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.delegatorAddr.isEmpty {
       try visitor.visitSingularStringField(value: self.delegatorAddr, fieldNumber: 1)
     }
@@ -1125,7 +1125,7 @@ extension Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest: SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest, rhs: Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest, rhs: Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest) -> Bool {
     if lhs.delegatorAddr != rhs.delegatorAddr {return false}
     if lhs.validatorAddr != rhs.validatorAddr {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1134,12 +1134,12 @@ extension Cosmos_Staking_V1beta1_QueryUnbondingDelegationRequest: SwiftProtobuf.
 }
 
 extension Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryUnbondingDelegationResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryUnbondingDelegationResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "unbond"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1151,7 +1151,7 @@ extension Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse: SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1162,7 +1162,7 @@ extension Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse: SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse, rhs: Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse, rhs: Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse) -> Bool {
     if lhs._unbond != rhs._unbond {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1170,13 +1170,13 @@ extension Cosmos_Staking_V1beta1_QueryUnbondingDelegationResponse: SwiftProtobuf
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegatorDelegationsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegatorDelegationsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_addr"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1189,7 +1189,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest: SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1203,7 +1203,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest: SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest) -> Bool {
     if lhs.delegatorAddr != rhs.delegatorAddr {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1212,13 +1212,13 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorDelegationsRequest: SwiftProtobuf
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegatorDelegationsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegatorDelegationsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegation_responses"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1231,7 +1231,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse: SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1245,7 +1245,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse: SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse) -> Bool {
     if lhs.delegationResponses != rhs.delegationResponses {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1254,13 +1254,13 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorDelegationsResponse: SwiftProtobu
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegatorUnbondingDelegationsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegatorUnbondingDelegationsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_addr"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1273,7 +1273,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest: Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1287,7 +1287,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest: Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest) -> Bool {
     if lhs.delegatorAddr != rhs.delegatorAddr {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1296,13 +1296,13 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsRequest: Swif
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegatorUnbondingDelegationsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegatorUnbondingDelegationsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "unbonding_responses"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1315,7 +1315,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse: Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1329,7 +1329,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse: Swi
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse) -> Bool {
     if lhs.unbondingResponses != rhs.unbondingResponses {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1338,15 +1338,15 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorUnbondingDelegationsResponse: Swi
 }
 
 extension Cosmos_Staking_V1beta1_QueryRedelegationsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryRedelegationsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryRedelegationsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_addr"),
     2: .standard(proto: "src_validator_addr"),
     3: .standard(proto: "dst_validator_addr"),
     4: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1361,7 +1361,7 @@ extension Cosmos_Staking_V1beta1_QueryRedelegationsRequest: SwiftProtobuf.Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1381,7 +1381,7 @@ extension Cosmos_Staking_V1beta1_QueryRedelegationsRequest: SwiftProtobuf.Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryRedelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryRedelegationsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryRedelegationsRequest, rhs: Cosmos_Staking_V1beta1_QueryRedelegationsRequest) -> Bool {
     if lhs.delegatorAddr != rhs.delegatorAddr {return false}
     if lhs.srcValidatorAddr != rhs.srcValidatorAddr {return false}
     if lhs.dstValidatorAddr != rhs.dstValidatorAddr {return false}
@@ -1392,13 +1392,13 @@ extension Cosmos_Staking_V1beta1_QueryRedelegationsRequest: SwiftProtobuf.Messag
 }
 
 extension Cosmos_Staking_V1beta1_QueryRedelegationsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryRedelegationsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryRedelegationsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "redelegation_responses"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1411,7 +1411,7 @@ extension Cosmos_Staking_V1beta1_QueryRedelegationsResponse: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1425,7 +1425,7 @@ extension Cosmos_Staking_V1beta1_QueryRedelegationsResponse: SwiftProtobuf.Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryRedelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryRedelegationsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryRedelegationsResponse, rhs: Cosmos_Staking_V1beta1_QueryRedelegationsResponse) -> Bool {
     if lhs.redelegationResponses != rhs.redelegationResponses {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1434,13 +1434,13 @@ extension Cosmos_Staking_V1beta1_QueryRedelegationsResponse: SwiftProtobuf.Messa
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegatorValidatorsRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegatorValidatorsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_addr"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1453,7 +1453,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest: SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1467,7 +1467,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest: SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest) -> Bool {
     if lhs.delegatorAddr != rhs.delegatorAddr {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1476,13 +1476,13 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorsRequest: SwiftProtobuf.
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegatorValidatorsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegatorValidatorsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "validators"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1495,7 +1495,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse: SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1509,7 +1509,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse: SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse) -> Bool {
     if lhs.validators != rhs.validators {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1518,13 +1518,13 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorsResponse: SwiftProtobuf
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegatorValidatorRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegatorValidatorRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_addr"),
     2: .standard(proto: "validator_addr"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1537,7 +1537,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest: SwiftProtobuf.M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.delegatorAddr.isEmpty {
       try visitor.visitSingularStringField(value: self.delegatorAddr, fieldNumber: 1)
     }
@@ -1547,7 +1547,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest: SwiftProtobuf.M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest, rhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest) -> Bool {
     if lhs.delegatorAddr != rhs.delegatorAddr {return false}
     if lhs.validatorAddr != rhs.validatorAddr {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1556,12 +1556,12 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorRequest: SwiftProtobuf.M
 }
 
 extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryDelegatorValidatorResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryDelegatorValidatorResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "validator"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1573,7 +1573,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse: SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1584,7 +1584,7 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse: SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse, rhs: Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse) -> Bool {
     if lhs._validator != rhs._validator {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1592,12 +1592,12 @@ extension Cosmos_Staking_V1beta1_QueryDelegatorValidatorResponse: SwiftProtobuf.
 }
 
 extension Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryHistoricalInfoRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryHistoricalInfoRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "height"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1609,14 +1609,14 @@ extension Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.height != 0 {
       try visitor.visitSingularInt64Field(value: self.height, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest, rhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest, rhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest) -> Bool {
     if lhs.height != rhs.height {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1624,12 +1624,12 @@ extension Cosmos_Staking_V1beta1_QueryHistoricalInfoRequest: SwiftProtobuf.Messa
 }
 
 extension Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryHistoricalInfoResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryHistoricalInfoResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "hist"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1641,7 +1641,7 @@ extension Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse: SwiftProtobuf.Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1652,7 +1652,7 @@ extension Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse: SwiftProtobuf.Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse, rhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse, rhs: Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse) -> Bool {
     if lhs._hist != rhs._hist {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1660,31 +1660,31 @@ extension Cosmos_Staking_V1beta1_QueryHistoricalInfoResponse: SwiftProtobuf.Mess
 }
 
 extension Cosmos_Staking_V1beta1_QueryPoolRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryPoolRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".QueryPoolRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryPoolRequest, rhs: Cosmos_Staking_V1beta1_QueryPoolRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryPoolRequest, rhs: Cosmos_Staking_V1beta1_QueryPoolRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Staking_V1beta1_QueryPoolResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryPoolResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryPoolResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pool"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1696,7 +1696,7 @@ extension Cosmos_Staking_V1beta1_QueryPoolResponse: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1707,7 +1707,7 @@ extension Cosmos_Staking_V1beta1_QueryPoolResponse: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryPoolResponse, rhs: Cosmos_Staking_V1beta1_QueryPoolResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryPoolResponse, rhs: Cosmos_Staking_V1beta1_QueryPoolResponse) -> Bool {
     if lhs._pool != rhs._pool {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1715,31 +1715,31 @@ extension Cosmos_Staking_V1beta1_QueryPoolResponse: SwiftProtobuf.Message, Swift
 }
 
 extension Cosmos_Staking_V1beta1_QueryParamsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryParamsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".QueryParamsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryParamsRequest, rhs: Cosmos_Staking_V1beta1_QueryParamsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryParamsRequest, rhs: Cosmos_Staking_V1beta1_QueryParamsRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Staking_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryParamsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryParamsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1751,7 +1751,7 @@ extension Cosmos_Staking_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1762,7 +1762,7 @@ extension Cosmos_Staking_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, Swi
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_QueryParamsResponse, rhs: Cosmos_Staking_V1beta1_QueryParamsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_QueryParamsResponse, rhs: Cosmos_Staking_V1beta1_QueryParamsResponse) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

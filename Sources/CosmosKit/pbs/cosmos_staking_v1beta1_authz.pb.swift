@@ -23,8 +23,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// AuthorizationType defines the type of staking module authorization type
 ///
 /// Since: cosmos-sdk 0.43
-enum Cosmos_Staking_V1beta1_AuthorizationType: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Cosmos_Staking_V1beta1_AuthorizationType: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
 
   /// AUTHORIZATION_TYPE_UNSPECIFIED specifies an unknown authorization type
   case unspecified // = 0
@@ -39,11 +39,11 @@ enum Cosmos_Staking_V1beta1_AuthorizationType: SwiftProtobuf.Enum {
   case redelegate // = 3
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unspecified
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unspecified
     case 1: self = .delegate
@@ -53,7 +53,7 @@ enum Cosmos_Staking_V1beta1_AuthorizationType: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unspecified: return 0
     case .delegate: return 1
@@ -69,7 +69,7 @@ enum Cosmos_Staking_V1beta1_AuthorizationType: SwiftProtobuf.Enum {
 
 extension Cosmos_Staking_V1beta1_AuthorizationType: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Cosmos_Staking_V1beta1_AuthorizationType] = [
+  public static var allCases: [Cosmos_Staking_V1beta1_AuthorizationType] = [
     .unspecified,
     .delegate,
     .undelegate,
@@ -82,28 +82,28 @@ extension Cosmos_Staking_V1beta1_AuthorizationType: CaseIterable {
 /// StakeAuthorization defines authorization for delegate/undelegate/redelegate.
 ///
 /// Since: cosmos-sdk 0.43
-struct Cosmos_Staking_V1beta1_StakeAuthorization {
+public struct Cosmos_Staking_V1beta1_StakeAuthorization {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// max_tokens specifies the maximum amount of tokens can be delegate to a validator. If it is
   /// empty, there is no spend limit and any amount of coins can be delegated.
-  var maxTokens: Cosmos_Base_V1beta1_Coin {
+  public var maxTokens: Cosmos_Base_V1beta1_Coin {
     get {return _maxTokens ?? Cosmos_Base_V1beta1_Coin()}
     set {_maxTokens = newValue}
   }
   /// Returns true if `maxTokens` has been explicitly set.
-  var hasMaxTokens: Bool {return self._maxTokens != nil}
+  public var hasMaxTokens: Bool {return self._maxTokens != nil}
   /// Clears the value of `maxTokens`. Subsequent reads from it will return its default value.
-  mutating func clearMaxTokens() {self._maxTokens = nil}
+  public mutating func clearMaxTokens() {self._maxTokens = nil}
 
   /// validators is the oneof that represents either allow_list or deny_list
-  var validators: Cosmos_Staking_V1beta1_StakeAuthorization.OneOf_Validators? = nil
+  public var validators: Cosmos_Staking_V1beta1_StakeAuthorization.OneOf_Validators? = nil
 
   /// allow_list specifies list of validator addresses to whom grantee can delegate tokens on behalf of granter's
   /// account.
-  var allowList: Cosmos_Staking_V1beta1_StakeAuthorization.Validators {
+  public var allowList: Cosmos_Staking_V1beta1_StakeAuthorization.Validators {
     get {
       if case .allowList(let v)? = validators {return v}
       return Cosmos_Staking_V1beta1_StakeAuthorization.Validators()
@@ -112,7 +112,7 @@ struct Cosmos_Staking_V1beta1_StakeAuthorization {
   }
 
   /// deny_list specifies list of validator addresses to whom grantee can not delegate tokens.
-  var denyList: Cosmos_Staking_V1beta1_StakeAuthorization.Validators {
+  public var denyList: Cosmos_Staking_V1beta1_StakeAuthorization.Validators {
     get {
       if case .denyList(let v)? = validators {return v}
       return Cosmos_Staking_V1beta1_StakeAuthorization.Validators()
@@ -121,12 +121,12 @@ struct Cosmos_Staking_V1beta1_StakeAuthorization {
   }
 
   /// authorization_type defines one of AuthorizationType.
-  var authorizationType: Cosmos_Staking_V1beta1_AuthorizationType = .unspecified
+  public var authorizationType: Cosmos_Staking_V1beta1_AuthorizationType = .unspecified
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// validators is the oneof that represents either allow_list or deny_list
-  enum OneOf_Validators: Equatable {
+  public enum OneOf_Validators: Equatable {
     /// allow_list specifies list of validator addresses to whom grantee can delegate tokens on behalf of granter's
     /// account.
     case allowList(Cosmos_Staking_V1beta1_StakeAuthorization.Validators)
@@ -134,7 +134,7 @@ struct Cosmos_Staking_V1beta1_StakeAuthorization {
     case denyList(Cosmos_Staking_V1beta1_StakeAuthorization.Validators)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Cosmos_Staking_V1beta1_StakeAuthorization.OneOf_Validators, rhs: Cosmos_Staking_V1beta1_StakeAuthorization.OneOf_Validators) -> Bool {
+    public static func ==(lhs: Cosmos_Staking_V1beta1_StakeAuthorization.OneOf_Validators, rhs: Cosmos_Staking_V1beta1_StakeAuthorization.OneOf_Validators) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -154,19 +154,19 @@ struct Cosmos_Staking_V1beta1_StakeAuthorization {
   }
 
   /// Validators defines list of validator addresses.
-  struct Validators {
+  public struct Validators {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var address: [String] = []
+    public var address: [String] = []
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  init() {}
+  public init() {}
 
   fileprivate var _maxTokens: Cosmos_Base_V1beta1_Coin? = nil
 }
@@ -183,7 +183,7 @@ extension Cosmos_Staking_V1beta1_StakeAuthorization.Validators: @unchecked Senda
 fileprivate let _protobuf_package = "cosmos.staking.v1beta1"
 
 extension Cosmos_Staking_V1beta1_AuthorizationType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "AUTHORIZATION_TYPE_UNSPECIFIED"),
     1: .same(proto: "AUTHORIZATION_TYPE_DELEGATE"),
     2: .same(proto: "AUTHORIZATION_TYPE_UNDELEGATE"),
@@ -192,15 +192,15 @@ extension Cosmos_Staking_V1beta1_AuthorizationType: SwiftProtobuf._ProtoNameProv
 }
 
 extension Cosmos_Staking_V1beta1_StakeAuthorization: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".StakeAuthorization"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".StakeAuthorization"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "max_tokens"),
     2: .standard(proto: "allow_list"),
     3: .standard(proto: "deny_list"),
     4: .standard(proto: "authorization_type"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -239,7 +239,7 @@ extension Cosmos_Staking_V1beta1_StakeAuthorization: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -264,7 +264,7 @@ extension Cosmos_Staking_V1beta1_StakeAuthorization: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_StakeAuthorization, rhs: Cosmos_Staking_V1beta1_StakeAuthorization) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_StakeAuthorization, rhs: Cosmos_Staking_V1beta1_StakeAuthorization) -> Bool {
     if lhs._maxTokens != rhs._maxTokens {return false}
     if lhs.validators != rhs.validators {return false}
     if lhs.authorizationType != rhs.authorizationType {return false}
@@ -274,12 +274,12 @@ extension Cosmos_Staking_V1beta1_StakeAuthorization: SwiftProtobuf.Message, Swif
 }
 
 extension Cosmos_Staking_V1beta1_StakeAuthorization.Validators: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Cosmos_Staking_V1beta1_StakeAuthorization.protoMessageName + ".Validators"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Cosmos_Staking_V1beta1_StakeAuthorization.protoMessageName + ".Validators"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -291,14 +291,14 @@ extension Cosmos_Staking_V1beta1_StakeAuthorization.Validators: SwiftProtobuf.Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitRepeatedStringField(value: self.address, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_StakeAuthorization.Validators, rhs: Cosmos_Staking_V1beta1_StakeAuthorization.Validators) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_StakeAuthorization.Validators, rhs: Cosmos_Staking_V1beta1_StakeAuthorization.Validators) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

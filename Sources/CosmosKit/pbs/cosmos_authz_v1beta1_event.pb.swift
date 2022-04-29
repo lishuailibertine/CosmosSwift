@@ -23,43 +23,43 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// EventGrant is emitted on Msg/Grant
-struct Cosmos_Authz_V1beta1_EventGrant {
+public struct Cosmos_Authz_V1beta1_EventGrant {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Msg type URL for which an autorization is granted
-  var msgTypeURL: String = String()
+  public var msgTypeURL: String = String()
 
   /// Granter account address
-  var granter: String = String()
+  public var granter: String = String()
 
   /// Grantee account address
-  var grantee: String = String()
+  public var grantee: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// EventRevoke is emitted on Msg/Revoke
-struct Cosmos_Authz_V1beta1_EventRevoke {
+public struct Cosmos_Authz_V1beta1_EventRevoke {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Msg type URL for which an autorization is revoked
-  var msgTypeURL: String = String()
+  public var msgTypeURL: String = String()
 
   /// Granter account address
-  var granter: String = String()
+  public var granter: String = String()
 
   /// Grantee account address
-  var grantee: String = String()
+  public var grantee: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -72,14 +72,14 @@ extension Cosmos_Authz_V1beta1_EventRevoke: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.authz.v1beta1"
 
 extension Cosmos_Authz_V1beta1_EventGrant: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventGrant"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventGrant"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     2: .standard(proto: "msg_type_url"),
     3: .same(proto: "granter"),
     4: .same(proto: "grantee"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -93,7 +93,7 @@ extension Cosmos_Authz_V1beta1_EventGrant: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.msgTypeURL.isEmpty {
       try visitor.visitSingularStringField(value: self.msgTypeURL, fieldNumber: 2)
     }
@@ -106,7 +106,7 @@ extension Cosmos_Authz_V1beta1_EventGrant: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Authz_V1beta1_EventGrant, rhs: Cosmos_Authz_V1beta1_EventGrant) -> Bool {
+  public static func ==(lhs: Cosmos_Authz_V1beta1_EventGrant, rhs: Cosmos_Authz_V1beta1_EventGrant) -> Bool {
     if lhs.msgTypeURL != rhs.msgTypeURL {return false}
     if lhs.granter != rhs.granter {return false}
     if lhs.grantee != rhs.grantee {return false}
@@ -116,14 +116,14 @@ extension Cosmos_Authz_V1beta1_EventGrant: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Cosmos_Authz_V1beta1_EventRevoke: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventRevoke"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventRevoke"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     2: .standard(proto: "msg_type_url"),
     3: .same(proto: "granter"),
     4: .same(proto: "grantee"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -137,7 +137,7 @@ extension Cosmos_Authz_V1beta1_EventRevoke: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.msgTypeURL.isEmpty {
       try visitor.visitSingularStringField(value: self.msgTypeURL, fieldNumber: 2)
     }
@@ -150,7 +150,7 @@ extension Cosmos_Authz_V1beta1_EventRevoke: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Authz_V1beta1_EventRevoke, rhs: Cosmos_Authz_V1beta1_EventRevoke) -> Bool {
+  public static func ==(lhs: Cosmos_Authz_V1beta1_EventRevoke, rhs: Cosmos_Authz_V1beta1_EventRevoke) -> Bool {
     if lhs.msgTypeURL != rhs.msgTypeURL {return false}
     if lhs.granter != rhs.granter {return false}
     if lhs.grantee != rhs.grantee {return false}

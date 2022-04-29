@@ -13,6 +13,14 @@ public enum CosmosHttpRequestError: Error{
     case ResponseError(stateCode:Int)
     case OtherError(error:Error)
 }
+public struct CosmosCoin:Codable{
+    public let amount: String
+    public let denom: String
+    public init(amount: String,denom: String){
+        self.amount = "\(Int(Double(amount) ?? 0))"
+        self.denom = denom
+    }
+}
 public struct CosmosLastBlock:Codable{
     public struct CosmosBlockId: Codable{
     }

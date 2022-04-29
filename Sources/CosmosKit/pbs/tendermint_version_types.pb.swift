@@ -23,35 +23,35 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// App includes the protocol and software version for the application.
 /// This information is included in ResponseInfo. The App.Protocol can be
 /// updated in ResponseEndBlock.
-struct Tendermint_Version_App {
+public struct Tendermint_Version_App {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var `protocol`: UInt64 = 0
+  public var `protocol`: UInt64 = 0
 
-  var software: String = String()
+  public var software: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Consensus captures the consensus rules for processing a block in the blockchain,
 /// including all blockchain data structures and the rules of the application's
 /// state transition machine.
-struct Tendermint_Version_Consensus {
+public struct Tendermint_Version_Consensus {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var block: UInt64 = 0
+  public var block: UInt64 = 0
 
-  var app: UInt64 = 0
+  public var app: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -64,13 +64,13 @@ extension Tendermint_Version_Consensus: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.version"
 
 extension Tendermint_Version_App: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".App"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".App"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "protocol"),
     2: .same(proto: "software"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -83,7 +83,7 @@ extension Tendermint_Version_App: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.`protocol` != 0 {
       try visitor.visitSingularUInt64Field(value: self.`protocol`, fieldNumber: 1)
     }
@@ -93,7 +93,7 @@ extension Tendermint_Version_App: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Version_App, rhs: Tendermint_Version_App) -> Bool {
+  public static func ==(lhs: Tendermint_Version_App, rhs: Tendermint_Version_App) -> Bool {
     if lhs.`protocol` != rhs.`protocol` {return false}
     if lhs.software != rhs.software {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -102,13 +102,13 @@ extension Tendermint_Version_App: SwiftProtobuf.Message, SwiftProtobuf._MessageI
 }
 
 extension Tendermint_Version_Consensus: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Consensus"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Consensus"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "block"),
     2: .same(proto: "app"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -121,7 +121,7 @@ extension Tendermint_Version_Consensus: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.block != 0 {
       try visitor.visitSingularUInt64Field(value: self.block, fieldNumber: 1)
     }
@@ -131,7 +131,7 @@ extension Tendermint_Version_Consensus: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Version_Consensus, rhs: Tendermint_Version_Consensus) -> Bool {
+  public static func ==(lhs: Tendermint_Version_Consensus, rhs: Tendermint_Version_Consensus) -> Bool {
     if lhs.block != rhs.block {return false}
     if lhs.app != rhs.app {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

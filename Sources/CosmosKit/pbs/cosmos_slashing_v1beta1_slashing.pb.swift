@@ -22,72 +22,72 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// ValidatorSigningInfo defines a validator's signing info for monitoring their
 /// liveness activity.
-struct Cosmos_Slashing_V1beta1_ValidatorSigningInfo {
+public struct Cosmos_Slashing_V1beta1_ValidatorSigningInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var address: String = String()
+  public var address: String = String()
 
   /// Height at which validator was first a candidate OR was unjailed
-  var startHeight: Int64 = 0
+  public var startHeight: Int64 = 0
 
   /// Index which is incremented each time the validator was a bonded
   /// in a block and may have signed a precommit or not. This in conjunction with the
   /// `SignedBlocksWindow` param determines the index in the `MissedBlocksBitArray`.
-  var indexOffset: Int64 = 0
+  public var indexOffset: Int64 = 0
 
   /// Timestamp until which the validator is jailed due to liveness downtime.
-  var jailedUntil: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var jailedUntil: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _jailedUntil ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_jailedUntil = newValue}
   }
   /// Returns true if `jailedUntil` has been explicitly set.
-  var hasJailedUntil: Bool {return self._jailedUntil != nil}
+  public var hasJailedUntil: Bool {return self._jailedUntil != nil}
   /// Clears the value of `jailedUntil`. Subsequent reads from it will return its default value.
-  mutating func clearJailedUntil() {self._jailedUntil = nil}
+  public mutating func clearJailedUntil() {self._jailedUntil = nil}
 
   /// Whether or not a validator has been tombstoned (killed out of validator set). It is set
   /// once the validator commits an equivocation or for any other configured misbehiavor.
-  var tombstoned: Bool = false
+  public var tombstoned: Bool = false
 
   /// A counter kept to avoid unnecessary array reads.
   /// Note that `Sum(MissedBlocksBitArray)` always equals `MissedBlocksCounter`.
-  var missedBlocksCounter: Int64 = 0
+  public var missedBlocksCounter: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _jailedUntil: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 /// Params represents the parameters used for by the slashing module.
-struct Cosmos_Slashing_V1beta1_Params {
+public struct Cosmos_Slashing_V1beta1_Params {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var signedBlocksWindow: Int64 = 0
+  public var signedBlocksWindow: Int64 = 0
 
-  var minSignedPerWindow: Data = Data()
+  public var minSignedPerWindow: Data = Data()
 
-  var downtimeJailDuration: SwiftProtobuf.Google_Protobuf_Duration {
+  public var downtimeJailDuration: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _downtimeJailDuration ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_downtimeJailDuration = newValue}
   }
   /// Returns true if `downtimeJailDuration` has been explicitly set.
-  var hasDowntimeJailDuration: Bool {return self._downtimeJailDuration != nil}
+  public var hasDowntimeJailDuration: Bool {return self._downtimeJailDuration != nil}
   /// Clears the value of `downtimeJailDuration`. Subsequent reads from it will return its default value.
-  mutating func clearDowntimeJailDuration() {self._downtimeJailDuration = nil}
+  public mutating func clearDowntimeJailDuration() {self._downtimeJailDuration = nil}
 
-  var slashFractionDoubleSign: Data = Data()
+  public var slashFractionDoubleSign: Data = Data()
 
-  var slashFractionDowntime: Data = Data()
+  public var slashFractionDowntime: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _downtimeJailDuration: SwiftProtobuf.Google_Protobuf_Duration? = nil
 }
@@ -102,8 +102,8 @@ extension Cosmos_Slashing_V1beta1_Params: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.slashing.v1beta1"
 
 extension Cosmos_Slashing_V1beta1_ValidatorSigningInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorSigningInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorSigningInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .standard(proto: "start_height"),
     3: .standard(proto: "index_offset"),
@@ -112,7 +112,7 @@ extension Cosmos_Slashing_V1beta1_ValidatorSigningInfo: SwiftProtobuf.Message, S
     6: .standard(proto: "missed_blocks_counter"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -129,7 +129,7 @@ extension Cosmos_Slashing_V1beta1_ValidatorSigningInfo: SwiftProtobuf.Message, S
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -155,7 +155,7 @@ extension Cosmos_Slashing_V1beta1_ValidatorSigningInfo: SwiftProtobuf.Message, S
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_ValidatorSigningInfo, rhs: Cosmos_Slashing_V1beta1_ValidatorSigningInfo) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_ValidatorSigningInfo, rhs: Cosmos_Slashing_V1beta1_ValidatorSigningInfo) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.startHeight != rhs.startHeight {return false}
     if lhs.indexOffset != rhs.indexOffset {return false}
@@ -168,8 +168,8 @@ extension Cosmos_Slashing_V1beta1_ValidatorSigningInfo: SwiftProtobuf.Message, S
 }
 
 extension Cosmos_Slashing_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Params"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Params"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "signed_blocks_window"),
     2: .standard(proto: "min_signed_per_window"),
     3: .standard(proto: "downtime_jail_duration"),
@@ -177,7 +177,7 @@ extension Cosmos_Slashing_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._
     5: .standard(proto: "slash_fraction_downtime"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -193,7 +193,7 @@ extension Cosmos_Slashing_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -216,7 +216,7 @@ extension Cosmos_Slashing_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_Params, rhs: Cosmos_Slashing_V1beta1_Params) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_Params, rhs: Cosmos_Slashing_V1beta1_Params) -> Bool {
     if lhs.signedBlocksWindow != rhs.signedBlocksWindow {return false}
     if lhs.minSignedPerWindow != rhs.minSignedPerWindow {return false}
     if lhs._downtimeJailDuration != rhs._downtimeJailDuration {return false}

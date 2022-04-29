@@ -21,37 +21,37 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// MsgSend represents a message to send a nft from one account to another account.
-struct Cosmos_Nft_V1beta1_MsgSend {
+public struct Cosmos_Nft_V1beta1_MsgSend {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721
-  var classID: String = String()
+  public var classID: String = String()
 
   /// id defines the unique identification of nft
-  var id: String = String()
+  public var id: String = String()
 
   /// sender is the address of the owner of nft
-  var sender: String = String()
+  public var sender: String = String()
 
   /// receiver is the receiver address of nft
-  var receiver: String = String()
+  public var receiver: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgSendResponse defines the Msg/Send response type.
-struct Cosmos_Nft_V1beta1_MsgSendResponse {
+public struct Cosmos_Nft_V1beta1_MsgSendResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -64,15 +64,15 @@ extension Cosmos_Nft_V1beta1_MsgSendResponse: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.nft.v1beta1"
 
 extension Cosmos_Nft_V1beta1_MsgSend: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgSend"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgSend"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "id"),
     3: .same(proto: "sender"),
     4: .same(proto: "receiver"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -87,7 +87,7 @@ extension Cosmos_Nft_V1beta1_MsgSend: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
@@ -103,7 +103,7 @@ extension Cosmos_Nft_V1beta1_MsgSend: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_MsgSend, rhs: Cosmos_Nft_V1beta1_MsgSend) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_MsgSend, rhs: Cosmos_Nft_V1beta1_MsgSend) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.id != rhs.id {return false}
     if lhs.sender != rhs.sender {return false}
@@ -114,19 +114,19 @@ extension Cosmos_Nft_V1beta1_MsgSend: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Cosmos_Nft_V1beta1_MsgSendResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgSendResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgSendResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_MsgSendResponse, rhs: Cosmos_Nft_V1beta1_MsgSendResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_MsgSendResponse, rhs: Cosmos_Nft_V1beta1_MsgSendResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -21,17 +21,17 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// GenesisState defines the evidence module's genesis state.
-struct Cosmos_Evidence_V1beta1_GenesisState {
+public struct Cosmos_Evidence_V1beta1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// evidence defines all the evidence at genesis.
-  var evidence: [SwiftProtobuf.Google_Protobuf_Any] = []
+  public var evidence: [SwiftProtobuf.Google_Protobuf_Any] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -43,12 +43,12 @@ extension Cosmos_Evidence_V1beta1_GenesisState: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.evidence.v1beta1"
 
 extension Cosmos_Evidence_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GenesisState"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GenesisState"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "evidence"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -60,14 +60,14 @@ extension Cosmos_Evidence_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.evidence.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.evidence, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Evidence_V1beta1_GenesisState, rhs: Cosmos_Evidence_V1beta1_GenesisState) -> Bool {
+  public static func ==(lhs: Cosmos_Evidence_V1beta1_GenesisState, rhs: Cosmos_Evidence_V1beta1_GenesisState) -> Bool {
     if lhs.evidence != rhs.evidence {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

@@ -25,30 +25,30 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// It must not be used in a non Tendermint key context because it doesn't implement
 /// ADR-28. Nevertheless, you will like to use ed25519 in app user level
 /// then you must create a new proto message and follow ADR-28 for Address construction.
-struct Cosmos_Crypto_Ed25519_PubKey {
+public struct Cosmos_Crypto_Ed25519_PubKey {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var key: Data = Data()
+  public var key: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Deprecated: PrivKey defines a ed25519 private key.
 /// NOTE: ed25519 keys must not be used in SDK apps except in a tendermint validator context.
-struct Cosmos_Crypto_Ed25519_PrivKey {
+public struct Cosmos_Crypto_Ed25519_PrivKey {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var key: Data = Data()
+  public var key: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -61,12 +61,12 @@ extension Cosmos_Crypto_Ed25519_PrivKey: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.crypto.ed25519"
 
 extension Cosmos_Crypto_Ed25519_PubKey: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PubKey"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PubKey"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "key"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -78,14 +78,14 @@ extension Cosmos_Crypto_Ed25519_PubKey: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.key.isEmpty {
       try visitor.visitSingularBytesField(value: self.key, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crypto_Ed25519_PubKey, rhs: Cosmos_Crypto_Ed25519_PubKey) -> Bool {
+  public static func ==(lhs: Cosmos_Crypto_Ed25519_PubKey, rhs: Cosmos_Crypto_Ed25519_PubKey) -> Bool {
     if lhs.key != rhs.key {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -93,12 +93,12 @@ extension Cosmos_Crypto_Ed25519_PubKey: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Cosmos_Crypto_Ed25519_PrivKey: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PrivKey"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PrivKey"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "key"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -110,14 +110,14 @@ extension Cosmos_Crypto_Ed25519_PrivKey: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.key.isEmpty {
       try visitor.visitSingularBytesField(value: self.key, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crypto_Ed25519_PrivKey, rhs: Cosmos_Crypto_Ed25519_PrivKey) -> Bool {
+  public static func ==(lhs: Cosmos_Crypto_Ed25519_PrivKey, rhs: Cosmos_Crypto_Ed25519_PrivKey) -> Bool {
     if lhs.key != rhs.key {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

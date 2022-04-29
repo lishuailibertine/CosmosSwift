@@ -21,19 +21,19 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// BlockIdFlag indicates which BlcokID the signature is for
-enum Tendermint_Types_BlockIDFlag: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Tendermint_Types_BlockIDFlag: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case unknown // = 0
   case absent // = 1
   case commit // = 2
   case `nil` // = 3
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unknown
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unknown
     case 1: self = .absent
@@ -43,7 +43,7 @@ enum Tendermint_Types_BlockIDFlag: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unknown: return 0
     case .absent: return 1
@@ -59,7 +59,7 @@ enum Tendermint_Types_BlockIDFlag: SwiftProtobuf.Enum {
 
 extension Tendermint_Types_BlockIDFlag: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Tendermint_Types_BlockIDFlag] = [
+  public static var allCases: [Tendermint_Types_BlockIDFlag] = [
     .unknown,
     .absent,
     .commit,
@@ -70,8 +70,8 @@ extension Tendermint_Types_BlockIDFlag: CaseIterable {
 #endif  // swift(>=4.2)
 
 /// SignedMsgType is a type of signed message in the consensus.
-enum Tendermint_Types_SignedMsgType: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Tendermint_Types_SignedMsgType: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case unknown // = 0
 
   /// Votes
@@ -82,11 +82,11 @@ enum Tendermint_Types_SignedMsgType: SwiftProtobuf.Enum {
   case proposal // = 32
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unknown
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unknown
     case 1: self = .prevote
@@ -96,7 +96,7 @@ enum Tendermint_Types_SignedMsgType: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unknown: return 0
     case .prevote: return 1
@@ -112,7 +112,7 @@ enum Tendermint_Types_SignedMsgType: SwiftProtobuf.Enum {
 
 extension Tendermint_Types_SignedMsgType: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Tendermint_Types_SignedMsgType] = [
+  public static var allCases: [Tendermint_Types_SignedMsgType] = [
     .unknown,
     .prevote,
     .precommit,
@@ -123,177 +123,177 @@ extension Tendermint_Types_SignedMsgType: CaseIterable {
 #endif  // swift(>=4.2)
 
 /// PartsetHeader
-struct Tendermint_Types_PartSetHeader {
+public struct Tendermint_Types_PartSetHeader {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var total: UInt32 = 0
+  public var total: UInt32 = 0
 
-  var hash: Data = Data()
+  public var hash: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Types_Part {
+public struct Tendermint_Types_Part {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var index: UInt32 = 0
+  public var index: UInt32 = 0
 
-  var bytes: Data = Data()
+  public var bytes: Data = Data()
 
-  var proof: Tendermint_Crypto_Proof {
+  public var proof: Tendermint_Crypto_Proof {
     get {return _proof ?? Tendermint_Crypto_Proof()}
     set {_proof = newValue}
   }
   /// Returns true if `proof` has been explicitly set.
-  var hasProof: Bool {return self._proof != nil}
+  public var hasProof: Bool {return self._proof != nil}
   /// Clears the value of `proof`. Subsequent reads from it will return its default value.
-  mutating func clearProof() {self._proof = nil}
+  public mutating func clearProof() {self._proof = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _proof: Tendermint_Crypto_Proof? = nil
 }
 
 /// BlockID
-struct Tendermint_Types_BlockID {
+public struct Tendermint_Types_BlockID {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var hash: Data = Data()
+  public var hash: Data = Data()
 
-  var partSetHeader: Tendermint_Types_PartSetHeader {
+  public var partSetHeader: Tendermint_Types_PartSetHeader {
     get {return _partSetHeader ?? Tendermint_Types_PartSetHeader()}
     set {_partSetHeader = newValue}
   }
   /// Returns true if `partSetHeader` has been explicitly set.
-  var hasPartSetHeader: Bool {return self._partSetHeader != nil}
+  public var hasPartSetHeader: Bool {return self._partSetHeader != nil}
   /// Clears the value of `partSetHeader`. Subsequent reads from it will return its default value.
-  mutating func clearPartSetHeader() {self._partSetHeader = nil}
+  public mutating func clearPartSetHeader() {self._partSetHeader = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _partSetHeader: Tendermint_Types_PartSetHeader? = nil
 }
 
 /// Header defines the structure of a Tendermint block header.
-struct Tendermint_Types_Header {
+public struct Tendermint_Types_Header {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// basic block info
-  var version: Tendermint_Version_Consensus {
+  public var version: Tendermint_Version_Consensus {
     get {return _storage._version ?? Tendermint_Version_Consensus()}
     set {_uniqueStorage()._version = newValue}
   }
   /// Returns true if `version` has been explicitly set.
-  var hasVersion: Bool {return _storage._version != nil}
+  public var hasVersion: Bool {return _storage._version != nil}
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
-  mutating func clearVersion() {_uniqueStorage()._version = nil}
+  public mutating func clearVersion() {_uniqueStorage()._version = nil}
 
-  var chainID: String {
+  public var chainID: String {
     get {return _storage._chainID}
     set {_uniqueStorage()._chainID = newValue}
   }
 
-  var height: Int64 {
+  public var height: Int64 {
     get {return _storage._height}
     set {_uniqueStorage()._height = newValue}
   }
 
-  var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._time = newValue}
   }
   /// Returns true if `time` has been explicitly set.
-  var hasTime: Bool {return _storage._time != nil}
+  public var hasTime: Bool {return _storage._time != nil}
   /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  mutating func clearTime() {_uniqueStorage()._time = nil}
+  public mutating func clearTime() {_uniqueStorage()._time = nil}
 
   /// prev block info
-  var lastBlockID: Tendermint_Types_BlockID {
+  public var lastBlockID: Tendermint_Types_BlockID {
     get {return _storage._lastBlockID ?? Tendermint_Types_BlockID()}
     set {_uniqueStorage()._lastBlockID = newValue}
   }
   /// Returns true if `lastBlockID` has been explicitly set.
-  var hasLastBlockID: Bool {return _storage._lastBlockID != nil}
+  public var hasLastBlockID: Bool {return _storage._lastBlockID != nil}
   /// Clears the value of `lastBlockID`. Subsequent reads from it will return its default value.
-  mutating func clearLastBlockID() {_uniqueStorage()._lastBlockID = nil}
+  public mutating func clearLastBlockID() {_uniqueStorage()._lastBlockID = nil}
 
   /// hashes of block data
-  var lastCommitHash: Data {
+  public var lastCommitHash: Data {
     get {return _storage._lastCommitHash}
     set {_uniqueStorage()._lastCommitHash = newValue}
   }
 
   /// transactions
-  var dataHash: Data {
+  public var dataHash: Data {
     get {return _storage._dataHash}
     set {_uniqueStorage()._dataHash = newValue}
   }
 
   /// hashes from the app output from the prev block
-  var validatorsHash: Data {
+  public var validatorsHash: Data {
     get {return _storage._validatorsHash}
     set {_uniqueStorage()._validatorsHash = newValue}
   }
 
   /// validators for the next block
-  var nextValidatorsHash: Data {
+  public var nextValidatorsHash: Data {
     get {return _storage._nextValidatorsHash}
     set {_uniqueStorage()._nextValidatorsHash = newValue}
   }
 
   /// consensus params for current block
-  var consensusHash: Data {
+  public var consensusHash: Data {
     get {return _storage._consensusHash}
     set {_uniqueStorage()._consensusHash = newValue}
   }
 
   /// state after txs from the previous block
-  var appHash: Data {
+  public var appHash: Data {
     get {return _storage._appHash}
     set {_uniqueStorage()._appHash = newValue}
   }
 
   /// root hash of all results from the txs from the previous block
-  var lastResultsHash: Data {
+  public var lastResultsHash: Data {
     get {return _storage._lastResultsHash}
     set {_uniqueStorage()._lastResultsHash = newValue}
   }
 
   /// consensus info
-  var evidenceHash: Data {
+  public var evidenceHash: Data {
     get {return _storage._evidenceHash}
     set {_uniqueStorage()._evidenceHash = newValue}
   }
 
   /// original proposer of the block
-  var proposerAddress: Data {
+  public var proposerAddress: Data {
     get {return _storage._proposerAddress}
     set {_uniqueStorage()._proposerAddress = newValue}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 /// Data contains the set of transactions included in the block
-struct Tendermint_Types_Data {
+public struct Tendermint_Types_Data {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -301,275 +301,275 @@ struct Tendermint_Types_Data {
   /// Txs that will be applied by state @ block.Height+1.
   /// NOTE: not all txs here are valid.  We're just agreeing on the order first.
   /// This means that block.AppHash does not include these txs.
-  var txs: [Data] = []
+  public var txs: [Data] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Vote represents a prevote, precommit, or commit vote from validators for
 /// consensus.
-struct Tendermint_Types_Vote {
+public struct Tendermint_Types_Vote {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var type: Tendermint_Types_SignedMsgType = .unknown
+  public var type: Tendermint_Types_SignedMsgType = .unknown
 
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var round: Int32 = 0
+  public var round: Int32 = 0
 
   /// zero if vote is nil.
-  var blockID: Tendermint_Types_BlockID {
+  public var blockID: Tendermint_Types_BlockID {
     get {return _blockID ?? Tendermint_Types_BlockID()}
     set {_blockID = newValue}
   }
   /// Returns true if `blockID` has been explicitly set.
-  var hasBlockID: Bool {return self._blockID != nil}
+  public var hasBlockID: Bool {return self._blockID != nil}
   /// Clears the value of `blockID`. Subsequent reads from it will return its default value.
-  mutating func clearBlockID() {self._blockID = nil}
+  public mutating func clearBlockID() {self._blockID = nil}
 
-  var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_timestamp = newValue}
   }
   /// Returns true if `timestamp` has been explicitly set.
-  var hasTimestamp: Bool {return self._timestamp != nil}
+  public var hasTimestamp: Bool {return self._timestamp != nil}
   /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
-  mutating func clearTimestamp() {self._timestamp = nil}
+  public mutating func clearTimestamp() {self._timestamp = nil}
 
-  var validatorAddress: Data = Data()
+  public var validatorAddress: Data = Data()
 
-  var validatorIndex: Int32 = 0
+  public var validatorIndex: Int32 = 0
 
-  var signature: Data = Data()
+  public var signature: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _blockID: Tendermint_Types_BlockID? = nil
   fileprivate var _timestamp: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 /// Commit contains the evidence that a block was committed by a set of validators.
-struct Tendermint_Types_Commit {
+public struct Tendermint_Types_Commit {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var round: Int32 = 0
+  public var round: Int32 = 0
 
-  var blockID: Tendermint_Types_BlockID {
+  public var blockID: Tendermint_Types_BlockID {
     get {return _blockID ?? Tendermint_Types_BlockID()}
     set {_blockID = newValue}
   }
   /// Returns true if `blockID` has been explicitly set.
-  var hasBlockID: Bool {return self._blockID != nil}
+  public var hasBlockID: Bool {return self._blockID != nil}
   /// Clears the value of `blockID`. Subsequent reads from it will return its default value.
-  mutating func clearBlockID() {self._blockID = nil}
+  public mutating func clearBlockID() {self._blockID = nil}
 
-  var signatures: [Tendermint_Types_CommitSig] = []
+  public var signatures: [Tendermint_Types_CommitSig] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _blockID: Tendermint_Types_BlockID? = nil
 }
 
 /// CommitSig is a part of the Vote included in a Commit.
-struct Tendermint_Types_CommitSig {
+public struct Tendermint_Types_CommitSig {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var blockIDFlag: Tendermint_Types_BlockIDFlag = .unknown
+  public var blockIDFlag: Tendermint_Types_BlockIDFlag = .unknown
 
-  var validatorAddress: Data = Data()
+  public var validatorAddress: Data = Data()
 
-  var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_timestamp = newValue}
   }
   /// Returns true if `timestamp` has been explicitly set.
-  var hasTimestamp: Bool {return self._timestamp != nil}
+  public var hasTimestamp: Bool {return self._timestamp != nil}
   /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
-  mutating func clearTimestamp() {self._timestamp = nil}
+  public mutating func clearTimestamp() {self._timestamp = nil}
 
-  var signature: Data = Data()
+  public var signature: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _timestamp: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
-struct Tendermint_Types_Proposal {
+public struct Tendermint_Types_Proposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var type: Tendermint_Types_SignedMsgType = .unknown
+  public var type: Tendermint_Types_SignedMsgType = .unknown
 
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var round: Int32 = 0
+  public var round: Int32 = 0
 
-  var polRound: Int32 = 0
+  public var polRound: Int32 = 0
 
-  var blockID: Tendermint_Types_BlockID {
+  public var blockID: Tendermint_Types_BlockID {
     get {return _blockID ?? Tendermint_Types_BlockID()}
     set {_blockID = newValue}
   }
   /// Returns true if `blockID` has been explicitly set.
-  var hasBlockID: Bool {return self._blockID != nil}
+  public var hasBlockID: Bool {return self._blockID != nil}
   /// Clears the value of `blockID`. Subsequent reads from it will return its default value.
-  mutating func clearBlockID() {self._blockID = nil}
+  public mutating func clearBlockID() {self._blockID = nil}
 
-  var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_timestamp = newValue}
   }
   /// Returns true if `timestamp` has been explicitly set.
-  var hasTimestamp: Bool {return self._timestamp != nil}
+  public var hasTimestamp: Bool {return self._timestamp != nil}
   /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
-  mutating func clearTimestamp() {self._timestamp = nil}
+  public mutating func clearTimestamp() {self._timestamp = nil}
 
-  var signature: Data = Data()
+  public var signature: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _blockID: Tendermint_Types_BlockID? = nil
   fileprivate var _timestamp: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
-struct Tendermint_Types_SignedHeader {
+public struct Tendermint_Types_SignedHeader {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var header: Tendermint_Types_Header {
+  public var header: Tendermint_Types_Header {
     get {return _header ?? Tendermint_Types_Header()}
     set {_header = newValue}
   }
   /// Returns true if `header` has been explicitly set.
-  var hasHeader: Bool {return self._header != nil}
+  public var hasHeader: Bool {return self._header != nil}
   /// Clears the value of `header`. Subsequent reads from it will return its default value.
-  mutating func clearHeader() {self._header = nil}
+  public mutating func clearHeader() {self._header = nil}
 
-  var commit: Tendermint_Types_Commit {
+  public var commit: Tendermint_Types_Commit {
     get {return _commit ?? Tendermint_Types_Commit()}
     set {_commit = newValue}
   }
   /// Returns true if `commit` has been explicitly set.
-  var hasCommit: Bool {return self._commit != nil}
+  public var hasCommit: Bool {return self._commit != nil}
   /// Clears the value of `commit`. Subsequent reads from it will return its default value.
-  mutating func clearCommit() {self._commit = nil}
+  public mutating func clearCommit() {self._commit = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _header: Tendermint_Types_Header? = nil
   fileprivate var _commit: Tendermint_Types_Commit? = nil
 }
 
-struct Tendermint_Types_LightBlock {
+public struct Tendermint_Types_LightBlock {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var signedHeader: Tendermint_Types_SignedHeader {
+  public var signedHeader: Tendermint_Types_SignedHeader {
     get {return _signedHeader ?? Tendermint_Types_SignedHeader()}
     set {_signedHeader = newValue}
   }
   /// Returns true if `signedHeader` has been explicitly set.
-  var hasSignedHeader: Bool {return self._signedHeader != nil}
+  public var hasSignedHeader: Bool {return self._signedHeader != nil}
   /// Clears the value of `signedHeader`. Subsequent reads from it will return its default value.
-  mutating func clearSignedHeader() {self._signedHeader = nil}
+  public mutating func clearSignedHeader() {self._signedHeader = nil}
 
-  var validatorSet: Tendermint_Types_ValidatorSet {
+  public var validatorSet: Tendermint_Types_ValidatorSet {
     get {return _validatorSet ?? Tendermint_Types_ValidatorSet()}
     set {_validatorSet = newValue}
   }
   /// Returns true if `validatorSet` has been explicitly set.
-  var hasValidatorSet: Bool {return self._validatorSet != nil}
+  public var hasValidatorSet: Bool {return self._validatorSet != nil}
   /// Clears the value of `validatorSet`. Subsequent reads from it will return its default value.
-  mutating func clearValidatorSet() {self._validatorSet = nil}
+  public mutating func clearValidatorSet() {self._validatorSet = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _signedHeader: Tendermint_Types_SignedHeader? = nil
   fileprivate var _validatorSet: Tendermint_Types_ValidatorSet? = nil
 }
 
-struct Tendermint_Types_BlockMeta {
+public struct Tendermint_Types_BlockMeta {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var blockID: Tendermint_Types_BlockID {
+  public var blockID: Tendermint_Types_BlockID {
     get {return _blockID ?? Tendermint_Types_BlockID()}
     set {_blockID = newValue}
   }
   /// Returns true if `blockID` has been explicitly set.
-  var hasBlockID: Bool {return self._blockID != nil}
+  public var hasBlockID: Bool {return self._blockID != nil}
   /// Clears the value of `blockID`. Subsequent reads from it will return its default value.
-  mutating func clearBlockID() {self._blockID = nil}
+  public mutating func clearBlockID() {self._blockID = nil}
 
-  var blockSize: Int64 = 0
+  public var blockSize: Int64 = 0
 
-  var header: Tendermint_Types_Header {
+  public var header: Tendermint_Types_Header {
     get {return _header ?? Tendermint_Types_Header()}
     set {_header = newValue}
   }
   /// Returns true if `header` has been explicitly set.
-  var hasHeader: Bool {return self._header != nil}
+  public var hasHeader: Bool {return self._header != nil}
   /// Clears the value of `header`. Subsequent reads from it will return its default value.
-  mutating func clearHeader() {self._header = nil}
+  public mutating func clearHeader() {self._header = nil}
 
-  var numTxs: Int64 = 0
+  public var numTxs: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _blockID: Tendermint_Types_BlockID? = nil
   fileprivate var _header: Tendermint_Types_Header? = nil
 }
 
 /// TxProof represents a Merkle proof of the presence of a transaction in the Merkle tree.
-struct Tendermint_Types_TxProof {
+public struct Tendermint_Types_TxProof {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var rootHash: Data = Data()
+  public var rootHash: Data = Data()
 
-  var data: Data = Data()
+  public var data: Data = Data()
 
-  var proof: Tendermint_Crypto_Proof {
+  public var proof: Tendermint_Crypto_Proof {
     get {return _proof ?? Tendermint_Crypto_Proof()}
     set {_proof = newValue}
   }
   /// Returns true if `proof` has been explicitly set.
-  var hasProof: Bool {return self._proof != nil}
+  public var hasProof: Bool {return self._proof != nil}
   /// Clears the value of `proof`. Subsequent reads from it will return its default value.
-  mutating func clearProof() {self._proof = nil}
+  public mutating func clearProof() {self._proof = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _proof: Tendermint_Crypto_Proof? = nil
 }
@@ -597,7 +597,7 @@ extension Tendermint_Types_TxProof: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.types"
 
 extension Tendermint_Types_BlockIDFlag: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "BLOCK_ID_FLAG_UNKNOWN"),
     1: .same(proto: "BLOCK_ID_FLAG_ABSENT"),
     2: .same(proto: "BLOCK_ID_FLAG_COMMIT"),
@@ -606,7 +606,7 @@ extension Tendermint_Types_BlockIDFlag: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension Tendermint_Types_SignedMsgType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "SIGNED_MSG_TYPE_UNKNOWN"),
     1: .same(proto: "SIGNED_MSG_TYPE_PREVOTE"),
     2: .same(proto: "SIGNED_MSG_TYPE_PRECOMMIT"),
@@ -615,13 +615,13 @@ extension Tendermint_Types_SignedMsgType: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension Tendermint_Types_PartSetHeader: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PartSetHeader"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PartSetHeader"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "total"),
     2: .same(proto: "hash"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -634,7 +634,7 @@ extension Tendermint_Types_PartSetHeader: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.total != 0 {
       try visitor.visitSingularUInt32Field(value: self.total, fieldNumber: 1)
     }
@@ -644,7 +644,7 @@ extension Tendermint_Types_PartSetHeader: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_PartSetHeader, rhs: Tendermint_Types_PartSetHeader) -> Bool {
+  public static func ==(lhs: Tendermint_Types_PartSetHeader, rhs: Tendermint_Types_PartSetHeader) -> Bool {
     if lhs.total != rhs.total {return false}
     if lhs.hash != rhs.hash {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -653,14 +653,14 @@ extension Tendermint_Types_PartSetHeader: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Tendermint_Types_Part: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Part"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Part"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "index"),
     2: .same(proto: "bytes"),
     3: .same(proto: "proof"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -674,7 +674,7 @@ extension Tendermint_Types_Part: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -691,7 +691,7 @@ extension Tendermint_Types_Part: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Part, rhs: Tendermint_Types_Part) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Part, rhs: Tendermint_Types_Part) -> Bool {
     if lhs.index != rhs.index {return false}
     if lhs.bytes != rhs.bytes {return false}
     if lhs._proof != rhs._proof {return false}
@@ -701,13 +701,13 @@ extension Tendermint_Types_Part: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Tendermint_Types_BlockID: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BlockID"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BlockID"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "hash"),
     2: .standard(proto: "part_set_header"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -720,7 +720,7 @@ extension Tendermint_Types_BlockID: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -734,7 +734,7 @@ extension Tendermint_Types_BlockID: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_BlockID, rhs: Tendermint_Types_BlockID) -> Bool {
+  public static func ==(lhs: Tendermint_Types_BlockID, rhs: Tendermint_Types_BlockID) -> Bool {
     if lhs.hash != rhs.hash {return false}
     if lhs._partSetHeader != rhs._partSetHeader {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -743,8 +743,8 @@ extension Tendermint_Types_BlockID: SwiftProtobuf.Message, SwiftProtobuf._Messag
 }
 
 extension Tendermint_Types_Header: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Header"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Header"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "version"),
     2: .standard(proto: "chain_id"),
     3: .same(proto: "height"),
@@ -806,7 +806,7 @@ extension Tendermint_Types_Header: SwiftProtobuf.Message, SwiftProtobuf._Message
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -834,7 +834,7 @@ extension Tendermint_Types_Header: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every if/case branch local when no optimizations
@@ -886,7 +886,7 @@ extension Tendermint_Types_Header: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Header, rhs: Tendermint_Types_Header) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Header, rhs: Tendermint_Types_Header) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -915,12 +915,12 @@ extension Tendermint_Types_Header: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Tendermint_Types_Data: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Data"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Data"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "txs"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -932,14 +932,14 @@ extension Tendermint_Types_Data: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.txs.isEmpty {
       try visitor.visitRepeatedBytesField(value: self.txs, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Data, rhs: Tendermint_Types_Data) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Data, rhs: Tendermint_Types_Data) -> Bool {
     if lhs.txs != rhs.txs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -947,8 +947,8 @@ extension Tendermint_Types_Data: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Vote"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Vote"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "type"),
     2: .same(proto: "height"),
     3: .same(proto: "round"),
@@ -959,7 +959,7 @@ extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     8: .same(proto: "signature"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -978,7 +978,7 @@ extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1010,7 +1010,7 @@ extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Vote, rhs: Tendermint_Types_Vote) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Vote, rhs: Tendermint_Types_Vote) -> Bool {
     if lhs.type != rhs.type {return false}
     if lhs.height != rhs.height {return false}
     if lhs.round != rhs.round {return false}
@@ -1025,15 +1025,15 @@ extension Tendermint_Types_Vote: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Tendermint_Types_Commit: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Commit"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Commit"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "height"),
     2: .same(proto: "round"),
     3: .standard(proto: "block_id"),
     4: .same(proto: "signatures"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1048,7 +1048,7 @@ extension Tendermint_Types_Commit: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1068,7 +1068,7 @@ extension Tendermint_Types_Commit: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Commit, rhs: Tendermint_Types_Commit) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Commit, rhs: Tendermint_Types_Commit) -> Bool {
     if lhs.height != rhs.height {return false}
     if lhs.round != rhs.round {return false}
     if lhs._blockID != rhs._blockID {return false}
@@ -1079,15 +1079,15 @@ extension Tendermint_Types_Commit: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Tendermint_Types_CommitSig: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CommitSig"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".CommitSig"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "block_id_flag"),
     2: .standard(proto: "validator_address"),
     3: .same(proto: "timestamp"),
     4: .same(proto: "signature"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1102,7 +1102,7 @@ extension Tendermint_Types_CommitSig: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1122,7 +1122,7 @@ extension Tendermint_Types_CommitSig: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_CommitSig, rhs: Tendermint_Types_CommitSig) -> Bool {
+  public static func ==(lhs: Tendermint_Types_CommitSig, rhs: Tendermint_Types_CommitSig) -> Bool {
     if lhs.blockIDFlag != rhs.blockIDFlag {return false}
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs._timestamp != rhs._timestamp {return false}
@@ -1133,8 +1133,8 @@ extension Tendermint_Types_CommitSig: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Tendermint_Types_Proposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Proposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Proposal"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "type"),
     2: .same(proto: "height"),
     3: .same(proto: "round"),
@@ -1144,7 +1144,7 @@ extension Tendermint_Types_Proposal: SwiftProtobuf.Message, SwiftProtobuf._Messa
     7: .same(proto: "signature"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1162,7 +1162,7 @@ extension Tendermint_Types_Proposal: SwiftProtobuf.Message, SwiftProtobuf._Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1191,7 +1191,7 @@ extension Tendermint_Types_Proposal: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Proposal, rhs: Tendermint_Types_Proposal) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Proposal, rhs: Tendermint_Types_Proposal) -> Bool {
     if lhs.type != rhs.type {return false}
     if lhs.height != rhs.height {return false}
     if lhs.round != rhs.round {return false}
@@ -1205,13 +1205,13 @@ extension Tendermint_Types_Proposal: SwiftProtobuf.Message, SwiftProtobuf._Messa
 }
 
 extension Tendermint_Types_SignedHeader: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SignedHeader"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SignedHeader"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "header"),
     2: .same(proto: "commit"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1224,7 +1224,7 @@ extension Tendermint_Types_SignedHeader: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1238,7 +1238,7 @@ extension Tendermint_Types_SignedHeader: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_SignedHeader, rhs: Tendermint_Types_SignedHeader) -> Bool {
+  public static func ==(lhs: Tendermint_Types_SignedHeader, rhs: Tendermint_Types_SignedHeader) -> Bool {
     if lhs._header != rhs._header {return false}
     if lhs._commit != rhs._commit {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1247,13 +1247,13 @@ extension Tendermint_Types_SignedHeader: SwiftProtobuf.Message, SwiftProtobuf._M
 }
 
 extension Tendermint_Types_LightBlock: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".LightBlock"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".LightBlock"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "signed_header"),
     2: .standard(proto: "validator_set"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1266,7 +1266,7 @@ extension Tendermint_Types_LightBlock: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1280,7 +1280,7 @@ extension Tendermint_Types_LightBlock: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_LightBlock, rhs: Tendermint_Types_LightBlock) -> Bool {
+  public static func ==(lhs: Tendermint_Types_LightBlock, rhs: Tendermint_Types_LightBlock) -> Bool {
     if lhs._signedHeader != rhs._signedHeader {return false}
     if lhs._validatorSet != rhs._validatorSet {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1289,15 +1289,15 @@ extension Tendermint_Types_LightBlock: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Tendermint_Types_BlockMeta: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BlockMeta"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BlockMeta"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "block_id"),
     2: .standard(proto: "block_size"),
     3: .same(proto: "header"),
     4: .standard(proto: "num_txs"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1312,7 +1312,7 @@ extension Tendermint_Types_BlockMeta: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1332,7 +1332,7 @@ extension Tendermint_Types_BlockMeta: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_BlockMeta, rhs: Tendermint_Types_BlockMeta) -> Bool {
+  public static func ==(lhs: Tendermint_Types_BlockMeta, rhs: Tendermint_Types_BlockMeta) -> Bool {
     if lhs._blockID != rhs._blockID {return false}
     if lhs.blockSize != rhs.blockSize {return false}
     if lhs._header != rhs._header {return false}
@@ -1343,14 +1343,14 @@ extension Tendermint_Types_BlockMeta: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Tendermint_Types_TxProof: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TxProof"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TxProof"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "root_hash"),
     2: .same(proto: "data"),
     3: .same(proto: "proof"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1364,7 +1364,7 @@ extension Tendermint_Types_TxProof: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1381,7 +1381,7 @@ extension Tendermint_Types_TxProof: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_TxProof, rhs: Tendermint_Types_TxProof) -> Bool {
+  public static func ==(lhs: Tendermint_Types_TxProof, rhs: Tendermint_Types_TxProof) -> Bool {
     if lhs.rootHash != rhs.rootHash {return false}
     if lhs.data != rhs.data {return false}
     if lhs._proof != rhs._proof {return false}

@@ -24,16 +24,16 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// the granter's account.
 ///
 /// Since: cosmos-sdk 0.43
-struct Cosmos_Bank_V1beta1_SendAuthorization {
+public struct Cosmos_Bank_V1beta1_SendAuthorization {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var spendLimit: [Cosmos_Base_V1beta1_Coin] = []
+  public var spendLimit: [Cosmos_Base_V1beta1_Coin] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -45,12 +45,12 @@ extension Cosmos_Bank_V1beta1_SendAuthorization: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.bank.v1beta1"
 
 extension Cosmos_Bank_V1beta1_SendAuthorization: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SendAuthorization"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SendAuthorization"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "spend_limit"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -62,14 +62,14 @@ extension Cosmos_Bank_V1beta1_SendAuthorization: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.spendLimit.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.spendLimit, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Bank_V1beta1_SendAuthorization, rhs: Cosmos_Bank_V1beta1_SendAuthorization) -> Bool {
+  public static func ==(lhs: Cosmos_Bank_V1beta1_SendAuthorization, rhs: Cosmos_Bank_V1beta1_SendAuthorization) -> Bool {
     if lhs.spendLimit != rhs.spendLimit {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

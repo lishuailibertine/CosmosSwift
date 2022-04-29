@@ -21,144 +21,111 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// EventCreateGroup is an event emitted when a group is created.
-struct Cosmos_Group_V1beta1_EventCreateGroup {
+public struct Cosmos_Group_V1beta1_EventCreateGroup {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// group_id is the unique ID of the group.
-  var groupID: UInt64 = 0
+  public var groupID: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// EventUpdateGroup is an event emitted when a group is updated.
-struct Cosmos_Group_V1beta1_EventUpdateGroup {
+public struct Cosmos_Group_V1beta1_EventUpdateGroup {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// group_id is the unique ID of the group.
-  var groupID: UInt64 = 0
+  public var groupID: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// EventCreateGroupPolicy is an event emitted when a group policy is created.
-struct Cosmos_Group_V1beta1_EventCreateGroupPolicy {
+/// EventCreateGroupAccount is an event emitted when a group account is created.
+public struct Cosmos_Group_V1beta1_EventCreateGroupAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// address is the account address of the group policy.
-  var address: String = String()
+  /// address is the address of the group account.
+  public var address: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// EventUpdateGroupPolicy is an event emitted when a group policy is updated.
-struct Cosmos_Group_V1beta1_EventUpdateGroupPolicy {
+/// EventUpdateGroupAccount is an event emitted when a group account is updated.
+public struct Cosmos_Group_V1beta1_EventUpdateGroupAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// address is the account address of the group policy.
-  var address: String = String()
+  /// address is the address of the group account.
+  public var address: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// EventSubmitProposal is an event emitted when a proposal is created.
-struct Cosmos_Group_V1beta1_EventSubmitProposal {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// proposal_id is the unique ID of the proposal.
-  var proposalID: UInt64 = 0
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// EventWithdrawProposal is an event emitted when a proposal is withdrawn.
-struct Cosmos_Group_V1beta1_EventWithdrawProposal {
+/// EventCreateProposal is an event emitted when a proposal is created.
+public struct Cosmos_Group_V1beta1_EventCreateProposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// proposal_id is the unique ID of the proposal.
-  var proposalID: UInt64 = 0
+  public var proposalID: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// EventVote is an event emitted when a voter votes on a proposal.
-struct Cosmos_Group_V1beta1_EventVote {
+public struct Cosmos_Group_V1beta1_EventVote {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// proposal_id is the unique ID of the proposal.
-  var proposalID: UInt64 = 0
+  public var proposalID: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// EventExec is an event emitted when a proposal is executed.
-struct Cosmos_Group_V1beta1_EventExec {
+public struct Cosmos_Group_V1beta1_EventExec {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// proposal_id is the unique ID of the proposal.
-  var proposalID: UInt64 = 0
+  public var proposalID: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
-}
-
-/// EventLeaveGroup is an event emitted when group member leaves the group.
-struct Cosmos_Group_V1beta1_EventLeaveGroup {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// group_id is the unique ID of the group.
-  var groupID: UInt64 = 0
-
-  /// address is the account address of the group member.
-  var address: String = String()
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
 extension Cosmos_Group_V1beta1_EventCreateGroup: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_EventUpdateGroup: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_EventCreateGroupPolicy: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_EventUpdateGroupPolicy: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_EventSubmitProposal: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_EventWithdrawProposal: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_EventCreateGroupAccount: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_EventUpdateGroupAccount: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_EventCreateProposal: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_EventVote: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_EventExec: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_EventLeaveGroup: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -166,12 +133,12 @@ extension Cosmos_Group_V1beta1_EventLeaveGroup: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.group.v1beta1"
 
 extension Cosmos_Group_V1beta1_EventCreateGroup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventCreateGroup"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventCreateGroup"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "group_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -183,14 +150,14 @@ extension Cosmos_Group_V1beta1_EventCreateGroup: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.groupID != 0 {
       try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_EventCreateGroup, rhs: Cosmos_Group_V1beta1_EventCreateGroup) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_EventCreateGroup, rhs: Cosmos_Group_V1beta1_EventCreateGroup) -> Bool {
     if lhs.groupID != rhs.groupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -198,12 +165,12 @@ extension Cosmos_Group_V1beta1_EventCreateGroup: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Cosmos_Group_V1beta1_EventUpdateGroup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventUpdateGroup"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventUpdateGroup"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "group_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -215,27 +182,27 @@ extension Cosmos_Group_V1beta1_EventUpdateGroup: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.groupID != 0 {
       try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_EventUpdateGroup, rhs: Cosmos_Group_V1beta1_EventUpdateGroup) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_EventUpdateGroup, rhs: Cosmos_Group_V1beta1_EventUpdateGroup) -> Bool {
     if lhs.groupID != rhs.groupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_EventCreateGroupPolicy: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventCreateGroupPolicy"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_EventCreateGroupAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".EventCreateGroupAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -247,27 +214,27 @@ extension Cosmos_Group_V1beta1_EventCreateGroupPolicy: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_EventCreateGroupPolicy, rhs: Cosmos_Group_V1beta1_EventCreateGroupPolicy) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_EventCreateGroupAccount, rhs: Cosmos_Group_V1beta1_EventCreateGroupAccount) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_EventUpdateGroupPolicy: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventUpdateGroupPolicy"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_EventUpdateGroupAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".EventUpdateGroupAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -279,27 +246,27 @@ extension Cosmos_Group_V1beta1_EventUpdateGroupPolicy: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_EventUpdateGroupPolicy, rhs: Cosmos_Group_V1beta1_EventUpdateGroupPolicy) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_EventUpdateGroupAccount, rhs: Cosmos_Group_V1beta1_EventUpdateGroupAccount) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_EventSubmitProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventSubmitProposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_EventCreateProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".EventCreateProposal"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proposal_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -311,46 +278,14 @@ extension Cosmos_Group_V1beta1_EventSubmitProposal: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.proposalID != 0 {
       try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_EventSubmitProposal, rhs: Cosmos_Group_V1beta1_EventSubmitProposal) -> Bool {
-    if lhs.proposalID != rhs.proposalID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Group_V1beta1_EventWithdrawProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventWithdrawProposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "proposal_id"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.proposalID) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.proposalID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Group_V1beta1_EventWithdrawProposal, rhs: Cosmos_Group_V1beta1_EventWithdrawProposal) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_EventCreateProposal, rhs: Cosmos_Group_V1beta1_EventCreateProposal) -> Bool {
     if lhs.proposalID != rhs.proposalID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -358,12 +293,12 @@ extension Cosmos_Group_V1beta1_EventWithdrawProposal: SwiftProtobuf.Message, Swi
 }
 
 extension Cosmos_Group_V1beta1_EventVote: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventVote"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventVote"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proposal_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -375,14 +310,14 @@ extension Cosmos_Group_V1beta1_EventVote: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.proposalID != 0 {
       try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_EventVote, rhs: Cosmos_Group_V1beta1_EventVote) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_EventVote, rhs: Cosmos_Group_V1beta1_EventVote) -> Bool {
     if lhs.proposalID != rhs.proposalID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -390,12 +325,12 @@ extension Cosmos_Group_V1beta1_EventVote: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Cosmos_Group_V1beta1_EventExec: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventExec"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventExec"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proposal_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -407,53 +342,15 @@ extension Cosmos_Group_V1beta1_EventExec: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.proposalID != 0 {
       try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_EventExec, rhs: Cosmos_Group_V1beta1_EventExec) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_EventExec, rhs: Cosmos_Group_V1beta1_EventExec) -> Bool {
     if lhs.proposalID != rhs.proposalID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Group_V1beta1_EventLeaveGroup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventLeaveGroup"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "group_id"),
-    2: .same(proto: "address"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.groupID) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.address) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.groupID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 1)
-    }
-    if !self.address.isEmpty {
-      try visitor.visitSingularStringField(value: self.address, fieldNumber: 2)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Group_V1beta1_EventLeaveGroup, rhs: Cosmos_Group_V1beta1_EventLeaveGroup) -> Bool {
-    if lhs.groupID != rhs.groupID {return false}
-    if lhs.address != rhs.address {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -21,54 +21,54 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// GenesisState defines the bank module's genesis state.
-struct Cosmos_Bank_V1beta1_GenesisState {
+public struct Cosmos_Bank_V1beta1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// params defines all the paramaters of the module.
-  var params: Cosmos_Bank_V1beta1_Params {
+  public var params: Cosmos_Bank_V1beta1_Params {
     get {return _params ?? Cosmos_Bank_V1beta1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  public var hasParams: Bool {return self._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  public mutating func clearParams() {self._params = nil}
 
   /// balances is an array containing the balances of all the accounts.
-  var balances: [Cosmos_Bank_V1beta1_Balance] = []
+  public var balances: [Cosmos_Bank_V1beta1_Balance] = []
 
   /// supply represents the total supply. If it is left empty, then supply will be calculated based on the provided
   /// balances. Otherwise, it will be used to validate that the sum of the balances equals this amount.
-  var supply: [Cosmos_Base_V1beta1_Coin] = []
+  public var supply: [Cosmos_Base_V1beta1_Coin] = []
 
   /// denom_metadata defines the metadata of the differents coins.
-  var denomMetadata: [Cosmos_Bank_V1beta1_Metadata] = []
+  public var denomMetadata: [Cosmos_Bank_V1beta1_Metadata] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _params: Cosmos_Bank_V1beta1_Params? = nil
 }
 
 /// Balance defines an account address and balance pair used in the bank module's
 /// genesis state.
-struct Cosmos_Bank_V1beta1_Balance {
+public struct Cosmos_Bank_V1beta1_Balance {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// address is the address of the balance holder.
-  var address: String = String()
+  public var address: String = String()
 
   /// coins defines the different coins this balance holds.
-  var coins: [Cosmos_Base_V1beta1_Coin] = []
+  public var coins: [Cosmos_Base_V1beta1_Coin] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -81,15 +81,15 @@ extension Cosmos_Bank_V1beta1_Balance: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.bank.v1beta1"
 
 extension Cosmos_Bank_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GenesisState"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GenesisState"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
     2: .same(proto: "balances"),
     3: .same(proto: "supply"),
     4: .standard(proto: "denom_metadata"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -104,7 +104,7 @@ extension Cosmos_Bank_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -124,7 +124,7 @@ extension Cosmos_Bank_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Bank_V1beta1_GenesisState, rhs: Cosmos_Bank_V1beta1_GenesisState) -> Bool {
+  public static func ==(lhs: Cosmos_Bank_V1beta1_GenesisState, rhs: Cosmos_Bank_V1beta1_GenesisState) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs.balances != rhs.balances {return false}
     if lhs.supply != rhs.supply {return false}
@@ -135,13 +135,13 @@ extension Cosmos_Bank_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Cosmos_Bank_V1beta1_Balance: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Balance"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Balance"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .same(proto: "coins"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -154,7 +154,7 @@ extension Cosmos_Bank_V1beta1_Balance: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
     }
@@ -164,7 +164,7 @@ extension Cosmos_Bank_V1beta1_Balance: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Bank_V1beta1_Balance, rhs: Cosmos_Bank_V1beta1_Balance) -> Bool {
+  public static func ==(lhs: Cosmos_Bank_V1beta1_Balance, rhs: Cosmos_Bank_V1beta1_Balance) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.coins != rhs.coins {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

@@ -24,7 +24,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// BasicAllowance implements Allowance with a one-time grant of tokens
 /// that optionally expires. The grantee can use up to SpendLimit to cover fees.
-struct Cosmos_Feegrant_V1beta1_BasicAllowance {
+public struct Cosmos_Feegrant_V1beta1_BasicAllowance {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -32,75 +32,75 @@ struct Cosmos_Feegrant_V1beta1_BasicAllowance {
   /// spend_limit specifies the maximum amount of tokens that can be spent
   /// by this allowance and will be updated as tokens are spent. If it is
   /// empty, there is no spend limit and any amount of coins can be spent.
-  var spendLimit: [Cosmos_Base_V1beta1_Coin] = []
+  public var spendLimit: [Cosmos_Base_V1beta1_Coin] = []
 
   /// expiration specifies an optional time when this allowance expires
-  var expiration: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var expiration: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _expiration ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_expiration = newValue}
   }
   /// Returns true if `expiration` has been explicitly set.
-  var hasExpiration: Bool {return self._expiration != nil}
+  public var hasExpiration: Bool {return self._expiration != nil}
   /// Clears the value of `expiration`. Subsequent reads from it will return its default value.
-  mutating func clearExpiration() {self._expiration = nil}
+  public mutating func clearExpiration() {self._expiration = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _expiration: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 /// PeriodicAllowance extends Allowance to allow for both a maximum cap,
 /// as well as a limit per time period.
-struct Cosmos_Feegrant_V1beta1_PeriodicAllowance {
+public struct Cosmos_Feegrant_V1beta1_PeriodicAllowance {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// basic specifies a struct of `BasicAllowance`
-  var basic: Cosmos_Feegrant_V1beta1_BasicAllowance {
+  public var basic: Cosmos_Feegrant_V1beta1_BasicAllowance {
     get {return _basic ?? Cosmos_Feegrant_V1beta1_BasicAllowance()}
     set {_basic = newValue}
   }
   /// Returns true if `basic` has been explicitly set.
-  var hasBasic: Bool {return self._basic != nil}
+  public var hasBasic: Bool {return self._basic != nil}
   /// Clears the value of `basic`. Subsequent reads from it will return its default value.
-  mutating func clearBasic() {self._basic = nil}
+  public mutating func clearBasic() {self._basic = nil}
 
   /// period specifies the time duration in which period_spend_limit coins can
   /// be spent before that allowance is reset
-  var period: SwiftProtobuf.Google_Protobuf_Duration {
+  public var period: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _period ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_period = newValue}
   }
   /// Returns true if `period` has been explicitly set.
-  var hasPeriod: Bool {return self._period != nil}
+  public var hasPeriod: Bool {return self._period != nil}
   /// Clears the value of `period`. Subsequent reads from it will return its default value.
-  mutating func clearPeriod() {self._period = nil}
+  public mutating func clearPeriod() {self._period = nil}
 
   /// period_spend_limit specifies the maximum number of coins that can be spent
   /// in the period
-  var periodSpendLimit: [Cosmos_Base_V1beta1_Coin] = []
+  public var periodSpendLimit: [Cosmos_Base_V1beta1_Coin] = []
 
   /// period_can_spend is the number of coins left to be spent before the period_reset time
-  var periodCanSpend: [Cosmos_Base_V1beta1_Coin] = []
+  public var periodCanSpend: [Cosmos_Base_V1beta1_Coin] = []
 
   /// period_reset is the time at which this period resets and a new one begins,
   /// it is calculated from the start time of the first transaction after the
   /// last period ended
-  var periodReset: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var periodReset: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _periodReset ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_periodReset = newValue}
   }
   /// Returns true if `periodReset` has been explicitly set.
-  var hasPeriodReset: Bool {return self._periodReset != nil}
+  public var hasPeriodReset: Bool {return self._periodReset != nil}
   /// Clears the value of `periodReset`. Subsequent reads from it will return its default value.
-  mutating func clearPeriodReset() {self._periodReset = nil}
+  public mutating func clearPeriodReset() {self._periodReset = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _basic: Cosmos_Feegrant_V1beta1_BasicAllowance? = nil
   fileprivate var _period: SwiftProtobuf.Google_Protobuf_Duration? = nil
@@ -108,56 +108,56 @@ struct Cosmos_Feegrant_V1beta1_PeriodicAllowance {
 }
 
 /// AllowedMsgAllowance creates allowance only for specified message types.
-struct Cosmos_Feegrant_V1beta1_AllowedMsgAllowance {
+public struct Cosmos_Feegrant_V1beta1_AllowedMsgAllowance {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// allowance can be any of basic and filtered fee allowance.
-  var allowance: SwiftProtobuf.Google_Protobuf_Any {
+  public var allowance: SwiftProtobuf.Google_Protobuf_Any {
     get {return _allowance ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_allowance = newValue}
   }
   /// Returns true if `allowance` has been explicitly set.
-  var hasAllowance: Bool {return self._allowance != nil}
+  public var hasAllowance: Bool {return self._allowance != nil}
   /// Clears the value of `allowance`. Subsequent reads from it will return its default value.
-  mutating func clearAllowance() {self._allowance = nil}
+  public mutating func clearAllowance() {self._allowance = nil}
 
   /// allowed_messages are the messages for which the grantee has the access.
-  var allowedMessages: [String] = []
+  public var allowedMessages: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _allowance: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
 
 /// Grant is stored in the KVStore to record a grant with full context
-struct Cosmos_Feegrant_V1beta1_Grant {
+public struct Cosmos_Feegrant_V1beta1_Grant {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// granter is the address of the user granting an allowance of their funds.
-  var granter: String = String()
+  public var granter: String = String()
 
   /// grantee is the address of the user being granted an allowance of another user's funds.
-  var grantee: String = String()
+  public var grantee: String = String()
 
   /// allowance can be any of basic and filtered fee allowance.
-  var allowance: SwiftProtobuf.Google_Protobuf_Any {
+  public var allowance: SwiftProtobuf.Google_Protobuf_Any {
     get {return _allowance ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_allowance = newValue}
   }
   /// Returns true if `allowance` has been explicitly set.
-  var hasAllowance: Bool {return self._allowance != nil}
+  public var hasAllowance: Bool {return self._allowance != nil}
   /// Clears the value of `allowance`. Subsequent reads from it will return its default value.
-  mutating func clearAllowance() {self._allowance = nil}
+  public mutating func clearAllowance() {self._allowance = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _allowance: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
@@ -174,13 +174,13 @@ extension Cosmos_Feegrant_V1beta1_Grant: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.feegrant.v1beta1"
 
 extension Cosmos_Feegrant_V1beta1_BasicAllowance: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BasicAllowance"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BasicAllowance"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "spend_limit"),
     2: .same(proto: "expiration"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -193,7 +193,7 @@ extension Cosmos_Feegrant_V1beta1_BasicAllowance: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -207,7 +207,7 @@ extension Cosmos_Feegrant_V1beta1_BasicAllowance: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Feegrant_V1beta1_BasicAllowance, rhs: Cosmos_Feegrant_V1beta1_BasicAllowance) -> Bool {
+  public static func ==(lhs: Cosmos_Feegrant_V1beta1_BasicAllowance, rhs: Cosmos_Feegrant_V1beta1_BasicAllowance) -> Bool {
     if lhs.spendLimit != rhs.spendLimit {return false}
     if lhs._expiration != rhs._expiration {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -216,8 +216,8 @@ extension Cosmos_Feegrant_V1beta1_BasicAllowance: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Cosmos_Feegrant_V1beta1_PeriodicAllowance: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PeriodicAllowance"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PeriodicAllowance"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "basic"),
     2: .same(proto: "period"),
     3: .standard(proto: "period_spend_limit"),
@@ -225,7 +225,7 @@ extension Cosmos_Feegrant_V1beta1_PeriodicAllowance: SwiftProtobuf.Message, Swif
     5: .standard(proto: "period_reset"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -241,7 +241,7 @@ extension Cosmos_Feegrant_V1beta1_PeriodicAllowance: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -264,7 +264,7 @@ extension Cosmos_Feegrant_V1beta1_PeriodicAllowance: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Feegrant_V1beta1_PeriodicAllowance, rhs: Cosmos_Feegrant_V1beta1_PeriodicAllowance) -> Bool {
+  public static func ==(lhs: Cosmos_Feegrant_V1beta1_PeriodicAllowance, rhs: Cosmos_Feegrant_V1beta1_PeriodicAllowance) -> Bool {
     if lhs._basic != rhs._basic {return false}
     if lhs._period != rhs._period {return false}
     if lhs.periodSpendLimit != rhs.periodSpendLimit {return false}
@@ -276,13 +276,13 @@ extension Cosmos_Feegrant_V1beta1_PeriodicAllowance: SwiftProtobuf.Message, Swif
 }
 
 extension Cosmos_Feegrant_V1beta1_AllowedMsgAllowance: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".AllowedMsgAllowance"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".AllowedMsgAllowance"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "allowance"),
     2: .standard(proto: "allowed_messages"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -295,7 +295,7 @@ extension Cosmos_Feegrant_V1beta1_AllowedMsgAllowance: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -309,7 +309,7 @@ extension Cosmos_Feegrant_V1beta1_AllowedMsgAllowance: SwiftProtobuf.Message, Sw
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Feegrant_V1beta1_AllowedMsgAllowance, rhs: Cosmos_Feegrant_V1beta1_AllowedMsgAllowance) -> Bool {
+  public static func ==(lhs: Cosmos_Feegrant_V1beta1_AllowedMsgAllowance, rhs: Cosmos_Feegrant_V1beta1_AllowedMsgAllowance) -> Bool {
     if lhs._allowance != rhs._allowance {return false}
     if lhs.allowedMessages != rhs.allowedMessages {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -318,14 +318,14 @@ extension Cosmos_Feegrant_V1beta1_AllowedMsgAllowance: SwiftProtobuf.Message, Sw
 }
 
 extension Cosmos_Feegrant_V1beta1_Grant: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Grant"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Grant"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "granter"),
     2: .same(proto: "grantee"),
     3: .same(proto: "allowance"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -339,7 +339,7 @@ extension Cosmos_Feegrant_V1beta1_Grant: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -356,7 +356,7 @@ extension Cosmos_Feegrant_V1beta1_Grant: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Feegrant_V1beta1_Grant, rhs: Cosmos_Feegrant_V1beta1_Grant) -> Bool {
+  public static func ==(lhs: Cosmos_Feegrant_V1beta1_Grant, rhs: Cosmos_Feegrant_V1beta1_Grant) -> Bool {
     if lhs.granter != rhs.granter {return false}
     if lhs.grantee != rhs.grantee {return false}
     if lhs._allowance != rhs._allowance {return false}

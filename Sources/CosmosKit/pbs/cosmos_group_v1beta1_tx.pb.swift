@@ -21,8 +21,8 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Exec defines modes of execution of a proposal on creation or on new vote.
-enum Cosmos_Group_V1beta1_Exec: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Cosmos_Group_V1beta1_Exec: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
 
   /// An empty value means that there should be a separate
   /// MsgExec request for the proposal to execute.
@@ -35,11 +35,11 @@ enum Cosmos_Group_V1beta1_Exec: SwiftProtobuf.Enum {
   case `try` // = 1
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unspecified
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unspecified
     case 1: self = .try
@@ -47,7 +47,7 @@ enum Cosmos_Group_V1beta1_Exec: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unspecified: return 0
     case .try: return 1
@@ -61,7 +61,7 @@ enum Cosmos_Group_V1beta1_Exec: SwiftProtobuf.Enum {
 
 extension Cosmos_Group_V1beta1_Exec: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Cosmos_Group_V1beta1_Exec] = [
+  public static var allCases: [Cosmos_Group_V1beta1_Exec] = [
     .unspecified,
     .try,
   ]
@@ -70,499 +70,388 @@ extension Cosmos_Group_V1beta1_Exec: CaseIterable {
 #endif  // swift(>=4.2)
 
 /// MsgCreateGroup is the Msg/CreateGroup request type.
-struct Cosmos_Group_V1beta1_MsgCreateGroup {
+public struct Cosmos_Group_V1beta1_MsgCreateGroup {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// admin is the account address of the group admin.
-  var admin: String = String()
+  public var admin: String = String()
 
   /// members defines the group members.
-  var members: [Cosmos_Group_V1beta1_Member] = []
+  public var members: [Cosmos_Group_V1beta1_Member] = []
 
   /// metadata is any arbitrary metadata to attached to the group.
-  var metadata: String = String()
+  public var metadata: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgCreateGroupResponse is the Msg/CreateGroup response type.
-struct Cosmos_Group_V1beta1_MsgCreateGroupResponse {
+public struct Cosmos_Group_V1beta1_MsgCreateGroupResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// group_id is the unique ID of the newly created group.
-  var groupID: UInt64 = 0
+  public var groupID: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgUpdateGroupMembers is the Msg/UpdateGroupMembers request type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupMembers {
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupMembers {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// admin is the account address of the group admin.
-  var admin: String = String()
+  public var admin: String = String()
 
   /// group_id is the unique ID of the group.
-  var groupID: UInt64 = 0
+  public var groupID: UInt64 = 0
 
   /// member_updates is the list of members to update,
   /// set weight to 0 to remove a member.
-  var memberUpdates: [Cosmos_Group_V1beta1_Member] = []
+  public var memberUpdates: [Cosmos_Group_V1beta1_Member] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgUpdateGroupMembersResponse is the Msg/UpdateGroupMembers response type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupMembersResponse {
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupMembersResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgUpdateGroupAdmin is the Msg/UpdateGroupAdmin request type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupAdmin {
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupAdmin {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// admin is the current account address of the group admin.
-  var admin: String = String()
+  public var admin: String = String()
 
   /// group_id is the unique ID of the group.
-  var groupID: UInt64 = 0
+  public var groupID: UInt64 = 0
 
   /// new_admin is the group new admin account address.
-  var newAdmin: String = String()
+  public var newAdmin: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgUpdateGroupAdminResponse is the Msg/UpdateGroupAdmin response type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupAdminResponse {
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupAdminResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgUpdateGroupMetadata is the Msg/UpdateGroupMetadata request type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupMetadata {
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupMetadata {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// admin is the account address of the group admin.
-  var admin: String = String()
+  public var admin: String = String()
 
   /// group_id is the unique ID of the group.
-  var groupID: UInt64 = 0
+  public var groupID: UInt64 = 0
 
   /// metadata is the updated group's metadata.
-  var metadata: String = String()
+  public var metadata: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgUpdateGroupMetadataResponse is the Msg/UpdateGroupMetadata response type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse {
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// MsgCreateGroupPolicy is the Msg/CreateGroupPolicy request type.
-struct Cosmos_Group_V1beta1_MsgCreateGroupPolicy {
+/// MsgCreateGroupAccount is the Msg/CreateGroupAccount request type.
+public struct Cosmos_Group_V1beta1_MsgCreateGroupAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// admin is the account address of the group admin.
-  var admin: String = String()
+  public var admin: String = String()
 
   /// group_id is the unique ID of the group.
-  var groupID: UInt64 = 0
+  public var groupID: UInt64 = 0
 
-  /// metadata is any arbitrary metadata attached to the group policy.
-  var metadata: String = String()
+  /// metadata is any arbitrary metadata to attached to the group account.
+  public var metadata: Data = Data()
 
-  /// decision_policy specifies the group policy's decision policy.
-  var decisionPolicy: SwiftProtobuf.Google_Protobuf_Any {
+  /// decision_policy specifies the group account's decision policy.
+  public var decisionPolicy: SwiftProtobuf.Google_Protobuf_Any {
     get {return _decisionPolicy ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_decisionPolicy = newValue}
   }
   /// Returns true if `decisionPolicy` has been explicitly set.
-  var hasDecisionPolicy: Bool {return self._decisionPolicy != nil}
+  public var hasDecisionPolicy: Bool {return self._decisionPolicy != nil}
   /// Clears the value of `decisionPolicy`. Subsequent reads from it will return its default value.
-  mutating func clearDecisionPolicy() {self._decisionPolicy = nil}
+  public mutating func clearDecisionPolicy() {self._decisionPolicy = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _decisionPolicy: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
 
-/// MsgCreateGroupPolicyResponse is the Msg/CreateGroupPolicy response type.
-struct Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse {
+/// MsgCreateGroupAccountResponse is the Msg/CreateGroupAccount response type.
+public struct Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// address is the account address of the newly created group policy.
-  var address: String = String()
+  /// address is the account address of the newly created group account.
+  public var address: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// MsgUpdateGroupPolicyAdmin is the Msg/UpdateGroupPolicyAdmin request type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin {
+/// MsgUpdateGroupAccountAdmin is the Msg/UpdateGroupAccountAdmin request type.
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// admin is the account address of the group admin.
-  var admin: String = String()
+  public var admin: String = String()
 
-  /// address is the account address of the group policy.
-  var address: String = String()
+  /// address is the group account address.
+  public var address: String = String()
 
-  /// new_admin is the new group policy admin.
-  var newAdmin: String = String()
+  /// new_admin is the new group account admin.
+  public var newAdmin: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// MsgCreateGroupWithPolicy is the Msg/CreateGroupWithPolicy request type.
-struct Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy {
+/// MsgUpdateGroupAccountAdminResponse is the Msg/UpdateGroupAccountAdmin response type.
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// admin is the account address of the group and group policy admin.
-  var admin: String = String()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  /// members defines the group members.
-  var members: [Cosmos_Group_V1beta1_Member] = []
-
-  /// group_metadata is any arbitrary metadata attached to the group.
-  var groupMetadata: String = String()
-
-  /// group_policy_metadata is any arbitrary metadata attached to the group policy.
-  var groupPolicyMetadata: String = String()
-
-  /// group_policy_as_admin is a boolean field, if set to true, the group policy account address will be used as group and group policy admin.
-  var groupPolicyAsAdmin: Bool = false
-
-  /// decision_policy specifies the group policy's decision policy.
-  var decisionPolicy: SwiftProtobuf.Google_Protobuf_Any {
-    get {return _decisionPolicy ?? SwiftProtobuf.Google_Protobuf_Any()}
-    set {_decisionPolicy = newValue}
-  }
-  /// Returns true if `decisionPolicy` has been explicitly set.
-  var hasDecisionPolicy: Bool {return self._decisionPolicy != nil}
-  /// Clears the value of `decisionPolicy`. Subsequent reads from it will return its default value.
-  mutating func clearDecisionPolicy() {self._decisionPolicy = nil}
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-
-  fileprivate var _decisionPolicy: SwiftProtobuf.Google_Protobuf_Any? = nil
+  public init() {}
 }
 
-/// MsgCreateGroupWithPolicyResponse is the Msg/CreateGroupWithPolicy response type.
-struct Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// group_id is the unique ID of the newly created group with policy.
-  var groupID: UInt64 = 0
-
-  /// group_policy_address is the account address of the newly created group policy.
-  var groupPolicyAddress: String = String()
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// MsgUpdateGroupPolicyAdminResponse is the Msg/UpdateGroupPolicyAdmin response type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// MsgUpdateGroupPolicyDecisionPolicy is the Msg/UpdateGroupPolicyDecisionPolicy request type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy {
+/// MsgUpdateGroupAccountDecisionPolicy is the Msg/UpdateGroupAccountDecisionPolicy request type.
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// admin is the account address of the group admin.
-  var admin: String = String()
+  public var admin: String = String()
 
-  /// address is the account address of group policy.
-  var address: String = String()
+  /// address is the group account address.
+  public var address: String = String()
 
-  /// decision_policy is the updated group policy's decision policy.
-  var decisionPolicy: SwiftProtobuf.Google_Protobuf_Any {
+  /// decision_policy is the updated group account decision policy.
+  public var decisionPolicy: SwiftProtobuf.Google_Protobuf_Any {
     get {return _decisionPolicy ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_decisionPolicy = newValue}
   }
   /// Returns true if `decisionPolicy` has been explicitly set.
-  var hasDecisionPolicy: Bool {return self._decisionPolicy != nil}
+  public var hasDecisionPolicy: Bool {return self._decisionPolicy != nil}
   /// Clears the value of `decisionPolicy`. Subsequent reads from it will return its default value.
-  mutating func clearDecisionPolicy() {self._decisionPolicy = nil}
+  public mutating func clearDecisionPolicy() {self._decisionPolicy = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _decisionPolicy: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
 
-/// MsgUpdateGroupPolicyDecisionPolicyResponse is the Msg/UpdateGroupPolicyDecisionPolicy response type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse {
+/// MsgUpdateGroupAccountDecisionPolicyResponse is the Msg/UpdateGroupAccountDecisionPolicy response type.
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// MsgUpdateGroupPolicyMetadata is the Msg/UpdateGroupPolicyMetadata request type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata {
+/// MsgUpdateGroupAccountMetadata is the Msg/UpdateGroupAccountMetadata request type.
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// admin is the account address of the group admin.
-  var admin: String = String()
+  public var admin: String = String()
 
-  /// address is the account address of group policy.
-  var address: String = String()
+  /// address is the group account address.
+  public var address: String = String()
 
-  /// metadata is the updated group policy metadata.
-  var metadata: String = String()
+  /// metadata is the updated group account metadata.
+  public var metadata: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// MsgUpdateGroupPolicyMetadataResponse is the Msg/UpdateGroupPolicyMetadata response type.
-struct Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse {
+/// MsgUpdateGroupAccountMetadataResponse is the Msg/UpdateGroupAccountMetadata response type.
+public struct Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// MsgSubmitProposal is the Msg/SubmitProposal request type.
-struct Cosmos_Group_V1beta1_MsgSubmitProposal {
+/// MsgCreateProposal is the Msg/CreateProposal request type.
+public struct Cosmos_Group_V1beta1_MsgCreateProposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// address is the account address of group policy.
-  var address: String = String()
+  /// address is the group account address.
+  public var address: String = String()
 
   /// proposers are the account addresses of the proposers.
   /// Proposers signatures will be counted as yes votes.
-  var proposers: [String] = []
+  public var proposers: [String] = []
 
   /// metadata is any arbitrary metadata to attached to the proposal.
-  var metadata: String = String()
+  public var metadata: Data = Data()
 
-  /// messages is a list of `sdk.Msg`s that will be executed if the proposal passes.
-  var messages: [SwiftProtobuf.Google_Protobuf_Any] = []
+  /// msgs is a list of Msgs that will be executed if the proposal passes.
+  public var msgs: [SwiftProtobuf.Google_Protobuf_Any] = []
 
   /// exec defines the mode of execution of the proposal,
   /// whether it should be executed immediately on creation or not.
   /// If so, proposers signatures are considered as Yes votes.
-  var exec: Cosmos_Group_V1beta1_Exec = .unspecified
+  public var exec: Cosmos_Group_V1beta1_Exec = .unspecified
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-/// MsgSubmitProposalResponse is the Msg/SubmitProposal response type.
-struct Cosmos_Group_V1beta1_MsgSubmitProposalResponse {
+/// MsgCreateProposalResponse is the Msg/CreateProposal response type.
+public struct Cosmos_Group_V1beta1_MsgCreateProposalResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// proposal is the unique ID of the proposal.
-  var proposalID: UInt64 = 0
+  public var proposalID: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
-}
-
-/// MsgWithdrawProposal is the Msg/WithdrawProposal request type.
-struct Cosmos_Group_V1beta1_MsgWithdrawProposal {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// proposal is the unique ID of the proposal.
-  var proposalID: UInt64 = 0
-
-  /// address is the admin of the group policy or one of the proposer of the proposal.
-  var address: String = String()
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// MsgWithdrawProposalResponse is the Msg/WithdrawProposal response type.
-struct Cosmos_Group_V1beta1_MsgWithdrawProposalResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
+  public init() {}
 }
 
 /// MsgVote is the Msg/Vote request type.
-struct Cosmos_Group_V1beta1_MsgVote {
+public struct Cosmos_Group_V1beta1_MsgVote {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// proposal is the unique ID of the proposal.
-  var proposalID: UInt64 = 0
+  public var proposalID: UInt64 = 0
 
   /// voter is the voter account address.
-  var voter: String = String()
+  public var voter: String = String()
 
-  /// option is the voter's choice on the proposal.
-  var option: Cosmos_Group_V1beta1_VoteOption = .unspecified
+  /// choice is the voter's choice on the proposal.
+  public var choice: Cosmos_Group_V1beta1_Choice = .unspecified
 
   /// metadata is any arbitrary metadata to attached to the vote.
-  var metadata: String = String()
+  public var metadata: Data = Data()
 
   /// exec defines whether the proposal should be executed
   /// immediately after voting or not.
-  var exec: Cosmos_Group_V1beta1_Exec = .unspecified
+  public var exec: Cosmos_Group_V1beta1_Exec = .unspecified
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgVoteResponse is the Msg/Vote response type.
-struct Cosmos_Group_V1beta1_MsgVoteResponse {
+public struct Cosmos_Group_V1beta1_MsgVoteResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgExec is the Msg/Exec request type.
-struct Cosmos_Group_V1beta1_MsgExec {
+public struct Cosmos_Group_V1beta1_MsgExec {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// proposal is the unique ID of the proposal.
-  var proposalID: UInt64 = 0
+  public var proposalID: UInt64 = 0
 
   /// signer is the account address used to execute the proposal.
-  var signer: String = String()
+  public var signer: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgExecResponse is the Msg/Exec request type.
-struct Cosmos_Group_V1beta1_MsgExecResponse {
+public struct Cosmos_Group_V1beta1_MsgExecResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
-}
-
-/// MsgLeaveGroup is the Msg/LeaveGroup request type.
-struct Cosmos_Group_V1beta1_MsgLeaveGroup {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// address is the account address of the group member.
-  var address: String = String()
-
-  /// group_id is the unique ID of the group.
-  var groupID: UInt64 = 0
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
-}
-
-/// MsgLeaveGroupResponse is the Msg/LeaveGroup response type.
-struct Cosmos_Group_V1beta1_MsgLeaveGroupResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -575,26 +464,20 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupAdmin: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_MsgUpdateGroupAdminResponse: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_MsgUpdateGroupMetadata: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgCreateGroupPolicy: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgSubmitProposal: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgSubmitProposalResponse: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgWithdrawProposal: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgWithdrawProposalResponse: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgCreateGroupAccount: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgCreateProposal: @unchecked Sendable {}
+extension Cosmos_Group_V1beta1_MsgCreateProposalResponse: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_MsgVote: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_MsgVoteResponse: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_MsgExec: @unchecked Sendable {}
 extension Cosmos_Group_V1beta1_MsgExecResponse: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgLeaveGroup: @unchecked Sendable {}
-extension Cosmos_Group_V1beta1_MsgLeaveGroupResponse: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -602,21 +485,21 @@ extension Cosmos_Group_V1beta1_MsgLeaveGroupResponse: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.group.v1beta1"
 
 extension Cosmos_Group_V1beta1_Exec: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "EXEC_UNSPECIFIED"),
     1: .same(proto: "EXEC_TRY"),
   ]
 }
 
 extension Cosmos_Group_V1beta1_MsgCreateGroup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgCreateGroup"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgCreateGroup"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
     2: .same(proto: "members"),
     3: .same(proto: "metadata"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -624,13 +507,13 @@ extension Cosmos_Group_V1beta1_MsgCreateGroup: SwiftProtobuf.Message, SwiftProto
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.admin) }()
       case 2: try { try decoder.decodeRepeatedMessageField(value: &self.members) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.metadata) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.metadata) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.admin.isEmpty {
       try visitor.visitSingularStringField(value: self.admin, fieldNumber: 1)
     }
@@ -638,12 +521,12 @@ extension Cosmos_Group_V1beta1_MsgCreateGroup: SwiftProtobuf.Message, SwiftProto
       try visitor.visitRepeatedMessageField(value: self.members, fieldNumber: 2)
     }
     if !self.metadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.metadata, fieldNumber: 3)
+      try visitor.visitSingularBytesField(value: self.metadata, fieldNumber: 3)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroup, rhs: Cosmos_Group_V1beta1_MsgCreateGroup) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroup, rhs: Cosmos_Group_V1beta1_MsgCreateGroup) -> Bool {
     if lhs.admin != rhs.admin {return false}
     if lhs.members != rhs.members {return false}
     if lhs.metadata != rhs.metadata {return false}
@@ -653,12 +536,12 @@ extension Cosmos_Group_V1beta1_MsgCreateGroup: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Cosmos_Group_V1beta1_MsgCreateGroupResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "group_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -670,14 +553,14 @@ extension Cosmos_Group_V1beta1_MsgCreateGroupResponse: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.groupID != 0 {
       try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroupResponse, rhs: Cosmos_Group_V1beta1_MsgCreateGroupResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroupResponse, rhs: Cosmos_Group_V1beta1_MsgCreateGroupResponse) -> Bool {
     if lhs.groupID != rhs.groupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -685,14 +568,14 @@ extension Cosmos_Group_V1beta1_MsgCreateGroupResponse: SwiftProtobuf.Message, Sw
 }
 
 extension Cosmos_Group_V1beta1_MsgUpdateGroupMembers: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupMembers"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupMembers"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
     2: .standard(proto: "group_id"),
     3: .standard(proto: "member_updates"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -706,7 +589,7 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupMembers: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.admin.isEmpty {
       try visitor.visitSingularStringField(value: self.admin, fieldNumber: 1)
     }
@@ -719,7 +602,7 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupMembers: SwiftProtobuf.Message, Swi
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupMembers, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupMembers) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupMembers, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupMembers) -> Bool {
     if lhs.admin != rhs.admin {return false}
     if lhs.groupID != rhs.groupID {return false}
     if lhs.memberUpdates != rhs.memberUpdates {return false}
@@ -729,33 +612,33 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupMembers: SwiftProtobuf.Message, Swi
 }
 
 extension Cosmos_Group_V1beta1_MsgUpdateGroupMembersResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupMembersResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupMembersResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupMembersResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupMembersResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupMembersResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupMembersResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Group_V1beta1_MsgUpdateGroupAdmin: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAdmin"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAdmin"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
     2: .standard(proto: "group_id"),
     3: .standard(proto: "new_admin"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -769,7 +652,7 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupAdmin: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.admin.isEmpty {
       try visitor.visitSingularStringField(value: self.admin, fieldNumber: 1)
     }
@@ -782,7 +665,7 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupAdmin: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAdmin, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAdmin) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAdmin, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAdmin) -> Bool {
     if lhs.admin != rhs.admin {return false}
     if lhs.groupID != rhs.groupID {return false}
     if lhs.newAdmin != rhs.newAdmin {return false}
@@ -792,33 +675,33 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupAdmin: SwiftProtobuf.Message, Swift
 }
 
 extension Cosmos_Group_V1beta1_MsgUpdateGroupAdminResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAdminResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAdminResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAdminResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAdminResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAdminResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAdminResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Group_V1beta1_MsgUpdateGroupMetadata: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupMetadata"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupMetadata"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
     2: .standard(proto: "group_id"),
     3: .same(proto: "metadata"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -826,13 +709,13 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupMetadata: SwiftProtobuf.Message, Sw
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.admin) }()
       case 2: try { try decoder.decodeSingularUInt64Field(value: &self.groupID) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.metadata) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.metadata) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.admin.isEmpty {
       try visitor.visitSingularStringField(value: self.admin, fieldNumber: 1)
     }
@@ -840,12 +723,12 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupMetadata: SwiftProtobuf.Message, Sw
       try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 2)
     }
     if !self.metadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.metadata, fieldNumber: 3)
+      try visitor.visitSingularBytesField(value: self.metadata, fieldNumber: 3)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupMetadata, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupMetadata) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupMetadata, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupMetadata) -> Bool {
     if lhs.admin != rhs.admin {return false}
     if lhs.groupID != rhs.groupID {return false}
     if lhs.metadata != rhs.metadata {return false}
@@ -855,34 +738,34 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupMetadata: SwiftProtobuf.Message, Sw
 }
 
 extension Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupMetadataResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupMetadataResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgCreateGroupPolicy: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupPolicy"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_MsgCreateGroupAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
     2: .standard(proto: "group_id"),
     3: .same(proto: "metadata"),
     4: .standard(proto: "decision_policy"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -890,14 +773,14 @@ extension Cosmos_Group_V1beta1_MsgCreateGroupPolicy: SwiftProtobuf.Message, Swif
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.admin) }()
       case 2: try { try decoder.decodeSingularUInt64Field(value: &self.groupID) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.metadata) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.metadata) }()
       case 4: try { try decoder.decodeSingularMessageField(value: &self._decisionPolicy) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -909,7 +792,7 @@ extension Cosmos_Group_V1beta1_MsgCreateGroupPolicy: SwiftProtobuf.Message, Swif
       try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 2)
     }
     if !self.metadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.metadata, fieldNumber: 3)
+      try visitor.visitSingularBytesField(value: self.metadata, fieldNumber: 3)
     }
     try { if let v = self._decisionPolicy {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
@@ -917,7 +800,7 @@ extension Cosmos_Group_V1beta1_MsgCreateGroupPolicy: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroupPolicy, rhs: Cosmos_Group_V1beta1_MsgCreateGroupPolicy) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroupAccount, rhs: Cosmos_Group_V1beta1_MsgCreateGroupAccount) -> Bool {
     if lhs.admin != rhs.admin {return false}
     if lhs.groupID != rhs.groupID {return false}
     if lhs.metadata != rhs.metadata {return false}
@@ -927,13 +810,13 @@ extension Cosmos_Group_V1beta1_MsgCreateGroupPolicy: SwiftProtobuf.Message, Swif
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupPolicyResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupAccountResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -945,29 +828,29 @@ extension Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse, rhs: Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse, rhs: Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupPolicyAdmin"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAccountAdmin"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
     2: .same(proto: "address"),
     3: .standard(proto: "new_admin"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -981,7 +864,7 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin: SwiftProtobuf.Message,
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.admin.isEmpty {
       try visitor.visitSingularStringField(value: self.admin, fieldNumber: 1)
     }
@@ -994,7 +877,7 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin: SwiftProtobuf.Message,
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin) -> Bool {
     if lhs.admin != rhs.admin {return false}
     if lhs.address != rhs.address {return false}
     if lhs.newAdmin != rhs.newAdmin {return false}
@@ -1003,138 +886,34 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin: SwiftProtobuf.Message,
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupWithPolicy"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "admin"),
-    2: .same(proto: "members"),
-    3: .standard(proto: "group_metadata"),
-    4: .standard(proto: "group_policy_metadata"),
-    5: .standard(proto: "group_policy_as_admin"),
-    6: .standard(proto: "decision_policy"),
-  ]
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAccountAdminResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.admin) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.members) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.groupMetadata) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.groupPolicyMetadata) }()
-      case 5: try { try decoder.decodeSingularBoolField(value: &self.groupPolicyAsAdmin) }()
-      case 6: try { try decoder.decodeSingularMessageField(value: &self._decisionPolicy) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.admin.isEmpty {
-      try visitor.visitSingularStringField(value: self.admin, fieldNumber: 1)
-    }
-    if !self.members.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.members, fieldNumber: 2)
-    }
-    if !self.groupMetadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.groupMetadata, fieldNumber: 3)
-    }
-    if !self.groupPolicyMetadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.groupPolicyMetadata, fieldNumber: 4)
-    }
-    if self.groupPolicyAsAdmin != false {
-      try visitor.visitSingularBoolField(value: self.groupPolicyAsAdmin, fieldNumber: 5)
-    }
-    try { if let v = self._decisionPolicy {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy, rhs: Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy) -> Bool {
-    if lhs.admin != rhs.admin {return false}
-    if lhs.members != rhs.members {return false}
-    if lhs.groupMetadata != rhs.groupMetadata {return false}
-    if lhs.groupPolicyMetadata != rhs.groupPolicyMetadata {return false}
-    if lhs.groupPolicyAsAdmin != rhs.groupPolicyAsAdmin {return false}
-    if lhs._decisionPolicy != rhs._decisionPolicy {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgCreateGroupWithPolicyResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "group_id"),
-    2: .standard(proto: "group_policy_address"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.groupID) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.groupPolicyAddress) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.groupID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 1)
-    }
-    if !self.groupPolicyAddress.isEmpty {
-      try visitor.visitSingularStringField(value: self.groupPolicyAddress, fieldNumber: 2)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse, rhs: Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse) -> Bool {
-    if lhs.groupID != rhs.groupID {return false}
-    if lhs.groupPolicyAddress != rhs.groupPolicyAddress {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupPolicyAdminResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupPolicyDecisionPolicy"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAccountDecisionPolicy"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
     2: .same(proto: "address"),
     3: .standard(proto: "decision_policy"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1148,7 +927,7 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy: SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1165,7 +944,7 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy: SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy) -> Bool {
     if lhs.admin != rhs.admin {return false}
     if lhs.address != rhs.address {return false}
     if lhs._decisionPolicy != rhs._decisionPolicy {return false}
@@ -1174,34 +953,34 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy: SwiftProtobuf
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupPolicyDecisionPolicyResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAccountDecisionPolicyResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupPolicyMetadata"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAccountMetadata"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "admin"),
     2: .same(proto: "address"),
     3: .same(proto: "metadata"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1209,13 +988,13 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata: SwiftProtobuf.Messa
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.admin) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.address) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.metadata) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.metadata) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.admin.isEmpty {
       try visitor.visitSingularStringField(value: self.admin, fieldNumber: 1)
     }
@@ -1223,12 +1002,12 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata: SwiftProtobuf.Messa
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 2)
     }
     if !self.metadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.metadata, fieldNumber: 3)
+      try visitor.visitSingularBytesField(value: self.metadata, fieldNumber: 3)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata) -> Bool {
     if lhs.admin != rhs.admin {return false}
     if lhs.address != rhs.address {return false}
     if lhs.metadata != rhs.metadata {return false}
@@ -1237,36 +1016,36 @@ extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata: SwiftProtobuf.Messa
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupPolicyMetadataResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+extension Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgUpdateGroupAccountMetadataResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse, rhs: Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgSubmitProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgSubmitProposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_MsgCreateProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgCreateProposal"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .same(proto: "proposers"),
     3: .same(proto: "metadata"),
-    4: .same(proto: "messages"),
+    4: .same(proto: "msgs"),
     5: .same(proto: "exec"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1274,15 +1053,15 @@ extension Cosmos_Group_V1beta1_MsgSubmitProposal: SwiftProtobuf.Message, SwiftPr
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.address) }()
       case 2: try { try decoder.decodeRepeatedStringField(value: &self.proposers) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.metadata) }()
-      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.messages) }()
+      case 3: try { try decoder.decodeSingularBytesField(value: &self.metadata) }()
+      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.msgs) }()
       case 5: try { try decoder.decodeSingularEnumField(value: &self.exec) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
     }
@@ -1290,10 +1069,10 @@ extension Cosmos_Group_V1beta1_MsgSubmitProposal: SwiftProtobuf.Message, SwiftPr
       try visitor.visitRepeatedStringField(value: self.proposers, fieldNumber: 2)
     }
     if !self.metadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.metadata, fieldNumber: 3)
+      try visitor.visitSingularBytesField(value: self.metadata, fieldNumber: 3)
     }
-    if !self.messages.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.messages, fieldNumber: 4)
+    if !self.msgs.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.msgs, fieldNumber: 4)
     }
     if self.exec != .unspecified {
       try visitor.visitSingularEnumField(value: self.exec, fieldNumber: 5)
@@ -1301,24 +1080,24 @@ extension Cosmos_Group_V1beta1_MsgSubmitProposal: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgSubmitProposal, rhs: Cosmos_Group_V1beta1_MsgSubmitProposal) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateProposal, rhs: Cosmos_Group_V1beta1_MsgCreateProposal) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.proposers != rhs.proposers {return false}
     if lhs.metadata != rhs.metadata {return false}
-    if lhs.messages != rhs.messages {return false}
+    if lhs.msgs != rhs.msgs {return false}
     if lhs.exec != rhs.exec {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
-extension Cosmos_Group_V1beta1_MsgSubmitProposalResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgSubmitProposalResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Group_V1beta1_MsgCreateProposalResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".MsgCreateProposalResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proposal_id"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1330,88 +1109,31 @@ extension Cosmos_Group_V1beta1_MsgSubmitProposalResponse: SwiftProtobuf.Message,
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.proposalID != 0 {
       try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgSubmitProposalResponse, rhs: Cosmos_Group_V1beta1_MsgSubmitProposalResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgCreateProposalResponse, rhs: Cosmos_Group_V1beta1_MsgCreateProposalResponse) -> Bool {
     if lhs.proposalID != rhs.proposalID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Group_V1beta1_MsgWithdrawProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgWithdrawProposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "proposal_id"),
-    2: .same(proto: "address"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularUInt64Field(value: &self.proposalID) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.address) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.proposalID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
-    }
-    if !self.address.isEmpty {
-      try visitor.visitSingularStringField(value: self.address, fieldNumber: 2)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgWithdrawProposal, rhs: Cosmos_Group_V1beta1_MsgWithdrawProposal) -> Bool {
-    if lhs.proposalID != rhs.proposalID {return false}
-    if lhs.address != rhs.address {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Group_V1beta1_MsgWithdrawProposalResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgWithdrawProposalResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgWithdrawProposalResponse, rhs: Cosmos_Group_V1beta1_MsgWithdrawProposalResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Group_V1beta1_MsgVote: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgVote"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgVote"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proposal_id"),
     2: .same(proto: "voter"),
-    3: .same(proto: "option"),
+    3: .same(proto: "choice"),
     4: .same(proto: "metadata"),
     5: .same(proto: "exec"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1419,26 +1141,26 @@ extension Cosmos_Group_V1beta1_MsgVote: SwiftProtobuf.Message, SwiftProtobuf._Me
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularUInt64Field(value: &self.proposalID) }()
       case 2: try { try decoder.decodeSingularStringField(value: &self.voter) }()
-      case 3: try { try decoder.decodeSingularEnumField(value: &self.option) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.metadata) }()
+      case 3: try { try decoder.decodeSingularEnumField(value: &self.choice) }()
+      case 4: try { try decoder.decodeSingularBytesField(value: &self.metadata) }()
       case 5: try { try decoder.decodeSingularEnumField(value: &self.exec) }()
       default: break
       }
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.proposalID != 0 {
       try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
     }
     if !self.voter.isEmpty {
       try visitor.visitSingularStringField(value: self.voter, fieldNumber: 2)
     }
-    if self.option != .unspecified {
-      try visitor.visitSingularEnumField(value: self.option, fieldNumber: 3)
+    if self.choice != .unspecified {
+      try visitor.visitSingularEnumField(value: self.choice, fieldNumber: 3)
     }
     if !self.metadata.isEmpty {
-      try visitor.visitSingularStringField(value: self.metadata, fieldNumber: 4)
+      try visitor.visitSingularBytesField(value: self.metadata, fieldNumber: 4)
     }
     if self.exec != .unspecified {
       try visitor.visitSingularEnumField(value: self.exec, fieldNumber: 5)
@@ -1446,10 +1168,10 @@ extension Cosmos_Group_V1beta1_MsgVote: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgVote, rhs: Cosmos_Group_V1beta1_MsgVote) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgVote, rhs: Cosmos_Group_V1beta1_MsgVote) -> Bool {
     if lhs.proposalID != rhs.proposalID {return false}
     if lhs.voter != rhs.voter {return false}
-    if lhs.option != rhs.option {return false}
+    if lhs.choice != rhs.choice {return false}
     if lhs.metadata != rhs.metadata {return false}
     if lhs.exec != rhs.exec {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1458,32 +1180,32 @@ extension Cosmos_Group_V1beta1_MsgVote: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Cosmos_Group_V1beta1_MsgVoteResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgVoteResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgVoteResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgVoteResponse, rhs: Cosmos_Group_V1beta1_MsgVoteResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgVoteResponse, rhs: Cosmos_Group_V1beta1_MsgVoteResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Group_V1beta1_MsgExec: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgExec"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgExec"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "proposal_id"),
     2: .same(proto: "signer"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1496,7 +1218,7 @@ extension Cosmos_Group_V1beta1_MsgExec: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.proposalID != 0 {
       try visitor.visitSingularUInt64Field(value: self.proposalID, fieldNumber: 1)
     }
@@ -1506,7 +1228,7 @@ extension Cosmos_Group_V1beta1_MsgExec: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgExec, rhs: Cosmos_Group_V1beta1_MsgExec) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgExec, rhs: Cosmos_Group_V1beta1_MsgExec) -> Bool {
     if lhs.proposalID != rhs.proposalID {return false}
     if lhs.signer != rhs.signer {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -1515,76 +1237,19 @@ extension Cosmos_Group_V1beta1_MsgExec: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Cosmos_Group_V1beta1_MsgExecResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgExecResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgExecResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgExecResponse, rhs: Cosmos_Group_V1beta1_MsgExecResponse) -> Bool {
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Group_V1beta1_MsgLeaveGroup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgLeaveGroup"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "address"),
-    2: .standard(proto: "group_id"),
-  ]
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.address) }()
-      case 2: try { try decoder.decodeSingularUInt64Field(value: &self.groupID) }()
-      default: break
-      }
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.address.isEmpty {
-      try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
-    }
-    if self.groupID != 0 {
-      try visitor.visitSingularUInt64Field(value: self.groupID, fieldNumber: 2)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgLeaveGroup, rhs: Cosmos_Group_V1beta1_MsgLeaveGroup) -> Bool {
-    if lhs.address != rhs.address {return false}
-    if lhs.groupID != rhs.groupID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
-}
-
-extension Cosmos_Group_V1beta1_MsgLeaveGroupResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgLeaveGroupResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
-
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
-    }
-  }
-
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  static func ==(lhs: Cosmos_Group_V1beta1_MsgLeaveGroupResponse, rhs: Cosmos_Group_V1beta1_MsgLeaveGroupResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Group_V1beta1_MsgExecResponse, rhs: Cosmos_Group_V1beta1_MsgExecResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

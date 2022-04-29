@@ -21,31 +21,31 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Pairs defines a repeated slice of Pair objects.
-struct Cosmos_Base_Kv_V1beta1_Pairs {
+public struct Cosmos_Base_Kv_V1beta1_Pairs {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var pairs: [Cosmos_Base_Kv_V1beta1_Pair] = []
+  public var pairs: [Cosmos_Base_Kv_V1beta1_Pair] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Pair defines a key/value bytes tuple.
-struct Cosmos_Base_Kv_V1beta1_Pair {
+public struct Cosmos_Base_Kv_V1beta1_Pair {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var key: Data = Data()
+  public var key: Data = Data()
 
-  var value: Data = Data()
+  public var value: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -58,12 +58,12 @@ extension Cosmos_Base_Kv_V1beta1_Pair: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.base.kv.v1beta1"
 
 extension Cosmos_Base_Kv_V1beta1_Pairs: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Pairs"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Pairs"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pairs"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -75,14 +75,14 @@ extension Cosmos_Base_Kv_V1beta1_Pairs: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.pairs.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.pairs, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Base_Kv_V1beta1_Pairs, rhs: Cosmos_Base_Kv_V1beta1_Pairs) -> Bool {
+  public static func ==(lhs: Cosmos_Base_Kv_V1beta1_Pairs, rhs: Cosmos_Base_Kv_V1beta1_Pairs) -> Bool {
     if lhs.pairs != rhs.pairs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -90,13 +90,13 @@ extension Cosmos_Base_Kv_V1beta1_Pairs: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Cosmos_Base_Kv_V1beta1_Pair: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Pair"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Pair"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "key"),
     2: .same(proto: "value"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -109,7 +109,7 @@ extension Cosmos_Base_Kv_V1beta1_Pair: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.key.isEmpty {
       try visitor.visitSingularBytesField(value: self.key, fieldNumber: 1)
     }
@@ -119,7 +119,7 @@ extension Cosmos_Base_Kv_V1beta1_Pair: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Base_Kv_V1beta1_Pair, rhs: Cosmos_Base_Kv_V1beta1_Pair) -> Bool {
+  public static func ==(lhs: Cosmos_Base_Kv_V1beta1_Pair, rhs: Cosmos_Base_Kv_V1beta1_Pair) -> Bool {
     if lhs.key != rhs.key {return false}
     if lhs.value != rhs.value {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

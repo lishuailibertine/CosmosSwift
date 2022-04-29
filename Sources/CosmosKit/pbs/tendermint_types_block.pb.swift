@@ -20,50 +20,50 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Tendermint_Types_Block {
+public struct Tendermint_Types_Block {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var header: Tendermint_Types_Header {
+  public var header: Tendermint_Types_Header {
     get {return _header ?? Tendermint_Types_Header()}
     set {_header = newValue}
   }
   /// Returns true if `header` has been explicitly set.
-  var hasHeader: Bool {return self._header != nil}
+  public var hasHeader: Bool {return self._header != nil}
   /// Clears the value of `header`. Subsequent reads from it will return its default value.
-  mutating func clearHeader() {self._header = nil}
+  public mutating func clearHeader() {self._header = nil}
 
-  var data: Tendermint_Types_Data {
+  public var data: Tendermint_Types_Data {
     get {return _data ?? Tendermint_Types_Data()}
     set {_data = newValue}
   }
   /// Returns true if `data` has been explicitly set.
-  var hasData: Bool {return self._data != nil}
+  public var hasData: Bool {return self._data != nil}
   /// Clears the value of `data`. Subsequent reads from it will return its default value.
-  mutating func clearData() {self._data = nil}
+  public mutating func clearData() {self._data = nil}
 
-  var evidence: Tendermint_Types_EvidenceList {
+  public var evidence: Tendermint_Types_EvidenceList {
     get {return _evidence ?? Tendermint_Types_EvidenceList()}
     set {_evidence = newValue}
   }
   /// Returns true if `evidence` has been explicitly set.
-  var hasEvidence: Bool {return self._evidence != nil}
+  public var hasEvidence: Bool {return self._evidence != nil}
   /// Clears the value of `evidence`. Subsequent reads from it will return its default value.
-  mutating func clearEvidence() {self._evidence = nil}
+  public mutating func clearEvidence() {self._evidence = nil}
 
-  var lastCommit: Tendermint_Types_Commit {
+  public var lastCommit: Tendermint_Types_Commit {
     get {return _lastCommit ?? Tendermint_Types_Commit()}
     set {_lastCommit = newValue}
   }
   /// Returns true if `lastCommit` has been explicitly set.
-  var hasLastCommit: Bool {return self._lastCommit != nil}
+  public var hasLastCommit: Bool {return self._lastCommit != nil}
   /// Clears the value of `lastCommit`. Subsequent reads from it will return its default value.
-  mutating func clearLastCommit() {self._lastCommit = nil}
+  public mutating func clearLastCommit() {self._lastCommit = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _header: Tendermint_Types_Header? = nil
   fileprivate var _data: Tendermint_Types_Data? = nil
@@ -80,15 +80,15 @@ extension Tendermint_Types_Block: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.types"
 
 extension Tendermint_Types_Block: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Block"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Block"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "header"),
     2: .same(proto: "data"),
     3: .same(proto: "evidence"),
     4: .standard(proto: "last_commit"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -103,7 +103,7 @@ extension Tendermint_Types_Block: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -123,7 +123,7 @@ extension Tendermint_Types_Block: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Block, rhs: Tendermint_Types_Block) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Block, rhs: Tendermint_Types_Block) -> Bool {
     if lhs._header != rhs._header {return false}
     if lhs._data != rhs._data {return false}
     if lhs._evidence != rhs._evidence {return false}

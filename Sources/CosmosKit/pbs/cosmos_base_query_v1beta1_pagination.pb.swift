@@ -27,7 +27,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 ///          Foo some_parameter = 1;
 ///          PageRequest pagination = 2;
 ///  }
-struct Cosmos_Base_Query_V1beta1_PageRequest {
+public struct Cosmos_Base_Query_V1beta1_PageRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -35,31 +35,31 @@ struct Cosmos_Base_Query_V1beta1_PageRequest {
   /// key is a value returned in PageResponse.next_key to begin
   /// querying the next page most efficiently. Only one of offset or key
   /// should be set.
-  var key: Data = Data()
+  public var key: Data = Data()
 
   /// offset is a numeric offset that can be used when key is unavailable.
   /// It is less efficient than using key. Only one of offset or key should
   /// be set.
-  var offset: UInt64 = 0
+  public var offset: UInt64 = 0
 
   /// limit is the total number of results to be returned in the result page.
   /// If left empty it will default to a value to be set by each app.
-  var limit: UInt64 = 0
+  public var limit: UInt64 = 0
 
   /// count_total is set to true  to indicate that the result set should include
   /// a count of the total number of items available for pagination in UIs.
   /// count_total is only respected when offset is used. It is ignored when key
   /// is set.
-  var countTotal: Bool = false
+  public var countTotal: Bool = false
 
   /// reverse is set to true if results are to be returned in the descending order.
   ///
   /// Since: cosmos-sdk 0.43
-  var reverse: Bool = false
+  public var reverse: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// PageResponse is to be embedded in gRPC response messages where the
@@ -69,23 +69,22 @@ struct Cosmos_Base_Query_V1beta1_PageRequest {
 ///          repeated Bar results = 1;
 ///          PageResponse page = 2;
 ///  }
-struct Cosmos_Base_Query_V1beta1_PageResponse {
+public struct Cosmos_Base_Query_V1beta1_PageResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// next_key is the key to be passed to PageRequest.key to
-  /// query the next page most efficiently. It will be empty if
-  /// there are no more results.
-  var nextKey: Data = Data()
+  /// query the next page most efficiently
+  public var nextKey: Data = Data()
 
   /// total is total number of results available if PageRequest.count_total
   /// was set, its value is undefined otherwise
-  var total: UInt64 = 0
+  public var total: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -98,8 +97,8 @@ extension Cosmos_Base_Query_V1beta1_PageResponse: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.base.query.v1beta1"
 
 extension Cosmos_Base_Query_V1beta1_PageRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PageRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PageRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "key"),
     2: .same(proto: "offset"),
     3: .same(proto: "limit"),
@@ -107,7 +106,7 @@ extension Cosmos_Base_Query_V1beta1_PageRequest: SwiftProtobuf.Message, SwiftPro
     5: .same(proto: "reverse"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -123,7 +122,7 @@ extension Cosmos_Base_Query_V1beta1_PageRequest: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.key.isEmpty {
       try visitor.visitSingularBytesField(value: self.key, fieldNumber: 1)
     }
@@ -142,7 +141,7 @@ extension Cosmos_Base_Query_V1beta1_PageRequest: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Base_Query_V1beta1_PageRequest, rhs: Cosmos_Base_Query_V1beta1_PageRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Base_Query_V1beta1_PageRequest, rhs: Cosmos_Base_Query_V1beta1_PageRequest) -> Bool {
     if lhs.key != rhs.key {return false}
     if lhs.offset != rhs.offset {return false}
     if lhs.limit != rhs.limit {return false}
@@ -154,13 +153,13 @@ extension Cosmos_Base_Query_V1beta1_PageRequest: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Cosmos_Base_Query_V1beta1_PageResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PageResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PageResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "next_key"),
     2: .same(proto: "total"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -173,7 +172,7 @@ extension Cosmos_Base_Query_V1beta1_PageResponse: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.nextKey.isEmpty {
       try visitor.visitSingularBytesField(value: self.nextKey, fieldNumber: 1)
     }
@@ -183,7 +182,7 @@ extension Cosmos_Base_Query_V1beta1_PageResponse: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Base_Query_V1beta1_PageResponse, rhs: Cosmos_Base_Query_V1beta1_PageResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Base_Query_V1beta1_PageResponse, rhs: Cosmos_Base_Query_V1beta1_PageResponse) -> Bool {
     if lhs.nextKey != rhs.nextKey {return false}
     if lhs.total != rhs.total {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

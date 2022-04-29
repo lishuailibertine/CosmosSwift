@@ -20,17 +20,17 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-enum Tendermint_Abci_CheckTxType: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Tendermint_Abci_CheckTxType: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case new // = 0
   case recheck // = 1
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .new
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .new
     case 1: self = .recheck
@@ -38,7 +38,7 @@ enum Tendermint_Abci_CheckTxType: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .new: return 0
     case .recheck: return 1
@@ -52,7 +52,7 @@ enum Tendermint_Abci_CheckTxType: SwiftProtobuf.Enum {
 
 extension Tendermint_Abci_CheckTxType: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Tendermint_Abci_CheckTxType] = [
+  public static var allCases: [Tendermint_Abci_CheckTxType] = [
     .new,
     .recheck,
   ]
@@ -60,18 +60,18 @@ extension Tendermint_Abci_CheckTxType: CaseIterable {
 
 #endif  // swift(>=4.2)
 
-enum Tendermint_Abci_EvidenceType: SwiftProtobuf.Enum {
-  typealias RawValue = Int
+public enum Tendermint_Abci_EvidenceType: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
   case unknown // = 0
   case duplicateVote // = 1
   case lightClientAttack // = 2
   case UNRECOGNIZED(Int)
 
-  init() {
+  public init() {
     self = .unknown
   }
 
-  init?(rawValue: Int) {
+  public init?(rawValue: Int) {
     switch rawValue {
     case 0: self = .unknown
     case 1: self = .duplicateVote
@@ -80,7 +80,7 @@ enum Tendermint_Abci_EvidenceType: SwiftProtobuf.Enum {
     }
   }
 
-  var rawValue: Int {
+  public var rawValue: Int {
     switch self {
     case .unknown: return 0
     case .duplicateVote: return 1
@@ -95,7 +95,7 @@ enum Tendermint_Abci_EvidenceType: SwiftProtobuf.Enum {
 
 extension Tendermint_Abci_EvidenceType: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Tendermint_Abci_EvidenceType] = [
+  public static var allCases: [Tendermint_Abci_EvidenceType] = [
     .unknown,
     .duplicateVote,
     .lightClientAttack,
@@ -104,14 +104,14 @@ extension Tendermint_Abci_EvidenceType: CaseIterable {
 
 #endif  // swift(>=4.2)
 
-struct Tendermint_Abci_Request {
+public struct Tendermint_Abci_Request {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var value: Tendermint_Abci_Request.OneOf_Value? = nil
+  public var value: Tendermint_Abci_Request.OneOf_Value? = nil
 
-  var echo: Tendermint_Abci_RequestEcho {
+  public var echo: Tendermint_Abci_RequestEcho {
     get {
       if case .echo(let v)? = value {return v}
       return Tendermint_Abci_RequestEcho()
@@ -119,7 +119,7 @@ struct Tendermint_Abci_Request {
     set {value = .echo(newValue)}
   }
 
-  var flush: Tendermint_Abci_RequestFlush {
+  public var flush: Tendermint_Abci_RequestFlush {
     get {
       if case .flush(let v)? = value {return v}
       return Tendermint_Abci_RequestFlush()
@@ -127,7 +127,7 @@ struct Tendermint_Abci_Request {
     set {value = .flush(newValue)}
   }
 
-  var info: Tendermint_Abci_RequestInfo {
+  public var info: Tendermint_Abci_RequestInfo {
     get {
       if case .info(let v)? = value {return v}
       return Tendermint_Abci_RequestInfo()
@@ -135,7 +135,7 @@ struct Tendermint_Abci_Request {
     set {value = .info(newValue)}
   }
 
-  var setOption: Tendermint_Abci_RequestSetOption {
+  public var setOption: Tendermint_Abci_RequestSetOption {
     get {
       if case .setOption(let v)? = value {return v}
       return Tendermint_Abci_RequestSetOption()
@@ -143,7 +143,7 @@ struct Tendermint_Abci_Request {
     set {value = .setOption(newValue)}
   }
 
-  var initChain: Tendermint_Abci_RequestInitChain {
+  public var initChain: Tendermint_Abci_RequestInitChain {
     get {
       if case .initChain(let v)? = value {return v}
       return Tendermint_Abci_RequestInitChain()
@@ -151,7 +151,7 @@ struct Tendermint_Abci_Request {
     set {value = .initChain(newValue)}
   }
 
-  var query: Tendermint_Abci_RequestQuery {
+  public var query: Tendermint_Abci_RequestQuery {
     get {
       if case .query(let v)? = value {return v}
       return Tendermint_Abci_RequestQuery()
@@ -159,7 +159,7 @@ struct Tendermint_Abci_Request {
     set {value = .query(newValue)}
   }
 
-  var beginBlock: Tendermint_Abci_RequestBeginBlock {
+  public var beginBlock: Tendermint_Abci_RequestBeginBlock {
     get {
       if case .beginBlock(let v)? = value {return v}
       return Tendermint_Abci_RequestBeginBlock()
@@ -167,7 +167,7 @@ struct Tendermint_Abci_Request {
     set {value = .beginBlock(newValue)}
   }
 
-  var checkTx: Tendermint_Abci_RequestCheckTx {
+  public var checkTx: Tendermint_Abci_RequestCheckTx {
     get {
       if case .checkTx(let v)? = value {return v}
       return Tendermint_Abci_RequestCheckTx()
@@ -175,7 +175,7 @@ struct Tendermint_Abci_Request {
     set {value = .checkTx(newValue)}
   }
 
-  var deliverTx: Tendermint_Abci_RequestDeliverTx {
+  public var deliverTx: Tendermint_Abci_RequestDeliverTx {
     get {
       if case .deliverTx(let v)? = value {return v}
       return Tendermint_Abci_RequestDeliverTx()
@@ -183,7 +183,7 @@ struct Tendermint_Abci_Request {
     set {value = .deliverTx(newValue)}
   }
 
-  var endBlock: Tendermint_Abci_RequestEndBlock {
+  public var endBlock: Tendermint_Abci_RequestEndBlock {
     get {
       if case .endBlock(let v)? = value {return v}
       return Tendermint_Abci_RequestEndBlock()
@@ -191,7 +191,7 @@ struct Tendermint_Abci_Request {
     set {value = .endBlock(newValue)}
   }
 
-  var commit: Tendermint_Abci_RequestCommit {
+  public var commit: Tendermint_Abci_RequestCommit {
     get {
       if case .commit(let v)? = value {return v}
       return Tendermint_Abci_RequestCommit()
@@ -199,7 +199,7 @@ struct Tendermint_Abci_Request {
     set {value = .commit(newValue)}
   }
 
-  var listSnapshots: Tendermint_Abci_RequestListSnapshots {
+  public var listSnapshots: Tendermint_Abci_RequestListSnapshots {
     get {
       if case .listSnapshots(let v)? = value {return v}
       return Tendermint_Abci_RequestListSnapshots()
@@ -207,7 +207,7 @@ struct Tendermint_Abci_Request {
     set {value = .listSnapshots(newValue)}
   }
 
-  var offerSnapshot: Tendermint_Abci_RequestOfferSnapshot {
+  public var offerSnapshot: Tendermint_Abci_RequestOfferSnapshot {
     get {
       if case .offerSnapshot(let v)? = value {return v}
       return Tendermint_Abci_RequestOfferSnapshot()
@@ -215,7 +215,7 @@ struct Tendermint_Abci_Request {
     set {value = .offerSnapshot(newValue)}
   }
 
-  var loadSnapshotChunk: Tendermint_Abci_RequestLoadSnapshotChunk {
+  public var loadSnapshotChunk: Tendermint_Abci_RequestLoadSnapshotChunk {
     get {
       if case .loadSnapshotChunk(let v)? = value {return v}
       return Tendermint_Abci_RequestLoadSnapshotChunk()
@@ -223,7 +223,7 @@ struct Tendermint_Abci_Request {
     set {value = .loadSnapshotChunk(newValue)}
   }
 
-  var applySnapshotChunk: Tendermint_Abci_RequestApplySnapshotChunk {
+  public var applySnapshotChunk: Tendermint_Abci_RequestApplySnapshotChunk {
     get {
       if case .applySnapshotChunk(let v)? = value {return v}
       return Tendermint_Abci_RequestApplySnapshotChunk()
@@ -231,9 +231,9 @@ struct Tendermint_Abci_Request {
     set {value = .applySnapshotChunk(newValue)}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum OneOf_Value: Equatable {
+  public enum OneOf_Value: Equatable {
     case echo(Tendermint_Abci_RequestEcho)
     case flush(Tendermint_Abci_RequestFlush)
     case info(Tendermint_Abci_RequestInfo)
@@ -251,7 +251,7 @@ struct Tendermint_Abci_Request {
     case applySnapshotChunk(Tendermint_Abci_RequestApplySnapshotChunk)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Tendermint_Abci_Request.OneOf_Value, rhs: Tendermint_Abci_Request.OneOf_Value) -> Bool {
+    public static func ==(lhs: Tendermint_Abci_Request.OneOf_Value, rhs: Tendermint_Abci_Request.OneOf_Value) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -322,281 +322,281 @@ struct Tendermint_Abci_Request {
   #endif
   }
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_RequestEcho {
+public struct Tendermint_Abci_RequestEcho {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var message: String = String()
+  public var message: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_RequestFlush {
+public struct Tendermint_Abci_RequestFlush {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_RequestInfo {
+public struct Tendermint_Abci_RequestInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var version: String = String()
+  public var version: String = String()
 
-  var blockVersion: UInt64 = 0
+  public var blockVersion: UInt64 = 0
 
-  var p2PVersion: UInt64 = 0
+  public var p2PVersion: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// nondeterministic
-struct Tendermint_Abci_RequestSetOption {
+public struct Tendermint_Abci_RequestSetOption {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var key: String = String()
+  public var key: String = String()
 
-  var value: String = String()
+  public var value: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_RequestInitChain {
+public struct Tendermint_Abci_RequestInitChain {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_time = newValue}
   }
   /// Returns true if `time` has been explicitly set.
-  var hasTime: Bool {return self._time != nil}
+  public var hasTime: Bool {return self._time != nil}
   /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  mutating func clearTime() {self._time = nil}
+  public mutating func clearTime() {self._time = nil}
 
-  var chainID: String = String()
+  public var chainID: String = String()
 
-  var consensusParams: Tendermint_Abci_ConsensusParams {
+  public var consensusParams: Tendermint_Abci_ConsensusParams {
     get {return _consensusParams ?? Tendermint_Abci_ConsensusParams()}
     set {_consensusParams = newValue}
   }
   /// Returns true if `consensusParams` has been explicitly set.
-  var hasConsensusParams: Bool {return self._consensusParams != nil}
+  public var hasConsensusParams: Bool {return self._consensusParams != nil}
   /// Clears the value of `consensusParams`. Subsequent reads from it will return its default value.
-  mutating func clearConsensusParams() {self._consensusParams = nil}
+  public mutating func clearConsensusParams() {self._consensusParams = nil}
 
-  var validators: [Tendermint_Abci_ValidatorUpdate] = []
+  public var validators: [Tendermint_Abci_ValidatorUpdate] = []
 
-  var appStateBytes: Data = Data()
+  public var appStateBytes: Data = Data()
 
-  var initialHeight: Int64 = 0
+  public var initialHeight: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
   fileprivate var _consensusParams: Tendermint_Abci_ConsensusParams? = nil
 }
 
-struct Tendermint_Abci_RequestQuery {
+public struct Tendermint_Abci_RequestQuery {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var data: Data = Data()
+  public var data: Data = Data()
 
-  var path: String = String()
+  public var path: String = String()
 
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var prove: Bool = false
+  public var prove: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_RequestBeginBlock {
+public struct Tendermint_Abci_RequestBeginBlock {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var hash: Data = Data()
+  public var hash: Data = Data()
 
-  var header: Tendermint_Types_Header {
+  public var header: Tendermint_Types_Header {
     get {return _header ?? Tendermint_Types_Header()}
     set {_header = newValue}
   }
   /// Returns true if `header` has been explicitly set.
-  var hasHeader: Bool {return self._header != nil}
+  public var hasHeader: Bool {return self._header != nil}
   /// Clears the value of `header`. Subsequent reads from it will return its default value.
-  mutating func clearHeader() {self._header = nil}
+  public mutating func clearHeader() {self._header = nil}
 
-  var lastCommitInfo: Tendermint_Abci_LastCommitInfo {
+  public var lastCommitInfo: Tendermint_Abci_LastCommitInfo {
     get {return _lastCommitInfo ?? Tendermint_Abci_LastCommitInfo()}
     set {_lastCommitInfo = newValue}
   }
   /// Returns true if `lastCommitInfo` has been explicitly set.
-  var hasLastCommitInfo: Bool {return self._lastCommitInfo != nil}
+  public var hasLastCommitInfo: Bool {return self._lastCommitInfo != nil}
   /// Clears the value of `lastCommitInfo`. Subsequent reads from it will return its default value.
-  mutating func clearLastCommitInfo() {self._lastCommitInfo = nil}
+  public mutating func clearLastCommitInfo() {self._lastCommitInfo = nil}
 
-  var byzantineValidators: [Tendermint_Abci_Evidence] = []
+  public var byzantineValidators: [Tendermint_Abci_Evidence] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _header: Tendermint_Types_Header? = nil
   fileprivate var _lastCommitInfo: Tendermint_Abci_LastCommitInfo? = nil
 }
 
-struct Tendermint_Abci_RequestCheckTx {
+public struct Tendermint_Abci_RequestCheckTx {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var tx: Data = Data()
+  public var tx: Data = Data()
 
-  var type: Tendermint_Abci_CheckTxType = .new
+  public var type: Tendermint_Abci_CheckTxType = .new
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_RequestDeliverTx {
+public struct Tendermint_Abci_RequestDeliverTx {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var tx: Data = Data()
+  public var tx: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_RequestEndBlock {
+public struct Tendermint_Abci_RequestEndBlock {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_RequestCommit {
+public struct Tendermint_Abci_RequestCommit {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// lists available snapshots
-struct Tendermint_Abci_RequestListSnapshots {
+public struct Tendermint_Abci_RequestListSnapshots {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// offers a snapshot to the application
-struct Tendermint_Abci_RequestOfferSnapshot {
+public struct Tendermint_Abci_RequestOfferSnapshot {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// snapshot offered by peers
-  var snapshot: Tendermint_Abci_Snapshot {
+  public var snapshot: Tendermint_Abci_Snapshot {
     get {return _snapshot ?? Tendermint_Abci_Snapshot()}
     set {_snapshot = newValue}
   }
   /// Returns true if `snapshot` has been explicitly set.
-  var hasSnapshot: Bool {return self._snapshot != nil}
+  public var hasSnapshot: Bool {return self._snapshot != nil}
   /// Clears the value of `snapshot`. Subsequent reads from it will return its default value.
-  mutating func clearSnapshot() {self._snapshot = nil}
+  public mutating func clearSnapshot() {self._snapshot = nil}
 
   /// light client-verified app hash for snapshot height
-  var appHash: Data = Data()
+  public var appHash: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _snapshot: Tendermint_Abci_Snapshot? = nil
 }
 
 /// loads a snapshot chunk
-struct Tendermint_Abci_RequestLoadSnapshotChunk {
+public struct Tendermint_Abci_RequestLoadSnapshotChunk {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var height: UInt64 = 0
+  public var height: UInt64 = 0
 
-  var format: UInt32 = 0
+  public var format: UInt32 = 0
 
-  var chunk: UInt32 = 0
+  public var chunk: UInt32 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Applies a snapshot chunk
-struct Tendermint_Abci_RequestApplySnapshotChunk {
+public struct Tendermint_Abci_RequestApplySnapshotChunk {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var index: UInt32 = 0
+  public var index: UInt32 = 0
 
-  var chunk: Data = Data()
+  public var chunk: Data = Data()
 
-  var sender: String = String()
+  public var sender: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_Response {
+public struct Tendermint_Abci_Response {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var value: Tendermint_Abci_Response.OneOf_Value? = nil
+  public var value: Tendermint_Abci_Response.OneOf_Value? = nil
 
-  var exception: Tendermint_Abci_ResponseException {
+  public var exception: Tendermint_Abci_ResponseException {
     get {
       if case .exception(let v)? = value {return v}
       return Tendermint_Abci_ResponseException()
@@ -604,7 +604,7 @@ struct Tendermint_Abci_Response {
     set {value = .exception(newValue)}
   }
 
-  var echo: Tendermint_Abci_ResponseEcho {
+  public var echo: Tendermint_Abci_ResponseEcho {
     get {
       if case .echo(let v)? = value {return v}
       return Tendermint_Abci_ResponseEcho()
@@ -612,7 +612,7 @@ struct Tendermint_Abci_Response {
     set {value = .echo(newValue)}
   }
 
-  var flush: Tendermint_Abci_ResponseFlush {
+  public var flush: Tendermint_Abci_ResponseFlush {
     get {
       if case .flush(let v)? = value {return v}
       return Tendermint_Abci_ResponseFlush()
@@ -620,7 +620,7 @@ struct Tendermint_Abci_Response {
     set {value = .flush(newValue)}
   }
 
-  var info: Tendermint_Abci_ResponseInfo {
+  public var info: Tendermint_Abci_ResponseInfo {
     get {
       if case .info(let v)? = value {return v}
       return Tendermint_Abci_ResponseInfo()
@@ -628,7 +628,7 @@ struct Tendermint_Abci_Response {
     set {value = .info(newValue)}
   }
 
-  var setOption: Tendermint_Abci_ResponseSetOption {
+  public var setOption: Tendermint_Abci_ResponseSetOption {
     get {
       if case .setOption(let v)? = value {return v}
       return Tendermint_Abci_ResponseSetOption()
@@ -636,7 +636,7 @@ struct Tendermint_Abci_Response {
     set {value = .setOption(newValue)}
   }
 
-  var initChain: Tendermint_Abci_ResponseInitChain {
+  public var initChain: Tendermint_Abci_ResponseInitChain {
     get {
       if case .initChain(let v)? = value {return v}
       return Tendermint_Abci_ResponseInitChain()
@@ -644,7 +644,7 @@ struct Tendermint_Abci_Response {
     set {value = .initChain(newValue)}
   }
 
-  var query: Tendermint_Abci_ResponseQuery {
+  public var query: Tendermint_Abci_ResponseQuery {
     get {
       if case .query(let v)? = value {return v}
       return Tendermint_Abci_ResponseQuery()
@@ -652,7 +652,7 @@ struct Tendermint_Abci_Response {
     set {value = .query(newValue)}
   }
 
-  var beginBlock: Tendermint_Abci_ResponseBeginBlock {
+  public var beginBlock: Tendermint_Abci_ResponseBeginBlock {
     get {
       if case .beginBlock(let v)? = value {return v}
       return Tendermint_Abci_ResponseBeginBlock()
@@ -660,7 +660,7 @@ struct Tendermint_Abci_Response {
     set {value = .beginBlock(newValue)}
   }
 
-  var checkTx: Tendermint_Abci_ResponseCheckTx {
+  public var checkTx: Tendermint_Abci_ResponseCheckTx {
     get {
       if case .checkTx(let v)? = value {return v}
       return Tendermint_Abci_ResponseCheckTx()
@@ -668,7 +668,7 @@ struct Tendermint_Abci_Response {
     set {value = .checkTx(newValue)}
   }
 
-  var deliverTx: Tendermint_Abci_ResponseDeliverTx {
+  public var deliverTx: Tendermint_Abci_ResponseDeliverTx {
     get {
       if case .deliverTx(let v)? = value {return v}
       return Tendermint_Abci_ResponseDeliverTx()
@@ -676,7 +676,7 @@ struct Tendermint_Abci_Response {
     set {value = .deliverTx(newValue)}
   }
 
-  var endBlock: Tendermint_Abci_ResponseEndBlock {
+  public var endBlock: Tendermint_Abci_ResponseEndBlock {
     get {
       if case .endBlock(let v)? = value {return v}
       return Tendermint_Abci_ResponseEndBlock()
@@ -684,7 +684,7 @@ struct Tendermint_Abci_Response {
     set {value = .endBlock(newValue)}
   }
 
-  var commit: Tendermint_Abci_ResponseCommit {
+  public var commit: Tendermint_Abci_ResponseCommit {
     get {
       if case .commit(let v)? = value {return v}
       return Tendermint_Abci_ResponseCommit()
@@ -692,7 +692,7 @@ struct Tendermint_Abci_Response {
     set {value = .commit(newValue)}
   }
 
-  var listSnapshots: Tendermint_Abci_ResponseListSnapshots {
+  public var listSnapshots: Tendermint_Abci_ResponseListSnapshots {
     get {
       if case .listSnapshots(let v)? = value {return v}
       return Tendermint_Abci_ResponseListSnapshots()
@@ -700,7 +700,7 @@ struct Tendermint_Abci_Response {
     set {value = .listSnapshots(newValue)}
   }
 
-  var offerSnapshot: Tendermint_Abci_ResponseOfferSnapshot {
+  public var offerSnapshot: Tendermint_Abci_ResponseOfferSnapshot {
     get {
       if case .offerSnapshot(let v)? = value {return v}
       return Tendermint_Abci_ResponseOfferSnapshot()
@@ -708,7 +708,7 @@ struct Tendermint_Abci_Response {
     set {value = .offerSnapshot(newValue)}
   }
 
-  var loadSnapshotChunk: Tendermint_Abci_ResponseLoadSnapshotChunk {
+  public var loadSnapshotChunk: Tendermint_Abci_ResponseLoadSnapshotChunk {
     get {
       if case .loadSnapshotChunk(let v)? = value {return v}
       return Tendermint_Abci_ResponseLoadSnapshotChunk()
@@ -716,7 +716,7 @@ struct Tendermint_Abci_Response {
     set {value = .loadSnapshotChunk(newValue)}
   }
 
-  var applySnapshotChunk: Tendermint_Abci_ResponseApplySnapshotChunk {
+  public var applySnapshotChunk: Tendermint_Abci_ResponseApplySnapshotChunk {
     get {
       if case .applySnapshotChunk(let v)? = value {return v}
       return Tendermint_Abci_ResponseApplySnapshotChunk()
@@ -724,9 +724,9 @@ struct Tendermint_Abci_Response {
     set {value = .applySnapshotChunk(newValue)}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum OneOf_Value: Equatable {
+  public enum OneOf_Value: Equatable {
     case exception(Tendermint_Abci_ResponseException)
     case echo(Tendermint_Abci_ResponseEcho)
     case flush(Tendermint_Abci_ResponseFlush)
@@ -745,7 +745,7 @@ struct Tendermint_Abci_Response {
     case applySnapshotChunk(Tendermint_Abci_ResponseApplySnapshotChunk)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Tendermint_Abci_Response.OneOf_Value, rhs: Tendermint_Abci_Response.OneOf_Value) -> Bool {
+    public static func ==(lhs: Tendermint_Abci_Response.OneOf_Value, rhs: Tendermint_Abci_Response.OneOf_Value) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -820,277 +820,277 @@ struct Tendermint_Abci_Response {
   #endif
   }
 
-  init() {}
+  public init() {}
 }
 
 /// nondeterministic
-struct Tendermint_Abci_ResponseException {
+public struct Tendermint_Abci_ResponseException {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var error: String = String()
+  public var error: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseEcho {
+public struct Tendermint_Abci_ResponseEcho {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var message: String = String()
+  public var message: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseFlush {
+public struct Tendermint_Abci_ResponseFlush {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseInfo {
+public struct Tendermint_Abci_ResponseInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var data: String = String()
+  public var data: String = String()
 
-  var version: String = String()
+  public var version: String = String()
 
-  var appVersion: UInt64 = 0
+  public var appVersion: UInt64 = 0
 
-  var lastBlockHeight: Int64 = 0
+  public var lastBlockHeight: Int64 = 0
 
-  var lastBlockAppHash: Data = Data()
+  public var lastBlockAppHash: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// nondeterministic
-struct Tendermint_Abci_ResponseSetOption {
+public struct Tendermint_Abci_ResponseSetOption {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var code: UInt32 = 0
+  public var code: UInt32 = 0
 
   /// bytes data = 2;
-  var log: String = String()
+  public var log: String = String()
 
-  var info: String = String()
+  public var info: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseInitChain {
+public struct Tendermint_Abci_ResponseInitChain {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var consensusParams: Tendermint_Abci_ConsensusParams {
+  public var consensusParams: Tendermint_Abci_ConsensusParams {
     get {return _consensusParams ?? Tendermint_Abci_ConsensusParams()}
     set {_consensusParams = newValue}
   }
   /// Returns true if `consensusParams` has been explicitly set.
-  var hasConsensusParams: Bool {return self._consensusParams != nil}
+  public var hasConsensusParams: Bool {return self._consensusParams != nil}
   /// Clears the value of `consensusParams`. Subsequent reads from it will return its default value.
-  mutating func clearConsensusParams() {self._consensusParams = nil}
+  public mutating func clearConsensusParams() {self._consensusParams = nil}
 
-  var validators: [Tendermint_Abci_ValidatorUpdate] = []
+  public var validators: [Tendermint_Abci_ValidatorUpdate] = []
 
-  var appHash: Data = Data()
+  public var appHash: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _consensusParams: Tendermint_Abci_ConsensusParams? = nil
 }
 
-struct Tendermint_Abci_ResponseQuery {
+public struct Tendermint_Abci_ResponseQuery {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var code: UInt32 = 0
+  public var code: UInt32 = 0
 
   /// bytes data = 2; // use "value" instead.
-  var log: String = String()
+  public var log: String = String()
 
   /// nondeterministic
-  var info: String = String()
+  public var info: String = String()
 
-  var index: Int64 = 0
+  public var index: Int64 = 0
 
-  var key: Data = Data()
+  public var key: Data = Data()
 
-  var value: Data = Data()
+  public var value: Data = Data()
 
-  var proofOps: Tendermint_Crypto_ProofOps {
+  public var proofOps: Tendermint_Crypto_ProofOps {
     get {return _proofOps ?? Tendermint_Crypto_ProofOps()}
     set {_proofOps = newValue}
   }
   /// Returns true if `proofOps` has been explicitly set.
-  var hasProofOps: Bool {return self._proofOps != nil}
+  public var hasProofOps: Bool {return self._proofOps != nil}
   /// Clears the value of `proofOps`. Subsequent reads from it will return its default value.
-  mutating func clearProofOps() {self._proofOps = nil}
+  public mutating func clearProofOps() {self._proofOps = nil}
 
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var codespace: String = String()
+  public var codespace: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _proofOps: Tendermint_Crypto_ProofOps? = nil
 }
 
-struct Tendermint_Abci_ResponseBeginBlock {
+public struct Tendermint_Abci_ResponseBeginBlock {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var events: [Tendermint_Abci_Event] = []
+  public var events: [Tendermint_Abci_Event] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseCheckTx {
+public struct Tendermint_Abci_ResponseCheckTx {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var code: UInt32 = 0
+  public var code: UInt32 = 0
 
-  var data: Data = Data()
-
-  /// nondeterministic
-  var log: String = String()
+  public var data: Data = Data()
 
   /// nondeterministic
-  var info: String = String()
+  public var log: String = String()
 
-  var gasWanted: Int64 = 0
+  /// nondeterministic
+  public var info: String = String()
 
-  var gasUsed: Int64 = 0
+  public var gasWanted: Int64 = 0
 
-  var events: [Tendermint_Abci_Event] = []
+  public var gasUsed: Int64 = 0
 
-  var codespace: String = String()
+  public var events: [Tendermint_Abci_Event] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var codespace: String = String()
 
-  init() {}
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseDeliverTx {
+public struct Tendermint_Abci_ResponseDeliverTx {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var code: UInt32 = 0
+  public var code: UInt32 = 0
 
-  var data: Data = Data()
-
-  /// nondeterministic
-  var log: String = String()
+  public var data: Data = Data()
 
   /// nondeterministic
-  var info: String = String()
+  public var log: String = String()
 
-  var gasWanted: Int64 = 0
+  /// nondeterministic
+  public var info: String = String()
 
-  var gasUsed: Int64 = 0
+  public var gasWanted: Int64 = 0
 
-  var events: [Tendermint_Abci_Event] = []
+  public var gasUsed: Int64 = 0
 
-  var codespace: String = String()
+  public var events: [Tendermint_Abci_Event] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var codespace: String = String()
 
-  init() {}
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseEndBlock {
+public struct Tendermint_Abci_ResponseEndBlock {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var validatorUpdates: [Tendermint_Abci_ValidatorUpdate] = []
+  public var validatorUpdates: [Tendermint_Abci_ValidatorUpdate] = []
 
-  var consensusParamUpdates: Tendermint_Abci_ConsensusParams {
+  public var consensusParamUpdates: Tendermint_Abci_ConsensusParams {
     get {return _consensusParamUpdates ?? Tendermint_Abci_ConsensusParams()}
     set {_consensusParamUpdates = newValue}
   }
   /// Returns true if `consensusParamUpdates` has been explicitly set.
-  var hasConsensusParamUpdates: Bool {return self._consensusParamUpdates != nil}
+  public var hasConsensusParamUpdates: Bool {return self._consensusParamUpdates != nil}
   /// Clears the value of `consensusParamUpdates`. Subsequent reads from it will return its default value.
-  mutating func clearConsensusParamUpdates() {self._consensusParamUpdates = nil}
+  public mutating func clearConsensusParamUpdates() {self._consensusParamUpdates = nil}
 
-  var events: [Tendermint_Abci_Event] = []
+  public var events: [Tendermint_Abci_Event] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _consensusParamUpdates: Tendermint_Abci_ConsensusParams? = nil
 }
 
-struct Tendermint_Abci_ResponseCommit {
+public struct Tendermint_Abci_ResponseCommit {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// reserve 1
-  var data: Data = Data()
+  public var data: Data = Data()
 
-  var retainHeight: Int64 = 0
+  public var retainHeight: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseListSnapshots {
+public struct Tendermint_Abci_ResponseListSnapshots {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var snapshots: [Tendermint_Abci_Snapshot] = []
+  public var snapshots: [Tendermint_Abci_Snapshot] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseOfferSnapshot {
+public struct Tendermint_Abci_ResponseOfferSnapshot {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var result: Tendermint_Abci_ResponseOfferSnapshot.Result = .unknown
+  public var result: Tendermint_Abci_ResponseOfferSnapshot.Result = .unknown
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum Result: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum Result: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
 
     /// Unknown result, abort all snapshot restoration
     case unknown // = 0
@@ -1111,11 +1111,11 @@ struct Tendermint_Abci_ResponseOfferSnapshot {
     case rejectSender // = 5
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .unknown
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .unknown
       case 1: self = .accept
@@ -1127,7 +1127,7 @@ struct Tendermint_Abci_ResponseOfferSnapshot {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .unknown: return 0
       case .accept: return 1
@@ -1141,14 +1141,14 @@ struct Tendermint_Abci_ResponseOfferSnapshot {
 
   }
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=4.2)
 
 extension Tendermint_Abci_ResponseOfferSnapshot.Result: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Tendermint_Abci_ResponseOfferSnapshot.Result] = [
+  public static var allCases: [Tendermint_Abci_ResponseOfferSnapshot.Result] = [
     .unknown,
     .accept,
     .abort,
@@ -1160,35 +1160,35 @@ extension Tendermint_Abci_ResponseOfferSnapshot.Result: CaseIterable {
 
 #endif  // swift(>=4.2)
 
-struct Tendermint_Abci_ResponseLoadSnapshotChunk {
+public struct Tendermint_Abci_ResponseLoadSnapshotChunk {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var chunk: Data = Data()
+  public var chunk: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_ResponseApplySnapshotChunk {
+public struct Tendermint_Abci_ResponseApplySnapshotChunk {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var result: Tendermint_Abci_ResponseApplySnapshotChunk.Result = .unknown
+  public var result: Tendermint_Abci_ResponseApplySnapshotChunk.Result = .unknown
 
   /// Chunks to refetch and reapply
-  var refetchChunks: [UInt32] = []
+  public var refetchChunks: [UInt32] = []
 
   /// Chunk senders to reject and ban
-  var rejectSenders: [String] = []
+  public var rejectSenders: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum Result: SwiftProtobuf.Enum {
-    typealias RawValue = Int
+  public enum Result: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
 
     /// Unknown result, abort all snapshot restoration
     case unknown // = 0
@@ -1209,11 +1209,11 @@ struct Tendermint_Abci_ResponseApplySnapshotChunk {
     case rejectSnapshot // = 5
     case UNRECOGNIZED(Int)
 
-    init() {
+    public init() {
       self = .unknown
     }
 
-    init?(rawValue: Int) {
+    public init?(rawValue: Int) {
       switch rawValue {
       case 0: self = .unknown
       case 1: self = .accept
@@ -1225,7 +1225,7 @@ struct Tendermint_Abci_ResponseApplySnapshotChunk {
       }
     }
 
-    var rawValue: Int {
+    public var rawValue: Int {
       switch self {
       case .unknown: return 0
       case .accept: return 1
@@ -1239,14 +1239,14 @@ struct Tendermint_Abci_ResponseApplySnapshotChunk {
 
   }
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=4.2)
 
 extension Tendermint_Abci_ResponseApplySnapshotChunk.Result: CaseIterable {
   // The compiler won't synthesize support with the UNRECOGNIZED case.
-  static var allCases: [Tendermint_Abci_ResponseApplySnapshotChunk.Result] = [
+  public static var allCases: [Tendermint_Abci_ResponseApplySnapshotChunk.Result] = [
     .unknown,
     .accept,
     .abort,
@@ -1260,50 +1260,50 @@ extension Tendermint_Abci_ResponseApplySnapshotChunk.Result: CaseIterable {
 
 /// ConsensusParams contains all consensus-relevant parameters
 /// that can be adjusted by the abci app
-struct Tendermint_Abci_ConsensusParams {
+public struct Tendermint_Abci_ConsensusParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var block: Tendermint_Abci_BlockParams {
+  public var block: Tendermint_Abci_BlockParams {
     get {return _block ?? Tendermint_Abci_BlockParams()}
     set {_block = newValue}
   }
   /// Returns true if `block` has been explicitly set.
-  var hasBlock: Bool {return self._block != nil}
+  public var hasBlock: Bool {return self._block != nil}
   /// Clears the value of `block`. Subsequent reads from it will return its default value.
-  mutating func clearBlock() {self._block = nil}
+  public mutating func clearBlock() {self._block = nil}
 
-  var evidence: Tendermint_Types_EvidenceParams {
+  public var evidence: Tendermint_Types_EvidenceParams {
     get {return _evidence ?? Tendermint_Types_EvidenceParams()}
     set {_evidence = newValue}
   }
   /// Returns true if `evidence` has been explicitly set.
-  var hasEvidence: Bool {return self._evidence != nil}
+  public var hasEvidence: Bool {return self._evidence != nil}
   /// Clears the value of `evidence`. Subsequent reads from it will return its default value.
-  mutating func clearEvidence() {self._evidence = nil}
+  public mutating func clearEvidence() {self._evidence = nil}
 
-  var validator: Tendermint_Types_ValidatorParams {
+  public var validator: Tendermint_Types_ValidatorParams {
     get {return _validator ?? Tendermint_Types_ValidatorParams()}
     set {_validator = newValue}
   }
   /// Returns true if `validator` has been explicitly set.
-  var hasValidator: Bool {return self._validator != nil}
+  public var hasValidator: Bool {return self._validator != nil}
   /// Clears the value of `validator`. Subsequent reads from it will return its default value.
-  mutating func clearValidator() {self._validator = nil}
+  public mutating func clearValidator() {self._validator = nil}
 
-  var version: Tendermint_Types_VersionParams {
+  public var version: Tendermint_Types_VersionParams {
     get {return _version ?? Tendermint_Types_VersionParams()}
     set {_version = newValue}
   }
   /// Returns true if `version` has been explicitly set.
-  var hasVersion: Bool {return self._version != nil}
+  public var hasVersion: Bool {return self._version != nil}
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
-  mutating func clearVersion() {self._version = nil}
+  public mutating func clearVersion() {self._version = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _block: Tendermint_Abci_BlockParams? = nil
   fileprivate var _evidence: Tendermint_Types_EvidenceParams? = nil
@@ -1312,232 +1312,232 @@ struct Tendermint_Abci_ConsensusParams {
 }
 
 /// BlockParams contains limits on the block size.
-struct Tendermint_Abci_BlockParams {
+public struct Tendermint_Abci_BlockParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Note: must be greater than 0
-  var maxBytes: Int64 = 0
+  public var maxBytes: Int64 = 0
 
   /// Note: must be greater or equal to -1
-  var maxGas: Int64 = 0
+  public var maxGas: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
-struct Tendermint_Abci_LastCommitInfo {
+public struct Tendermint_Abci_LastCommitInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var round: Int32 = 0
+  public var round: Int32 = 0
 
-  var votes: [Tendermint_Abci_VoteInfo] = []
+  public var votes: [Tendermint_Abci_VoteInfo] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Event allows application developers to attach additional information to
 /// ResponseBeginBlock, ResponseEndBlock, ResponseCheckTx and ResponseDeliverTx.
 /// Later, transactions may be queried using these events.
-struct Tendermint_Abci_Event {
+public struct Tendermint_Abci_Event {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var type: String = String()
+  public var type: String = String()
 
-  var attributes: [Tendermint_Abci_EventAttribute] = []
+  public var attributes: [Tendermint_Abci_EventAttribute] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// EventAttribute is a single key-value pair, associated with an event.
-struct Tendermint_Abci_EventAttribute {
+public struct Tendermint_Abci_EventAttribute {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var key: Data = Data()
+  public var key: Data = Data()
 
-  var value: Data = Data()
+  public var value: Data = Data()
 
   /// nondeterministic
-  var index: Bool = false
+  public var index: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// TxResult contains results of executing the transaction.
 ///
 /// One usage is indexing transaction results.
-struct Tendermint_Abci_TxResult {
+public struct Tendermint_Abci_TxResult {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var index: UInt32 = 0
+  public var index: UInt32 = 0
 
-  var tx: Data = Data()
+  public var tx: Data = Data()
 
-  var result: Tendermint_Abci_ResponseDeliverTx {
+  public var result: Tendermint_Abci_ResponseDeliverTx {
     get {return _result ?? Tendermint_Abci_ResponseDeliverTx()}
     set {_result = newValue}
   }
   /// Returns true if `result` has been explicitly set.
-  var hasResult: Bool {return self._result != nil}
+  public var hasResult: Bool {return self._result != nil}
   /// Clears the value of `result`. Subsequent reads from it will return its default value.
-  mutating func clearResult() {self._result = nil}
+  public mutating func clearResult() {self._result = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _result: Tendermint_Abci_ResponseDeliverTx? = nil
 }
 
 /// Validator
-struct Tendermint_Abci_Validator {
+public struct Tendermint_Abci_Validator {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// The first 20 bytes of SHA256(public key)
-  var address: Data = Data()
+  public var address: Data = Data()
 
   /// PubKey pub_key = 2 [(gogoproto.nullable)=false];
-  var power: Int64 = 0
+  public var power: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// ValidatorUpdate
-struct Tendermint_Abci_ValidatorUpdate {
+public struct Tendermint_Abci_ValidatorUpdate {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var pubKey: Tendermint_Crypto_PublicKey {
+  public var pubKey: Tendermint_Crypto_PublicKey {
     get {return _pubKey ?? Tendermint_Crypto_PublicKey()}
     set {_pubKey = newValue}
   }
   /// Returns true if `pubKey` has been explicitly set.
-  var hasPubKey: Bool {return self._pubKey != nil}
+  public var hasPubKey: Bool {return self._pubKey != nil}
   /// Clears the value of `pubKey`. Subsequent reads from it will return its default value.
-  mutating func clearPubKey() {self._pubKey = nil}
+  public mutating func clearPubKey() {self._pubKey = nil}
 
-  var power: Int64 = 0
+  public var power: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pubKey: Tendermint_Crypto_PublicKey? = nil
 }
 
 /// VoteInfo
-struct Tendermint_Abci_VoteInfo {
+public struct Tendermint_Abci_VoteInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var validator: Tendermint_Abci_Validator {
+  public var validator: Tendermint_Abci_Validator {
     get {return _validator ?? Tendermint_Abci_Validator()}
     set {_validator = newValue}
   }
   /// Returns true if `validator` has been explicitly set.
-  var hasValidator: Bool {return self._validator != nil}
+  public var hasValidator: Bool {return self._validator != nil}
   /// Clears the value of `validator`. Subsequent reads from it will return its default value.
-  mutating func clearValidator() {self._validator = nil}
+  public mutating func clearValidator() {self._validator = nil}
 
-  var signedLastBlock: Bool = false
+  public var signedLastBlock: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _validator: Tendermint_Abci_Validator? = nil
 }
 
-struct Tendermint_Abci_Evidence {
+public struct Tendermint_Abci_Evidence {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var type: Tendermint_Abci_EvidenceType = .unknown
+  public var type: Tendermint_Abci_EvidenceType = .unknown
 
   /// The offending validator
-  var validator: Tendermint_Abci_Validator {
+  public var validator: Tendermint_Abci_Validator {
     get {return _validator ?? Tendermint_Abci_Validator()}
     set {_validator = newValue}
   }
   /// Returns true if `validator` has been explicitly set.
-  var hasValidator: Bool {return self._validator != nil}
+  public var hasValidator: Bool {return self._validator != nil}
   /// Clears the value of `validator`. Subsequent reads from it will return its default value.
-  mutating func clearValidator() {self._validator = nil}
+  public mutating func clearValidator() {self._validator = nil}
 
   /// The height when the offense occurred
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
   /// The corresponding time where the offense occurred
-  var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_time = newValue}
   }
   /// Returns true if `time` has been explicitly set.
-  var hasTime: Bool {return self._time != nil}
+  public var hasTime: Bool {return self._time != nil}
   /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  mutating func clearTime() {self._time = nil}
+  public mutating func clearTime() {self._time = nil}
 
   /// Total voting power of the validator set in case the ABCI application does
   /// not store historical validators.
   /// https://github.com/tendermint/tendermint/issues/4581
-  var totalVotingPower: Int64 = 0
+  public var totalVotingPower: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _validator: Tendermint_Abci_Validator? = nil
   fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
-struct Tendermint_Abci_Snapshot {
+public struct Tendermint_Abci_Snapshot {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// The height at which the snapshot was taken
-  var height: UInt64 = 0
+  public var height: UInt64 = 0
 
   /// The application-specific snapshot format
-  var format: UInt32 = 0
+  public var format: UInt32 = 0
 
   /// Number of chunks in the snapshot
-  var chunks: UInt32 = 0
+  public var chunks: UInt32 = 0
 
   /// Arbitrary snapshot hash, equal only if identical
-  var hash: Data = Data()
+  public var hash: Data = Data()
 
   /// Arbitrary application metadata
-  var metadata: Data = Data()
+  public var metadata: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -1598,14 +1598,14 @@ extension Tendermint_Abci_Snapshot: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.abci"
 
 extension Tendermint_Abci_CheckTxType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "NEW"),
     1: .same(proto: "RECHECK"),
   ]
 }
 
 extension Tendermint_Abci_EvidenceType: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNKNOWN"),
     1: .same(proto: "DUPLICATE_VOTE"),
     2: .same(proto: "LIGHT_CLIENT_ATTACK"),
@@ -1613,8 +1613,8 @@ extension Tendermint_Abci_EvidenceType: SwiftProtobuf._ProtoNameProviding {
 }
 
 extension Tendermint_Abci_Request: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Request"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Request"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "echo"),
     2: .same(proto: "flush"),
     3: .same(proto: "info"),
@@ -1632,7 +1632,7 @@ extension Tendermint_Abci_Request: SwiftProtobuf.Message, SwiftProtobuf._Message
     15: .standard(proto: "apply_snapshot_chunk"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1838,7 +1838,7 @@ extension Tendermint_Abci_Request: SwiftProtobuf.Message, SwiftProtobuf._Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -1909,7 +1909,7 @@ extension Tendermint_Abci_Request: SwiftProtobuf.Message, SwiftProtobuf._Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_Request, rhs: Tendermint_Abci_Request) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_Request, rhs: Tendermint_Abci_Request) -> Bool {
     if lhs.value != rhs.value {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1917,12 +1917,12 @@ extension Tendermint_Abci_Request: SwiftProtobuf.Message, SwiftProtobuf._Message
 }
 
 extension Tendermint_Abci_RequestEcho: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestEcho"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestEcho"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "message"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1934,14 +1934,14 @@ extension Tendermint_Abci_RequestEcho: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.message.isEmpty {
       try visitor.visitSingularStringField(value: self.message, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestEcho, rhs: Tendermint_Abci_RequestEcho) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestEcho, rhs: Tendermint_Abci_RequestEcho) -> Bool {
     if lhs.message != rhs.message {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -1949,33 +1949,33 @@ extension Tendermint_Abci_RequestEcho: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Tendermint_Abci_RequestFlush: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestFlush"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".RequestFlush"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestFlush, rhs: Tendermint_Abci_RequestFlush) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestFlush, rhs: Tendermint_Abci_RequestFlush) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Tendermint_Abci_RequestInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "version"),
     2: .standard(proto: "block_version"),
     3: .standard(proto: "p2p_version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -1989,7 +1989,7 @@ extension Tendermint_Abci_RequestInfo: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.version.isEmpty {
       try visitor.visitSingularStringField(value: self.version, fieldNumber: 1)
     }
@@ -2002,7 +2002,7 @@ extension Tendermint_Abci_RequestInfo: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestInfo, rhs: Tendermint_Abci_RequestInfo) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestInfo, rhs: Tendermint_Abci_RequestInfo) -> Bool {
     if lhs.version != rhs.version {return false}
     if lhs.blockVersion != rhs.blockVersion {return false}
     if lhs.p2PVersion != rhs.p2PVersion {return false}
@@ -2012,13 +2012,13 @@ extension Tendermint_Abci_RequestInfo: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Tendermint_Abci_RequestSetOption: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestSetOption"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestSetOption"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "key"),
     2: .same(proto: "value"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2031,7 +2031,7 @@ extension Tendermint_Abci_RequestSetOption: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.key.isEmpty {
       try visitor.visitSingularStringField(value: self.key, fieldNumber: 1)
     }
@@ -2041,7 +2041,7 @@ extension Tendermint_Abci_RequestSetOption: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestSetOption, rhs: Tendermint_Abci_RequestSetOption) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestSetOption, rhs: Tendermint_Abci_RequestSetOption) -> Bool {
     if lhs.key != rhs.key {return false}
     if lhs.value != rhs.value {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -2050,8 +2050,8 @@ extension Tendermint_Abci_RequestSetOption: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Tendermint_Abci_RequestInitChain: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestInitChain"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestInitChain"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "time"),
     2: .standard(proto: "chain_id"),
     3: .standard(proto: "consensus_params"),
@@ -2060,7 +2060,7 @@ extension Tendermint_Abci_RequestInitChain: SwiftProtobuf.Message, SwiftProtobuf
     6: .standard(proto: "initial_height"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2077,7 +2077,7 @@ extension Tendermint_Abci_RequestInitChain: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -2103,7 +2103,7 @@ extension Tendermint_Abci_RequestInitChain: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestInitChain, rhs: Tendermint_Abci_RequestInitChain) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestInitChain, rhs: Tendermint_Abci_RequestInitChain) -> Bool {
     if lhs._time != rhs._time {return false}
     if lhs.chainID != rhs.chainID {return false}
     if lhs._consensusParams != rhs._consensusParams {return false}
@@ -2116,15 +2116,15 @@ extension Tendermint_Abci_RequestInitChain: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Tendermint_Abci_RequestQuery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestQuery"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestQuery"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "data"),
     2: .same(proto: "path"),
     3: .same(proto: "height"),
     4: .same(proto: "prove"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2139,7 +2139,7 @@ extension Tendermint_Abci_RequestQuery: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.data.isEmpty {
       try visitor.visitSingularBytesField(value: self.data, fieldNumber: 1)
     }
@@ -2155,7 +2155,7 @@ extension Tendermint_Abci_RequestQuery: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestQuery, rhs: Tendermint_Abci_RequestQuery) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestQuery, rhs: Tendermint_Abci_RequestQuery) -> Bool {
     if lhs.data != rhs.data {return false}
     if lhs.path != rhs.path {return false}
     if lhs.height != rhs.height {return false}
@@ -2166,15 +2166,15 @@ extension Tendermint_Abci_RequestQuery: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Tendermint_Abci_RequestBeginBlock: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestBeginBlock"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestBeginBlock"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "hash"),
     2: .same(proto: "header"),
     3: .standard(proto: "last_commit_info"),
     4: .standard(proto: "byzantine_validators"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2189,7 +2189,7 @@ extension Tendermint_Abci_RequestBeginBlock: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -2209,7 +2209,7 @@ extension Tendermint_Abci_RequestBeginBlock: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestBeginBlock, rhs: Tendermint_Abci_RequestBeginBlock) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestBeginBlock, rhs: Tendermint_Abci_RequestBeginBlock) -> Bool {
     if lhs.hash != rhs.hash {return false}
     if lhs._header != rhs._header {return false}
     if lhs._lastCommitInfo != rhs._lastCommitInfo {return false}
@@ -2220,13 +2220,13 @@ extension Tendermint_Abci_RequestBeginBlock: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Tendermint_Abci_RequestCheckTx: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestCheckTx"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestCheckTx"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "tx"),
     2: .same(proto: "type"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2239,7 +2239,7 @@ extension Tendermint_Abci_RequestCheckTx: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.tx.isEmpty {
       try visitor.visitSingularBytesField(value: self.tx, fieldNumber: 1)
     }
@@ -2249,7 +2249,7 @@ extension Tendermint_Abci_RequestCheckTx: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestCheckTx, rhs: Tendermint_Abci_RequestCheckTx) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestCheckTx, rhs: Tendermint_Abci_RequestCheckTx) -> Bool {
     if lhs.tx != rhs.tx {return false}
     if lhs.type != rhs.type {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -2258,12 +2258,12 @@ extension Tendermint_Abci_RequestCheckTx: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Tendermint_Abci_RequestDeliverTx: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestDeliverTx"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestDeliverTx"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "tx"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2275,14 +2275,14 @@ extension Tendermint_Abci_RequestDeliverTx: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.tx.isEmpty {
       try visitor.visitSingularBytesField(value: self.tx, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestDeliverTx, rhs: Tendermint_Abci_RequestDeliverTx) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestDeliverTx, rhs: Tendermint_Abci_RequestDeliverTx) -> Bool {
     if lhs.tx != rhs.tx {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -2290,12 +2290,12 @@ extension Tendermint_Abci_RequestDeliverTx: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Tendermint_Abci_RequestEndBlock: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestEndBlock"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestEndBlock"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "height"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2307,14 +2307,14 @@ extension Tendermint_Abci_RequestEndBlock: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.height != 0 {
       try visitor.visitSingularInt64Field(value: self.height, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestEndBlock, rhs: Tendermint_Abci_RequestEndBlock) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestEndBlock, rhs: Tendermint_Abci_RequestEndBlock) -> Bool {
     if lhs.height != rhs.height {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -2322,51 +2322,51 @@ extension Tendermint_Abci_RequestEndBlock: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Tendermint_Abci_RequestCommit: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestCommit"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".RequestCommit"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestCommit, rhs: Tendermint_Abci_RequestCommit) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestCommit, rhs: Tendermint_Abci_RequestCommit) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Tendermint_Abci_RequestListSnapshots: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestListSnapshots"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".RequestListSnapshots"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestListSnapshots, rhs: Tendermint_Abci_RequestListSnapshots) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestListSnapshots, rhs: Tendermint_Abci_RequestListSnapshots) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Tendermint_Abci_RequestOfferSnapshot: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestOfferSnapshot"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestOfferSnapshot"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "snapshot"),
     2: .standard(proto: "app_hash"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2379,7 +2379,7 @@ extension Tendermint_Abci_RequestOfferSnapshot: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -2393,7 +2393,7 @@ extension Tendermint_Abci_RequestOfferSnapshot: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestOfferSnapshot, rhs: Tendermint_Abci_RequestOfferSnapshot) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestOfferSnapshot, rhs: Tendermint_Abci_RequestOfferSnapshot) -> Bool {
     if lhs._snapshot != rhs._snapshot {return false}
     if lhs.appHash != rhs.appHash {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -2402,14 +2402,14 @@ extension Tendermint_Abci_RequestOfferSnapshot: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Tendermint_Abci_RequestLoadSnapshotChunk: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestLoadSnapshotChunk"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestLoadSnapshotChunk"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "height"),
     2: .same(proto: "format"),
     3: .same(proto: "chunk"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2423,7 +2423,7 @@ extension Tendermint_Abci_RequestLoadSnapshotChunk: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.height != 0 {
       try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 1)
     }
@@ -2436,7 +2436,7 @@ extension Tendermint_Abci_RequestLoadSnapshotChunk: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestLoadSnapshotChunk, rhs: Tendermint_Abci_RequestLoadSnapshotChunk) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestLoadSnapshotChunk, rhs: Tendermint_Abci_RequestLoadSnapshotChunk) -> Bool {
     if lhs.height != rhs.height {return false}
     if lhs.format != rhs.format {return false}
     if lhs.chunk != rhs.chunk {return false}
@@ -2446,14 +2446,14 @@ extension Tendermint_Abci_RequestLoadSnapshotChunk: SwiftProtobuf.Message, Swift
 }
 
 extension Tendermint_Abci_RequestApplySnapshotChunk: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".RequestApplySnapshotChunk"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".RequestApplySnapshotChunk"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "index"),
     2: .same(proto: "chunk"),
     3: .same(proto: "sender"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2467,7 +2467,7 @@ extension Tendermint_Abci_RequestApplySnapshotChunk: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.index != 0 {
       try visitor.visitSingularUInt32Field(value: self.index, fieldNumber: 1)
     }
@@ -2480,7 +2480,7 @@ extension Tendermint_Abci_RequestApplySnapshotChunk: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_RequestApplySnapshotChunk, rhs: Tendermint_Abci_RequestApplySnapshotChunk) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_RequestApplySnapshotChunk, rhs: Tendermint_Abci_RequestApplySnapshotChunk) -> Bool {
     if lhs.index != rhs.index {return false}
     if lhs.chunk != rhs.chunk {return false}
     if lhs.sender != rhs.sender {return false}
@@ -2490,8 +2490,8 @@ extension Tendermint_Abci_RequestApplySnapshotChunk: SwiftProtobuf.Message, Swif
 }
 
 extension Tendermint_Abci_Response: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Response"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Response"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "exception"),
     2: .same(proto: "echo"),
     3: .same(proto: "flush"),
@@ -2510,7 +2510,7 @@ extension Tendermint_Abci_Response: SwiftProtobuf.Message, SwiftProtobuf._Messag
     16: .standard(proto: "apply_snapshot_chunk"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2729,7 +2729,7 @@ extension Tendermint_Abci_Response: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -2804,7 +2804,7 @@ extension Tendermint_Abci_Response: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_Response, rhs: Tendermint_Abci_Response) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_Response, rhs: Tendermint_Abci_Response) -> Bool {
     if lhs.value != rhs.value {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -2812,12 +2812,12 @@ extension Tendermint_Abci_Response: SwiftProtobuf.Message, SwiftProtobuf._Messag
 }
 
 extension Tendermint_Abci_ResponseException: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseException"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseException"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "error"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2829,14 +2829,14 @@ extension Tendermint_Abci_ResponseException: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.error.isEmpty {
       try visitor.visitSingularStringField(value: self.error, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseException, rhs: Tendermint_Abci_ResponseException) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseException, rhs: Tendermint_Abci_ResponseException) -> Bool {
     if lhs.error != rhs.error {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -2844,12 +2844,12 @@ extension Tendermint_Abci_ResponseException: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Tendermint_Abci_ResponseEcho: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseEcho"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseEcho"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "message"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2861,14 +2861,14 @@ extension Tendermint_Abci_ResponseEcho: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.message.isEmpty {
       try visitor.visitSingularStringField(value: self.message, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseEcho, rhs: Tendermint_Abci_ResponseEcho) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseEcho, rhs: Tendermint_Abci_ResponseEcho) -> Bool {
     if lhs.message != rhs.message {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -2876,27 +2876,27 @@ extension Tendermint_Abci_ResponseEcho: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Tendermint_Abci_ResponseFlush: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseFlush"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".ResponseFlush"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseFlush, rhs: Tendermint_Abci_ResponseFlush) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseFlush, rhs: Tendermint_Abci_ResponseFlush) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Tendermint_Abci_ResponseInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "data"),
     2: .same(proto: "version"),
     3: .standard(proto: "app_version"),
@@ -2904,7 +2904,7 @@ extension Tendermint_Abci_ResponseInfo: SwiftProtobuf.Message, SwiftProtobuf._Me
     5: .standard(proto: "last_block_app_hash"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2920,7 +2920,7 @@ extension Tendermint_Abci_ResponseInfo: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.data.isEmpty {
       try visitor.visitSingularStringField(value: self.data, fieldNumber: 1)
     }
@@ -2939,7 +2939,7 @@ extension Tendermint_Abci_ResponseInfo: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseInfo, rhs: Tendermint_Abci_ResponseInfo) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseInfo, rhs: Tendermint_Abci_ResponseInfo) -> Bool {
     if lhs.data != rhs.data {return false}
     if lhs.version != rhs.version {return false}
     if lhs.appVersion != rhs.appVersion {return false}
@@ -2951,14 +2951,14 @@ extension Tendermint_Abci_ResponseInfo: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Tendermint_Abci_ResponseSetOption: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseSetOption"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseSetOption"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "code"),
     3: .same(proto: "log"),
     4: .same(proto: "info"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -2972,7 +2972,7 @@ extension Tendermint_Abci_ResponseSetOption: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.code != 0 {
       try visitor.visitSingularUInt32Field(value: self.code, fieldNumber: 1)
     }
@@ -2985,7 +2985,7 @@ extension Tendermint_Abci_ResponseSetOption: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseSetOption, rhs: Tendermint_Abci_ResponseSetOption) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseSetOption, rhs: Tendermint_Abci_ResponseSetOption) -> Bool {
     if lhs.code != rhs.code {return false}
     if lhs.log != rhs.log {return false}
     if lhs.info != rhs.info {return false}
@@ -2995,14 +2995,14 @@ extension Tendermint_Abci_ResponseSetOption: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Tendermint_Abci_ResponseInitChain: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseInitChain"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseInitChain"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "consensus_params"),
     2: .same(proto: "validators"),
     3: .standard(proto: "app_hash"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3016,7 +3016,7 @@ extension Tendermint_Abci_ResponseInitChain: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -3033,7 +3033,7 @@ extension Tendermint_Abci_ResponseInitChain: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseInitChain, rhs: Tendermint_Abci_ResponseInitChain) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseInitChain, rhs: Tendermint_Abci_ResponseInitChain) -> Bool {
     if lhs._consensusParams != rhs._consensusParams {return false}
     if lhs.validators != rhs.validators {return false}
     if lhs.appHash != rhs.appHash {return false}
@@ -3043,8 +3043,8 @@ extension Tendermint_Abci_ResponseInitChain: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Tendermint_Abci_ResponseQuery: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseQuery"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseQuery"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "code"),
     3: .same(proto: "log"),
     4: .same(proto: "info"),
@@ -3056,7 +3056,7 @@ extension Tendermint_Abci_ResponseQuery: SwiftProtobuf.Message, SwiftProtobuf._M
     10: .same(proto: "codespace"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3076,7 +3076,7 @@ extension Tendermint_Abci_ResponseQuery: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -3111,7 +3111,7 @@ extension Tendermint_Abci_ResponseQuery: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseQuery, rhs: Tendermint_Abci_ResponseQuery) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseQuery, rhs: Tendermint_Abci_ResponseQuery) -> Bool {
     if lhs.code != rhs.code {return false}
     if lhs.log != rhs.log {return false}
     if lhs.info != rhs.info {return false}
@@ -3127,12 +3127,12 @@ extension Tendermint_Abci_ResponseQuery: SwiftProtobuf.Message, SwiftProtobuf._M
 }
 
 extension Tendermint_Abci_ResponseBeginBlock: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseBeginBlock"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseBeginBlock"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "events"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3144,14 +3144,14 @@ extension Tendermint_Abci_ResponseBeginBlock: SwiftProtobuf.Message, SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.events.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.events, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseBeginBlock, rhs: Tendermint_Abci_ResponseBeginBlock) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseBeginBlock, rhs: Tendermint_Abci_ResponseBeginBlock) -> Bool {
     if lhs.events != rhs.events {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -3159,8 +3159,8 @@ extension Tendermint_Abci_ResponseBeginBlock: SwiftProtobuf.Message, SwiftProtob
 }
 
 extension Tendermint_Abci_ResponseCheckTx: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseCheckTx"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseCheckTx"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "code"),
     2: .same(proto: "data"),
     3: .same(proto: "log"),
@@ -3171,7 +3171,7 @@ extension Tendermint_Abci_ResponseCheckTx: SwiftProtobuf.Message, SwiftProtobuf.
     8: .same(proto: "codespace"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3190,7 +3190,7 @@ extension Tendermint_Abci_ResponseCheckTx: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.code != 0 {
       try visitor.visitSingularUInt32Field(value: self.code, fieldNumber: 1)
     }
@@ -3218,7 +3218,7 @@ extension Tendermint_Abci_ResponseCheckTx: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseCheckTx, rhs: Tendermint_Abci_ResponseCheckTx) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseCheckTx, rhs: Tendermint_Abci_ResponseCheckTx) -> Bool {
     if lhs.code != rhs.code {return false}
     if lhs.data != rhs.data {return false}
     if lhs.log != rhs.log {return false}
@@ -3233,8 +3233,8 @@ extension Tendermint_Abci_ResponseCheckTx: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Tendermint_Abci_ResponseDeliverTx: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseDeliverTx"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseDeliverTx"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "code"),
     2: .same(proto: "data"),
     3: .same(proto: "log"),
@@ -3245,7 +3245,7 @@ extension Tendermint_Abci_ResponseDeliverTx: SwiftProtobuf.Message, SwiftProtobu
     8: .same(proto: "codespace"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3264,7 +3264,7 @@ extension Tendermint_Abci_ResponseDeliverTx: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.code != 0 {
       try visitor.visitSingularUInt32Field(value: self.code, fieldNumber: 1)
     }
@@ -3292,7 +3292,7 @@ extension Tendermint_Abci_ResponseDeliverTx: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseDeliverTx, rhs: Tendermint_Abci_ResponseDeliverTx) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseDeliverTx, rhs: Tendermint_Abci_ResponseDeliverTx) -> Bool {
     if lhs.code != rhs.code {return false}
     if lhs.data != rhs.data {return false}
     if lhs.log != rhs.log {return false}
@@ -3307,14 +3307,14 @@ extension Tendermint_Abci_ResponseDeliverTx: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Tendermint_Abci_ResponseEndBlock: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseEndBlock"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseEndBlock"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_updates"),
     2: .standard(proto: "consensus_param_updates"),
     3: .same(proto: "events"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3328,7 +3328,7 @@ extension Tendermint_Abci_ResponseEndBlock: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -3345,7 +3345,7 @@ extension Tendermint_Abci_ResponseEndBlock: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseEndBlock, rhs: Tendermint_Abci_ResponseEndBlock) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseEndBlock, rhs: Tendermint_Abci_ResponseEndBlock) -> Bool {
     if lhs.validatorUpdates != rhs.validatorUpdates {return false}
     if lhs._consensusParamUpdates != rhs._consensusParamUpdates {return false}
     if lhs.events != rhs.events {return false}
@@ -3355,13 +3355,13 @@ extension Tendermint_Abci_ResponseEndBlock: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Tendermint_Abci_ResponseCommit: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseCommit"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseCommit"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     2: .same(proto: "data"),
     3: .standard(proto: "retain_height"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3374,7 +3374,7 @@ extension Tendermint_Abci_ResponseCommit: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.data.isEmpty {
       try visitor.visitSingularBytesField(value: self.data, fieldNumber: 2)
     }
@@ -3384,7 +3384,7 @@ extension Tendermint_Abci_ResponseCommit: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseCommit, rhs: Tendermint_Abci_ResponseCommit) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseCommit, rhs: Tendermint_Abci_ResponseCommit) -> Bool {
     if lhs.data != rhs.data {return false}
     if lhs.retainHeight != rhs.retainHeight {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -3393,12 +3393,12 @@ extension Tendermint_Abci_ResponseCommit: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Tendermint_Abci_ResponseListSnapshots: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseListSnapshots"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseListSnapshots"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "snapshots"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3410,14 +3410,14 @@ extension Tendermint_Abci_ResponseListSnapshots: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.snapshots.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.snapshots, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseListSnapshots, rhs: Tendermint_Abci_ResponseListSnapshots) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseListSnapshots, rhs: Tendermint_Abci_ResponseListSnapshots) -> Bool {
     if lhs.snapshots != rhs.snapshots {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -3425,12 +3425,12 @@ extension Tendermint_Abci_ResponseListSnapshots: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Tendermint_Abci_ResponseOfferSnapshot: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseOfferSnapshot"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseOfferSnapshot"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "result"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3442,14 +3442,14 @@ extension Tendermint_Abci_ResponseOfferSnapshot: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.result != .unknown {
       try visitor.visitSingularEnumField(value: self.result, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseOfferSnapshot, rhs: Tendermint_Abci_ResponseOfferSnapshot) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseOfferSnapshot, rhs: Tendermint_Abci_ResponseOfferSnapshot) -> Bool {
     if lhs.result != rhs.result {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -3457,7 +3457,7 @@ extension Tendermint_Abci_ResponseOfferSnapshot: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Tendermint_Abci_ResponseOfferSnapshot.Result: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNKNOWN"),
     1: .same(proto: "ACCEPT"),
     2: .same(proto: "ABORT"),
@@ -3468,12 +3468,12 @@ extension Tendermint_Abci_ResponseOfferSnapshot.Result: SwiftProtobuf._ProtoName
 }
 
 extension Tendermint_Abci_ResponseLoadSnapshotChunk: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseLoadSnapshotChunk"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseLoadSnapshotChunk"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "chunk"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3485,14 +3485,14 @@ extension Tendermint_Abci_ResponseLoadSnapshotChunk: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.chunk.isEmpty {
       try visitor.visitSingularBytesField(value: self.chunk, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseLoadSnapshotChunk, rhs: Tendermint_Abci_ResponseLoadSnapshotChunk) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseLoadSnapshotChunk, rhs: Tendermint_Abci_ResponseLoadSnapshotChunk) -> Bool {
     if lhs.chunk != rhs.chunk {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -3500,14 +3500,14 @@ extension Tendermint_Abci_ResponseLoadSnapshotChunk: SwiftProtobuf.Message, Swif
 }
 
 extension Tendermint_Abci_ResponseApplySnapshotChunk: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ResponseApplySnapshotChunk"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ResponseApplySnapshotChunk"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "result"),
     2: .standard(proto: "refetch_chunks"),
     3: .standard(proto: "reject_senders"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3521,7 +3521,7 @@ extension Tendermint_Abci_ResponseApplySnapshotChunk: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.result != .unknown {
       try visitor.visitSingularEnumField(value: self.result, fieldNumber: 1)
     }
@@ -3534,7 +3534,7 @@ extension Tendermint_Abci_ResponseApplySnapshotChunk: SwiftProtobuf.Message, Swi
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ResponseApplySnapshotChunk, rhs: Tendermint_Abci_ResponseApplySnapshotChunk) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ResponseApplySnapshotChunk, rhs: Tendermint_Abci_ResponseApplySnapshotChunk) -> Bool {
     if lhs.result != rhs.result {return false}
     if lhs.refetchChunks != rhs.refetchChunks {return false}
     if lhs.rejectSenders != rhs.rejectSenders {return false}
@@ -3544,7 +3544,7 @@ extension Tendermint_Abci_ResponseApplySnapshotChunk: SwiftProtobuf.Message, Swi
 }
 
 extension Tendermint_Abci_ResponseApplySnapshotChunk.Result: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "UNKNOWN"),
     1: .same(proto: "ACCEPT"),
     2: .same(proto: "ABORT"),
@@ -3555,15 +3555,15 @@ extension Tendermint_Abci_ResponseApplySnapshotChunk.Result: SwiftProtobuf._Prot
 }
 
 extension Tendermint_Abci_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ConsensusParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ConsensusParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "block"),
     2: .same(proto: "evidence"),
     3: .same(proto: "validator"),
     4: .same(proto: "version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3578,7 +3578,7 @@ extension Tendermint_Abci_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -3598,7 +3598,7 @@ extension Tendermint_Abci_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ConsensusParams, rhs: Tendermint_Abci_ConsensusParams) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ConsensusParams, rhs: Tendermint_Abci_ConsensusParams) -> Bool {
     if lhs._block != rhs._block {return false}
     if lhs._evidence != rhs._evidence {return false}
     if lhs._validator != rhs._validator {return false}
@@ -3609,13 +3609,13 @@ extension Tendermint_Abci_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Tendermint_Abci_BlockParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BlockParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BlockParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "max_bytes"),
     2: .standard(proto: "max_gas"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3628,7 +3628,7 @@ extension Tendermint_Abci_BlockParams: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.maxBytes != 0 {
       try visitor.visitSingularInt64Field(value: self.maxBytes, fieldNumber: 1)
     }
@@ -3638,7 +3638,7 @@ extension Tendermint_Abci_BlockParams: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_BlockParams, rhs: Tendermint_Abci_BlockParams) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_BlockParams, rhs: Tendermint_Abci_BlockParams) -> Bool {
     if lhs.maxBytes != rhs.maxBytes {return false}
     if lhs.maxGas != rhs.maxGas {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -3647,13 +3647,13 @@ extension Tendermint_Abci_BlockParams: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Tendermint_Abci_LastCommitInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".LastCommitInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".LastCommitInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "round"),
     2: .same(proto: "votes"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3666,7 +3666,7 @@ extension Tendermint_Abci_LastCommitInfo: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.round != 0 {
       try visitor.visitSingularInt32Field(value: self.round, fieldNumber: 1)
     }
@@ -3676,7 +3676,7 @@ extension Tendermint_Abci_LastCommitInfo: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_LastCommitInfo, rhs: Tendermint_Abci_LastCommitInfo) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_LastCommitInfo, rhs: Tendermint_Abci_LastCommitInfo) -> Bool {
     if lhs.round != rhs.round {return false}
     if lhs.votes != rhs.votes {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -3685,13 +3685,13 @@ extension Tendermint_Abci_LastCommitInfo: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Tendermint_Abci_Event: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Event"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Event"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "type"),
     2: .same(proto: "attributes"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3704,7 +3704,7 @@ extension Tendermint_Abci_Event: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.type.isEmpty {
       try visitor.visitSingularStringField(value: self.type, fieldNumber: 1)
     }
@@ -3714,7 +3714,7 @@ extension Tendermint_Abci_Event: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_Event, rhs: Tendermint_Abci_Event) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_Event, rhs: Tendermint_Abci_Event) -> Bool {
     if lhs.type != rhs.type {return false}
     if lhs.attributes != rhs.attributes {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -3723,14 +3723,14 @@ extension Tendermint_Abci_Event: SwiftProtobuf.Message, SwiftProtobuf._MessageIm
 }
 
 extension Tendermint_Abci_EventAttribute: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventAttribute"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventAttribute"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "key"),
     2: .same(proto: "value"),
     3: .same(proto: "index"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3744,7 +3744,7 @@ extension Tendermint_Abci_EventAttribute: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.key.isEmpty {
       try visitor.visitSingularBytesField(value: self.key, fieldNumber: 1)
     }
@@ -3757,7 +3757,7 @@ extension Tendermint_Abci_EventAttribute: SwiftProtobuf.Message, SwiftProtobuf._
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_EventAttribute, rhs: Tendermint_Abci_EventAttribute) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_EventAttribute, rhs: Tendermint_Abci_EventAttribute) -> Bool {
     if lhs.key != rhs.key {return false}
     if lhs.value != rhs.value {return false}
     if lhs.index != rhs.index {return false}
@@ -3767,15 +3767,15 @@ extension Tendermint_Abci_EventAttribute: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Tendermint_Abci_TxResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".TxResult"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".TxResult"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "height"),
     2: .same(proto: "index"),
     3: .same(proto: "tx"),
     4: .same(proto: "result"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3790,7 +3790,7 @@ extension Tendermint_Abci_TxResult: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -3810,7 +3810,7 @@ extension Tendermint_Abci_TxResult: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_TxResult, rhs: Tendermint_Abci_TxResult) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_TxResult, rhs: Tendermint_Abci_TxResult) -> Bool {
     if lhs.height != rhs.height {return false}
     if lhs.index != rhs.index {return false}
     if lhs.tx != rhs.tx {return false}
@@ -3821,13 +3821,13 @@ extension Tendermint_Abci_TxResult: SwiftProtobuf.Message, SwiftProtobuf._Messag
 }
 
 extension Tendermint_Abci_Validator: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Validator"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Validator"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     3: .same(proto: "power"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3840,7 +3840,7 @@ extension Tendermint_Abci_Validator: SwiftProtobuf.Message, SwiftProtobuf._Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitSingularBytesField(value: self.address, fieldNumber: 1)
     }
@@ -3850,7 +3850,7 @@ extension Tendermint_Abci_Validator: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_Validator, rhs: Tendermint_Abci_Validator) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_Validator, rhs: Tendermint_Abci_Validator) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.power != rhs.power {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -3859,13 +3859,13 @@ extension Tendermint_Abci_Validator: SwiftProtobuf.Message, SwiftProtobuf._Messa
 }
 
 extension Tendermint_Abci_ValidatorUpdate: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorUpdate"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorUpdate"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "pub_key"),
     2: .same(proto: "power"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3878,7 +3878,7 @@ extension Tendermint_Abci_ValidatorUpdate: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -3892,7 +3892,7 @@ extension Tendermint_Abci_ValidatorUpdate: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_ValidatorUpdate, rhs: Tendermint_Abci_ValidatorUpdate) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_ValidatorUpdate, rhs: Tendermint_Abci_ValidatorUpdate) -> Bool {
     if lhs._pubKey != rhs._pubKey {return false}
     if lhs.power != rhs.power {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -3901,13 +3901,13 @@ extension Tendermint_Abci_ValidatorUpdate: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Tendermint_Abci_VoteInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VoteInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".VoteInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "validator"),
     2: .standard(proto: "signed_last_block"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3920,7 +3920,7 @@ extension Tendermint_Abci_VoteInfo: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -3934,7 +3934,7 @@ extension Tendermint_Abci_VoteInfo: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_VoteInfo, rhs: Tendermint_Abci_VoteInfo) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_VoteInfo, rhs: Tendermint_Abci_VoteInfo) -> Bool {
     if lhs._validator != rhs._validator {return false}
     if lhs.signedLastBlock != rhs.signedLastBlock {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -3943,8 +3943,8 @@ extension Tendermint_Abci_VoteInfo: SwiftProtobuf.Message, SwiftProtobuf._Messag
 }
 
 extension Tendermint_Abci_Evidence: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Evidence"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Evidence"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "type"),
     2: .same(proto: "validator"),
     3: .same(proto: "height"),
@@ -3952,7 +3952,7 @@ extension Tendermint_Abci_Evidence: SwiftProtobuf.Message, SwiftProtobuf._Messag
     5: .standard(proto: "total_voting_power"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -3968,7 +3968,7 @@ extension Tendermint_Abci_Evidence: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -3991,7 +3991,7 @@ extension Tendermint_Abci_Evidence: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_Evidence, rhs: Tendermint_Abci_Evidence) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_Evidence, rhs: Tendermint_Abci_Evidence) -> Bool {
     if lhs.type != rhs.type {return false}
     if lhs._validator != rhs._validator {return false}
     if lhs.height != rhs.height {return false}
@@ -4003,8 +4003,8 @@ extension Tendermint_Abci_Evidence: SwiftProtobuf.Message, SwiftProtobuf._Messag
 }
 
 extension Tendermint_Abci_Snapshot: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Snapshot"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Snapshot"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "height"),
     2: .same(proto: "format"),
     3: .same(proto: "chunks"),
@@ -4012,7 +4012,7 @@ extension Tendermint_Abci_Snapshot: SwiftProtobuf.Message, SwiftProtobuf._Messag
     5: .same(proto: "metadata"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -4028,7 +4028,7 @@ extension Tendermint_Abci_Snapshot: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.height != 0 {
       try visitor.visitSingularUInt64Field(value: self.height, fieldNumber: 1)
     }
@@ -4047,7 +4047,7 @@ extension Tendermint_Abci_Snapshot: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Abci_Snapshot, rhs: Tendermint_Abci_Snapshot) -> Bool {
+  public static func ==(lhs: Tendermint_Abci_Snapshot, rhs: Tendermint_Abci_Snapshot) -> Bool {
     if lhs.height != rhs.height {return false}
     if lhs.format != rhs.format {return false}
     if lhs.chunks != rhs.chunks {return false}

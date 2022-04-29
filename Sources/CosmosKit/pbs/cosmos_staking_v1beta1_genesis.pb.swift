@@ -21,65 +21,65 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// GenesisState defines the staking module's genesis state.
-struct Cosmos_Staking_V1beta1_GenesisState {
+public struct Cosmos_Staking_V1beta1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// params defines all the paramaters of related to deposit.
-  var params: Cosmos_Staking_V1beta1_Params {
+  public var params: Cosmos_Staking_V1beta1_Params {
     get {return _params ?? Cosmos_Staking_V1beta1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  public var hasParams: Bool {return self._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  public mutating func clearParams() {self._params = nil}
 
   /// last_total_power tracks the total amounts of bonded tokens recorded during
   /// the previous end block.
-  var lastTotalPower: Data = Data()
+  public var lastTotalPower: Data = Data()
 
   /// last_validator_powers is a special index that provides a historical list
   /// of the last-block's bonded validators.
-  var lastValidatorPowers: [Cosmos_Staking_V1beta1_LastValidatorPower] = []
+  public var lastValidatorPowers: [Cosmos_Staking_V1beta1_LastValidatorPower] = []
 
   /// delegations defines the validator set at genesis.
-  var validators: [Cosmos_Staking_V1beta1_Validator] = []
+  public var validators: [Cosmos_Staking_V1beta1_Validator] = []
 
   /// delegations defines the delegations active at genesis.
-  var delegations: [Cosmos_Staking_V1beta1_Delegation] = []
+  public var delegations: [Cosmos_Staking_V1beta1_Delegation] = []
 
   /// unbonding_delegations defines the unbonding delegations active at genesis.
-  var unbondingDelegations: [Cosmos_Staking_V1beta1_UnbondingDelegation] = []
+  public var unbondingDelegations: [Cosmos_Staking_V1beta1_UnbondingDelegation] = []
 
   /// redelegations defines the redelegations active at genesis.
-  var redelegations: [Cosmos_Staking_V1beta1_Redelegation] = []
+  public var redelegations: [Cosmos_Staking_V1beta1_Redelegation] = []
 
-  var exported: Bool = false
+  public var exported: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _params: Cosmos_Staking_V1beta1_Params? = nil
 }
 
 /// LastValidatorPower required for validator set update logic.
-struct Cosmos_Staking_V1beta1_LastValidatorPower {
+public struct Cosmos_Staking_V1beta1_LastValidatorPower {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// address is the address of the validator.
-  var address: String = String()
+  public var address: String = String()
 
   /// power defines the power of the validator.
-  var power: Int64 = 0
+  public var power: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -92,8 +92,8 @@ extension Cosmos_Staking_V1beta1_LastValidatorPower: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.staking.v1beta1"
 
 extension Cosmos_Staking_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GenesisState"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GenesisState"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
     2: .standard(proto: "last_total_power"),
     3: .standard(proto: "last_validator_powers"),
@@ -104,7 +104,7 @@ extension Cosmos_Staking_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProto
     8: .same(proto: "exported"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -123,7 +123,7 @@ extension Cosmos_Staking_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -155,7 +155,7 @@ extension Cosmos_Staking_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_GenesisState, rhs: Cosmos_Staking_V1beta1_GenesisState) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_GenesisState, rhs: Cosmos_Staking_V1beta1_GenesisState) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs.lastTotalPower != rhs.lastTotalPower {return false}
     if lhs.lastValidatorPowers != rhs.lastValidatorPowers {return false}
@@ -170,13 +170,13 @@ extension Cosmos_Staking_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Cosmos_Staking_V1beta1_LastValidatorPower: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".LastValidatorPower"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".LastValidatorPower"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .same(proto: "power"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -189,7 +189,7 @@ extension Cosmos_Staking_V1beta1_LastValidatorPower: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
     }
@@ -199,7 +199,7 @@ extension Cosmos_Staking_V1beta1_LastValidatorPower: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Staking_V1beta1_LastValidatorPower, rhs: Cosmos_Staking_V1beta1_LastValidatorPower) -> Bool {
+  public static func ==(lhs: Cosmos_Staking_V1beta1_LastValidatorPower, rhs: Cosmos_Staking_V1beta1_LastValidatorPower) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.power != rhs.power {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

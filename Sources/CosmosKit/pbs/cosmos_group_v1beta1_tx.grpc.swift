@@ -52,40 +52,30 @@ internal protocol Cosmos_Group_V1beta1_MsgClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse>
 
-  func createGroupPolicy(
-    _ request: Cosmos_Group_V1beta1_MsgCreateGroupPolicy,
+  func createGroupAccount(
+    _ request: Cosmos_Group_V1beta1_MsgCreateGroupAccount,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgCreateGroupPolicy, Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgCreateGroupAccount, Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse>
 
-  func createGroupWithPolicy(
-    _ request: Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy,
+  func updateGroupAccountAdmin(
+    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy, Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin, Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse>
 
-  func updateGroupPolicyAdmin(
-    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin,
+  func updateGroupAccountDecisionPolicy(
+    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy, Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse>
 
-  func updateGroupPolicyDecisionPolicy(
-    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy,
+  func updateGroupAccountMetadata(
+    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse>
 
-  func updateGroupPolicyMetadata(
-    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata,
+  func createProposal(
+    _ request: Cosmos_Group_V1beta1_MsgCreateProposal,
     callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse>
-
-  func submitProposal(
-    _ request: Cosmos_Group_V1beta1_MsgSubmitProposal,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgSubmitProposal, Cosmos_Group_V1beta1_MsgSubmitProposalResponse>
-
-  func withdrawProposal(
-    _ request: Cosmos_Group_V1beta1_MsgWithdrawProposal,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgWithdrawProposal, Cosmos_Group_V1beta1_MsgWithdrawProposalResponse>
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgCreateProposal, Cosmos_Group_V1beta1_MsgCreateProposalResponse>
 
   func vote(
     _ request: Cosmos_Group_V1beta1_MsgVote,
@@ -96,11 +86,6 @@ internal protocol Cosmos_Group_V1beta1_MsgClientProtocol: GRPCClient {
     _ request: Cosmos_Group_V1beta1_MsgExec,
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Group_V1beta1_MsgExec, Cosmos_Group_V1beta1_MsgExecResponse>
-
-  func leaveGroup(
-    _ request: Cosmos_Group_V1beta1_MsgLeaveGroup,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgLeaveGroup, Cosmos_Group_V1beta1_MsgLeaveGroupResponse>
 }
 
 extension Cosmos_Group_V1beta1_MsgClientProtocol {
@@ -180,129 +165,93 @@ extension Cosmos_Group_V1beta1_MsgClientProtocol {
     )
   }
 
-  /// CreateGroupPolicy creates a new group policy using given DecisionPolicy.
+  /// CreateGroupAccount creates a new group account using given DecisionPolicy.
   ///
   /// - Parameters:
-  ///   - request: Request to send to CreateGroupPolicy.
+  ///   - request: Request to send to CreateGroupAccount.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func createGroupPolicy(
-    _ request: Cosmos_Group_V1beta1_MsgCreateGroupPolicy,
+  internal func createGroupAccount(
+    _ request: Cosmos_Group_V1beta1_MsgCreateGroupAccount,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgCreateGroupPolicy, Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgCreateGroupAccount, Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Msg/CreateGroupPolicy",
+      path: "/cosmos.group.v1beta1.Msg/CreateGroupAccount",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCreateGroupPolicyInterceptors() ?? []
+      interceptors: self.interceptors?.makeCreateGroupAccountInterceptors() ?? []
     )
   }
 
-  /// CreateGroupWithPolicy creates a new group with policy.
+  /// UpdateGroupAccountAdmin updates a group account admin.
   ///
   /// - Parameters:
-  ///   - request: Request to send to CreateGroupWithPolicy.
+  ///   - request: Request to send to UpdateGroupAccountAdmin.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func createGroupWithPolicy(
-    _ request: Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy,
+  internal func updateGroupAccountAdmin(
+    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy, Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin, Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Msg/CreateGroupWithPolicy",
+      path: "/cosmos.group.v1beta1.Msg/UpdateGroupAccountAdmin",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCreateGroupWithPolicyInterceptors() ?? []
+      interceptors: self.interceptors?.makeUpdateGroupAccountAdminInterceptors() ?? []
     )
   }
 
-  /// UpdateGroupPolicyAdmin updates a group policy admin.
+  /// UpdateGroupAccountDecisionPolicy allows a group account decision policy to be updated.
   ///
   /// - Parameters:
-  ///   - request: Request to send to UpdateGroupPolicyAdmin.
+  ///   - request: Request to send to UpdateGroupAccountDecisionPolicy.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func updateGroupPolicyAdmin(
-    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin,
+  internal func updateGroupAccountDecisionPolicy(
+    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy, Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Msg/UpdateGroupPolicyAdmin",
+      path: "/cosmos.group.v1beta1.Msg/UpdateGroupAccountDecisionPolicy",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdateGroupPolicyAdminInterceptors() ?? []
+      interceptors: self.interceptors?.makeUpdateGroupAccountDecisionPolicyInterceptors() ?? []
     )
   }
 
-  /// UpdateGroupPolicyDecisionPolicy allows a group policy's decision policy to be updated.
+  /// UpdateGroupAccountMetadata updates a group account metadata.
   ///
   /// - Parameters:
-  ///   - request: Request to send to UpdateGroupPolicyDecisionPolicy.
+  ///   - request: Request to send to UpdateGroupAccountMetadata.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func updateGroupPolicyDecisionPolicy(
-    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy,
+  internal func updateGroupAccountMetadata(
+    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Msg/UpdateGroupPolicyDecisionPolicy",
+      path: "/cosmos.group.v1beta1.Msg/UpdateGroupAccountMetadata",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdateGroupPolicyDecisionPolicyInterceptors() ?? []
+      interceptors: self.interceptors?.makeUpdateGroupAccountMetadataInterceptors() ?? []
     )
   }
 
-  /// UpdateGroupPolicyMetadata updates a group policy metadata.
+  /// CreateProposal submits a new proposal.
   ///
   /// - Parameters:
-  ///   - request: Request to send to UpdateGroupPolicyMetadata.
+  ///   - request: Request to send to CreateProposal.
   ///   - callOptions: Call options.
   /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func updateGroupPolicyMetadata(
-    _ request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata,
+  internal func createProposal(
+    _ request: Cosmos_Group_V1beta1_MsgCreateProposal,
     callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse> {
+  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgCreateProposal, Cosmos_Group_V1beta1_MsgCreateProposalResponse> {
     return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Msg/UpdateGroupPolicyMetadata",
+      path: "/cosmos.group.v1beta1.Msg/CreateProposal",
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeUpdateGroupPolicyMetadataInterceptors() ?? []
-    )
-  }
-
-  /// SubmitProposal submits a new proposal.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to SubmitProposal.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func submitProposal(
-    _ request: Cosmos_Group_V1beta1_MsgSubmitProposal,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgSubmitProposal, Cosmos_Group_V1beta1_MsgSubmitProposalResponse> {
-    return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Msg/SubmitProposal",
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSubmitProposalInterceptors() ?? []
-    )
-  }
-
-  /// WithdrawProposal aborts a proposal.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to WithdrawProposal.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func withdrawProposal(
-    _ request: Cosmos_Group_V1beta1_MsgWithdrawProposal,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgWithdrawProposal, Cosmos_Group_V1beta1_MsgWithdrawProposalResponse> {
-    return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Msg/WithdrawProposal",
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeWithdrawProposalInterceptors() ?? []
+      interceptors: self.interceptors?.makeCreateProposalInterceptors() ?? []
     )
   }
 
@@ -341,24 +290,6 @@ extension Cosmos_Group_V1beta1_MsgClientProtocol {
       interceptors: self.interceptors?.makeExecInterceptors() ?? []
     )
   }
-
-  /// LeaveGroup allows a group member to leave the group.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to LeaveGroup.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func leaveGroup(
-    _ request: Cosmos_Group_V1beta1_MsgLeaveGroup,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Group_V1beta1_MsgLeaveGroup, Cosmos_Group_V1beta1_MsgLeaveGroupResponse> {
-    return self.makeUnaryCall(
-      path: "/cosmos.group.v1beta1.Msg/LeaveGroup",
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeLeaveGroupInterceptors() ?? []
-    )
-  }
 }
 
 internal protocol Cosmos_Group_V1beta1_MsgClientInterceptorFactoryProtocol {
@@ -375,35 +306,26 @@ internal protocol Cosmos_Group_V1beta1_MsgClientInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when invoking 'updateGroupMetadata'.
   func makeUpdateGroupMetadataInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'createGroupPolicy'.
-  func makeCreateGroupPolicyInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgCreateGroupPolicy, Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse>]
+  /// - Returns: Interceptors to use when invoking 'createGroupAccount'.
+  func makeCreateGroupAccountInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgCreateGroupAccount, Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'createGroupWithPolicy'.
-  func makeCreateGroupWithPolicyInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy, Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse>]
+  /// - Returns: Interceptors to use when invoking 'updateGroupAccountAdmin'.
+  func makeUpdateGroupAccountAdminInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin, Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'updateGroupPolicyAdmin'.
-  func makeUpdateGroupPolicyAdminInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse>]
+  /// - Returns: Interceptors to use when invoking 'updateGroupAccountDecisionPolicy'.
+  func makeUpdateGroupAccountDecisionPolicyInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy, Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'updateGroupPolicyDecisionPolicy'.
-  func makeUpdateGroupPolicyDecisionPolicyInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse>]
+  /// - Returns: Interceptors to use when invoking 'updateGroupAccountMetadata'.
+  func makeUpdateGroupAccountMetadataInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse>]
 
-  /// - Returns: Interceptors to use when invoking 'updateGroupPolicyMetadata'.
-  func makeUpdateGroupPolicyMetadataInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'submitProposal'.
-  func makeSubmitProposalInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgSubmitProposal, Cosmos_Group_V1beta1_MsgSubmitProposalResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'withdrawProposal'.
-  func makeWithdrawProposalInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgWithdrawProposal, Cosmos_Group_V1beta1_MsgWithdrawProposalResponse>]
+  /// - Returns: Interceptors to use when invoking 'createProposal'.
+  func makeCreateProposalInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgCreateProposal, Cosmos_Group_V1beta1_MsgCreateProposalResponse>]
 
   /// - Returns: Interceptors to use when invoking 'vote'.
   func makeVoteInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgVote, Cosmos_Group_V1beta1_MsgVoteResponse>]
 
   /// - Returns: Interceptors to use when invoking 'exec'.
   func makeExecInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgExec, Cosmos_Group_V1beta1_MsgExecResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'leaveGroup'.
-  func makeLeaveGroupInterceptors() -> [ClientInterceptor<Cosmos_Group_V1beta1_MsgLeaveGroup, Cosmos_Group_V1beta1_MsgLeaveGroupResponse>]
 }
 
 internal final class Cosmos_Group_V1beta1_MsgClient: Cosmos_Group_V1beta1_MsgClientProtocol {
@@ -446,35 +368,26 @@ internal protocol Cosmos_Group_V1beta1_MsgProvider: CallHandlerProvider {
   /// UpdateGroupMetadata updates the group metadata with given group id and admin address.
   func updateGroupMetadata(request: Cosmos_Group_V1beta1_MsgUpdateGroupMetadata, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse>
 
-  /// CreateGroupPolicy creates a new group policy using given DecisionPolicy.
-  func createGroupPolicy(request: Cosmos_Group_V1beta1_MsgCreateGroupPolicy, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse>
+  /// CreateGroupAccount creates a new group account using given DecisionPolicy.
+  func createGroupAccount(request: Cosmos_Group_V1beta1_MsgCreateGroupAccount, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse>
 
-  /// CreateGroupWithPolicy creates a new group with policy.
-  func createGroupWithPolicy(request: Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse>
+  /// UpdateGroupAccountAdmin updates a group account admin.
+  func updateGroupAccountAdmin(request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse>
 
-  /// UpdateGroupPolicyAdmin updates a group policy admin.
-  func updateGroupPolicyAdmin(request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse>
+  /// UpdateGroupAccountDecisionPolicy allows a group account decision policy to be updated.
+  func updateGroupAccountDecisionPolicy(request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse>
 
-  /// UpdateGroupPolicyDecisionPolicy allows a group policy's decision policy to be updated.
-  func updateGroupPolicyDecisionPolicy(request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse>
+  /// UpdateGroupAccountMetadata updates a group account metadata.
+  func updateGroupAccountMetadata(request: Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse>
 
-  /// UpdateGroupPolicyMetadata updates a group policy metadata.
-  func updateGroupPolicyMetadata(request: Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse>
-
-  /// SubmitProposal submits a new proposal.
-  func submitProposal(request: Cosmos_Group_V1beta1_MsgSubmitProposal, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgSubmitProposalResponse>
-
-  /// WithdrawProposal aborts a proposal.
-  func withdrawProposal(request: Cosmos_Group_V1beta1_MsgWithdrawProposal, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgWithdrawProposalResponse>
+  /// CreateProposal submits a new proposal.
+  func createProposal(request: Cosmos_Group_V1beta1_MsgCreateProposal, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgCreateProposalResponse>
 
   /// Vote allows a voter to vote on a proposal.
   func vote(request: Cosmos_Group_V1beta1_MsgVote, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgVoteResponse>
 
   /// Exec executes a proposal.
   func exec(request: Cosmos_Group_V1beta1_MsgExec, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgExecResponse>
-
-  /// LeaveGroup allows a group member to leave the group.
-  func leaveGroup(request: Cosmos_Group_V1beta1_MsgLeaveGroup, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Group_V1beta1_MsgLeaveGroupResponse>
 }
 
 extension Cosmos_Group_V1beta1_MsgProvider {
@@ -523,67 +436,49 @@ extension Cosmos_Group_V1beta1_MsgProvider {
         userFunction: self.updateGroupMetadata(request:context:)
       )
 
-    case "CreateGroupPolicy":
+    case "CreateGroupAccount":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgCreateGroupPolicy>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse>(),
-        interceptors: self.interceptors?.makeCreateGroupPolicyInterceptors() ?? [],
-        userFunction: self.createGroupPolicy(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgCreateGroupAccount>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse>(),
+        interceptors: self.interceptors?.makeCreateGroupAccountInterceptors() ?? [],
+        userFunction: self.createGroupAccount(request:context:)
       )
 
-    case "CreateGroupWithPolicy":
+    case "UpdateGroupAccountAdmin":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse>(),
-        interceptors: self.interceptors?.makeCreateGroupWithPolicyInterceptors() ?? [],
-        userFunction: self.createGroupWithPolicy(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse>(),
+        interceptors: self.interceptors?.makeUpdateGroupAccountAdminInterceptors() ?? [],
+        userFunction: self.updateGroupAccountAdmin(request:context:)
       )
 
-    case "UpdateGroupPolicyAdmin":
+    case "UpdateGroupAccountDecisionPolicy":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse>(),
-        interceptors: self.interceptors?.makeUpdateGroupPolicyAdminInterceptors() ?? [],
-        userFunction: self.updateGroupPolicyAdmin(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse>(),
+        interceptors: self.interceptors?.makeUpdateGroupAccountDecisionPolicyInterceptors() ?? [],
+        userFunction: self.updateGroupAccountDecisionPolicy(request:context:)
       )
 
-    case "UpdateGroupPolicyDecisionPolicy":
+    case "UpdateGroupAccountMetadata":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse>(),
-        interceptors: self.interceptors?.makeUpdateGroupPolicyDecisionPolicyInterceptors() ?? [],
-        userFunction: self.updateGroupPolicyDecisionPolicy(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse>(),
+        interceptors: self.interceptors?.makeUpdateGroupAccountMetadataInterceptors() ?? [],
+        userFunction: self.updateGroupAccountMetadata(request:context:)
       )
 
-    case "UpdateGroupPolicyMetadata":
+    case "CreateProposal":
       return UnaryServerHandler(
         context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse>(),
-        interceptors: self.interceptors?.makeUpdateGroupPolicyMetadataInterceptors() ?? [],
-        userFunction: self.updateGroupPolicyMetadata(request:context:)
-      )
-
-    case "SubmitProposal":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgSubmitProposal>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgSubmitProposalResponse>(),
-        interceptors: self.interceptors?.makeSubmitProposalInterceptors() ?? [],
-        userFunction: self.submitProposal(request:context:)
-      )
-
-    case "WithdrawProposal":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgWithdrawProposal>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgWithdrawProposalResponse>(),
-        interceptors: self.interceptors?.makeWithdrawProposalInterceptors() ?? [],
-        userFunction: self.withdrawProposal(request:context:)
+        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgCreateProposal>(),
+        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgCreateProposalResponse>(),
+        interceptors: self.interceptors?.makeCreateProposalInterceptors() ?? [],
+        userFunction: self.createProposal(request:context:)
       )
 
     case "Vote":
@@ -602,15 +497,6 @@ extension Cosmos_Group_V1beta1_MsgProvider {
         responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgExecResponse>(),
         interceptors: self.interceptors?.makeExecInterceptors() ?? [],
         userFunction: self.exec(request:context:)
-      )
-
-    case "LeaveGroup":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Group_V1beta1_MsgLeaveGroup>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Group_V1beta1_MsgLeaveGroupResponse>(),
-        interceptors: self.interceptors?.makeLeaveGroupInterceptors() ?? [],
-        userFunction: self.leaveGroup(request:context:)
       )
 
     default:
@@ -637,33 +523,25 @@ internal protocol Cosmos_Group_V1beta1_MsgServerInterceptorFactoryProtocol {
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeUpdateGroupMetadataInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupMetadataResponse>]
 
-  /// - Returns: Interceptors to use when handling 'createGroupPolicy'.
+  /// - Returns: Interceptors to use when handling 'createGroupAccount'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeCreateGroupPolicyInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgCreateGroupPolicy, Cosmos_Group_V1beta1_MsgCreateGroupPolicyResponse>]
+  func makeCreateGroupAccountInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgCreateGroupAccount, Cosmos_Group_V1beta1_MsgCreateGroupAccountResponse>]
 
-  /// - Returns: Interceptors to use when handling 'createGroupWithPolicy'.
+  /// - Returns: Interceptors to use when handling 'updateGroupAccountAdmin'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeCreateGroupWithPolicyInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgCreateGroupWithPolicy, Cosmos_Group_V1beta1_MsgCreateGroupWithPolicyResponse>]
+  func makeUpdateGroupAccountAdminInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdmin, Cosmos_Group_V1beta1_MsgUpdateGroupAccountAdminResponse>]
 
-  /// - Returns: Interceptors to use when handling 'updateGroupPolicyAdmin'.
+  /// - Returns: Interceptors to use when handling 'updateGroupAccountDecisionPolicy'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeUpdateGroupPolicyAdminInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdmin, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyAdminResponse>]
+  func makeUpdateGroupAccountDecisionPolicyInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicy, Cosmos_Group_V1beta1_MsgUpdateGroupAccountDecisionPolicyResponse>]
 
-  /// - Returns: Interceptors to use when handling 'updateGroupPolicyDecisionPolicy'.
+  /// - Returns: Interceptors to use when handling 'updateGroupAccountMetadata'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeUpdateGroupPolicyDecisionPolicyInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicy, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyDecisionPolicyResponse>]
+  func makeUpdateGroupAccountMetadataInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupAccountMetadataResponse>]
 
-  /// - Returns: Interceptors to use when handling 'updateGroupPolicyMetadata'.
+  /// - Returns: Interceptors to use when handling 'createProposal'.
   ///   Defaults to calling `self.makeInterceptors()`.
-  func makeUpdateGroupPolicyMetadataInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadata, Cosmos_Group_V1beta1_MsgUpdateGroupPolicyMetadataResponse>]
-
-  /// - Returns: Interceptors to use when handling 'submitProposal'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeSubmitProposalInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgSubmitProposal, Cosmos_Group_V1beta1_MsgSubmitProposalResponse>]
-
-  /// - Returns: Interceptors to use when handling 'withdrawProposal'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeWithdrawProposalInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgWithdrawProposal, Cosmos_Group_V1beta1_MsgWithdrawProposalResponse>]
+  func makeCreateProposalInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgCreateProposal, Cosmos_Group_V1beta1_MsgCreateProposalResponse>]
 
   /// - Returns: Interceptors to use when handling 'vote'.
   ///   Defaults to calling `self.makeInterceptors()`.
@@ -672,8 +550,4 @@ internal protocol Cosmos_Group_V1beta1_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'exec'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeExecInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgExec, Cosmos_Group_V1beta1_MsgExecResponse>]
-
-  /// - Returns: Interceptors to use when handling 'leaveGroup'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeLeaveGroupInterceptors() -> [ServerInterceptor<Cosmos_Group_V1beta1_MsgLeaveGroup, Cosmos_Group_V1beta1_MsgLeaveGroupResponse>]
 }

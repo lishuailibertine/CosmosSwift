@@ -21,95 +21,95 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// GenesisState defines the slashing module's genesis state.
-struct Cosmos_Slashing_V1beta1_GenesisState {
+public struct Cosmos_Slashing_V1beta1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// params defines all the paramaters of related to deposit.
-  var params: Cosmos_Slashing_V1beta1_Params {
+  public var params: Cosmos_Slashing_V1beta1_Params {
     get {return _params ?? Cosmos_Slashing_V1beta1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  public var hasParams: Bool {return self._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  public mutating func clearParams() {self._params = nil}
 
   /// signing_infos represents a map between validator addresses and their
   /// signing infos.
-  var signingInfos: [Cosmos_Slashing_V1beta1_SigningInfo] = []
+  public var signingInfos: [Cosmos_Slashing_V1beta1_SigningInfo] = []
 
   /// missed_blocks represents a map between validator addresses and their
   /// missed blocks.
-  var missedBlocks: [Cosmos_Slashing_V1beta1_ValidatorMissedBlocks] = []
+  public var missedBlocks: [Cosmos_Slashing_V1beta1_ValidatorMissedBlocks] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _params: Cosmos_Slashing_V1beta1_Params? = nil
 }
 
 /// SigningInfo stores validator signing info of corresponding address.
-struct Cosmos_Slashing_V1beta1_SigningInfo {
+public struct Cosmos_Slashing_V1beta1_SigningInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// address is the validator address.
-  var address: String = String()
+  public var address: String = String()
 
   /// validator_signing_info represents the signing info of this validator.
-  var validatorSigningInfo: Cosmos_Slashing_V1beta1_ValidatorSigningInfo {
+  public var validatorSigningInfo: Cosmos_Slashing_V1beta1_ValidatorSigningInfo {
     get {return _validatorSigningInfo ?? Cosmos_Slashing_V1beta1_ValidatorSigningInfo()}
     set {_validatorSigningInfo = newValue}
   }
   /// Returns true if `validatorSigningInfo` has been explicitly set.
-  var hasValidatorSigningInfo: Bool {return self._validatorSigningInfo != nil}
+  public var hasValidatorSigningInfo: Bool {return self._validatorSigningInfo != nil}
   /// Clears the value of `validatorSigningInfo`. Subsequent reads from it will return its default value.
-  mutating func clearValidatorSigningInfo() {self._validatorSigningInfo = nil}
+  public mutating func clearValidatorSigningInfo() {self._validatorSigningInfo = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _validatorSigningInfo: Cosmos_Slashing_V1beta1_ValidatorSigningInfo? = nil
 }
 
 /// ValidatorMissedBlocks contains array of missed blocks of corresponding
 /// address.
-struct Cosmos_Slashing_V1beta1_ValidatorMissedBlocks {
+public struct Cosmos_Slashing_V1beta1_ValidatorMissedBlocks {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// address is the validator address.
-  var address: String = String()
+  public var address: String = String()
 
   /// missed_blocks is an array of missed blocks by the validator.
-  var missedBlocks: [Cosmos_Slashing_V1beta1_MissedBlock] = []
+  public var missedBlocks: [Cosmos_Slashing_V1beta1_MissedBlock] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MissedBlock contains height and missed status as boolean.
-struct Cosmos_Slashing_V1beta1_MissedBlock {
+public struct Cosmos_Slashing_V1beta1_MissedBlock {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// index is the height at which the block was missed.
-  var index: Int64 = 0
+  public var index: Int64 = 0
 
   /// missed is the missed status.
-  var missed: Bool = false
+  public var missed: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -124,14 +124,14 @@ extension Cosmos_Slashing_V1beta1_MissedBlock: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.slashing.v1beta1"
 
 extension Cosmos_Slashing_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GenesisState"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GenesisState"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
     2: .standard(proto: "signing_infos"),
     3: .standard(proto: "missed_blocks"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -145,7 +145,7 @@ extension Cosmos_Slashing_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -162,7 +162,7 @@ extension Cosmos_Slashing_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_GenesisState, rhs: Cosmos_Slashing_V1beta1_GenesisState) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_GenesisState, rhs: Cosmos_Slashing_V1beta1_GenesisState) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs.signingInfos != rhs.signingInfos {return false}
     if lhs.missedBlocks != rhs.missedBlocks {return false}
@@ -172,13 +172,13 @@ extension Cosmos_Slashing_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProt
 }
 
 extension Cosmos_Slashing_V1beta1_SigningInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SigningInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SigningInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .standard(proto: "validator_signing_info"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -191,7 +191,7 @@ extension Cosmos_Slashing_V1beta1_SigningInfo: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -205,7 +205,7 @@ extension Cosmos_Slashing_V1beta1_SigningInfo: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_SigningInfo, rhs: Cosmos_Slashing_V1beta1_SigningInfo) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_SigningInfo, rhs: Cosmos_Slashing_V1beta1_SigningInfo) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs._validatorSigningInfo != rhs._validatorSigningInfo {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -214,13 +214,13 @@ extension Cosmos_Slashing_V1beta1_SigningInfo: SwiftProtobuf.Message, SwiftProto
 }
 
 extension Cosmos_Slashing_V1beta1_ValidatorMissedBlocks: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorMissedBlocks"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorMissedBlocks"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .standard(proto: "missed_blocks"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -233,7 +233,7 @@ extension Cosmos_Slashing_V1beta1_ValidatorMissedBlocks: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.address.isEmpty {
       try visitor.visitSingularStringField(value: self.address, fieldNumber: 1)
     }
@@ -243,7 +243,7 @@ extension Cosmos_Slashing_V1beta1_ValidatorMissedBlocks: SwiftProtobuf.Message, 
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_ValidatorMissedBlocks, rhs: Cosmos_Slashing_V1beta1_ValidatorMissedBlocks) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_ValidatorMissedBlocks, rhs: Cosmos_Slashing_V1beta1_ValidatorMissedBlocks) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs.missedBlocks != rhs.missedBlocks {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -252,13 +252,13 @@ extension Cosmos_Slashing_V1beta1_ValidatorMissedBlocks: SwiftProtobuf.Message, 
 }
 
 extension Cosmos_Slashing_V1beta1_MissedBlock: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MissedBlock"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MissedBlock"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "index"),
     2: .same(proto: "missed"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -271,7 +271,7 @@ extension Cosmos_Slashing_V1beta1_MissedBlock: SwiftProtobuf.Message, SwiftProto
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.index != 0 {
       try visitor.visitSingularInt64Field(value: self.index, fieldNumber: 1)
     }
@@ -281,7 +281,7 @@ extension Cosmos_Slashing_V1beta1_MissedBlock: SwiftProtobuf.Message, SwiftProto
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_MissedBlock, rhs: Cosmos_Slashing_V1beta1_MissedBlock) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_MissedBlock, rhs: Cosmos_Slashing_V1beta1_MissedBlock) -> Bool {
     if lhs.index != rhs.index {return false}
     if lhs.missed != rhs.missed {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

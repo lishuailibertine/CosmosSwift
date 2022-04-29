@@ -21,90 +21,90 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method.
-struct Cosmos_Mint_V1beta1_QueryParamsRequest {
+public struct Cosmos_Mint_V1beta1_QueryParamsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
-struct Cosmos_Mint_V1beta1_QueryParamsResponse {
+public struct Cosmos_Mint_V1beta1_QueryParamsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// params defines the parameters of the module.
-  var params: Cosmos_Mint_V1beta1_Params {
+  public var params: Cosmos_Mint_V1beta1_Params {
     get {return _params ?? Cosmos_Mint_V1beta1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  public var hasParams: Bool {return self._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  public mutating func clearParams() {self._params = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _params: Cosmos_Mint_V1beta1_Params? = nil
 }
 
 /// QueryInflationRequest is the request type for the Query/Inflation RPC method.
-struct Cosmos_Mint_V1beta1_QueryInflationRequest {
+public struct Cosmos_Mint_V1beta1_QueryInflationRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryInflationResponse is the response type for the Query/Inflation RPC
 /// method.
-struct Cosmos_Mint_V1beta1_QueryInflationResponse {
+public struct Cosmos_Mint_V1beta1_QueryInflationResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// inflation is the current minting inflation value.
-  var inflation: Data = Data()
+  public var inflation: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryAnnualProvisionsRequest is the request type for the
 /// Query/AnnualProvisions RPC method.
-struct Cosmos_Mint_V1beta1_QueryAnnualProvisionsRequest {
+public struct Cosmos_Mint_V1beta1_QueryAnnualProvisionsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryAnnualProvisionsResponse is the response type for the
 /// Query/AnnualProvisions RPC method.
-struct Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse {
+public struct Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// annual_provisions is the current minting annual provisions value.
-  var annualProvisions: Data = Data()
+  public var annualProvisions: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -121,31 +121,31 @@ extension Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse: @unchecked Sendable
 fileprivate let _protobuf_package = "cosmos.mint.v1beta1"
 
 extension Cosmos_Mint_V1beta1_QueryParamsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryParamsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".QueryParamsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Mint_V1beta1_QueryParamsRequest, rhs: Cosmos_Mint_V1beta1_QueryParamsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Mint_V1beta1_QueryParamsRequest, rhs: Cosmos_Mint_V1beta1_QueryParamsRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Mint_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryParamsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryParamsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -157,7 +157,7 @@ extension Cosmos_Mint_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, SwiftP
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -168,7 +168,7 @@ extension Cosmos_Mint_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, SwiftP
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Mint_V1beta1_QueryParamsResponse, rhs: Cosmos_Mint_V1beta1_QueryParamsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Mint_V1beta1_QueryParamsResponse, rhs: Cosmos_Mint_V1beta1_QueryParamsResponse) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -176,31 +176,31 @@ extension Cosmos_Mint_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, SwiftP
 }
 
 extension Cosmos_Mint_V1beta1_QueryInflationRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryInflationRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".QueryInflationRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Mint_V1beta1_QueryInflationRequest, rhs: Cosmos_Mint_V1beta1_QueryInflationRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Mint_V1beta1_QueryInflationRequest, rhs: Cosmos_Mint_V1beta1_QueryInflationRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Mint_V1beta1_QueryInflationResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryInflationResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryInflationResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "inflation"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -212,14 +212,14 @@ extension Cosmos_Mint_V1beta1_QueryInflationResponse: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.inflation.isEmpty {
       try visitor.visitSingularBytesField(value: self.inflation, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Mint_V1beta1_QueryInflationResponse, rhs: Cosmos_Mint_V1beta1_QueryInflationResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Mint_V1beta1_QueryInflationResponse, rhs: Cosmos_Mint_V1beta1_QueryInflationResponse) -> Bool {
     if lhs.inflation != rhs.inflation {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -227,31 +227,31 @@ extension Cosmos_Mint_V1beta1_QueryInflationResponse: SwiftProtobuf.Message, Swi
 }
 
 extension Cosmos_Mint_V1beta1_QueryAnnualProvisionsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryAnnualProvisionsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".QueryAnnualProvisionsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Mint_V1beta1_QueryAnnualProvisionsRequest, rhs: Cosmos_Mint_V1beta1_QueryAnnualProvisionsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Mint_V1beta1_QueryAnnualProvisionsRequest, rhs: Cosmos_Mint_V1beta1_QueryAnnualProvisionsRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryAnnualProvisionsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryAnnualProvisionsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "annual_provisions"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -263,14 +263,14 @@ extension Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.annualProvisions.isEmpty {
       try visitor.visitSingularBytesField(value: self.annualProvisions, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse, rhs: Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse, rhs: Cosmos_Mint_V1beta1_QueryAnnualProvisionsResponse) -> Bool {
     if lhs.annualProvisions != rhs.annualProvisions {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

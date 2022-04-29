@@ -21,122 +21,122 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// QueryParamsRequest is the request type for the Query/Params RPC method
-struct Cosmos_Slashing_V1beta1_QueryParamsRequest {
+public struct Cosmos_Slashing_V1beta1_QueryParamsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryParamsResponse is the response type for the Query/Params RPC method
-struct Cosmos_Slashing_V1beta1_QueryParamsResponse {
+public struct Cosmos_Slashing_V1beta1_QueryParamsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var params: Cosmos_Slashing_V1beta1_Params {
+  public var params: Cosmos_Slashing_V1beta1_Params {
     get {return _params ?? Cosmos_Slashing_V1beta1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  public var hasParams: Bool {return self._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  public mutating func clearParams() {self._params = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _params: Cosmos_Slashing_V1beta1_Params? = nil
 }
 
 /// QuerySigningInfoRequest is the request type for the Query/SigningInfo RPC
 /// method
-struct Cosmos_Slashing_V1beta1_QuerySigningInfoRequest {
+public struct Cosmos_Slashing_V1beta1_QuerySigningInfoRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// cons_address is the address to query signing info of
-  var consAddress: String = String()
+  public var consAddress: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QuerySigningInfoResponse is the response type for the Query/SigningInfo RPC
 /// method
-struct Cosmos_Slashing_V1beta1_QuerySigningInfoResponse {
+public struct Cosmos_Slashing_V1beta1_QuerySigningInfoResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// val_signing_info is the signing info of requested val cons address
-  var valSigningInfo: Cosmos_Slashing_V1beta1_ValidatorSigningInfo {
+  public var valSigningInfo: Cosmos_Slashing_V1beta1_ValidatorSigningInfo {
     get {return _valSigningInfo ?? Cosmos_Slashing_V1beta1_ValidatorSigningInfo()}
     set {_valSigningInfo = newValue}
   }
   /// Returns true if `valSigningInfo` has been explicitly set.
-  var hasValSigningInfo: Bool {return self._valSigningInfo != nil}
+  public var hasValSigningInfo: Bool {return self._valSigningInfo != nil}
   /// Clears the value of `valSigningInfo`. Subsequent reads from it will return its default value.
-  mutating func clearValSigningInfo() {self._valSigningInfo = nil}
+  public mutating func clearValSigningInfo() {self._valSigningInfo = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _valSigningInfo: Cosmos_Slashing_V1beta1_ValidatorSigningInfo? = nil
 }
 
 /// QuerySigningInfosRequest is the request type for the Query/SigningInfos RPC
 /// method
-struct Cosmos_Slashing_V1beta1_QuerySigningInfosRequest {
+public struct Cosmos_Slashing_V1beta1_QuerySigningInfosRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QuerySigningInfosResponse is the response type for the Query/SigningInfos RPC
 /// method
-struct Cosmos_Slashing_V1beta1_QuerySigningInfosResponse {
+public struct Cosmos_Slashing_V1beta1_QuerySigningInfosResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// info is the signing info of all validators
-  var info: [Cosmos_Slashing_V1beta1_ValidatorSigningInfo] = []
+  public var info: [Cosmos_Slashing_V1beta1_ValidatorSigningInfo] = []
 
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
@@ -155,31 +155,31 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfosResponse: @unchecked Sendable
 fileprivate let _protobuf_package = "cosmos.slashing.v1beta1"
 
 extension Cosmos_Slashing_V1beta1_QueryParamsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryParamsRequest"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".QueryParamsRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_QueryParamsRequest, rhs: Cosmos_Slashing_V1beta1_QueryParamsRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_QueryParamsRequest, rhs: Cosmos_Slashing_V1beta1_QueryParamsRequest) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Slashing_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryParamsResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryParamsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -191,7 +191,7 @@ extension Cosmos_Slashing_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, Sw
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -202,7 +202,7 @@ extension Cosmos_Slashing_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, Sw
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_QueryParamsResponse, rhs: Cosmos_Slashing_V1beta1_QueryParamsResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_QueryParamsResponse, rhs: Cosmos_Slashing_V1beta1_QueryParamsResponse) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -210,12 +210,12 @@ extension Cosmos_Slashing_V1beta1_QueryParamsResponse: SwiftProtobuf.Message, Sw
 }
 
 extension Cosmos_Slashing_V1beta1_QuerySigningInfoRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QuerySigningInfoRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QuerySigningInfoRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "cons_address"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -227,14 +227,14 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfoRequest: SwiftProtobuf.Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.consAddress.isEmpty {
       try visitor.visitSingularStringField(value: self.consAddress, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_QuerySigningInfoRequest, rhs: Cosmos_Slashing_V1beta1_QuerySigningInfoRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_QuerySigningInfoRequest, rhs: Cosmos_Slashing_V1beta1_QuerySigningInfoRequest) -> Bool {
     if lhs.consAddress != rhs.consAddress {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -242,12 +242,12 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfoRequest: SwiftProtobuf.Message
 }
 
 extension Cosmos_Slashing_V1beta1_QuerySigningInfoResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QuerySigningInfoResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QuerySigningInfoResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "val_signing_info"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -259,7 +259,7 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfoResponse: SwiftProtobuf.Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -270,7 +270,7 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfoResponse: SwiftProtobuf.Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_QuerySigningInfoResponse, rhs: Cosmos_Slashing_V1beta1_QuerySigningInfoResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_QuerySigningInfoResponse, rhs: Cosmos_Slashing_V1beta1_QuerySigningInfoResponse) -> Bool {
     if lhs._valSigningInfo != rhs._valSigningInfo {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -278,12 +278,12 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfoResponse: SwiftProtobuf.Messag
 }
 
 extension Cosmos_Slashing_V1beta1_QuerySigningInfosRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QuerySigningInfosRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QuerySigningInfosRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -295,7 +295,7 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfosRequest: SwiftProtobuf.Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -306,7 +306,7 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfosRequest: SwiftProtobuf.Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_QuerySigningInfosRequest, rhs: Cosmos_Slashing_V1beta1_QuerySigningInfosRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_QuerySigningInfosRequest, rhs: Cosmos_Slashing_V1beta1_QuerySigningInfosRequest) -> Bool {
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -314,13 +314,13 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfosRequest: SwiftProtobuf.Messag
 }
 
 extension Cosmos_Slashing_V1beta1_QuerySigningInfosResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QuerySigningInfosResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QuerySigningInfosResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "info"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -333,7 +333,7 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfosResponse: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -347,7 +347,7 @@ extension Cosmos_Slashing_V1beta1_QuerySigningInfosResponse: SwiftProtobuf.Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_QuerySigningInfosResponse, rhs: Cosmos_Slashing_V1beta1_QuerySigningInfosResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_QuerySigningInfosResponse, rhs: Cosmos_Slashing_V1beta1_QuerySigningInfosResponse) -> Bool {
     if lhs.info != rhs.info {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

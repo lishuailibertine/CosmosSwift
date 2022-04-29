@@ -21,89 +21,89 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// QueryEvidenceRequest is the request type for the Query/Evidence RPC method.
-struct Cosmos_Evidence_V1beta1_QueryEvidenceRequest {
+public struct Cosmos_Evidence_V1beta1_QueryEvidenceRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// evidence_hash defines the hash of the requested evidence.
-  var evidenceHash: Data = Data()
+  public var evidenceHash: Data = Data()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// QueryEvidenceResponse is the response type for the Query/Evidence RPC method.
-struct Cosmos_Evidence_V1beta1_QueryEvidenceResponse {
+public struct Cosmos_Evidence_V1beta1_QueryEvidenceResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// evidence returns the requested evidence.
-  var evidence: SwiftProtobuf.Google_Protobuf_Any {
+  public var evidence: SwiftProtobuf.Google_Protobuf_Any {
     get {return _evidence ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_evidence = newValue}
   }
   /// Returns true if `evidence` has been explicitly set.
-  var hasEvidence: Bool {return self._evidence != nil}
+  public var hasEvidence: Bool {return self._evidence != nil}
   /// Clears the value of `evidence`. Subsequent reads from it will return its default value.
-  mutating func clearEvidence() {self._evidence = nil}
+  public mutating func clearEvidence() {self._evidence = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _evidence: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
 
 /// QueryEvidenceRequest is the request type for the Query/AllEvidence RPC
 /// method.
-struct Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest {
+public struct Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// pagination defines an optional pagination for the request.
-  var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageRequest {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageRequest()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageRequest? = nil
 }
 
 /// QueryAllEvidenceResponse is the response type for the Query/AllEvidence RPC
 /// method.
-struct Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse {
+public struct Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// evidence returns all evidences.
-  var evidence: [SwiftProtobuf.Google_Protobuf_Any] = []
+  public var evidence: [SwiftProtobuf.Google_Protobuf_Any] = []
 
   /// pagination defines the pagination in the response.
-  var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
+  public var pagination: Cosmos_Base_Query_V1beta1_PageResponse {
     get {return _pagination ?? Cosmos_Base_Query_V1beta1_PageResponse()}
     set {_pagination = newValue}
   }
   /// Returns true if `pagination` has been explicitly set.
-  var hasPagination: Bool {return self._pagination != nil}
+  public var hasPagination: Bool {return self._pagination != nil}
   /// Clears the value of `pagination`. Subsequent reads from it will return its default value.
-  mutating func clearPagination() {self._pagination = nil}
+  public mutating func clearPagination() {self._pagination = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pagination: Cosmos_Base_Query_V1beta1_PageResponse? = nil
 }
@@ -120,12 +120,12 @@ extension Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse: @unchecked Sendable 
 fileprivate let _protobuf_package = "cosmos.evidence.v1beta1"
 
 extension Cosmos_Evidence_V1beta1_QueryEvidenceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryEvidenceRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryEvidenceRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "evidence_hash"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -137,14 +137,14 @@ extension Cosmos_Evidence_V1beta1_QueryEvidenceRequest: SwiftProtobuf.Message, S
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.evidenceHash.isEmpty {
       try visitor.visitSingularBytesField(value: self.evidenceHash, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Evidence_V1beta1_QueryEvidenceRequest, rhs: Cosmos_Evidence_V1beta1_QueryEvidenceRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Evidence_V1beta1_QueryEvidenceRequest, rhs: Cosmos_Evidence_V1beta1_QueryEvidenceRequest) -> Bool {
     if lhs.evidenceHash != rhs.evidenceHash {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -152,12 +152,12 @@ extension Cosmos_Evidence_V1beta1_QueryEvidenceRequest: SwiftProtobuf.Message, S
 }
 
 extension Cosmos_Evidence_V1beta1_QueryEvidenceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryEvidenceResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryEvidenceResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "evidence"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -169,7 +169,7 @@ extension Cosmos_Evidence_V1beta1_QueryEvidenceResponse: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -180,7 +180,7 @@ extension Cosmos_Evidence_V1beta1_QueryEvidenceResponse: SwiftProtobuf.Message, 
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Evidence_V1beta1_QueryEvidenceResponse, rhs: Cosmos_Evidence_V1beta1_QueryEvidenceResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Evidence_V1beta1_QueryEvidenceResponse, rhs: Cosmos_Evidence_V1beta1_QueryEvidenceResponse) -> Bool {
     if lhs._evidence != rhs._evidence {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -188,12 +188,12 @@ extension Cosmos_Evidence_V1beta1_QueryEvidenceResponse: SwiftProtobuf.Message, 
 }
 
 extension Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryAllEvidenceRequest"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryAllEvidenceRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -205,7 +205,7 @@ extension Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest: SwiftProtobuf.Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -216,7 +216,7 @@ extension Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest: SwiftProtobuf.Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest, rhs: Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest) -> Bool {
+  public static func ==(lhs: Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest, rhs: Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest) -> Bool {
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -224,13 +224,13 @@ extension Cosmos_Evidence_V1beta1_QueryAllEvidenceRequest: SwiftProtobuf.Message
 }
 
 extension Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".QueryAllEvidenceResponse"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".QueryAllEvidenceResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "evidence"),
     2: .same(proto: "pagination"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -243,7 +243,7 @@ extension Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse: SwiftProtobuf.Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -257,7 +257,7 @@ extension Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse: SwiftProtobuf.Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse, rhs: Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse, rhs: Cosmos_Evidence_V1beta1_QueryAllEvidenceResponse) -> Bool {
     if lhs.evidence != rhs.evidence {return false}
     if lhs._pagination != rhs._pagination {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

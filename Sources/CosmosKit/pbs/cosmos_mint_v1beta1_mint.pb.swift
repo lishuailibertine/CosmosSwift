@@ -21,49 +21,49 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Minter represents the minting state.
-struct Cosmos_Mint_V1beta1_Minter {
+public struct Cosmos_Mint_V1beta1_Minter {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// current annual inflation rate
-  var inflation: String = String()
+  public var inflation: String = String()
 
   /// current annual expected provisions
-  var annualProvisions: String = String()
+  public var annualProvisions: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// Params holds parameters for the mint module.
-struct Cosmos_Mint_V1beta1_Params {
+public struct Cosmos_Mint_V1beta1_Params {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// type of coin to mint
-  var mintDenom: String = String()
+  public var mintDenom: String = String()
 
   /// maximum annual change in inflation rate
-  var inflationRateChange: String = String()
+  public var inflationRateChange: String = String()
 
   /// maximum inflation rate
-  var inflationMax: String = String()
+  public var inflationMax: String = String()
 
   /// minimum inflation rate
-  var inflationMin: String = String()
+  public var inflationMin: String = String()
 
   /// goal of percent bonded atoms
-  var goalBonded: String = String()
+  public var goalBonded: String = String()
 
   /// expected blocks per year
-  var blocksPerYear: UInt64 = 0
+  public var blocksPerYear: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -76,13 +76,13 @@ extension Cosmos_Mint_V1beta1_Params: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.mint.v1beta1"
 
 extension Cosmos_Mint_V1beta1_Minter: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Minter"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Minter"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "inflation"),
     2: .standard(proto: "annual_provisions"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -95,7 +95,7 @@ extension Cosmos_Mint_V1beta1_Minter: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.inflation.isEmpty {
       try visitor.visitSingularStringField(value: self.inflation, fieldNumber: 1)
     }
@@ -105,7 +105,7 @@ extension Cosmos_Mint_V1beta1_Minter: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Mint_V1beta1_Minter, rhs: Cosmos_Mint_V1beta1_Minter) -> Bool {
+  public static func ==(lhs: Cosmos_Mint_V1beta1_Minter, rhs: Cosmos_Mint_V1beta1_Minter) -> Bool {
     if lhs.inflation != rhs.inflation {return false}
     if lhs.annualProvisions != rhs.annualProvisions {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -114,8 +114,8 @@ extension Cosmos_Mint_V1beta1_Minter: SwiftProtobuf.Message, SwiftProtobuf._Mess
 }
 
 extension Cosmos_Mint_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Params"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Params"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "mint_denom"),
     2: .standard(proto: "inflation_rate_change"),
     3: .standard(proto: "inflation_max"),
@@ -124,7 +124,7 @@ extension Cosmos_Mint_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._Mess
     6: .standard(proto: "blocks_per_year"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -141,7 +141,7 @@ extension Cosmos_Mint_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.mintDenom.isEmpty {
       try visitor.visitSingularStringField(value: self.mintDenom, fieldNumber: 1)
     }
@@ -163,7 +163,7 @@ extension Cosmos_Mint_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Mint_V1beta1_Params, rhs: Cosmos_Mint_V1beta1_Params) -> Bool {
+  public static func ==(lhs: Cosmos_Mint_V1beta1_Params, rhs: Cosmos_Mint_V1beta1_Params) -> Bool {
     if lhs.mintDenom != rhs.mintDenom {return false}
     if lhs.inflationRateChange != rhs.inflationRateChange {return false}
     if lhs.inflationMax != rhs.inflationMax {return false}

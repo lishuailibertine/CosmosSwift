@@ -20,14 +20,14 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Tendermint_Types_Evidence {
+public struct Tendermint_Types_Evidence {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sum: Tendermint_Types_Evidence.OneOf_Sum? = nil
+  public var sum: Tendermint_Types_Evidence.OneOf_Sum? = nil
 
-  var duplicateVoteEvidence: Tendermint_Types_DuplicateVoteEvidence {
+  public var duplicateVoteEvidence: Tendermint_Types_DuplicateVoteEvidence {
     get {
       if case .duplicateVoteEvidence(let v)? = sum {return v}
       return Tendermint_Types_DuplicateVoteEvidence()
@@ -35,7 +35,7 @@ struct Tendermint_Types_Evidence {
     set {sum = .duplicateVoteEvidence(newValue)}
   }
 
-  var lightClientAttackEvidence: Tendermint_Types_LightClientAttackEvidence {
+  public var lightClientAttackEvidence: Tendermint_Types_LightClientAttackEvidence {
     get {
       if case .lightClientAttackEvidence(let v)? = sum {return v}
       return Tendermint_Types_LightClientAttackEvidence()
@@ -43,14 +43,14 @@ struct Tendermint_Types_Evidence {
     set {sum = .lightClientAttackEvidence(newValue)}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum OneOf_Sum: Equatable {
+  public enum OneOf_Sum: Equatable {
     case duplicateVoteEvidence(Tendermint_Types_DuplicateVoteEvidence)
     case lightClientAttackEvidence(Tendermint_Types_LightClientAttackEvidence)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Tendermint_Types_Evidence.OneOf_Sum, rhs: Tendermint_Types_Evidence.OneOf_Sum) -> Bool {
+    public static func ==(lhs: Tendermint_Types_Evidence.OneOf_Sum, rhs: Tendermint_Types_Evidence.OneOf_Sum) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -69,115 +69,115 @@ struct Tendermint_Types_Evidence {
   #endif
   }
 
-  init() {}
+  public init() {}
 }
 
 /// DuplicateVoteEvidence contains evidence of a validator signed two conflicting votes.
-struct Tendermint_Types_DuplicateVoteEvidence {
+public struct Tendermint_Types_DuplicateVoteEvidence {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var voteA: Tendermint_Types_Vote {
+  public var voteA: Tendermint_Types_Vote {
     get {return _storage._voteA ?? Tendermint_Types_Vote()}
     set {_uniqueStorage()._voteA = newValue}
   }
   /// Returns true if `voteA` has been explicitly set.
-  var hasVoteA: Bool {return _storage._voteA != nil}
+  public var hasVoteA: Bool {return _storage._voteA != nil}
   /// Clears the value of `voteA`. Subsequent reads from it will return its default value.
-  mutating func clearVoteA() {_uniqueStorage()._voteA = nil}
+  public mutating func clearVoteA() {_uniqueStorage()._voteA = nil}
 
-  var voteB: Tendermint_Types_Vote {
+  public var voteB: Tendermint_Types_Vote {
     get {return _storage._voteB ?? Tendermint_Types_Vote()}
     set {_uniqueStorage()._voteB = newValue}
   }
   /// Returns true if `voteB` has been explicitly set.
-  var hasVoteB: Bool {return _storage._voteB != nil}
+  public var hasVoteB: Bool {return _storage._voteB != nil}
   /// Clears the value of `voteB`. Subsequent reads from it will return its default value.
-  mutating func clearVoteB() {_uniqueStorage()._voteB = nil}
+  public mutating func clearVoteB() {_uniqueStorage()._voteB = nil}
 
-  var totalVotingPower: Int64 {
+  public var totalVotingPower: Int64 {
     get {return _storage._totalVotingPower}
     set {_uniqueStorage()._totalVotingPower = newValue}
   }
 
-  var validatorPower: Int64 {
+  public var validatorPower: Int64 {
     get {return _storage._validatorPower}
     set {_uniqueStorage()._validatorPower = newValue}
   }
 
-  var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._timestamp = newValue}
   }
   /// Returns true if `timestamp` has been explicitly set.
-  var hasTimestamp: Bool {return _storage._timestamp != nil}
+  public var hasTimestamp: Bool {return _storage._timestamp != nil}
   /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
-  mutating func clearTimestamp() {_uniqueStorage()._timestamp = nil}
+  public mutating func clearTimestamp() {_uniqueStorage()._timestamp = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 /// LightClientAttackEvidence contains evidence of a set of validators attempting to mislead a light client.
-struct Tendermint_Types_LightClientAttackEvidence {
+public struct Tendermint_Types_LightClientAttackEvidence {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var conflictingBlock: Tendermint_Types_LightBlock {
+  public var conflictingBlock: Tendermint_Types_LightBlock {
     get {return _storage._conflictingBlock ?? Tendermint_Types_LightBlock()}
     set {_uniqueStorage()._conflictingBlock = newValue}
   }
   /// Returns true if `conflictingBlock` has been explicitly set.
-  var hasConflictingBlock: Bool {return _storage._conflictingBlock != nil}
+  public var hasConflictingBlock: Bool {return _storage._conflictingBlock != nil}
   /// Clears the value of `conflictingBlock`. Subsequent reads from it will return its default value.
-  mutating func clearConflictingBlock() {_uniqueStorage()._conflictingBlock = nil}
+  public mutating func clearConflictingBlock() {_uniqueStorage()._conflictingBlock = nil}
 
-  var commonHeight: Int64 {
+  public var commonHeight: Int64 {
     get {return _storage._commonHeight}
     set {_uniqueStorage()._commonHeight = newValue}
   }
 
-  var byzantineValidators: [Tendermint_Types_Validator] {
+  public var byzantineValidators: [Tendermint_Types_Validator] {
     get {return _storage._byzantineValidators}
     set {_uniqueStorage()._byzantineValidators = newValue}
   }
 
-  var totalVotingPower: Int64 {
+  public var totalVotingPower: Int64 {
     get {return _storage._totalVotingPower}
     set {_uniqueStorage()._totalVotingPower = newValue}
   }
 
-  var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._timestamp = newValue}
   }
   /// Returns true if `timestamp` has been explicitly set.
-  var hasTimestamp: Bool {return _storage._timestamp != nil}
+  public var hasTimestamp: Bool {return _storage._timestamp != nil}
   /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
-  mutating func clearTimestamp() {_uniqueStorage()._timestamp = nil}
+  public mutating func clearTimestamp() {_uniqueStorage()._timestamp = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-struct Tendermint_Types_EvidenceList {
+public struct Tendermint_Types_EvidenceList {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var evidence: [Tendermint_Types_Evidence] = []
+  public var evidence: [Tendermint_Types_Evidence] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -193,13 +193,13 @@ extension Tendermint_Types_EvidenceList: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.types"
 
 extension Tendermint_Types_Evidence: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Evidence"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Evidence"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "duplicate_vote_evidence"),
     2: .standard(proto: "light_client_attack_evidence"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -236,7 +236,7 @@ extension Tendermint_Types_Evidence: SwiftProtobuf.Message, SwiftProtobuf._Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -255,7 +255,7 @@ extension Tendermint_Types_Evidence: SwiftProtobuf.Message, SwiftProtobuf._Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_Evidence, rhs: Tendermint_Types_Evidence) -> Bool {
+  public static func ==(lhs: Tendermint_Types_Evidence, rhs: Tendermint_Types_Evidence) -> Bool {
     if lhs.sum != rhs.sum {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -263,8 +263,8 @@ extension Tendermint_Types_Evidence: SwiftProtobuf.Message, SwiftProtobuf._Messa
 }
 
 extension Tendermint_Types_DuplicateVoteEvidence: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DuplicateVoteEvidence"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DuplicateVoteEvidence"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "vote_a"),
     2: .standard(proto: "vote_b"),
     3: .standard(proto: "total_voting_power"),
@@ -299,7 +299,7 @@ extension Tendermint_Types_DuplicateVoteEvidence: SwiftProtobuf.Message, SwiftPr
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -318,7 +318,7 @@ extension Tendermint_Types_DuplicateVoteEvidence: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every if/case branch local when no optimizations
@@ -343,7 +343,7 @@ extension Tendermint_Types_DuplicateVoteEvidence: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_DuplicateVoteEvidence, rhs: Tendermint_Types_DuplicateVoteEvidence) -> Bool {
+  public static func ==(lhs: Tendermint_Types_DuplicateVoteEvidence, rhs: Tendermint_Types_DuplicateVoteEvidence) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -363,8 +363,8 @@ extension Tendermint_Types_DuplicateVoteEvidence: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Tendermint_Types_LightClientAttackEvidence: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".LightClientAttackEvidence"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".LightClientAttackEvidence"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "conflicting_block"),
     2: .standard(proto: "common_height"),
     3: .standard(proto: "byzantine_validators"),
@@ -399,7 +399,7 @@ extension Tendermint_Types_LightClientAttackEvidence: SwiftProtobuf.Message, Swi
     return _storage
   }
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     _ = _uniqueStorage()
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       while let fieldNumber = try decoder.nextFieldNumber() {
@@ -418,7 +418,7 @@ extension Tendermint_Types_LightClientAttackEvidence: SwiftProtobuf.Message, Swi
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every if/case branch local when no optimizations
@@ -443,7 +443,7 @@ extension Tendermint_Types_LightClientAttackEvidence: SwiftProtobuf.Message, Swi
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_LightClientAttackEvidence, rhs: Tendermint_Types_LightClientAttackEvidence) -> Bool {
+  public static func ==(lhs: Tendermint_Types_LightClientAttackEvidence, rhs: Tendermint_Types_LightClientAttackEvidence) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0
@@ -463,12 +463,12 @@ extension Tendermint_Types_LightClientAttackEvidence: SwiftProtobuf.Message, Swi
 }
 
 extension Tendermint_Types_EvidenceList: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EvidenceList"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EvidenceList"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "evidence"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -480,14 +480,14 @@ extension Tendermint_Types_EvidenceList: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.evidence.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.evidence, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_EvidenceList, rhs: Tendermint_Types_EvidenceList) -> Bool {
+  public static func ==(lhs: Tendermint_Types_EvidenceList, rhs: Tendermint_Types_EvidenceList) -> Bool {
     if lhs.evidence != rhs.evidence {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

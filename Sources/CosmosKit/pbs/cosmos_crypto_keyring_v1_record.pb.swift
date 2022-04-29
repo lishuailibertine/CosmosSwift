@@ -21,29 +21,29 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Record is used for representing a key in the keyring.
-struct Cosmos_Crypto_Keyring_V1_Record {
+public struct Cosmos_Crypto_Keyring_V1_Record {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// name represents a name of Record
-  var name: String = String()
+  public var name: String = String()
 
   /// pub_key represents a public key in any format
-  var pubKey: SwiftProtobuf.Google_Protobuf_Any {
+  public var pubKey: SwiftProtobuf.Google_Protobuf_Any {
     get {return _pubKey ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_pubKey = newValue}
   }
   /// Returns true if `pubKey` has been explicitly set.
-  var hasPubKey: Bool {return self._pubKey != nil}
+  public var hasPubKey: Bool {return self._pubKey != nil}
   /// Clears the value of `pubKey`. Subsequent reads from it will return its default value.
-  mutating func clearPubKey() {self._pubKey = nil}
+  public mutating func clearPubKey() {self._pubKey = nil}
 
   /// Record contains one of the following items
-  var item: Cosmos_Crypto_Keyring_V1_Record.OneOf_Item? = nil
+  public var item: Cosmos_Crypto_Keyring_V1_Record.OneOf_Item? = nil
 
   /// local stores the public information about a locally stored key
-  var local: Cosmos_Crypto_Keyring_V1_Record.Local {
+  public var local: Cosmos_Crypto_Keyring_V1_Record.Local {
     get {
       if case .local(let v)? = item {return v}
       return Cosmos_Crypto_Keyring_V1_Record.Local()
@@ -52,7 +52,7 @@ struct Cosmos_Crypto_Keyring_V1_Record {
   }
 
   /// ledger stores the public information about a Ledger key
-  var ledger: Cosmos_Crypto_Keyring_V1_Record.Ledger {
+  public var ledger: Cosmos_Crypto_Keyring_V1_Record.Ledger {
     get {
       if case .ledger(let v)? = item {return v}
       return Cosmos_Crypto_Keyring_V1_Record.Ledger()
@@ -61,7 +61,7 @@ struct Cosmos_Crypto_Keyring_V1_Record {
   }
 
   /// Multi does not store any information.
-  var multi: Cosmos_Crypto_Keyring_V1_Record.Multi {
+  public var multi: Cosmos_Crypto_Keyring_V1_Record.Multi {
     get {
       if case .multi(let v)? = item {return v}
       return Cosmos_Crypto_Keyring_V1_Record.Multi()
@@ -70,7 +70,7 @@ struct Cosmos_Crypto_Keyring_V1_Record {
   }
 
   /// Offline does not store any information.
-  var offline: Cosmos_Crypto_Keyring_V1_Record.Offline {
+  public var offline: Cosmos_Crypto_Keyring_V1_Record.Offline {
     get {
       if case .offline(let v)? = item {return v}
       return Cosmos_Crypto_Keyring_V1_Record.Offline()
@@ -78,10 +78,10 @@ struct Cosmos_Crypto_Keyring_V1_Record {
     set {item = .offline(newValue)}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// Record contains one of the following items
-  enum OneOf_Item: Equatable {
+  public enum OneOf_Item: Equatable {
     /// local stores the public information about a locally stored key
     case local(Cosmos_Crypto_Keyring_V1_Record.Local)
     /// ledger stores the public information about a Ledger key
@@ -92,7 +92,7 @@ struct Cosmos_Crypto_Keyring_V1_Record {
     case offline(Cosmos_Crypto_Keyring_V1_Record.Offline)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.OneOf_Item, rhs: Cosmos_Crypto_Keyring_V1_Record.OneOf_Item) -> Bool {
+    public static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.OneOf_Item, rhs: Cosmos_Crypto_Keyring_V1_Record.OneOf_Item) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -121,74 +121,74 @@ struct Cosmos_Crypto_Keyring_V1_Record {
 
   /// Item is a keyring item stored in a keyring backend.
   /// Local item
-  struct Local {
+  public struct Local {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var privKey: SwiftProtobuf.Google_Protobuf_Any {
+    public var privKey: SwiftProtobuf.Google_Protobuf_Any {
       get {return _privKey ?? SwiftProtobuf.Google_Protobuf_Any()}
       set {_privKey = newValue}
     }
     /// Returns true if `privKey` has been explicitly set.
-    var hasPrivKey: Bool {return self._privKey != nil}
+    public var hasPrivKey: Bool {return self._privKey != nil}
     /// Clears the value of `privKey`. Subsequent reads from it will return its default value.
-    mutating func clearPrivKey() {self._privKey = nil}
+    public mutating func clearPrivKey() {self._privKey = nil}
 
-    var privKeyType: String = String()
+    public var privKeyType: String = String()
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _privKey: SwiftProtobuf.Google_Protobuf_Any? = nil
   }
 
   /// Ledger item
-  struct Ledger {
+  public struct Ledger {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var path: Cosmos_Crypto_Hd_V1_BIP44Params {
+    public var path: Cosmos_Crypto_Hd_V1_BIP44Params {
       get {return _path ?? Cosmos_Crypto_Hd_V1_BIP44Params()}
       set {_path = newValue}
     }
     /// Returns true if `path` has been explicitly set.
-    var hasPath: Bool {return self._path != nil}
+    public var hasPath: Bool {return self._path != nil}
     /// Clears the value of `path`. Subsequent reads from it will return its default value.
-    mutating func clearPath() {self._path = nil}
+    public mutating func clearPath() {self._path = nil}
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
 
     fileprivate var _path: Cosmos_Crypto_Hd_V1_BIP44Params? = nil
   }
 
   /// Multi item
-  struct Multi {
+  public struct Multi {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
   /// Offline item
-  struct Offline {
+  public struct Offline {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
 
-    var unknownFields = SwiftProtobuf.UnknownStorage()
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-    init() {}
+    public init() {}
   }
 
-  init() {}
+  public init() {}
 
   fileprivate var _pubKey: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
@@ -207,8 +207,8 @@ extension Cosmos_Crypto_Keyring_V1_Record.Offline: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.crypto.keyring.v1"
 
 extension Cosmos_Crypto_Keyring_V1_Record: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Record"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Record"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "name"),
     2: .standard(proto: "pub_key"),
     3: .same(proto: "local"),
@@ -217,7 +217,7 @@ extension Cosmos_Crypto_Keyring_V1_Record: SwiftProtobuf.Message, SwiftProtobuf.
     6: .same(proto: "offline"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -282,7 +282,7 @@ extension Cosmos_Crypto_Keyring_V1_Record: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -315,7 +315,7 @@ extension Cosmos_Crypto_Keyring_V1_Record: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record, rhs: Cosmos_Crypto_Keyring_V1_Record) -> Bool {
+  public static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record, rhs: Cosmos_Crypto_Keyring_V1_Record) -> Bool {
     if lhs.name != rhs.name {return false}
     if lhs._pubKey != rhs._pubKey {return false}
     if lhs.item != rhs.item {return false}
@@ -325,13 +325,13 @@ extension Cosmos_Crypto_Keyring_V1_Record: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Cosmos_Crypto_Keyring_V1_Record.Local: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Cosmos_Crypto_Keyring_V1_Record.protoMessageName + ".Local"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Cosmos_Crypto_Keyring_V1_Record.protoMessageName + ".Local"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "priv_key"),
     2: .standard(proto: "priv_key_type"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -344,7 +344,7 @@ extension Cosmos_Crypto_Keyring_V1_Record.Local: SwiftProtobuf.Message, SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -358,7 +358,7 @@ extension Cosmos_Crypto_Keyring_V1_Record.Local: SwiftProtobuf.Message, SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.Local, rhs: Cosmos_Crypto_Keyring_V1_Record.Local) -> Bool {
+  public static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.Local, rhs: Cosmos_Crypto_Keyring_V1_Record.Local) -> Bool {
     if lhs._privKey != rhs._privKey {return false}
     if lhs.privKeyType != rhs.privKeyType {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -367,12 +367,12 @@ extension Cosmos_Crypto_Keyring_V1_Record.Local: SwiftProtobuf.Message, SwiftPro
 }
 
 extension Cosmos_Crypto_Keyring_V1_Record.Ledger: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Cosmos_Crypto_Keyring_V1_Record.protoMessageName + ".Ledger"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = Cosmos_Crypto_Keyring_V1_Record.protoMessageName + ".Ledger"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "path"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -384,7 +384,7 @@ extension Cosmos_Crypto_Keyring_V1_Record.Ledger: SwiftProtobuf.Message, SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -395,7 +395,7 @@ extension Cosmos_Crypto_Keyring_V1_Record.Ledger: SwiftProtobuf.Message, SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.Ledger, rhs: Cosmos_Crypto_Keyring_V1_Record.Ledger) -> Bool {
+  public static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.Ledger, rhs: Cosmos_Crypto_Keyring_V1_Record.Ledger) -> Bool {
     if lhs._path != rhs._path {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -403,38 +403,38 @@ extension Cosmos_Crypto_Keyring_V1_Record.Ledger: SwiftProtobuf.Message, SwiftPr
 }
 
 extension Cosmos_Crypto_Keyring_V1_Record.Multi: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Cosmos_Crypto_Keyring_V1_Record.protoMessageName + ".Multi"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = Cosmos_Crypto_Keyring_V1_Record.protoMessageName + ".Multi"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.Multi, rhs: Cosmos_Crypto_Keyring_V1_Record.Multi) -> Bool {
+  public static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.Multi, rhs: Cosmos_Crypto_Keyring_V1_Record.Multi) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Crypto_Keyring_V1_Record.Offline: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = Cosmos_Crypto_Keyring_V1_Record.protoMessageName + ".Offline"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = Cosmos_Crypto_Keyring_V1_Record.protoMessageName + ".Offline"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.Offline, rhs: Cosmos_Crypto_Keyring_V1_Record.Offline) -> Bool {
+  public static func ==(lhs: Cosmos_Crypto_Keyring_V1_Record.Offline, rhs: Cosmos_Crypto_Keyring_V1_Record.Offline) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

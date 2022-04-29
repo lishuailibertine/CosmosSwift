@@ -21,14 +21,14 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// PublicKey defines the keys available for use with Tendermint Validators
-struct Tendermint_Crypto_PublicKey {
+public struct Tendermint_Crypto_PublicKey {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sum: Tendermint_Crypto_PublicKey.OneOf_Sum? = nil
+  public var sum: Tendermint_Crypto_PublicKey.OneOf_Sum? = nil
 
-  var ed25519: Data {
+  public var ed25519: Data {
     get {
       if case .ed25519(let v)? = sum {return v}
       return Data()
@@ -36,7 +36,7 @@ struct Tendermint_Crypto_PublicKey {
     set {sum = .ed25519(newValue)}
   }
 
-  var secp256K1: Data {
+  public var secp256K1: Data {
     get {
       if case .secp256K1(let v)? = sum {return v}
       return Data()
@@ -44,14 +44,14 @@ struct Tendermint_Crypto_PublicKey {
     set {sum = .secp256K1(newValue)}
   }
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  enum OneOf_Sum: Equatable {
+  public enum OneOf_Sum: Equatable {
     case ed25519(Data)
     case secp256K1(Data)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Tendermint_Crypto_PublicKey.OneOf_Sum, rhs: Tendermint_Crypto_PublicKey.OneOf_Sum) -> Bool {
+    public static func ==(lhs: Tendermint_Crypto_PublicKey.OneOf_Sum, rhs: Tendermint_Crypto_PublicKey.OneOf_Sum) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -70,7 +70,7 @@ struct Tendermint_Crypto_PublicKey {
   #endif
   }
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -83,13 +83,13 @@ extension Tendermint_Crypto_PublicKey.OneOf_Sum: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.crypto"
 
 extension Tendermint_Crypto_PublicKey: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PublicKey"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PublicKey"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "ed25519"),
     2: .same(proto: "secp256k1"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -116,7 +116,7 @@ extension Tendermint_Crypto_PublicKey: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -135,7 +135,7 @@ extension Tendermint_Crypto_PublicKey: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Crypto_PublicKey, rhs: Tendermint_Crypto_PublicKey) -> Bool {
+  public static func ==(lhs: Tendermint_Crypto_PublicKey, rhs: Tendermint_Crypto_PublicKey) -> Bool {
     if lhs.sum != rhs.sum {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

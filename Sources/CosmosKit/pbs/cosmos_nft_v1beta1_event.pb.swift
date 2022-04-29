@@ -21,56 +21,56 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// EventSend is emitted on Msg/Send
-struct Cosmos_Nft_V1beta1_EventSend {
+public struct Cosmos_Nft_V1beta1_EventSend {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var id: String = String()
+  public var id: String = String()
 
-  var sender: String = String()
+  public var sender: String = String()
 
-  var receiver: String = String()
+  public var receiver: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// EventMint is emitted on Mint
-struct Cosmos_Nft_V1beta1_EventMint {
+public struct Cosmos_Nft_V1beta1_EventMint {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var id: String = String()
+  public var id: String = String()
 
-  var owner: String = String()
+  public var owner: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// EventBurn is emitted on Burn
-struct Cosmos_Nft_V1beta1_EventBurn {
+public struct Cosmos_Nft_V1beta1_EventBurn {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var classID: String = String()
+  public var classID: String = String()
 
-  var id: String = String()
+  public var id: String = String()
 
-  var owner: String = String()
+  public var owner: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -84,15 +84,15 @@ extension Cosmos_Nft_V1beta1_EventBurn: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.nft.v1beta1"
 
 extension Cosmos_Nft_V1beta1_EventSend: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventSend"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventSend"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "id"),
     3: .same(proto: "sender"),
     4: .same(proto: "receiver"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -107,7 +107,7 @@ extension Cosmos_Nft_V1beta1_EventSend: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
@@ -123,7 +123,7 @@ extension Cosmos_Nft_V1beta1_EventSend: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_EventSend, rhs: Cosmos_Nft_V1beta1_EventSend) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_EventSend, rhs: Cosmos_Nft_V1beta1_EventSend) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.id != rhs.id {return false}
     if lhs.sender != rhs.sender {return false}
@@ -134,14 +134,14 @@ extension Cosmos_Nft_V1beta1_EventSend: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Cosmos_Nft_V1beta1_EventMint: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventMint"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventMint"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "id"),
     3: .same(proto: "owner"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -155,7 +155,7 @@ extension Cosmos_Nft_V1beta1_EventMint: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
@@ -168,7 +168,7 @@ extension Cosmos_Nft_V1beta1_EventMint: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_EventMint, rhs: Cosmos_Nft_V1beta1_EventMint) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_EventMint, rhs: Cosmos_Nft_V1beta1_EventMint) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.id != rhs.id {return false}
     if lhs.owner != rhs.owner {return false}
@@ -178,14 +178,14 @@ extension Cosmos_Nft_V1beta1_EventMint: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Cosmos_Nft_V1beta1_EventBurn: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EventBurn"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EventBurn"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "id"),
     3: .same(proto: "owner"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -199,7 +199,7 @@ extension Cosmos_Nft_V1beta1_EventBurn: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.classID.isEmpty {
       try visitor.visitSingularStringField(value: self.classID, fieldNumber: 1)
     }
@@ -212,7 +212,7 @@ extension Cosmos_Nft_V1beta1_EventBurn: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_EventBurn, rhs: Cosmos_Nft_V1beta1_EventBurn) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_EventBurn, rhs: Cosmos_Nft_V1beta1_EventBurn) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.id != rhs.id {return false}
     if lhs.owner != rhs.owner {return false}

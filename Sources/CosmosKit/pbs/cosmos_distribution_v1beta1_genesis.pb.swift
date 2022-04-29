@@ -23,236 +23,236 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// DelegatorWithdrawInfo is the address for where distributions rewards are
 /// withdrawn to by default this struct is only used at genesis to feed in
 /// default withdraw addresses.
-struct Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo {
+public struct Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_address is the address of the delegator.
-  var delegatorAddress: String = String()
+  public var delegatorAddress: String = String()
 
   /// withdraw_address is the address to withdraw the delegation rewards to.
-  var withdrawAddress: String = String()
+  public var withdrawAddress: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// ValidatorOutstandingRewardsRecord is used for import/export via genesis json.
-struct Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord {
+public struct Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator_address is the address of the validator.
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
   /// outstanding_rewards represents the oustanding rewards of a validator.
-  var outstandingRewards: [Cosmos_Base_V1beta1_DecCoin] = []
+  public var outstandingRewards: [Cosmos_Base_V1beta1_DecCoin] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// ValidatorAccumulatedCommissionRecord is used for import / export via genesis
 /// json.
-struct Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord {
+public struct Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator_address is the address of the validator.
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
   /// accumulated is the accumulated commission of a validator.
-  var accumulated: Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommission {
+  public var accumulated: Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommission {
     get {return _accumulated ?? Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommission()}
     set {_accumulated = newValue}
   }
   /// Returns true if `accumulated` has been explicitly set.
-  var hasAccumulated: Bool {return self._accumulated != nil}
+  public var hasAccumulated: Bool {return self._accumulated != nil}
   /// Clears the value of `accumulated`. Subsequent reads from it will return its default value.
-  mutating func clearAccumulated() {self._accumulated = nil}
+  public mutating func clearAccumulated() {self._accumulated = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _accumulated: Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommission? = nil
 }
 
 /// ValidatorHistoricalRewardsRecord is used for import / export via genesis
 /// json.
-struct Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord {
+public struct Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator_address is the address of the validator.
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
   /// period defines the period the historical rewards apply to.
-  var period: UInt64 = 0
+  public var period: UInt64 = 0
 
   /// rewards defines the historical rewards of a validator.
-  var rewards: Cosmos_Distribution_V1beta1_ValidatorHistoricalRewards {
+  public var rewards: Cosmos_Distribution_V1beta1_ValidatorHistoricalRewards {
     get {return _rewards ?? Cosmos_Distribution_V1beta1_ValidatorHistoricalRewards()}
     set {_rewards = newValue}
   }
   /// Returns true if `rewards` has been explicitly set.
-  var hasRewards: Bool {return self._rewards != nil}
+  public var hasRewards: Bool {return self._rewards != nil}
   /// Clears the value of `rewards`. Subsequent reads from it will return its default value.
-  mutating func clearRewards() {self._rewards = nil}
+  public mutating func clearRewards() {self._rewards = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _rewards: Cosmos_Distribution_V1beta1_ValidatorHistoricalRewards? = nil
 }
 
 /// ValidatorCurrentRewardsRecord is used for import / export via genesis json.
-struct Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord {
+public struct Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator_address is the address of the validator.
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
   /// rewards defines the current rewards of a validator.
-  var rewards: Cosmos_Distribution_V1beta1_ValidatorCurrentRewards {
+  public var rewards: Cosmos_Distribution_V1beta1_ValidatorCurrentRewards {
     get {return _rewards ?? Cosmos_Distribution_V1beta1_ValidatorCurrentRewards()}
     set {_rewards = newValue}
   }
   /// Returns true if `rewards` has been explicitly set.
-  var hasRewards: Bool {return self._rewards != nil}
+  public var hasRewards: Bool {return self._rewards != nil}
   /// Clears the value of `rewards`. Subsequent reads from it will return its default value.
-  mutating func clearRewards() {self._rewards = nil}
+  public mutating func clearRewards() {self._rewards = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _rewards: Cosmos_Distribution_V1beta1_ValidatorCurrentRewards? = nil
 }
 
 /// DelegatorStartingInfoRecord used for import / export via genesis json.
-struct Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord {
+public struct Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// delegator_address is the address of the delegator.
-  var delegatorAddress: String = String()
+  public var delegatorAddress: String = String()
 
   /// validator_address is the address of the validator.
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
   /// starting_info defines the starting info of a delegator.
-  var startingInfo: Cosmos_Distribution_V1beta1_DelegatorStartingInfo {
+  public var startingInfo: Cosmos_Distribution_V1beta1_DelegatorStartingInfo {
     get {return _startingInfo ?? Cosmos_Distribution_V1beta1_DelegatorStartingInfo()}
     set {_startingInfo = newValue}
   }
   /// Returns true if `startingInfo` has been explicitly set.
-  var hasStartingInfo: Bool {return self._startingInfo != nil}
+  public var hasStartingInfo: Bool {return self._startingInfo != nil}
   /// Clears the value of `startingInfo`. Subsequent reads from it will return its default value.
-  mutating func clearStartingInfo() {self._startingInfo = nil}
+  public mutating func clearStartingInfo() {self._startingInfo = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _startingInfo: Cosmos_Distribution_V1beta1_DelegatorStartingInfo? = nil
 }
 
 /// ValidatorSlashEventRecord is used for import / export via genesis json.
-struct Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord {
+public struct Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// validator_address is the address of the validator.
-  var validatorAddress: String = String()
+  public var validatorAddress: String = String()
 
   /// height defines the block height at which the slash event occured.
-  var height: UInt64 = 0
+  public var height: UInt64 = 0
 
   /// period is the period of the slash event.
-  var period: UInt64 = 0
+  public var period: UInt64 = 0
 
   /// validator_slash_event describes the slash event.
-  var validatorSlashEvent: Cosmos_Distribution_V1beta1_ValidatorSlashEvent {
+  public var validatorSlashEvent: Cosmos_Distribution_V1beta1_ValidatorSlashEvent {
     get {return _validatorSlashEvent ?? Cosmos_Distribution_V1beta1_ValidatorSlashEvent()}
     set {_validatorSlashEvent = newValue}
   }
   /// Returns true if `validatorSlashEvent` has been explicitly set.
-  var hasValidatorSlashEvent: Bool {return self._validatorSlashEvent != nil}
+  public var hasValidatorSlashEvent: Bool {return self._validatorSlashEvent != nil}
   /// Clears the value of `validatorSlashEvent`. Subsequent reads from it will return its default value.
-  mutating func clearValidatorSlashEvent() {self._validatorSlashEvent = nil}
+  public mutating func clearValidatorSlashEvent() {self._validatorSlashEvent = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _validatorSlashEvent: Cosmos_Distribution_V1beta1_ValidatorSlashEvent? = nil
 }
 
 /// GenesisState defines the distribution module's genesis state.
-struct Cosmos_Distribution_V1beta1_GenesisState {
+public struct Cosmos_Distribution_V1beta1_GenesisState {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// params defines all the paramaters of the module.
-  var params: Cosmos_Distribution_V1beta1_Params {
+  public var params: Cosmos_Distribution_V1beta1_Params {
     get {return _params ?? Cosmos_Distribution_V1beta1_Params()}
     set {_params = newValue}
   }
   /// Returns true if `params` has been explicitly set.
-  var hasParams: Bool {return self._params != nil}
+  public var hasParams: Bool {return self._params != nil}
   /// Clears the value of `params`. Subsequent reads from it will return its default value.
-  mutating func clearParams() {self._params = nil}
+  public mutating func clearParams() {self._params = nil}
 
   /// fee_pool defines the fee pool at genesis.
-  var feePool: Cosmos_Distribution_V1beta1_FeePool {
+  public var feePool: Cosmos_Distribution_V1beta1_FeePool {
     get {return _feePool ?? Cosmos_Distribution_V1beta1_FeePool()}
     set {_feePool = newValue}
   }
   /// Returns true if `feePool` has been explicitly set.
-  var hasFeePool: Bool {return self._feePool != nil}
+  public var hasFeePool: Bool {return self._feePool != nil}
   /// Clears the value of `feePool`. Subsequent reads from it will return its default value.
-  mutating func clearFeePool() {self._feePool = nil}
+  public mutating func clearFeePool() {self._feePool = nil}
 
   /// fee_pool defines the delegator withdraw infos at genesis.
-  var delegatorWithdrawInfos: [Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo] = []
+  public var delegatorWithdrawInfos: [Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo] = []
 
   /// fee_pool defines the previous proposer at genesis.
-  var previousProposer: String = String()
+  public var previousProposer: String = String()
 
   /// fee_pool defines the outstanding rewards of all validators at genesis.
-  var outstandingRewards: [Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord] = []
+  public var outstandingRewards: [Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord] = []
 
   /// fee_pool defines the accumulated commisions of all validators at genesis.
-  var validatorAccumulatedCommissions: [Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord] = []
+  public var validatorAccumulatedCommissions: [Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord] = []
 
   /// fee_pool defines the historical rewards of all validators at genesis.
-  var validatorHistoricalRewards: [Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord] = []
+  public var validatorHistoricalRewards: [Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord] = []
 
   /// fee_pool defines the current rewards of all validators at genesis.
-  var validatorCurrentRewards: [Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord] = []
+  public var validatorCurrentRewards: [Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord] = []
 
   /// fee_pool defines the delegator starting infos at genesis.
-  var delegatorStartingInfos: [Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord] = []
+  public var delegatorStartingInfos: [Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord] = []
 
   /// fee_pool defines the validator slash events at genesis.
-  var validatorSlashEvents: [Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord] = []
+  public var validatorSlashEvents: [Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _params: Cosmos_Distribution_V1beta1_Params? = nil
   fileprivate var _feePool: Cosmos_Distribution_V1beta1_FeePool? = nil
@@ -274,13 +274,13 @@ extension Cosmos_Distribution_V1beta1_GenesisState: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.distribution.v1beta1"
 
 extension Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DelegatorWithdrawInfo"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DelegatorWithdrawInfo"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_address"),
     2: .standard(proto: "withdraw_address"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -293,7 +293,7 @@ extension Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo: SwiftProtobuf.Messa
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.delegatorAddress.isEmpty {
       try visitor.visitSingularStringField(value: self.delegatorAddress, fieldNumber: 1)
     }
@@ -303,7 +303,7 @@ extension Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo: SwiftProtobuf.Messa
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo, rhs: Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo) -> Bool {
+  public static func ==(lhs: Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo, rhs: Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo) -> Bool {
     if lhs.delegatorAddress != rhs.delegatorAddress {return false}
     if lhs.withdrawAddress != rhs.withdrawAddress {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -312,13 +312,13 @@ extension Cosmos_Distribution_V1beta1_DelegatorWithdrawInfo: SwiftProtobuf.Messa
 }
 
 extension Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorOutstandingRewardsRecord"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorOutstandingRewardsRecord"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_address"),
     2: .standard(proto: "outstanding_rewards"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -331,7 +331,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord: SwiftPr
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.validatorAddress.isEmpty {
       try visitor.visitSingularStringField(value: self.validatorAddress, fieldNumber: 1)
     }
@@ -341,7 +341,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord: SwiftPr
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord) -> Bool {
+  public static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord) -> Bool {
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs.outstandingRewards != rhs.outstandingRewards {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -350,13 +350,13 @@ extension Cosmos_Distribution_V1beta1_ValidatorOutstandingRewardsRecord: SwiftPr
 }
 
 extension Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorAccumulatedCommissionRecord"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorAccumulatedCommissionRecord"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_address"),
     2: .same(proto: "accumulated"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -369,7 +369,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord: Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -383,7 +383,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord: Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord) -> Bool {
+  public static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord) -> Bool {
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs._accumulated != rhs._accumulated {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -392,14 +392,14 @@ extension Cosmos_Distribution_V1beta1_ValidatorAccumulatedCommissionRecord: Swif
 }
 
 extension Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorHistoricalRewardsRecord"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorHistoricalRewardsRecord"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_address"),
     2: .same(proto: "period"),
     3: .same(proto: "rewards"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -413,7 +413,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord: SwiftPro
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -430,7 +430,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord: SwiftPro
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord) -> Bool {
+  public static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord) -> Bool {
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs.period != rhs.period {return false}
     if lhs._rewards != rhs._rewards {return false}
@@ -440,13 +440,13 @@ extension Cosmos_Distribution_V1beta1_ValidatorHistoricalRewardsRecord: SwiftPro
 }
 
 extension Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorCurrentRewardsRecord"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorCurrentRewardsRecord"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_address"),
     2: .same(proto: "rewards"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -459,7 +459,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord: SwiftProtob
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -473,7 +473,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord: SwiftProtob
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord) -> Bool {
+  public static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord) -> Bool {
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs._rewards != rhs._rewards {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -482,14 +482,14 @@ extension Cosmos_Distribution_V1beta1_ValidatorCurrentRewardsRecord: SwiftProtob
 }
 
 extension Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DelegatorStartingInfoRecord"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DelegatorStartingInfoRecord"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "delegator_address"),
     2: .standard(proto: "validator_address"),
     3: .standard(proto: "starting_info"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -503,7 +503,7 @@ extension Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord: SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -520,7 +520,7 @@ extension Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord: SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord, rhs: Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord) -> Bool {
+  public static func ==(lhs: Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord, rhs: Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord) -> Bool {
     if lhs.delegatorAddress != rhs.delegatorAddress {return false}
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs._startingInfo != rhs._startingInfo {return false}
@@ -530,15 +530,15 @@ extension Cosmos_Distribution_V1beta1_DelegatorStartingInfoRecord: SwiftProtobuf
 }
 
 extension Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorSlashEventRecord"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorSlashEventRecord"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_address"),
     2: .same(proto: "height"),
     3: .same(proto: "period"),
     4: .standard(proto: "validator_slash_event"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -553,7 +553,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord: SwiftProtobuf.M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -573,7 +573,7 @@ extension Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord: SwiftProtobuf.M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord) -> Bool {
+  public static func ==(lhs: Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord, rhs: Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord) -> Bool {
     if lhs.validatorAddress != rhs.validatorAddress {return false}
     if lhs.height != rhs.height {return false}
     if lhs.period != rhs.period {return false}
@@ -584,8 +584,8 @@ extension Cosmos_Distribution_V1beta1_ValidatorSlashEventRecord: SwiftProtobuf.M
 }
 
 extension Cosmos_Distribution_V1beta1_GenesisState: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".GenesisState"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".GenesisState"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "params"),
     2: .standard(proto: "fee_pool"),
     3: .standard(proto: "delegator_withdraw_infos"),
@@ -598,7 +598,7 @@ extension Cosmos_Distribution_V1beta1_GenesisState: SwiftProtobuf.Message, Swift
     10: .standard(proto: "validator_slash_events"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -619,7 +619,7 @@ extension Cosmos_Distribution_V1beta1_GenesisState: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -657,7 +657,7 @@ extension Cosmos_Distribution_V1beta1_GenesisState: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Distribution_V1beta1_GenesisState, rhs: Cosmos_Distribution_V1beta1_GenesisState) -> Bool {
+  public static func ==(lhs: Cosmos_Distribution_V1beta1_GenesisState, rhs: Cosmos_Distribution_V1beta1_GenesisState) -> Bool {
     if lhs._params != rhs._params {return false}
     if lhs._feePool != rhs._feePool {return false}
     if lhs.delegatorWithdrawInfos != rhs.delegatorWithdrawInfos {return false}

@@ -22,29 +22,29 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// Equivocation implements the Evidence interface and defines evidence of double
 /// signing misbehavior.
-struct Cosmos_Evidence_V1beta1_Equivocation {
+public struct Cosmos_Evidence_V1beta1_Equivocation {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
-  var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_time = newValue}
   }
   /// Returns true if `time` has been explicitly set.
-  var hasTime: Bool {return self._time != nil}
+  public var hasTime: Bool {return self._time != nil}
   /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  mutating func clearTime() {self._time = nil}
+  public mutating func clearTime() {self._time = nil}
 
-  var power: Int64 = 0
+  public var power: Int64 = 0
 
-  var consensusAddress: String = String()
+  public var consensusAddress: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
@@ -58,15 +58,15 @@ extension Cosmos_Evidence_V1beta1_Equivocation: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.evidence.v1beta1"
 
 extension Cosmos_Evidence_V1beta1_Equivocation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Equivocation"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Equivocation"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "height"),
     2: .same(proto: "time"),
     3: .same(proto: "power"),
     4: .standard(proto: "consensus_address"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -81,7 +81,7 @@ extension Cosmos_Evidence_V1beta1_Equivocation: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -101,7 +101,7 @@ extension Cosmos_Evidence_V1beta1_Equivocation: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Evidence_V1beta1_Equivocation, rhs: Cosmos_Evidence_V1beta1_Equivocation) -> Bool {
+  public static func ==(lhs: Cosmos_Evidence_V1beta1_Equivocation, rhs: Cosmos_Evidence_V1beta1_Equivocation) -> Bool {
     if lhs.height != rhs.height {return false}
     if lhs._time != rhs._time {return false}
     if lhs.power != rhs.power {return false}

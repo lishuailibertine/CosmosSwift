@@ -23,78 +23,78 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// BaseAccount defines a base account type. It contains all the necessary fields
 /// for basic account functionality. Any custom account type should extend this
 /// type for additional functionality (e.g. vesting).
-struct Cosmos_Auth_V1beta1_BaseAccount {
+public struct Cosmos_Auth_V1beta1_BaseAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var address: String = String()
+  public var address: String = String()
 
-  var pubKey: SwiftProtobuf.Google_Protobuf_Any {
+  public var pubKey: SwiftProtobuf.Google_Protobuf_Any {
     get {return _pubKey ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_pubKey = newValue}
   }
   /// Returns true if `pubKey` has been explicitly set.
-  var hasPubKey: Bool {return self._pubKey != nil}
+  public var hasPubKey: Bool {return self._pubKey != nil}
   /// Clears the value of `pubKey`. Subsequent reads from it will return its default value.
-  mutating func clearPubKey() {self._pubKey = nil}
+  public mutating func clearPubKey() {self._pubKey = nil}
 
-  var accountNumber: UInt64 = 0
+  public var accountNumber: UInt64 = 0
 
-  var sequence: UInt64 = 0
+  public var sequence: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _pubKey: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
 
 /// ModuleAccount defines an account for modules that holds coins on a pool.
-struct Cosmos_Auth_V1beta1_ModuleAccount {
+public struct Cosmos_Auth_V1beta1_ModuleAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var baseAccount: Cosmos_Auth_V1beta1_BaseAccount {
+  public var baseAccount: Cosmos_Auth_V1beta1_BaseAccount {
     get {return _baseAccount ?? Cosmos_Auth_V1beta1_BaseAccount()}
     set {_baseAccount = newValue}
   }
   /// Returns true if `baseAccount` has been explicitly set.
-  var hasBaseAccount: Bool {return self._baseAccount != nil}
+  public var hasBaseAccount: Bool {return self._baseAccount != nil}
   /// Clears the value of `baseAccount`. Subsequent reads from it will return its default value.
-  mutating func clearBaseAccount() {self._baseAccount = nil}
+  public mutating func clearBaseAccount() {self._baseAccount = nil}
 
-  var name: String = String()
+  public var name: String = String()
 
-  var permissions: [String] = []
+  public var permissions: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _baseAccount: Cosmos_Auth_V1beta1_BaseAccount? = nil
 }
 
 /// Params defines the parameters for the auth module.
-struct Cosmos_Auth_V1beta1_Params {
+public struct Cosmos_Auth_V1beta1_Params {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var maxMemoCharacters: UInt64 = 0
+  public var maxMemoCharacters: UInt64 = 0
 
-  var txSigLimit: UInt64 = 0
+  public var txSigLimit: UInt64 = 0
 
-  var txSizeCostPerByte: UInt64 = 0
+  public var txSizeCostPerByte: UInt64 = 0
 
-  var sigVerifyCostEd25519: UInt64 = 0
+  public var sigVerifyCostEd25519: UInt64 = 0
 
-  var sigVerifyCostSecp256K1: UInt64 = 0
+  public var sigVerifyCostSecp256K1: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -108,15 +108,15 @@ extension Cosmos_Auth_V1beta1_Params: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.auth.v1beta1"
 
 extension Cosmos_Auth_V1beta1_BaseAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BaseAccount"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BaseAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "address"),
     2: .standard(proto: "pub_key"),
     3: .standard(proto: "account_number"),
     4: .same(proto: "sequence"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -131,7 +131,7 @@ extension Cosmos_Auth_V1beta1_BaseAccount: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -151,7 +151,7 @@ extension Cosmos_Auth_V1beta1_BaseAccount: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Auth_V1beta1_BaseAccount, rhs: Cosmos_Auth_V1beta1_BaseAccount) -> Bool {
+  public static func ==(lhs: Cosmos_Auth_V1beta1_BaseAccount, rhs: Cosmos_Auth_V1beta1_BaseAccount) -> Bool {
     if lhs.address != rhs.address {return false}
     if lhs._pubKey != rhs._pubKey {return false}
     if lhs.accountNumber != rhs.accountNumber {return false}
@@ -162,14 +162,14 @@ extension Cosmos_Auth_V1beta1_BaseAccount: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Cosmos_Auth_V1beta1_ModuleAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ModuleAccount"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ModuleAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "base_account"),
     2: .same(proto: "name"),
     3: .same(proto: "permissions"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -183,7 +183,7 @@ extension Cosmos_Auth_V1beta1_ModuleAccount: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -200,7 +200,7 @@ extension Cosmos_Auth_V1beta1_ModuleAccount: SwiftProtobuf.Message, SwiftProtobu
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Auth_V1beta1_ModuleAccount, rhs: Cosmos_Auth_V1beta1_ModuleAccount) -> Bool {
+  public static func ==(lhs: Cosmos_Auth_V1beta1_ModuleAccount, rhs: Cosmos_Auth_V1beta1_ModuleAccount) -> Bool {
     if lhs._baseAccount != rhs._baseAccount {return false}
     if lhs.name != rhs.name {return false}
     if lhs.permissions != rhs.permissions {return false}
@@ -210,8 +210,8 @@ extension Cosmos_Auth_V1beta1_ModuleAccount: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Cosmos_Auth_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Params"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Params"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "max_memo_characters"),
     2: .standard(proto: "tx_sig_limit"),
     3: .standard(proto: "tx_size_cost_per_byte"),
@@ -219,7 +219,7 @@ extension Cosmos_Auth_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._Mess
     5: .standard(proto: "sig_verify_cost_secp256k1"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -235,7 +235,7 @@ extension Cosmos_Auth_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._Mess
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.maxMemoCharacters != 0 {
       try visitor.visitSingularUInt64Field(value: self.maxMemoCharacters, fieldNumber: 1)
     }
@@ -254,7 +254,7 @@ extension Cosmos_Auth_V1beta1_Params: SwiftProtobuf.Message, SwiftProtobuf._Mess
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Auth_V1beta1_Params, rhs: Cosmos_Auth_V1beta1_Params) -> Bool {
+  public static func ==(lhs: Cosmos_Auth_V1beta1_Params, rhs: Cosmos_Auth_V1beta1_Params) -> Bool {
     if lhs.maxMemoCharacters != rhs.maxMemoCharacters {return false}
     if lhs.txSigLimit != rhs.txSigLimit {return false}
     if lhs.txSizeCostPerByte != rhs.txSizeCostPerByte {return false}

@@ -21,31 +21,31 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// MsgVerifyInvariant represents a message to verify a particular invariance.
-struct Cosmos_Crisis_V1beta1_MsgVerifyInvariant {
+public struct Cosmos_Crisis_V1beta1_MsgVerifyInvariant {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var sender: String = String()
+  public var sender: String = String()
 
-  var invariantModuleName: String = String()
+  public var invariantModuleName: String = String()
 
-  var invariantRoute: String = String()
+  public var invariantRoute: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type.
-struct Cosmos_Crisis_V1beta1_MsgVerifyInvariantResponse {
+public struct Cosmos_Crisis_V1beta1_MsgVerifyInvariantResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -58,14 +58,14 @@ extension Cosmos_Crisis_V1beta1_MsgVerifyInvariantResponse: @unchecked Sendable 
 fileprivate let _protobuf_package = "cosmos.crisis.v1beta1"
 
 extension Cosmos_Crisis_V1beta1_MsgVerifyInvariant: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgVerifyInvariant"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgVerifyInvariant"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "sender"),
     2: .standard(proto: "invariant_module_name"),
     3: .standard(proto: "invariant_route"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -79,7 +79,7 @@ extension Cosmos_Crisis_V1beta1_MsgVerifyInvariant: SwiftProtobuf.Message, Swift
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.sender.isEmpty {
       try visitor.visitSingularStringField(value: self.sender, fieldNumber: 1)
     }
@@ -92,7 +92,7 @@ extension Cosmos_Crisis_V1beta1_MsgVerifyInvariant: SwiftProtobuf.Message, Swift
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crisis_V1beta1_MsgVerifyInvariant, rhs: Cosmos_Crisis_V1beta1_MsgVerifyInvariant) -> Bool {
+  public static func ==(lhs: Cosmos_Crisis_V1beta1_MsgVerifyInvariant, rhs: Cosmos_Crisis_V1beta1_MsgVerifyInvariant) -> Bool {
     if lhs.sender != rhs.sender {return false}
     if lhs.invariantModuleName != rhs.invariantModuleName {return false}
     if lhs.invariantRoute != rhs.invariantRoute {return false}
@@ -102,19 +102,19 @@ extension Cosmos_Crisis_V1beta1_MsgVerifyInvariant: SwiftProtobuf.Message, Swift
 }
 
 extension Cosmos_Crisis_V1beta1_MsgVerifyInvariantResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgVerifyInvariantResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgVerifyInvariantResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Crisis_V1beta1_MsgVerifyInvariantResponse, rhs: Cosmos_Crisis_V1beta1_MsgVerifyInvariantResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Crisis_V1beta1_MsgVerifyInvariantResponse, rhs: Cosmos_Crisis_V1beta1_MsgVerifyInvariantResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

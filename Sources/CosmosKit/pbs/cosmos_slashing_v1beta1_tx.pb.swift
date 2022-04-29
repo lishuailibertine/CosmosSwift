@@ -21,27 +21,27 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// MsgUnjail defines the Msg/Unjail request type
-struct Cosmos_Slashing_V1beta1_MsgUnjail {
+public struct Cosmos_Slashing_V1beta1_MsgUnjail {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var validatorAddr: String = String()
+  public var validatorAddr: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgUnjailResponse defines the Msg/Unjail response type
-struct Cosmos_Slashing_V1beta1_MsgUnjailResponse {
+public struct Cosmos_Slashing_V1beta1_MsgUnjailResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -54,12 +54,12 @@ extension Cosmos_Slashing_V1beta1_MsgUnjailResponse: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.slashing.v1beta1"
 
 extension Cosmos_Slashing_V1beta1_MsgUnjail: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUnjail"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgUnjail"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "validator_addr"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -71,14 +71,14 @@ extension Cosmos_Slashing_V1beta1_MsgUnjail: SwiftProtobuf.Message, SwiftProtobu
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.validatorAddr.isEmpty {
       try visitor.visitSingularStringField(value: self.validatorAddr, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_MsgUnjail, rhs: Cosmos_Slashing_V1beta1_MsgUnjail) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_MsgUnjail, rhs: Cosmos_Slashing_V1beta1_MsgUnjail) -> Bool {
     if lhs.validatorAddr != rhs.validatorAddr {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -86,19 +86,19 @@ extension Cosmos_Slashing_V1beta1_MsgUnjail: SwiftProtobuf.Message, SwiftProtobu
 }
 
 extension Cosmos_Slashing_V1beta1_MsgUnjailResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgUnjailResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgUnjailResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Slashing_V1beta1_MsgUnjailResponse, rhs: Cosmos_Slashing_V1beta1_MsgUnjailResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Slashing_V1beta1_MsgUnjailResponse, rhs: Cosmos_Slashing_V1beta1_MsgUnjailResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

@@ -37,11 +37,6 @@ internal protocol Cosmos_Gov_V1beta2_MsgClientProtocol: GRPCClient {
     callOptions: CallOptions?
   ) -> UnaryCall<Cosmos_Gov_V1beta2_MsgSubmitProposal, Cosmos_Gov_V1beta2_MsgSubmitProposalResponse>
 
-  func execLegacyContent(
-    _ request: Cosmos_Gov_V1beta2_MsgExecLegacyContent,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Cosmos_Gov_V1beta2_MsgExecLegacyContent, Cosmos_Gov_V1beta2_MsgExecLegacyContentResponse>
-
   func vote(
     _ request: Cosmos_Gov_V1beta2_MsgVote,
     callOptions: CallOptions?
@@ -81,25 +76,6 @@ extension Cosmos_Gov_V1beta2_MsgClientProtocol {
     )
   }
 
-  /// ExecLegacyContent defines a Msg to be in included in a MsgSubmitProposal
-  /// to execute a legacy content-based proposal.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ExecLegacyContent.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  internal func execLegacyContent(
-    _ request: Cosmos_Gov_V1beta2_MsgExecLegacyContent,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Cosmos_Gov_V1beta2_MsgExecLegacyContent, Cosmos_Gov_V1beta2_MsgExecLegacyContentResponse> {
-    return self.makeUnaryCall(
-      path: "/cosmos.gov.v1beta2.Msg/ExecLegacyContent",
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeExecLegacyContentInterceptors() ?? []
-    )
-  }
-
   /// Vote defines a method to add a vote on a specific proposal.
   ///
   /// - Parameters:
@@ -119,6 +95,8 @@ extension Cosmos_Gov_V1beta2_MsgClientProtocol {
   }
 
   /// VoteWeighted defines a method to add a weighted vote on a specific proposal.
+  ///
+  /// Since: cosmos-sdk 0.43
   ///
   /// - Parameters:
   ///   - request: Request to send to VoteWeighted.
@@ -159,9 +137,6 @@ internal protocol Cosmos_Gov_V1beta2_MsgClientInterceptorFactoryProtocol {
 
   /// - Returns: Interceptors to use when invoking 'submitProposal'.
   func makeSubmitProposalInterceptors() -> [ClientInterceptor<Cosmos_Gov_V1beta2_MsgSubmitProposal, Cosmos_Gov_V1beta2_MsgSubmitProposalResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'execLegacyContent'.
-  func makeExecLegacyContentInterceptors() -> [ClientInterceptor<Cosmos_Gov_V1beta2_MsgExecLegacyContent, Cosmos_Gov_V1beta2_MsgExecLegacyContentResponse>]
 
   /// - Returns: Interceptors to use when invoking 'vote'.
   func makeVoteInterceptors() -> [ClientInterceptor<Cosmos_Gov_V1beta2_MsgVote, Cosmos_Gov_V1beta2_MsgVoteResponse>]
@@ -204,14 +179,12 @@ internal protocol Cosmos_Gov_V1beta2_MsgProvider: CallHandlerProvider {
   /// SubmitProposal defines a method to create new proposal given a content.
   func submitProposal(request: Cosmos_Gov_V1beta2_MsgSubmitProposal, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta2_MsgSubmitProposalResponse>
 
-  /// ExecLegacyContent defines a Msg to be in included in a MsgSubmitProposal
-  /// to execute a legacy content-based proposal.
-  func execLegacyContent(request: Cosmos_Gov_V1beta2_MsgExecLegacyContent, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta2_MsgExecLegacyContentResponse>
-
   /// Vote defines a method to add a vote on a specific proposal.
   func vote(request: Cosmos_Gov_V1beta2_MsgVote, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta2_MsgVoteResponse>
 
   /// VoteWeighted defines a method to add a weighted vote on a specific proposal.
+  ///
+  /// Since: cosmos-sdk 0.43
   func voteWeighted(request: Cosmos_Gov_V1beta2_MsgVoteWeighted, context: StatusOnlyCallContext) -> EventLoopFuture<Cosmos_Gov_V1beta2_MsgVoteWeightedResponse>
 
   /// Deposit defines a method to add deposit on a specific proposal.
@@ -235,15 +208,6 @@ extension Cosmos_Gov_V1beta2_MsgProvider {
         responseSerializer: ProtobufSerializer<Cosmos_Gov_V1beta2_MsgSubmitProposalResponse>(),
         interceptors: self.interceptors?.makeSubmitProposalInterceptors() ?? [],
         userFunction: self.submitProposal(request:context:)
-      )
-
-    case "ExecLegacyContent":
-      return UnaryServerHandler(
-        context: context,
-        requestDeserializer: ProtobufDeserializer<Cosmos_Gov_V1beta2_MsgExecLegacyContent>(),
-        responseSerializer: ProtobufSerializer<Cosmos_Gov_V1beta2_MsgExecLegacyContentResponse>(),
-        interceptors: self.interceptors?.makeExecLegacyContentInterceptors() ?? [],
-        userFunction: self.execLegacyContent(request:context:)
       )
 
     case "Vote":
@@ -284,10 +248,6 @@ internal protocol Cosmos_Gov_V1beta2_MsgServerInterceptorFactoryProtocol {
   /// - Returns: Interceptors to use when handling 'submitProposal'.
   ///   Defaults to calling `self.makeInterceptors()`.
   func makeSubmitProposalInterceptors() -> [ServerInterceptor<Cosmos_Gov_V1beta2_MsgSubmitProposal, Cosmos_Gov_V1beta2_MsgSubmitProposalResponse>]
-
-  /// - Returns: Interceptors to use when handling 'execLegacyContent'.
-  ///   Defaults to calling `self.makeInterceptors()`.
-  func makeExecLegacyContentInterceptors() -> [ServerInterceptor<Cosmos_Gov_V1beta2_MsgExecLegacyContent, Cosmos_Gov_V1beta2_MsgExecLegacyContentResponse>]
 
   /// - Returns: Interceptors to use when handling 'vote'.
   ///   Defaults to calling `self.makeInterceptors()`.

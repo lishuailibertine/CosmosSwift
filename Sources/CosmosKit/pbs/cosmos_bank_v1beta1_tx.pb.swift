@@ -21,57 +21,57 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// MsgSend represents a message to send coins from one account to another.
-struct Cosmos_Bank_V1beta1_MsgSend {
+public struct Cosmos_Bank_V1beta1_MsgSend {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var fromAddress: String = String()
+  public var fromAddress: String = String()
 
-  var toAddress: String = String()
+  public var toAddress: String = String()
 
-  var amount: [Cosmos_Base_V1beta1_Coin] = []
+  public var amount: [Cosmos_Base_V1beta1_Coin] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgSendResponse defines the Msg/Send response type.
-struct Cosmos_Bank_V1beta1_MsgSendResponse {
+public struct Cosmos_Bank_V1beta1_MsgSendResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgMultiSend represents an arbitrary multi-in, multi-out send message.
-struct Cosmos_Bank_V1beta1_MsgMultiSend {
+public struct Cosmos_Bank_V1beta1_MsgMultiSend {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var inputs: [Cosmos_Bank_V1beta1_Input] = []
+  public var inputs: [Cosmos_Bank_V1beta1_Input] = []
 
-  var outputs: [Cosmos_Bank_V1beta1_Output] = []
+  public var outputs: [Cosmos_Bank_V1beta1_Output] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// MsgMultiSendResponse defines the Msg/MultiSend response type.
-struct Cosmos_Bank_V1beta1_MsgMultiSendResponse {
+public struct Cosmos_Bank_V1beta1_MsgMultiSendResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -86,14 +86,14 @@ extension Cosmos_Bank_V1beta1_MsgMultiSendResponse: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.bank.v1beta1"
 
 extension Cosmos_Bank_V1beta1_MsgSend: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgSend"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgSend"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "from_address"),
     2: .standard(proto: "to_address"),
     3: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -107,7 +107,7 @@ extension Cosmos_Bank_V1beta1_MsgSend: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.fromAddress.isEmpty {
       try visitor.visitSingularStringField(value: self.fromAddress, fieldNumber: 1)
     }
@@ -120,7 +120,7 @@ extension Cosmos_Bank_V1beta1_MsgSend: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Bank_V1beta1_MsgSend, rhs: Cosmos_Bank_V1beta1_MsgSend) -> Bool {
+  public static func ==(lhs: Cosmos_Bank_V1beta1_MsgSend, rhs: Cosmos_Bank_V1beta1_MsgSend) -> Bool {
     if lhs.fromAddress != rhs.fromAddress {return false}
     if lhs.toAddress != rhs.toAddress {return false}
     if lhs.amount != rhs.amount {return false}
@@ -130,32 +130,32 @@ extension Cosmos_Bank_V1beta1_MsgSend: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Cosmos_Bank_V1beta1_MsgSendResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgSendResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgSendResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Bank_V1beta1_MsgSendResponse, rhs: Cosmos_Bank_V1beta1_MsgSendResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Bank_V1beta1_MsgSendResponse, rhs: Cosmos_Bank_V1beta1_MsgSendResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
 }
 
 extension Cosmos_Bank_V1beta1_MsgMultiSend: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgMultiSend"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".MsgMultiSend"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "inputs"),
     2: .same(proto: "outputs"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -168,7 +168,7 @@ extension Cosmos_Bank_V1beta1_MsgMultiSend: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.inputs.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.inputs, fieldNumber: 1)
     }
@@ -178,7 +178,7 @@ extension Cosmos_Bank_V1beta1_MsgMultiSend: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Bank_V1beta1_MsgMultiSend, rhs: Cosmos_Bank_V1beta1_MsgMultiSend) -> Bool {
+  public static func ==(lhs: Cosmos_Bank_V1beta1_MsgMultiSend, rhs: Cosmos_Bank_V1beta1_MsgMultiSend) -> Bool {
     if lhs.inputs != rhs.inputs {return false}
     if lhs.outputs != rhs.outputs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -187,19 +187,19 @@ extension Cosmos_Bank_V1beta1_MsgMultiSend: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Cosmos_Bank_V1beta1_MsgMultiSendResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".MsgMultiSendResponse"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let protoMessageName: String = _protobuf_package + ".MsgMultiSendResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let _ = try decoder.nextFieldNumber() {
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Bank_V1beta1_MsgMultiSendResponse, rhs: Cosmos_Bank_V1beta1_MsgMultiSendResponse) -> Bool {
+  public static func ==(lhs: Cosmos_Bank_V1beta1_MsgMultiSendResponse, rhs: Cosmos_Bank_V1beta1_MsgMultiSendResponse) -> Bool {
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

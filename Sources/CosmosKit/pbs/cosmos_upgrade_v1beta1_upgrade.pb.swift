@@ -21,7 +21,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Plan specifies information about a planned upgrade and when it should occur.
-struct Cosmos_Upgrade_V1beta1_Plan {
+public struct Cosmos_Upgrade_V1beta1_Plan {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -33,43 +33,43 @@ struct Cosmos_Upgrade_V1beta1_Plan {
   /// upgrade handler with this name has been set in the software, it will be
   /// assumed that the software is out-of-date when the upgrade Time or Height is
   /// reached and the software will exit.
-  var name: String = String()
+  public var name: String = String()
 
   /// Deprecated: Time based upgrades have been deprecated. Time based upgrade logic
   /// has been removed from the SDK.
   /// If this field is not empty, an error will be thrown.
-  var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_time = newValue}
   }
   /// Returns true if `time` has been explicitly set.
-  var hasTime: Bool {return self._time != nil}
+  public var hasTime: Bool {return self._time != nil}
   /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  mutating func clearTime() {self._time = nil}
+  public mutating func clearTime() {self._time = nil}
 
   /// The height at which the upgrade must be performed.
   /// Only used if Time is not set.
-  var height: Int64 = 0
+  public var height: Int64 = 0
 
   /// Any application specific upgrade info to be included on-chain
   /// such as a git commit that validators could automatically upgrade to
-  var info: String = String()
+  public var info: String = String()
 
   /// Deprecated: UpgradedClientState field has been deprecated. IBC upgrade logic has been
   /// moved to the IBC module in the sub module 02-client.
   /// If this field is not empty, an error will be thrown.
-  var upgradedClientState: SwiftProtobuf.Google_Protobuf_Any {
+  public var upgradedClientState: SwiftProtobuf.Google_Protobuf_Any {
     get {return _upgradedClientState ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_upgradedClientState = newValue}
   }
   /// Returns true if `upgradedClientState` has been explicitly set.
-  var hasUpgradedClientState: Bool {return self._upgradedClientState != nil}
+  public var hasUpgradedClientState: Bool {return self._upgradedClientState != nil}
   /// Clears the value of `upgradedClientState`. Subsequent reads from it will return its default value.
-  mutating func clearUpgradedClientState() {self._upgradedClientState = nil}
+  public mutating func clearUpgradedClientState() {self._upgradedClientState = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
   fileprivate var _upgradedClientState: SwiftProtobuf.Google_Protobuf_Any? = nil
@@ -77,68 +77,64 @@ struct Cosmos_Upgrade_V1beta1_Plan {
 
 /// SoftwareUpgradeProposal is a gov Content type for initiating a software
 /// upgrade.
-/// Deprecated: This legacy proposal is deprecated in favor of Msg-based gov
-/// proposals, see MsgSoftwareUpgrade.
-struct Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal {
+public struct Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var title: String = String()
+  public var title: String = String()
 
-  var description_p: String = String()
+  public var description_p: String = String()
 
-  var plan: Cosmos_Upgrade_V1beta1_Plan {
+  public var plan: Cosmos_Upgrade_V1beta1_Plan {
     get {return _plan ?? Cosmos_Upgrade_V1beta1_Plan()}
     set {_plan = newValue}
   }
   /// Returns true if `plan` has been explicitly set.
-  var hasPlan: Bool {return self._plan != nil}
+  public var hasPlan: Bool {return self._plan != nil}
   /// Clears the value of `plan`. Subsequent reads from it will return its default value.
-  mutating func clearPlan() {self._plan = nil}
+  public mutating func clearPlan() {self._plan = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _plan: Cosmos_Upgrade_V1beta1_Plan? = nil
 }
 
 /// CancelSoftwareUpgradeProposal is a gov Content type for cancelling a software
 /// upgrade.
-/// Deprecated: This legacy proposal is deprecated in favor of Msg-based gov
-/// proposals, see MsgCancelUpgrade.
-struct Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal {
+public struct Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var title: String = String()
+  public var title: String = String()
 
-  var description_p: String = String()
+  public var description_p: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// ModuleVersion specifies a module and its consensus version.
 ///
 /// Since: cosmos-sdk 0.43
-struct Cosmos_Upgrade_V1beta1_ModuleVersion {
+public struct Cosmos_Upgrade_V1beta1_ModuleVersion {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// name of the app module
-  var name: String = String()
+  public var name: String = String()
 
   /// consensus version of the app module
-  var version: UInt64 = 0
+  public var version: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -153,8 +149,8 @@ extension Cosmos_Upgrade_V1beta1_ModuleVersion: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.upgrade.v1beta1"
 
 extension Cosmos_Upgrade_V1beta1_Plan: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Plan"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Plan"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "name"),
     2: .same(proto: "time"),
     3: .same(proto: "height"),
@@ -162,7 +158,7 @@ extension Cosmos_Upgrade_V1beta1_Plan: SwiftProtobuf.Message, SwiftProtobuf._Mes
     5: .standard(proto: "upgraded_client_state"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -178,7 +174,7 @@ extension Cosmos_Upgrade_V1beta1_Plan: SwiftProtobuf.Message, SwiftProtobuf._Mes
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -201,7 +197,7 @@ extension Cosmos_Upgrade_V1beta1_Plan: SwiftProtobuf.Message, SwiftProtobuf._Mes
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Upgrade_V1beta1_Plan, rhs: Cosmos_Upgrade_V1beta1_Plan) -> Bool {
+  public static func ==(lhs: Cosmos_Upgrade_V1beta1_Plan, rhs: Cosmos_Upgrade_V1beta1_Plan) -> Bool {
     if lhs.name != rhs.name {return false}
     if lhs._time != rhs._time {return false}
     if lhs.height != rhs.height {return false}
@@ -213,14 +209,14 @@ extension Cosmos_Upgrade_V1beta1_Plan: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".SoftwareUpgradeProposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".SoftwareUpgradeProposal"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "title"),
     2: .same(proto: "description"),
     3: .same(proto: "plan"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -234,7 +230,7 @@ extension Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal: SwiftProtobuf.Message,
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -251,7 +247,7 @@ extension Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal: SwiftProtobuf.Message,
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal, rhs: Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal) -> Bool {
+  public static func ==(lhs: Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal, rhs: Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal) -> Bool {
     if lhs.title != rhs.title {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs._plan != rhs._plan {return false}
@@ -261,13 +257,13 @@ extension Cosmos_Upgrade_V1beta1_SoftwareUpgradeProposal: SwiftProtobuf.Message,
 }
 
 extension Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CancelSoftwareUpgradeProposal"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".CancelSoftwareUpgradeProposal"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "title"),
     2: .same(proto: "description"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -280,7 +276,7 @@ extension Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal: SwiftProtobuf.Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.title.isEmpty {
       try visitor.visitSingularStringField(value: self.title, fieldNumber: 1)
     }
@@ -290,7 +286,7 @@ extension Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal: SwiftProtobuf.Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal, rhs: Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal) -> Bool {
+  public static func ==(lhs: Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal, rhs: Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal) -> Bool {
     if lhs.title != rhs.title {return false}
     if lhs.description_p != rhs.description_p {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -299,13 +295,13 @@ extension Cosmos_Upgrade_V1beta1_CancelSoftwareUpgradeProposal: SwiftProtobuf.Me
 }
 
 extension Cosmos_Upgrade_V1beta1_ModuleVersion: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ModuleVersion"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ModuleVersion"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "name"),
     2: .same(proto: "version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -318,7 +314,7 @@ extension Cosmos_Upgrade_V1beta1_ModuleVersion: SwiftProtobuf.Message, SwiftProt
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.name.isEmpty {
       try visitor.visitSingularStringField(value: self.name, fieldNumber: 1)
     }
@@ -328,7 +324,7 @@ extension Cosmos_Upgrade_V1beta1_ModuleVersion: SwiftProtobuf.Message, SwiftProt
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Upgrade_V1beta1_ModuleVersion, rhs: Cosmos_Upgrade_V1beta1_ModuleVersion) -> Bool {
+  public static func ==(lhs: Cosmos_Upgrade_V1beta1_ModuleVersion, rhs: Cosmos_Upgrade_V1beta1_ModuleVersion) -> Bool {
     if lhs.name != rhs.name {return false}
     if lhs.version != rhs.version {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

@@ -37,7 +37,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 /// Defines the HTTP configuration for an API service. It contains a list of
 /// [HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method
 /// to one or more HTTP REST API methods.
-struct Google_Api_Http {
+public struct Google_Api_Http {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -45,7 +45,7 @@ struct Google_Api_Http {
   /// A list of HTTP configuration rules that apply to individual API methods.
   ///
   /// **NOTE:** All service configuration rules follow "last one wins" order.
-  var rules: [Google_Api_HttpRule] = []
+  public var rules: [Google_Api_HttpRule] = []
 
   /// When set to true, URL path parmeters will be fully URI-decoded except in
   /// cases of single segment matches in reserved expansion, where "%2F" will be
@@ -53,11 +53,11 @@ struct Google_Api_Http {
   ///
   /// The default behavior is to not decode RFC 6570 reserved characters in multi
   /// segment matches.
-  var fullyDecodeReservedExpansion: Bool = false
+  public var fullyDecodeReservedExpansion: Bool = false
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// `HttpRule` defines the mapping of an RPC method to one or more HTTP
@@ -277,7 +277,7 @@ struct Google_Api_Http {
 ///
 /// NOTE: the field paths in variables and in the `body` must not refer to
 /// repeated fields or map fields.
-struct Google_Api_HttpRule {
+public struct Google_Api_HttpRule {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -285,15 +285,15 @@ struct Google_Api_HttpRule {
   /// Selects methods to which this rule applies.
   ///
   /// Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
-  var selector: String = String()
+  public var selector: String = String()
 
   /// Determines the URL pattern is matched by this rules. This pattern can be
   /// used with any of the {get|put|post|delete|patch} methods. A custom method
   /// can be defined using the 'custom' field.
-  var pattern: Google_Api_HttpRule.OneOf_Pattern? = nil
+  public var pattern: Google_Api_HttpRule.OneOf_Pattern? = nil
 
   /// Used for listing and getting information about resources.
-  var get: String {
+  public var get: String {
     get {
       if case .get(let v)? = pattern {return v}
       return String()
@@ -302,7 +302,7 @@ struct Google_Api_HttpRule {
   }
 
   /// Used for updating a resource.
-  var put: String {
+  public var put: String {
     get {
       if case .put(let v)? = pattern {return v}
       return String()
@@ -311,7 +311,7 @@ struct Google_Api_HttpRule {
   }
 
   /// Used for creating a resource.
-  var post: String {
+  public var post: String {
     get {
       if case .post(let v)? = pattern {return v}
       return String()
@@ -320,7 +320,7 @@ struct Google_Api_HttpRule {
   }
 
   /// Used for deleting a resource.
-  var delete: String {
+  public var delete: String {
     get {
       if case .delete(let v)? = pattern {return v}
       return String()
@@ -329,7 +329,7 @@ struct Google_Api_HttpRule {
   }
 
   /// Used for updating a resource.
-  var patch: String {
+  public var patch: String {
     get {
       if case .patch(let v)? = pattern {return v}
       return String()
@@ -341,7 +341,7 @@ struct Google_Api_HttpRule {
   /// included in the `pattern` field, such as HEAD, or "*" to leave the
   /// HTTP method unspecified for this rule. The wild-card rule is useful
   /// for services that provide content to Web (HTML) clients.
-  var custom: Google_Api_CustomHttpPattern {
+  public var custom: Google_Api_CustomHttpPattern {
     get {
       if case .custom(let v)? = pattern {return v}
       return Google_Api_CustomHttpPattern()
@@ -353,24 +353,24 @@ struct Google_Api_HttpRule {
   /// `*` for mapping all fields not captured by the path pattern to the HTTP
   /// body. NOTE: the referred field must not be a repeated field and must be
   /// present at the top-level of request message type.
-  var body: String = String()
+  public var body: String = String()
 
   /// Optional. The name of the response field whose value is mapped to the HTTP
   /// body of response. Other response fields are ignored. When
   /// not set, the response message will be used as HTTP body of response.
-  var responseBody: String = String()
+  public var responseBody: String = String()
 
   /// Additional HTTP bindings for the selector. Nested bindings must
   /// not contain an `additional_bindings` field themselves (that is,
   /// the nesting may only be one level deep).
-  var additionalBindings: [Google_Api_HttpRule] = []
+  public var additionalBindings: [Google_Api_HttpRule] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   /// Determines the URL pattern is matched by this rules. This pattern can be
   /// used with any of the {get|put|post|delete|patch} methods. A custom method
   /// can be defined using the 'custom' field.
-  enum OneOf_Pattern: Equatable {
+  public enum OneOf_Pattern: Equatable {
     /// Used for listing and getting information about resources.
     case get(String)
     /// Used for updating a resource.
@@ -388,7 +388,7 @@ struct Google_Api_HttpRule {
     case custom(Google_Api_CustomHttpPattern)
 
   #if !swift(>=4.1)
-    static func ==(lhs: Google_Api_HttpRule.OneOf_Pattern, rhs: Google_Api_HttpRule.OneOf_Pattern) -> Bool {
+    public static func ==(lhs: Google_Api_HttpRule.OneOf_Pattern, rhs: Google_Api_HttpRule.OneOf_Pattern) -> Bool {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
@@ -423,24 +423,24 @@ struct Google_Api_HttpRule {
   #endif
   }
 
-  init() {}
+  public init() {}
 }
 
 /// A custom pattern is used for defining custom HTTP verb.
-struct Google_Api_CustomHttpPattern {
+public struct Google_Api_CustomHttpPattern {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// The name of this custom HTTP verb.
-  var kind: String = String()
+  public var kind: String = String()
 
   /// The path matched by this custom verb.
-  var path: String = String()
+  public var path: String = String()
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -455,13 +455,13 @@ extension Google_Api_CustomHttpPattern: @unchecked Sendable {}
 fileprivate let _protobuf_package = "google.api"
 
 extension Google_Api_Http: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Http"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Http"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "rules"),
     2: .standard(proto: "fully_decode_reserved_expansion"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -474,7 +474,7 @@ extension Google_Api_Http: SwiftProtobuf.Message, SwiftProtobuf._MessageImplemen
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.rules.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.rules, fieldNumber: 1)
     }
@@ -484,7 +484,7 @@ extension Google_Api_Http: SwiftProtobuf.Message, SwiftProtobuf._MessageImplemen
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Api_Http, rhs: Google_Api_Http) -> Bool {
+  public static func ==(lhs: Google_Api_Http, rhs: Google_Api_Http) -> Bool {
     if lhs.rules != rhs.rules {return false}
     if lhs.fullyDecodeReservedExpansion != rhs.fullyDecodeReservedExpansion {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -493,8 +493,8 @@ extension Google_Api_Http: SwiftProtobuf.Message, SwiftProtobuf._MessageImplemen
 }
 
 extension Google_Api_HttpRule: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".HttpRule"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".HttpRule"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "selector"),
     2: .same(proto: "get"),
     3: .same(proto: "put"),
@@ -507,7 +507,7 @@ extension Google_Api_HttpRule: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     11: .standard(proto: "additional_bindings"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -575,7 +575,7 @@ extension Google_Api_HttpRule: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -621,7 +621,7 @@ extension Google_Api_HttpRule: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Api_HttpRule, rhs: Google_Api_HttpRule) -> Bool {
+  public static func ==(lhs: Google_Api_HttpRule, rhs: Google_Api_HttpRule) -> Bool {
     if lhs.selector != rhs.selector {return false}
     if lhs.pattern != rhs.pattern {return false}
     if lhs.body != rhs.body {return false}
@@ -633,13 +633,13 @@ extension Google_Api_HttpRule: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
 }
 
 extension Google_Api_CustomHttpPattern: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".CustomHttpPattern"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".CustomHttpPattern"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "kind"),
     2: .same(proto: "path"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -652,7 +652,7 @@ extension Google_Api_CustomHttpPattern: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.kind.isEmpty {
       try visitor.visitSingularStringField(value: self.kind, fieldNumber: 1)
     }
@@ -662,7 +662,7 @@ extension Google_Api_CustomHttpPattern: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Google_Api_CustomHttpPattern, rhs: Google_Api_CustomHttpPattern) -> Bool {
+  public static func ==(lhs: Google_Api_CustomHttpPattern, rhs: Google_Api_CustomHttpPattern) -> Bool {
     if lhs.kind != rhs.kind {return false}
     if lhs.path != rhs.path {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

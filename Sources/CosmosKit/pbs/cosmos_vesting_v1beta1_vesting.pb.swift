@@ -22,56 +22,56 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// BaseVestingAccount implements the VestingAccount interface. It contains all
 /// the necessary fields needed for any vesting account implementation.
-struct Cosmos_Vesting_V1beta1_BaseVestingAccount {
+public struct Cosmos_Vesting_V1beta1_BaseVestingAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var baseAccount: Cosmos_Auth_V1beta1_BaseAccount {
+  public var baseAccount: Cosmos_Auth_V1beta1_BaseAccount {
     get {return _baseAccount ?? Cosmos_Auth_V1beta1_BaseAccount()}
     set {_baseAccount = newValue}
   }
   /// Returns true if `baseAccount` has been explicitly set.
-  var hasBaseAccount: Bool {return self._baseAccount != nil}
+  public var hasBaseAccount: Bool {return self._baseAccount != nil}
   /// Clears the value of `baseAccount`. Subsequent reads from it will return its default value.
-  mutating func clearBaseAccount() {self._baseAccount = nil}
+  public mutating func clearBaseAccount() {self._baseAccount = nil}
 
-  var originalVesting: [Cosmos_Base_V1beta1_Coin] = []
+  public var originalVesting: [Cosmos_Base_V1beta1_Coin] = []
 
-  var delegatedFree: [Cosmos_Base_V1beta1_Coin] = []
+  public var delegatedFree: [Cosmos_Base_V1beta1_Coin] = []
 
-  var delegatedVesting: [Cosmos_Base_V1beta1_Coin] = []
+  public var delegatedVesting: [Cosmos_Base_V1beta1_Coin] = []
 
-  var endTime: Int64 = 0
+  public var endTime: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _baseAccount: Cosmos_Auth_V1beta1_BaseAccount? = nil
 }
 
 /// ContinuousVestingAccount implements the VestingAccount interface. It
 /// continuously vests by unlocking coins linearly with respect to time.
-struct Cosmos_Vesting_V1beta1_ContinuousVestingAccount {
+public struct Cosmos_Vesting_V1beta1_ContinuousVestingAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount {
+  public var baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount {
     get {return _baseVestingAccount ?? Cosmos_Vesting_V1beta1_BaseVestingAccount()}
     set {_baseVestingAccount = newValue}
   }
   /// Returns true if `baseVestingAccount` has been explicitly set.
-  var hasBaseVestingAccount: Bool {return self._baseVestingAccount != nil}
+  public var hasBaseVestingAccount: Bool {return self._baseVestingAccount != nil}
   /// Clears the value of `baseVestingAccount`. Subsequent reads from it will return its default value.
-  mutating func clearBaseVestingAccount() {self._baseVestingAccount = nil}
+  public mutating func clearBaseVestingAccount() {self._baseVestingAccount = nil}
 
-  var startTime: Int64 = 0
+  public var startTime: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount? = nil
 }
@@ -79,65 +79,65 @@ struct Cosmos_Vesting_V1beta1_ContinuousVestingAccount {
 /// DelayedVestingAccount implements the VestingAccount interface. It vests all
 /// coins after a specific time, but non prior. In other words, it keeps them
 /// locked until a specified time.
-struct Cosmos_Vesting_V1beta1_DelayedVestingAccount {
+public struct Cosmos_Vesting_V1beta1_DelayedVestingAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount {
+  public var baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount {
     get {return _baseVestingAccount ?? Cosmos_Vesting_V1beta1_BaseVestingAccount()}
     set {_baseVestingAccount = newValue}
   }
   /// Returns true if `baseVestingAccount` has been explicitly set.
-  var hasBaseVestingAccount: Bool {return self._baseVestingAccount != nil}
+  public var hasBaseVestingAccount: Bool {return self._baseVestingAccount != nil}
   /// Clears the value of `baseVestingAccount`. Subsequent reads from it will return its default value.
-  mutating func clearBaseVestingAccount() {self._baseVestingAccount = nil}
+  public mutating func clearBaseVestingAccount() {self._baseVestingAccount = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount? = nil
 }
 
 /// Period defines a length of time and amount of coins that will vest.
-struct Cosmos_Vesting_V1beta1_Period {
+public struct Cosmos_Vesting_V1beta1_Period {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var length: Int64 = 0
+  public var length: Int64 = 0
 
-  var amount: [Cosmos_Base_V1beta1_Coin] = []
+  public var amount: [Cosmos_Base_V1beta1_Coin] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// PeriodicVestingAccount implements the VestingAccount interface. It
 /// periodically vests by unlocking coins during each specified period.
-struct Cosmos_Vesting_V1beta1_PeriodicVestingAccount {
+public struct Cosmos_Vesting_V1beta1_PeriodicVestingAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount {
+  public var baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount {
     get {return _baseVestingAccount ?? Cosmos_Vesting_V1beta1_BaseVestingAccount()}
     set {_baseVestingAccount = newValue}
   }
   /// Returns true if `baseVestingAccount` has been explicitly set.
-  var hasBaseVestingAccount: Bool {return self._baseVestingAccount != nil}
+  public var hasBaseVestingAccount: Bool {return self._baseVestingAccount != nil}
   /// Clears the value of `baseVestingAccount`. Subsequent reads from it will return its default value.
-  mutating func clearBaseVestingAccount() {self._baseVestingAccount = nil}
+  public mutating func clearBaseVestingAccount() {self._baseVestingAccount = nil}
 
-  var startTime: Int64 = 0
+  public var startTime: Int64 = 0
 
-  var vestingPeriods: [Cosmos_Vesting_V1beta1_Period] = []
+  public var vestingPeriods: [Cosmos_Vesting_V1beta1_Period] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount? = nil
 }
@@ -147,23 +147,23 @@ struct Cosmos_Vesting_V1beta1_PeriodicVestingAccount {
 /// still be used for delegating and for governance votes even while locked.
 ///
 /// Since: cosmos-sdk 0.43
-struct Cosmos_Vesting_V1beta1_PermanentLockedAccount {
+public struct Cosmos_Vesting_V1beta1_PermanentLockedAccount {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount {
+  public var baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount {
     get {return _baseVestingAccount ?? Cosmos_Vesting_V1beta1_BaseVestingAccount()}
     set {_baseVestingAccount = newValue}
   }
   /// Returns true if `baseVestingAccount` has been explicitly set.
-  var hasBaseVestingAccount: Bool {return self._baseVestingAccount != nil}
+  public var hasBaseVestingAccount: Bool {return self._baseVestingAccount != nil}
   /// Clears the value of `baseVestingAccount`. Subsequent reads from it will return its default value.
-  mutating func clearBaseVestingAccount() {self._baseVestingAccount = nil}
+  public mutating func clearBaseVestingAccount() {self._baseVestingAccount = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _baseVestingAccount: Cosmos_Vesting_V1beta1_BaseVestingAccount? = nil
 }
@@ -182,8 +182,8 @@ extension Cosmos_Vesting_V1beta1_PermanentLockedAccount: @unchecked Sendable {}
 fileprivate let _protobuf_package = "cosmos.vesting.v1beta1"
 
 extension Cosmos_Vesting_V1beta1_BaseVestingAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BaseVestingAccount"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BaseVestingAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "base_account"),
     2: .standard(proto: "original_vesting"),
     3: .standard(proto: "delegated_free"),
@@ -191,7 +191,7 @@ extension Cosmos_Vesting_V1beta1_BaseVestingAccount: SwiftProtobuf.Message, Swif
     5: .standard(proto: "end_time"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -207,7 +207,7 @@ extension Cosmos_Vesting_V1beta1_BaseVestingAccount: SwiftProtobuf.Message, Swif
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -230,7 +230,7 @@ extension Cosmos_Vesting_V1beta1_BaseVestingAccount: SwiftProtobuf.Message, Swif
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Vesting_V1beta1_BaseVestingAccount, rhs: Cosmos_Vesting_V1beta1_BaseVestingAccount) -> Bool {
+  public static func ==(lhs: Cosmos_Vesting_V1beta1_BaseVestingAccount, rhs: Cosmos_Vesting_V1beta1_BaseVestingAccount) -> Bool {
     if lhs._baseAccount != rhs._baseAccount {return false}
     if lhs.originalVesting != rhs.originalVesting {return false}
     if lhs.delegatedFree != rhs.delegatedFree {return false}
@@ -242,13 +242,13 @@ extension Cosmos_Vesting_V1beta1_BaseVestingAccount: SwiftProtobuf.Message, Swif
 }
 
 extension Cosmos_Vesting_V1beta1_ContinuousVestingAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ContinuousVestingAccount"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ContinuousVestingAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "base_vesting_account"),
     2: .standard(proto: "start_time"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -261,7 +261,7 @@ extension Cosmos_Vesting_V1beta1_ContinuousVestingAccount: SwiftProtobuf.Message
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -275,7 +275,7 @@ extension Cosmos_Vesting_V1beta1_ContinuousVestingAccount: SwiftProtobuf.Message
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Vesting_V1beta1_ContinuousVestingAccount, rhs: Cosmos_Vesting_V1beta1_ContinuousVestingAccount) -> Bool {
+  public static func ==(lhs: Cosmos_Vesting_V1beta1_ContinuousVestingAccount, rhs: Cosmos_Vesting_V1beta1_ContinuousVestingAccount) -> Bool {
     if lhs._baseVestingAccount != rhs._baseVestingAccount {return false}
     if lhs.startTime != rhs.startTime {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -284,12 +284,12 @@ extension Cosmos_Vesting_V1beta1_ContinuousVestingAccount: SwiftProtobuf.Message
 }
 
 extension Cosmos_Vesting_V1beta1_DelayedVestingAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".DelayedVestingAccount"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".DelayedVestingAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "base_vesting_account"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -301,7 +301,7 @@ extension Cosmos_Vesting_V1beta1_DelayedVestingAccount: SwiftProtobuf.Message, S
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -312,7 +312,7 @@ extension Cosmos_Vesting_V1beta1_DelayedVestingAccount: SwiftProtobuf.Message, S
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Vesting_V1beta1_DelayedVestingAccount, rhs: Cosmos_Vesting_V1beta1_DelayedVestingAccount) -> Bool {
+  public static func ==(lhs: Cosmos_Vesting_V1beta1_DelayedVestingAccount, rhs: Cosmos_Vesting_V1beta1_DelayedVestingAccount) -> Bool {
     if lhs._baseVestingAccount != rhs._baseVestingAccount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -320,13 +320,13 @@ extension Cosmos_Vesting_V1beta1_DelayedVestingAccount: SwiftProtobuf.Message, S
 }
 
 extension Cosmos_Vesting_V1beta1_Period: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Period"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".Period"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "length"),
     2: .same(proto: "amount"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -339,7 +339,7 @@ extension Cosmos_Vesting_V1beta1_Period: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.length != 0 {
       try visitor.visitSingularInt64Field(value: self.length, fieldNumber: 1)
     }
@@ -349,7 +349,7 @@ extension Cosmos_Vesting_V1beta1_Period: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Vesting_V1beta1_Period, rhs: Cosmos_Vesting_V1beta1_Period) -> Bool {
+  public static func ==(lhs: Cosmos_Vesting_V1beta1_Period, rhs: Cosmos_Vesting_V1beta1_Period) -> Bool {
     if lhs.length != rhs.length {return false}
     if lhs.amount != rhs.amount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -358,14 +358,14 @@ extension Cosmos_Vesting_V1beta1_Period: SwiftProtobuf.Message, SwiftProtobuf._M
 }
 
 extension Cosmos_Vesting_V1beta1_PeriodicVestingAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PeriodicVestingAccount"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PeriodicVestingAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "base_vesting_account"),
     2: .standard(proto: "start_time"),
     3: .standard(proto: "vesting_periods"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -379,7 +379,7 @@ extension Cosmos_Vesting_V1beta1_PeriodicVestingAccount: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -396,7 +396,7 @@ extension Cosmos_Vesting_V1beta1_PeriodicVestingAccount: SwiftProtobuf.Message, 
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Vesting_V1beta1_PeriodicVestingAccount, rhs: Cosmos_Vesting_V1beta1_PeriodicVestingAccount) -> Bool {
+  public static func ==(lhs: Cosmos_Vesting_V1beta1_PeriodicVestingAccount, rhs: Cosmos_Vesting_V1beta1_PeriodicVestingAccount) -> Bool {
     if lhs._baseVestingAccount != rhs._baseVestingAccount {return false}
     if lhs.startTime != rhs.startTime {return false}
     if lhs.vestingPeriods != rhs.vestingPeriods {return false}
@@ -406,12 +406,12 @@ extension Cosmos_Vesting_V1beta1_PeriodicVestingAccount: SwiftProtobuf.Message, 
 }
 
 extension Cosmos_Vesting_V1beta1_PermanentLockedAccount: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".PermanentLockedAccount"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".PermanentLockedAccount"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "base_vesting_account"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -423,7 +423,7 @@ extension Cosmos_Vesting_V1beta1_PermanentLockedAccount: SwiftProtobuf.Message, 
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -434,7 +434,7 @@ extension Cosmos_Vesting_V1beta1_PermanentLockedAccount: SwiftProtobuf.Message, 
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Vesting_V1beta1_PermanentLockedAccount, rhs: Cosmos_Vesting_V1beta1_PermanentLockedAccount) -> Bool {
+  public static func ==(lhs: Cosmos_Vesting_V1beta1_PermanentLockedAccount, rhs: Cosmos_Vesting_V1beta1_PermanentLockedAccount) -> Bool {
     if lhs._baseVestingAccount != rhs._baseVestingAccount {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true

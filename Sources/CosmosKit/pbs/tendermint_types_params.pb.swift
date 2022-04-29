@@ -22,50 +22,50 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 
 /// ConsensusParams contains consensus critical parameters that determine the
 /// validity of blocks.
-struct Tendermint_Types_ConsensusParams {
+public struct Tendermint_Types_ConsensusParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var block: Tendermint_Types_BlockParams {
+  public var block: Tendermint_Types_BlockParams {
     get {return _block ?? Tendermint_Types_BlockParams()}
     set {_block = newValue}
   }
   /// Returns true if `block` has been explicitly set.
-  var hasBlock: Bool {return self._block != nil}
+  public var hasBlock: Bool {return self._block != nil}
   /// Clears the value of `block`. Subsequent reads from it will return its default value.
-  mutating func clearBlock() {self._block = nil}
+  public mutating func clearBlock() {self._block = nil}
 
-  var evidence: Tendermint_Types_EvidenceParams {
+  public var evidence: Tendermint_Types_EvidenceParams {
     get {return _evidence ?? Tendermint_Types_EvidenceParams()}
     set {_evidence = newValue}
   }
   /// Returns true if `evidence` has been explicitly set.
-  var hasEvidence: Bool {return self._evidence != nil}
+  public var hasEvidence: Bool {return self._evidence != nil}
   /// Clears the value of `evidence`. Subsequent reads from it will return its default value.
-  mutating func clearEvidence() {self._evidence = nil}
+  public mutating func clearEvidence() {self._evidence = nil}
 
-  var validator: Tendermint_Types_ValidatorParams {
+  public var validator: Tendermint_Types_ValidatorParams {
     get {return _validator ?? Tendermint_Types_ValidatorParams()}
     set {_validator = newValue}
   }
   /// Returns true if `validator` has been explicitly set.
-  var hasValidator: Bool {return self._validator != nil}
+  public var hasValidator: Bool {return self._validator != nil}
   /// Clears the value of `validator`. Subsequent reads from it will return its default value.
-  mutating func clearValidator() {self._validator = nil}
+  public mutating func clearValidator() {self._validator = nil}
 
-  var version: Tendermint_Types_VersionParams {
+  public var version: Tendermint_Types_VersionParams {
     get {return _version ?? Tendermint_Types_VersionParams()}
     set {_version = newValue}
   }
   /// Returns true if `version` has been explicitly set.
-  var hasVersion: Bool {return self._version != nil}
+  public var hasVersion: Bool {return self._version != nil}
   /// Clears the value of `version`. Subsequent reads from it will return its default value.
-  mutating func clearVersion() {self._version = nil}
+  public mutating func clearVersion() {self._version = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _block: Tendermint_Types_BlockParams? = nil
   fileprivate var _evidence: Tendermint_Types_EvidenceParams? = nil
@@ -74,32 +74,32 @@ struct Tendermint_Types_ConsensusParams {
 }
 
 /// BlockParams contains limits on the block size.
-struct Tendermint_Types_BlockParams {
+public struct Tendermint_Types_BlockParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// Max block size, in bytes.
   /// Note: must be greater than 0
-  var maxBytes: Int64 = 0
+  public var maxBytes: Int64 = 0
 
   /// Max gas per block.
   /// Note: must be greater or equal to -1
-  var maxGas: Int64 = 0
+  public var maxGas: Int64 = 0
 
   /// Minimum time increment between consecutive blocks (in milliseconds) If the
   /// block header timestamp is ahead of the system clock, decrease this value.
   ///
   /// Not exposed to the application.
-  var timeIotaMs: Int64 = 0
+  public var timeIotaMs: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// EvidenceParams determine how we handle evidence of malfeasance.
-struct Tendermint_Types_EvidenceParams {
+public struct Tendermint_Types_EvidenceParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -108,76 +108,76 @@ struct Tendermint_Types_EvidenceParams {
   ///
   /// The basic formula for calculating this is: MaxAgeDuration / {average block
   /// time}.
-  var maxAgeNumBlocks: Int64 = 0
+  public var maxAgeNumBlocks: Int64 = 0
 
   /// Max age of evidence, in time.
   ///
   /// It should correspond with an app's "unbonding period" or other similar
   /// mechanism for handling [Nothing-At-Stake
   /// attacks](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed).
-  var maxAgeDuration: SwiftProtobuf.Google_Protobuf_Duration {
+  public var maxAgeDuration: SwiftProtobuf.Google_Protobuf_Duration {
     get {return _maxAgeDuration ?? SwiftProtobuf.Google_Protobuf_Duration()}
     set {_maxAgeDuration = newValue}
   }
   /// Returns true if `maxAgeDuration` has been explicitly set.
-  var hasMaxAgeDuration: Bool {return self._maxAgeDuration != nil}
+  public var hasMaxAgeDuration: Bool {return self._maxAgeDuration != nil}
   /// Clears the value of `maxAgeDuration`. Subsequent reads from it will return its default value.
-  mutating func clearMaxAgeDuration() {self._maxAgeDuration = nil}
+  public mutating func clearMaxAgeDuration() {self._maxAgeDuration = nil}
 
   /// This sets the maximum size of total evidence in bytes that can be committed in a single block.
   /// and should fall comfortably under the max block bytes.
   /// Default is 1048576 or 1MB
-  var maxBytes: Int64 = 0
+  public var maxBytes: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _maxAgeDuration: SwiftProtobuf.Google_Protobuf_Duration? = nil
 }
 
 /// ValidatorParams restrict the public key types validators can use.
 /// NOTE: uses ABCI pubkey naming, not Amino names.
-struct Tendermint_Types_ValidatorParams {
+public struct Tendermint_Types_ValidatorParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var pubKeyTypes: [String] = []
+  public var pubKeyTypes: [String] = []
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// VersionParams contains the ABCI application version.
-struct Tendermint_Types_VersionParams {
+public struct Tendermint_Types_VersionParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var appVersion: UInt64 = 0
+  public var appVersion: UInt64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 /// HashedParams is a subset of ConsensusParams.
 ///
 /// It is hashed into the Header.ConsensusHash.
-struct Tendermint_Types_HashedParams {
+public struct Tendermint_Types_HashedParams {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  var blockMaxBytes: Int64 = 0
+  public var blockMaxBytes: Int64 = 0
 
-  var blockMaxGas: Int64 = 0
+  public var blockMaxGas: Int64 = 0
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -194,15 +194,15 @@ extension Tendermint_Types_HashedParams: @unchecked Sendable {}
 fileprivate let _protobuf_package = "tendermint.types"
 
 extension Tendermint_Types_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ConsensusParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ConsensusParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "block"),
     2: .same(proto: "evidence"),
     3: .same(proto: "validator"),
     4: .same(proto: "version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -217,7 +217,7 @@ extension Tendermint_Types_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -237,7 +237,7 @@ extension Tendermint_Types_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_ConsensusParams, rhs: Tendermint_Types_ConsensusParams) -> Bool {
+  public static func ==(lhs: Tendermint_Types_ConsensusParams, rhs: Tendermint_Types_ConsensusParams) -> Bool {
     if lhs._block != rhs._block {return false}
     if lhs._evidence != rhs._evidence {return false}
     if lhs._validator != rhs._validator {return false}
@@ -248,14 +248,14 @@ extension Tendermint_Types_ConsensusParams: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Tendermint_Types_BlockParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".BlockParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".BlockParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "max_bytes"),
     2: .standard(proto: "max_gas"),
     3: .standard(proto: "time_iota_ms"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -269,7 +269,7 @@ extension Tendermint_Types_BlockParams: SwiftProtobuf.Message, SwiftProtobuf._Me
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.maxBytes != 0 {
       try visitor.visitSingularInt64Field(value: self.maxBytes, fieldNumber: 1)
     }
@@ -282,7 +282,7 @@ extension Tendermint_Types_BlockParams: SwiftProtobuf.Message, SwiftProtobuf._Me
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_BlockParams, rhs: Tendermint_Types_BlockParams) -> Bool {
+  public static func ==(lhs: Tendermint_Types_BlockParams, rhs: Tendermint_Types_BlockParams) -> Bool {
     if lhs.maxBytes != rhs.maxBytes {return false}
     if lhs.maxGas != rhs.maxGas {return false}
     if lhs.timeIotaMs != rhs.timeIotaMs {return false}
@@ -292,14 +292,14 @@ extension Tendermint_Types_BlockParams: SwiftProtobuf.Message, SwiftProtobuf._Me
 }
 
 extension Tendermint_Types_EvidenceParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".EvidenceParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".EvidenceParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "max_age_num_blocks"),
     2: .standard(proto: "max_age_duration"),
     3: .standard(proto: "max_bytes"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -313,7 +313,7 @@ extension Tendermint_Types_EvidenceParams: SwiftProtobuf.Message, SwiftProtobuf.
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -330,7 +330,7 @@ extension Tendermint_Types_EvidenceParams: SwiftProtobuf.Message, SwiftProtobuf.
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_EvidenceParams, rhs: Tendermint_Types_EvidenceParams) -> Bool {
+  public static func ==(lhs: Tendermint_Types_EvidenceParams, rhs: Tendermint_Types_EvidenceParams) -> Bool {
     if lhs.maxAgeNumBlocks != rhs.maxAgeNumBlocks {return false}
     if lhs._maxAgeDuration != rhs._maxAgeDuration {return false}
     if lhs.maxBytes != rhs.maxBytes {return false}
@@ -340,12 +340,12 @@ extension Tendermint_Types_EvidenceParams: SwiftProtobuf.Message, SwiftProtobuf.
 }
 
 extension Tendermint_Types_ValidatorParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".ValidatorParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".ValidatorParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "pub_key_types"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -357,14 +357,14 @@ extension Tendermint_Types_ValidatorParams: SwiftProtobuf.Message, SwiftProtobuf
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if !self.pubKeyTypes.isEmpty {
       try visitor.visitRepeatedStringField(value: self.pubKeyTypes, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_ValidatorParams, rhs: Tendermint_Types_ValidatorParams) -> Bool {
+  public static func ==(lhs: Tendermint_Types_ValidatorParams, rhs: Tendermint_Types_ValidatorParams) -> Bool {
     if lhs.pubKeyTypes != rhs.pubKeyTypes {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -372,12 +372,12 @@ extension Tendermint_Types_ValidatorParams: SwiftProtobuf.Message, SwiftProtobuf
 }
 
 extension Tendermint_Types_VersionParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VersionParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".VersionParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "app_version"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -389,14 +389,14 @@ extension Tendermint_Types_VersionParams: SwiftProtobuf.Message, SwiftProtobuf._
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.appVersion != 0 {
       try visitor.visitSingularUInt64Field(value: self.appVersion, fieldNumber: 1)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_VersionParams, rhs: Tendermint_Types_VersionParams) -> Bool {
+  public static func ==(lhs: Tendermint_Types_VersionParams, rhs: Tendermint_Types_VersionParams) -> Bool {
     if lhs.appVersion != rhs.appVersion {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -404,13 +404,13 @@ extension Tendermint_Types_VersionParams: SwiftProtobuf.Message, SwiftProtobuf._
 }
 
 extension Tendermint_Types_HashedParams: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".HashedParams"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".HashedParams"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "block_max_bytes"),
     2: .standard(proto: "block_max_gas"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -423,7 +423,7 @@ extension Tendermint_Types_HashedParams: SwiftProtobuf.Message, SwiftProtobuf._M
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     if self.blockMaxBytes != 0 {
       try visitor.visitSingularInt64Field(value: self.blockMaxBytes, fieldNumber: 1)
     }
@@ -433,7 +433,7 @@ extension Tendermint_Types_HashedParams: SwiftProtobuf.Message, SwiftProtobuf._M
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Tendermint_Types_HashedParams, rhs: Tendermint_Types_HashedParams) -> Bool {
+  public static func ==(lhs: Tendermint_Types_HashedParams, rhs: Tendermint_Types_HashedParams) -> Bool {
     if lhs.blockMaxBytes != rhs.blockMaxBytes {return false}
     if lhs.blockMaxGas != rhs.blockMaxGas {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}

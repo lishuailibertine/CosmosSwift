@@ -21,83 +21,83 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 }
 
 /// Class defines the class of the nft type.
-struct Cosmos_Nft_V1beta1_Class {
+public struct Cosmos_Nft_V1beta1_NFTClass {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// id defines the unique identifier of the NFT classification, similar to the contract address of ERC721
-  var id: String = String()
+  public var id: String = String()
 
   /// name defines the human-readable name of the NFT classification. Optional
-  var name: String = String()
+  public var name: String = String()
 
   /// symbol is an abbreviated name for nft classification. Optional
-  var symbol: String = String()
+  public var symbol: String = String()
 
   /// description is a brief description of nft classification. Optional
-  var description_p: String = String()
+  public var description_p: String = String()
 
   /// uri for the class metadata stored off chain. It can define schema for Class and NFT `Data` attributes. Optional
-  var uri: String = String()
+  public var uri: String = String()
 
   /// uri_hash is a hash of the document pointed by uri. Optional
-  var uriHash: String = String()
+  public var uriHash: String = String()
 
   /// data is the app specific metadata of the NFT class. Optional
-  var data: SwiftProtobuf.Google_Protobuf_Any {
+  public var data: SwiftProtobuf.Google_Protobuf_Any {
     get {return _data ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_data = newValue}
   }
   /// Returns true if `data` has been explicitly set.
-  var hasData: Bool {return self._data != nil}
+  public var hasData: Bool {return self._data != nil}
   /// Clears the value of `data`. Subsequent reads from it will return its default value.
-  mutating func clearData() {self._data = nil}
+  public mutating func clearData() {self._data = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _data: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
 
 /// NFT defines the NFT.
-struct Cosmos_Nft_V1beta1_NFT {
+public struct Cosmos_Nft_V1beta1_NFT {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   /// class_id associated with the NFT, similar to the contract address of ERC721
-  var classID: String = String()
+  public var classID: String = String()
 
   /// id is a unique identifier of the NFT
-  var id: String = String()
+  public var id: String = String()
 
   /// uri for the NFT metadata stored off chain
-  var uri: String = String()
+  public var uri: String = String()
 
   /// uri_hash is a hash of the document pointed by uri
-  var uriHash: String = String()
+  public var uriHash: String = String()
 
   /// data is an app specific data of the NFT. Optional
-  var data: SwiftProtobuf.Google_Protobuf_Any {
+  public var data: SwiftProtobuf.Google_Protobuf_Any {
     get {return _data ?? SwiftProtobuf.Google_Protobuf_Any()}
     set {_data = newValue}
   }
   /// Returns true if `data` has been explicitly set.
-  var hasData: Bool {return self._data != nil}
+  public var hasData: Bool {return self._data != nil}
   /// Clears the value of `data`. Subsequent reads from it will return its default value.
-  mutating func clearData() {self._data = nil}
+  public mutating func clearData() {self._data = nil}
 
-  var unknownFields = SwiftProtobuf.UnknownStorage()
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
 
-  init() {}
+  public init() {}
 
   fileprivate var _data: SwiftProtobuf.Google_Protobuf_Any? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Cosmos_Nft_V1beta1_Class: @unchecked Sendable {}
+extension Cosmos_Nft_V1beta1_NFTClass: @unchecked Sendable {}
 extension Cosmos_Nft_V1beta1_NFT: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
@@ -105,9 +105,9 @@ extension Cosmos_Nft_V1beta1_NFT: @unchecked Sendable {}
 
 fileprivate let _protobuf_package = "cosmos.nft.v1beta1"
 
-extension Cosmos_Nft_V1beta1_Class: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".Class"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+extension Cosmos_Nft_V1beta1_NFTClass: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".NFTClass"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "id"),
     2: .same(proto: "name"),
     3: .same(proto: "symbol"),
@@ -117,7 +117,7 @@ extension Cosmos_Nft_V1beta1_Class: SwiftProtobuf.Message, SwiftProtobuf._Messag
     7: .same(proto: "data"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -135,7 +135,7 @@ extension Cosmos_Nft_V1beta1_Class: SwiftProtobuf.Message, SwiftProtobuf._Messag
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -164,7 +164,7 @@ extension Cosmos_Nft_V1beta1_Class: SwiftProtobuf.Message, SwiftProtobuf._Messag
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_Class, rhs: Cosmos_Nft_V1beta1_Class) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_NFTClass, rhs: Cosmos_Nft_V1beta1_NFTClass) -> Bool {
     if lhs.id != rhs.id {return false}
     if lhs.name != rhs.name {return false}
     if lhs.symbol != rhs.symbol {return false}
@@ -178,8 +178,8 @@ extension Cosmos_Nft_V1beta1_Class: SwiftProtobuf.Message, SwiftProtobuf._Messag
 }
 
 extension Cosmos_Nft_V1beta1_NFT: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".NFT"
-  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+  public static let protoMessageName: String = _protobuf_package + ".NFT"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "class_id"),
     2: .same(proto: "id"),
     3: .same(proto: "uri"),
@@ -187,7 +187,7 @@ extension Cosmos_Nft_V1beta1_NFT: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     10: .same(proto: "data"),
   ]
 
-  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
       // The use of inline closures is to circumvent an issue where the compiler
       // allocates stack space for every case branch when no optimizations are
@@ -203,7 +203,7 @@ extension Cosmos_Nft_V1beta1_NFT: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     }
   }
 
-  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
     // The use of inline closures is to circumvent an issue where the compiler
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
@@ -226,7 +226,7 @@ extension Cosmos_Nft_V1beta1_NFT: SwiftProtobuf.Message, SwiftProtobuf._MessageI
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Cosmos_Nft_V1beta1_NFT, rhs: Cosmos_Nft_V1beta1_NFT) -> Bool {
+  public static func ==(lhs: Cosmos_Nft_V1beta1_NFT, rhs: Cosmos_Nft_V1beta1_NFT) -> Bool {
     if lhs.classID != rhs.classID {return false}
     if lhs.id != rhs.id {return false}
     if lhs.uri != rhs.uri {return false}
