@@ -67,7 +67,7 @@ public struct CosmosTxResponse:Codable{
     }
     public let tx_response:CosmosTxResponseInfo
 }
-typealias CosmosAccountInfo = CosmosResponseAccount.CosmosAccountInfo
+public typealias CosmosAccountInfo = CosmosResponseAccount.CosmosAccountInfo
 typealias CosmosUnbondingDelegationsEntryResponse = CosmosUnbondingDelegationsResponse.CosmosUnbondingDelegationsEntryResponse
 typealias CosmosBlock = CosmosLastBlock.CosmosBlock
 typealias CosmosBlockHeader = CosmosBlock.CosmosBlockHeader

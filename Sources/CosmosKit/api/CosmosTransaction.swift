@@ -14,11 +14,11 @@ import PromiseKit
 import BigInt
 public struct CosmosTransaction{
     
+    public var gasLimit:UInt64 = 0
     public var memo: String = ""
+    public var feeCoin: CosmosCoin = CosmosCoin(amount: "0", denom: "uatom")
     public var sequence: UInt64 = 0
     public var accountNumber: UInt64 = 0
-    public var feeCoin: CosmosCoin = CosmosCoin(amount: "0", denom: "uatom")
-    public var gasLimit:UInt64 = 0
     public var signerPublicKey: Data = Data()
     public var chainId:String = "cosmoshub-4"
     private var messages:[Google_Protobuf_Any] = []
@@ -26,13 +26,12 @@ public struct CosmosTransaction{
     /// buildMsgs
     /// - Parameter msgs: [Dictionary<typeURL,value>]
     /// - Returns:
-    public mutating func buildMsgs(msgs:Dictionary<String,Message>) throws{
+    public mutating func addMsgs(msgs:Dictionary<String,Message>){
         var anyMsgs = [Google_Protobuf_Any]()
         for (typeURL, message) in msgs {
-            let value = try message.serializedData()
             let anyMsg = Google_Protobuf_Any.with {
                 $0.typeURL = typeURL
-                $0.value = value
+                $0.value = try! message.serializedData()
             }
             anyMsgs.append(anyMsg)
         }
@@ -45,12 +44,12 @@ public struct CosmosTransaction{
         }
         let signerInfo = try getSignerInfo(publicKey: signerPublicKey, sequence:sequence)
         let authInfo = getAuthInfo(signerInfo, feeCoin: feeCoin ,gasLimit: gasLimit)
-        let rawTx = try signRawTx(txBody, authInfo, accountNumber: accountNumber, chainId: chainId, keypair: keypair)
+        let rawTx = try CosmosTransaction.signRawTx(txBody, authInfo, accountNumber: accountNumber, chainId: chainId, keypair: keypair)
         let serializedData = try rawTx.serializedData()
         return serializedData.bytes.toBase64()
     }
     
-    public func signRawTx(bodyBytes: Data, authInfoBytes: Data,accountNumber: UInt64,chainId:String,keypair:CosmosKeypair) throws -> Cosmos_Tx_V1beta1_TxRaw{
+    static public func signRawTx(bodyBytes: Data, authInfoBytes: Data,accountNumber: UInt64,chainId:String,keypair:CosmosKeypair) throws -> Cosmos_Tx_V1beta1_TxRaw{
         let signDoc = Cosmos_Tx_V1beta1_SignDoc.with {
             $0.bodyBytes = bodyBytes
             $0.authInfoBytes = authInfoBytes
@@ -65,10 +64,10 @@ public struct CosmosTransaction{
         }
     }
     
-    private func signRawTx(_ txBody: Cosmos_Tx_V1beta1_TxBody, _ authInfo: Cosmos_Tx_V1beta1_AuthInfo,accountNumber: UInt64,chainId:String,keypair:CosmosKeypair) throws -> Cosmos_Tx_V1beta1_TxRaw {
+    static private func signRawTx(_ txBody: Cosmos_Tx_V1beta1_TxBody, _ authInfo: Cosmos_Tx_V1beta1_AuthInfo,accountNumber: UInt64,chainId:String,keypair:CosmosKeypair) throws -> Cosmos_Tx_V1beta1_TxRaw {
         let bodyBytes = try txBody.serializedData()
         let authInfoBytes = try authInfo.serializedData()
-        return try signRawTx(bodyBytes: bodyBytes, authInfoBytes: authInfoBytes, accountNumber: accountNumber, chainId: chainId, keypair: keypair)
+        return try CosmosTransaction.signRawTx(bodyBytes: bodyBytes, authInfoBytes: authInfoBytes, accountNumber: accountNumber, chainId: chainId, keypair: keypair)
     }
     private func getSignerInfo(publicKey: Data,sequence:UInt64) throws -> Cosmos_Tx_V1beta1_SignerInfo {
         let single = Cosmos_Tx_V1beta1_ModeInfo.Single.with {
