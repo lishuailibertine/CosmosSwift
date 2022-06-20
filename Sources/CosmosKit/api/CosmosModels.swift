@@ -17,7 +17,7 @@ public struct CosmosCoin:Codable{
     public let amount: String
     public let denom: String
     public init(amount: String,denom: String){
-        self.amount = "\(Int(Double(amount) ?? 0))"
+        self.amount = amount
         self.denom = denom
     }
 }
