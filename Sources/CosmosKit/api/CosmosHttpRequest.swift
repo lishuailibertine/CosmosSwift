@@ -93,8 +93,8 @@ public struct CosmosHttpRequest{
             sendRequest(method: .get, path: String(format: CosmosRequestPath.Staking_V1beta1_Delegations.rawValue, address), param: nil).done { (result: CosmosDelegations)
                 in
                 seal.fulfill(result.delegation_responses)
-            }.catch { error in
-                seal.reject(error)
+            }.catch { _ in
+                seal.fulfill([])
             }
         }
     }
@@ -103,8 +103,8 @@ public struct CosmosHttpRequest{
             sendRequest(method: .get, path: String(format: CosmosRequestPath.Staking_V1beta1_Delegators.rawValue, address), param: nil).done { (result: CosmosStakeUnbondingDelegation)
                 in
                 seal.fulfill(result.unbonding_responses)
-            }.catch { error in
-                seal.reject(error)
+            }.catch { _ in
+                seal.fulfill([])
             }
         }
     }
