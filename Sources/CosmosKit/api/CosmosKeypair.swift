@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import GRPC
 import Secp256k1Swift
 import CryptoSwift
 import BIP32Swift
