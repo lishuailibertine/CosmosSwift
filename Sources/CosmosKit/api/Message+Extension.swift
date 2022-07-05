@@ -10,7 +10,7 @@ import CryptoSwift
 import SwiftProtobuf
 
 public protocol CosmosHumanDecodable:Message {
-    func toHuman() throws -> [String: Any]
+    public func toHuman() throws -> [String: Any]
 }
 
 extension Cosmos_Base_V1beta1_Coin: CosmosHumanDecodable {
