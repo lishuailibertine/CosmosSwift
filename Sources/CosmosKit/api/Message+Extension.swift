@@ -7,8 +7,9 @@
 
 import Foundation
 import CryptoSwift
+import SwiftProtobuf
 
-public protocol CosmosHumanDecodable {
+public protocol CosmosHumanDecodable:Message {
     func toHuman() throws -> [String: Any]
 }
 
