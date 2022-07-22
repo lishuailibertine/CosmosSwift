@@ -10,6 +10,7 @@ import Secp256k1Swift
 import CryptoSwift
 import BIP32Swift
 import Bech32
+import RIPEMDSwift
 
 public struct CosmosAddress{
     public let address: String
