@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by li shuai on 2022/3/22.
 //
@@ -50,6 +50,16 @@ public struct CosmosHttpRequest{
     }
     private var headers: HTTPHeaders {
         ["Content-type": "application/json"]
+    }
+    public func getAccountDic(address:String)->Promise<Dictionary<String,Any>>{
+        return Promise { seal in
+            sendRequest(method: .get, path: String(format: CosmosRequestPath.Auth_V1beta1_Accounts.rawValue, address), param: nil).done {(result:Dictionary<String, Any>)
+                in
+                seal.fulfill(result)
+            }.catch { error in
+                seal.reject(error)
+            }
+        }
     }
     public func getAccount(address:String)->Promise<CosmosResponseAccount>{
         return Promise { seal in
@@ -138,6 +148,24 @@ public struct CosmosHttpRequest{
                     do {
                         let result = try JSONDecoder().decode(T.self, from: data)
                         seal.fulfill(result)
+                    } catch let e {
+                        seal.reject(e)
+                    }
+                case .failure(let e):
+                    seal.reject(e)
+                }
+            }
+        }
+    }
+    private func sendRequest(method:HTTPMethod,path:String,param:Dictionary<String,String>?,encoder:ParameterEncoder = URLEncodedFormParameterEncoder.default )->Promise<Dictionary<String, Any>>{
+        return  Promise { seal in
+            AF.request("\(url)\(path)", method: method, parameters: param, encoder: encoder, headers:nil).responseData { response in
+                switch response.result {
+                case .success(let data):
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                        let dic = json as! Dictionary<String, Any>
+                        seal.fulfill(dic)
                     } catch let e {
                         seal.reject(e)
                     }
