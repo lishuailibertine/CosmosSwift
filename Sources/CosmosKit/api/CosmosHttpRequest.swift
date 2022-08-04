@@ -51,11 +51,11 @@ public struct CosmosHttpRequest{
     private var headers: HTTPHeaders {
         ["Content-type": "application/json"]
     }
-    public func getAccount(address:String)->Promise<Dictionary<String,Any>>{
+    public func getAccountDic(address:String)->Promise<Dictionary<String,Any>>{
         return Promise { seal in
             sendRequest(method: .get, path: String(format: CosmosRequestPath.Auth_V1beta1_Accounts.rawValue, address), param: nil).done {(result:Dictionary<String, Any>)
                 in
-                
+                seal.fulfill(result)
             }.catch { error in
                 seal.reject(error)
             }
