@@ -51,21 +51,12 @@ public struct CosmosHttpRequest{
     private var headers: HTTPHeaders {
         ["Content-type": "application/json"]
     }
-    public func getAccountDic(address:String)->Promise<Dictionary<String,Any>>{
+    public func getAccount(address:String)->Promise<CosmosResponseAccount>{
         return Promise { seal in
             sendRequest(method: .get, path: String(format: CosmosRequestPath.Auth_V1beta1_Accounts.rawValue, address), param: nil).done {(result:Dictionary<String, Any>)
                 in
-                seal.fulfill(result)
-            }.catch { error in
-                seal.reject(error)
-            }
-        }
-    }
-    public func getAccount(address:String)->Promise<CosmosResponseAccount>{
-        return Promise { seal in
-            sendRequest(method: .get, path: String(format: CosmosRequestPath.Auth_V1beta1_Accounts.rawValue, address), param: nil).done {(result:CosmosResponseAccount)
-                in
-                seal.fulfill(result)
+                seal.fulfill(CosmosResponseAccount.decode(json: result))
+                
             }.catch { error in
                 seal.reject(error)
             }
@@ -80,9 +71,9 @@ public struct CosmosHttpRequest{
             }
         }
     }
-    public func getLastBlock()->Promise<CosmosLastBlock>{
+    public func getLastBlock(path:String = CosmosRequestPath.Blocks_Latest.rawValue )->Promise<CosmosLastBlock>{
         return Promise { seal in
-            sendRequest(method: .get, path: CosmosRequestPath.Blocks_Latest.rawValue, param: nil).done { (result: CosmosLastBlock) in
+            sendRequest(method: .get, path: path, param: nil).done { (result: CosmosLastBlock) in
                 seal.fulfill(result)
             }.catch { error in
                 seal.reject(error)
@@ -118,7 +109,7 @@ public struct CosmosHttpRequest{
             }
         }
     }
-   
+    
     public func sendTX(tx:ComosTxRequest) -> Promise<CosmosTxResponse>{
         return Promise { seal in
             do {

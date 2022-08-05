@@ -41,7 +41,28 @@ public struct CosmosResponseAccount:Codable{
         public let account_number: String
         public let sequence: String
     }
-    public let account:CosmosAccountInfo
+    public var account:CosmosAccountInfo
+    public static func decode(json:Dictionary<String,Any>) -> CosmosResponseAccount{
+        let account_number_key = "account_number"
+        let sequence_key = "sequence"
+        let account_number = json.valueFor(key: account_number_key) ?? "0"
+        let sequence = json.valueFor(key: sequence_key) ?? "0"
+        return CosmosResponseAccount(account: CosmosAccountInfo(account_number: account_number, sequence: sequence))
+    }
+}
+extension Dictionary where Key == String, Value:Any{
+    public func valueFor(key:String)->String?{
+        if self.keys.contains(key) {
+            return self[key] as? String
+        }else{
+            for subkey in self.keys {
+                if let dic = self[subkey] as? Dictionary<String,Any> {
+                    return dic.valueFor(key: key)
+                }
+            }
+            return nil
+        }
+    }
 }
 public struct CosmosDelegationsResponse:Codable{
     public let balance:CosmosCoin
