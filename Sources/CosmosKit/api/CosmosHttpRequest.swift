@@ -14,7 +14,7 @@ public enum CosmosRequestPath: String{
     case Auth_V1beta1_Accounts = "/cosmos/auth/v1beta1/accounts/%@"
     case Staking_V1beta1_Delegations = "/cosmos/staking/v1beta1/delegations/%@"
     case Staking_V1beta1_Delegators = "/cosmos/staking/v1beta1/delegators/%@/unbonding_delegations"
-    case Blocks_Latest = "/blocks/latest"
+    case Blocks_Latest = "/cosmos/base/tendermint/v1beta1/blocks/latest"
     case Tx_V1beta1_Txs = "/cosmos/tx/v1beta1/txs"
 }
 public typealias CosmosTxModel = ComosTxRequest.CosmosTxModel
