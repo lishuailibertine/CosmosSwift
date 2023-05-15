@@ -20,7 +20,7 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.18.0"),
         .package(name: "Secp256k1Swift",url: "https://github.com/mathwallet/Secp256k1Swift.git", from: "1.3.1"),
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift",from: "1.4.2"),
-        .package(name: "Bech32", url: "https://github.com/lishuailibertine/Bech32", from: "1.0.4"),
+        .package(name: "Bech32", url: "https://github.com/lishuailibertine/Bech32", from: "1.0.5"),
         .package(url: "https://github.com/mxcl/PromiseKit.git", .upToNextMajor(from: "6.16.2")),
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.4.3")
     ],
