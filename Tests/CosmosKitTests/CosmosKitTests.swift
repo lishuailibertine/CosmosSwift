@@ -4,7 +4,7 @@ import XCTest
 
 final class CosmosKitTests: XCTestCase {
     var request:CosmosHttpRequest {
-        var r = CosmosHttpRequest.shared
+        let r = CosmosHttpRequest.shared
 //        r.url = "https://lcd-inj-app.cosmostation.io"
         return r
     }
