@@ -18,8 +18,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.26.0"),
-        .package(name: "Secp256k1Swift",url: "https://github.com/mathwallet/Secp256k1Swift.git", from: "2.0.0"),
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift",from: "1.4.2"),
+        .package(name: "Secp256k1Swift",url: "https://github.com/mathwallet/Secp256k1Swift.git", from: "2.0.1"),
         .package(name: "Bech32", url: "https://github.com/lishuailibertine/Bech32", from: "1.0.5"),
         .package(url: "https://github.com/mxcl/PromiseKit.git", .upToNextMajor(from: "8.1.1")),
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.9.1")
@@ -32,7 +31,6 @@ let package = Package(
             dependencies: [
                 .product(name: "SwiftProtobuf", package: "swift-protobuf"),
                 "Secp256k1Swift",
-                "CryptoSwift",
                 .product(name: "BIP32Swift", package: "Secp256k1Swift"),
                 "Bech32",
                 "PromiseKit",
